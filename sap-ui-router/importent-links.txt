@@ -1,0 +1,7 @@
+Directive 
+http://tutorials.jenkov.com/angularjs/custom-directives.html
+https://www.undefinednull.com/2014/02/11/mastering-the-scope-of-a-directive-in-angularjs/
+https://jsfiddle.net/shidhincr/eyNYw/4/?utm_source=website&utm_medium=embed&utm_campaign=eyNYw
+https://jsfiddle.net/shidhincr/q3kex/3/?utm_source=website&utm_medium=embed&utm_campaign=q3kex
+https://jsfiddle.net/shidhincr/q3kex/4/?utm_source=website&utm_medium=embed&utm_campaign=q3kex
+https://plnkr.co/edit/ny6aqt3kzDyljaGakaEM?p=preview
