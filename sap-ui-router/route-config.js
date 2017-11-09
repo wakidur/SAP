@@ -116,7 +116,7 @@
             $stateProvider.state({
                 name:'nofound',
                 url: '*path',
-                template: '<h2>Welcome to Dashboard Template for Bootstrap </h2>'
+                template: '<h2>No route found  </h2>'
             });
         }]);
 
