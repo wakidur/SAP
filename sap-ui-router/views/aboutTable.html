@@ -1,0 +1,20 @@
+<h2>Fine Scotches</h2>
+<p>First word only: {{msg | capitalize}}</p>
+<p>All words: {{msg | capitalize:true}}</p>
+
+<table class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Cost</td>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr ng-repeat="scotch in scotches">
+            <td>{{ scotch.name }}</td>
+            <td>${{ scotch.price }}</td>
+        </tr>
+        
+    </tbody>
+</table>

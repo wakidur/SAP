@@ -1,0 +1,18 @@
+{
+  "name": "ui-router",
+  "version": "1.0.0",
+  "description": "project study",
+  "main": "app.js",
+  "scripts": {
+    "test": "app.js"
+  },
+  "keywords": [
+    "study"
+  ],
+  "author": "wakidur",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.7",
+    "angular": "^1.6.6"
+  }
+}
