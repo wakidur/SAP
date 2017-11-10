@@ -1,0 +1,12 @@
+/*=========important parts of AngularJS====*/
+
+Template
+Directives
+Model
+Scope
+Expressions
+Compiler
+Filter
+View
+Data Binding
+Controller
