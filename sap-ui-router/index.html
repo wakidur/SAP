@@ -2,81 +2,85 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="dist/img/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="dist/img/favicon.ico">
 
-  <title>Dashboard Template</title>
+    <title>Dashboard Template</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <link href="dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="dist/css/dashboard.css" rel="stylesheet">
-  <!-- Bootstrap core JavaScript
+    <!-- Custom styles for this template -->
+    <link href="dist/css/dashboard.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript
     ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="dist/js/bootstrap.min.js"></script>
-  <script src="dist/js/holder.min.js"></script>
-  <script src="node_modules/angular/angular.min.js"></script>
-  <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/holder.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 
-  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 
-  <script src="main-module.js"></script>
-  <script src="route-config.js"></script>
-  <script src="filters/charAtFilter.js"></script>
-  <script src="service/peopleSvc.js"></script>
-  <script src="controller/lableCtrl.js"></script>
-  <script src="controller/scotchCtrl.js"></script>
-  <script src="controller/arnovCtrl.js"></script>
-  <script src="controller/tableCtrl.js"></script>
-  <script src="controller/peopleCtrl.js"></script>
-  <script src="controller/personCtrl.js"></script>
+    <script src="main-module.js"></script>
+    <script src="route-config.js"></script>
+    <script src="filters/charAtFilter.js"></script>
+    <script src="service/peopleSvc.js"></script>
+    <script src="service/userProfileSvc.js"></script>
+    <script src="controller/lableCtrl.js"></script>
+    <script src="controller/scotchCtrl.js"></script>
+    <script src="controller/arnovCtrl.js"></script>
+    <script src="controller/tableCtrl.js"></script>
+    <script src="controller/peopleCtrl.js"></script>
+    <script src="controller/personCtrl.js"></script>
+    <script src="controller/profileCtrl.js"></script>
+    <script src="controller/singleUserCtrl.js"></script>
 
 
 
 
 
-  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-  <script src="dist/js/ie-emulation-modes-warning.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="dist/js/ie10-viewport-bug-workaround.js"></script>
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="dist/js/ie-emulation-modes-warning.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="dist/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body ng-app="appModule">
-  <!-- header section  -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/layout/header.html'"></nav>
-  <!-- header section  -->
-  <div class="container-fluid">
-    <div class="row">
-      <!-- sidebar navigation  section  -->
-      <div class="col-sm-3 col-md-2 sidebar" ng-include="'views/layout/sidebar.html'"></div>
-      <!-- sidebar navigation  section  -->
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <h1 class="page-header" ng-if="$state.current.name === 'nofound'">Welcome to Dashboard Template for Bootstrap </h1>
-        <h1 ng-class="{'page-header':$state.current.name.length}" ng-if="!($state.current.name === 'nofound')">{{$state.current.name | capitalize}}</h1>
-        <!-- dynamic view section  -->
-        <ui-view></ui-view>
-        <!-- dynamic view section  -->
-      </div>
+    <!-- header section  -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/layout/header.html'"></nav>
+    <!-- header section  -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- sidebar navigation  section  -->
+            <div class="col-sm-3 col-md-2 sidebar" ng-include="'views/layout/sidebar.html'"></div>
+            <!-- sidebar navigation  section  -->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" ng-if="$state.current.name === 'nofound'">Welcome to Dashboard Template for Bootstrap </h1>
+                <h1 ng-class="{'page-header':$state.current.name.length}" ng-if="!($state.current.name === 'nofound')">{{$state.current.name | capitalize}}</h1>
+                <!-- dynamic view section  -->
+                <ui-view></ui-view>
+                <!-- dynamic view section  -->
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 
 </html>
