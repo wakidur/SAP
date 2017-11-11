@@ -114,8 +114,8 @@
             });
 
 
-            //profile 
-            // people
+            // nested 
+
             $stateProvider.state({
                 name: 'profile',
                 url: '/profile',
@@ -132,17 +132,22 @@
                 controllerAs: 'vm'
             });
             $stateProvider.state({
-                name: 'user',
+                name: 'profile.user',
                 // This state takes a URL parameter called personId
-                url: '/profile/{userID}',
+                url: '/{userId}',
                 // This state defines a 'person' resolve
                 // It delegates to the PeopleService, passing the personId parameter
                 resolve: {
-                    singleUserSvc: function(userProfileSve, $transition$) {
-                        return userProfileSve.getUser($transition$.params().userID);
+                    singleUserSvc: function(userProfileSve, $stateParams) {
+                        return userProfileSve.getUser($stateParams.userId);
+                        // return userProfileSvc.find(function(person) {
+                        //     console.log(person.id === $stateParams.userId);
+                        //     return person.id === $stateParams.userId;
+                        //     // console.log(person.id);
+                        // });
                     }
                 },
-                templateUrl: 'views/single-user.html',
+                templateUrl: 'views/singleUser.html',
                 controller: 'singleUserCtrl',
                 controllerAs: 'vm'
             });
