@@ -132,39 +132,53 @@
                 controllerAs: 'vm'
             });
             $stateProvider.state({
-                name: 'profile.user',
+                name: 'profile.profileuser',
                 // This state takes a URL parameter called personId
-                url: '/{userId}',
+                url: '/{profileuserId}',
                 // This state defines a 'person' resolve
                 // It delegates to the PeopleService, passing the personId parameter
                 // resolve: {
-                //     singleUserSvc: function(userProfileSve, $stateParams) {
-                //         return userProfileSve.getUser($stateParams.userId);
-                //         // return userProfileSvc.find(function(person) {
-                //         //     console.log(person.id === $stateParams.userId);
-                //         //     return person.id === $stateParams.userId;
-                //         //     // console.log(person.id);
-                //         // });
+                //     singleUserSvc: function(userProfileSvc, $stateParams) {
+                //         var containervalu = [];
+                //         //return userProfileSve.getUser($stateParams.userId);
+                //         return userProfileSvc.find(function(profileuser) {
+                //             //console.log(person.id === $stateParams.profileuserId);
+                //             // return profileuser.id == $stateParams.profileuserId;
+                //             if( profileuser.id === $stateParams.profileuserId){
+                //                 return containervalu.push(profileuser);
+                //                 //this.profileuser;
+                //                 console.log(containervalu);
+                //             }
+                //             return containervalu;
+                //         });
                 //     }
                 // },
                 templateUrl: 'views/singleUser.html',
                 // controller: 'singleUserCtrl',
-                controller: function(userProfileSve, $stateParams) {
+                controller: function(userProfileSvc, $stateParams) {
                     // var vm = this;
                     var vm = this;
-                    vm.singleUser = singleUserSvc;
+                    vm.singleUser = [];
                     getsingleUser();
             
                     function getsingleUser() {
-                        return userProfileSve.getUser($stateParams.userId)
-                            .then(function (data) {
-                                vm.singleUser = data;
-                                return vm.singleUser;
-                            });
-                    }
-                },
-                controllerAs: 'vm'
-            });
+                        //return userProfileSve.getUser($stateParams.userId);
+                         userProfileSvc.find(function(profileuser) {
+                            //console.log(person.id === $stateParams.profileuserId);
+                            // return profileuser.id == $stateParams.profileuserId;
+                            if( profileuser.id === $stateParams.profileuserId){
+                                vm.singleUser.push(profileuser);
+                                //this.profileuser;
+                                
+                            }
+                           
+                        });
+                        return vm.singleUser;
+                }
+               
+            },
+            controllerAs:'vm'
+        }),
 
             $stateProvider.state({
                 name: 'directive',
