@@ -137,20 +137,49 @@
                 url: '/{userId}',
                 // This state defines a 'person' resolve
                 // It delegates to the PeopleService, passing the personId parameter
-                resolve: {
-                    singleUserSvc: function(userProfileSve, $stateParams) {
-                        return userProfileSve.getUser($stateParams.userId);
-                        // return userProfileSvc.find(function(person) {
-                        //     console.log(person.id === $stateParams.userId);
-                        //     return person.id === $stateParams.userId;
-                        //     // console.log(person.id);
-                        // });
+                // resolve: {
+                //     singleUserSvc: function(userProfileSve, $stateParams) {
+                //         return userProfileSve.getUser($stateParams.userId);
+                //         // return userProfileSvc.find(function(person) {
+                //         //     console.log(person.id === $stateParams.userId);
+                //         //     return person.id === $stateParams.userId;
+                //         //     // console.log(person.id);
+                //         // });
+                //     }
+                // },
+                templateUrl: 'views/singleUser.html',
+                // controller: 'singleUserCtrl',
+                controller: function(userProfileSve, $stateParams) {
+                    // var vm = this;
+                    var vm = this;
+                    vm.singleUser = singleUserSvc;
+                    getsingleUser();
+            
+                    function getsingleUser() {
+                        return userProfileSve.getUser($stateParams.userId)
+                            .then(function (data) {
+                                vm.singleUser = data;
+                                return vm.singleUser;
+                            });
                     }
                 },
-                templateUrl: 'views/singleUser.html',
-                controller: 'singleUserCtrl',
                 controllerAs: 'vm'
             });
+
+            $stateProvider.state({
+                name: 'directive',
+                url: '/directive',
+                templateUrl: 'views/directive.html',
+                controller: function($scope, $http) {
+                    $scope.jakob = {};
+                    $scope.jakob.firstName = "Jakob";
+                    $scope.jakob.lastName  = "Jenkov";
+                
+                    $scope.john = {};
+                    $scope.john.firstName = "John";
+                    $scope.john.lastName  = "Doe";
+                }
+            }),
 
             $stateProvider.state({
                 name: 'nofound',

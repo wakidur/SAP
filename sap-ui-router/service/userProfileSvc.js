@@ -31,8 +31,11 @@
                 return person.id === id;
             }
             return service.getAllUser().then(function(people) {
+                console.log(people);
                 return people.find(personMatchesParam);
+                console.log(people);
             });
+            console.log(people);
         }
 
 
