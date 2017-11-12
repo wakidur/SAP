@@ -1,0 +1,30 @@
+/*=========important parts of AngularJS====*/
+
+Template
+Directives
+Model
+Scope
+    $watch
+    $apply
+    $digest
+    $destroy()
+Expressions
+Compiler/ HTML Compiler 
+Filter
+Forms 
+View
+Data Binding
+Controller
+Dependency Injection
+Injector
+Module
+Service
+Interpolation 
+Components 
+Component Router 
+Animations 
+Providers 
+Decorators
+Bootstrap 
+
+ 

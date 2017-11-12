@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="user in vm.allUsers">
+        <div class="thumbnail">
+            <img ng-src="dist/img/{{user.images}}.jpg" alt="{{user.name}}">
+            <div class="caption">
+                <h3>
+                    <a ui-sref="profile.user({ userId: user.id })">
+                         Name: {{user.name}}
+                    </a>
+                </h3>
+                <p>email {{user.email}}</p>
+                <p>{{user.id}}</p>
+
+
+                <!-- <p>company {{alluser.company}}</p>
+                <p>eyeColor {{alluser.eyeColor}}</p>
+                <address><strong>{{alluser.address}}</strong></address> -->
+            </div>
+        </div>
+    </div>
+</div>

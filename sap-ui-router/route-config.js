@@ -1,17 +1,17 @@
-(function (angular) {
+(function(angular) {
     'use strict';
 
     angular
         .module('appModule')
-        .config(['$stateProvider', function ($stateProvider) {
+        .config(['$stateProvider', function($stateProvider) {
 
             //$urlRouteProvider.otherwise('');
             // deshboard route
             $stateProvider.state({
-                url: '/',
                 name: 'deshboard',
+                url: '/deshboard',
                 template: '<h1>{{contact.title}}</h1>',
-                controller: function () {
+                controller: function() {
                     this.title = 'Dashboard';
                 },
                 controllerAs: 'contact'
@@ -27,7 +27,7 @@
                 name: 'home.list',
                 url: '/list',
                 templateUrl: 'views/home-list.html',
-                controller: function () {
+                controller: function() {
                     this.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
                 },
                 controllerAs: 'partialContact'
@@ -82,15 +82,15 @@
 
             // people
             $stateProvider.state({
-                name: 'people', 
-                url: '/people', 
+                name: 'people',
+                url: '/people',
                 // This state defines a 'people' resolve
                 // It delegates to the PeopleService to HTTP fetch (async)
                 // The people component receives this via its `bindings: `
                 resolve: {
-                  peopleresolveSvc: function(peopleService) {
+                    peopleresolveSvc: function(peopleService) {
                         return peopleService.getAllPeople();
-                  }
+                    }
                 },
                 templateUrl: 'views/people.html',
                 controller: 'peopleCtrl',
@@ -98,25 +98,64 @@
             });
             // person 
             $stateProvider.state({
-                name: 'person', 
+                name: 'person',
                 // This state takes a URL parameter called personId
-                url: '/people/{personId}', 
+                url: '/people/{personId}',
                 // This state defines a 'person' resolve
                 // It delegates to the PeopleService, passing the personId parameter
                 resolve: {
                     peopleresolveSvc: function(peopleService, $transition$) {
-                    return peopleService.getPerson($transition$.params().personId);
-                  }
+                        return peopleService.getPerson($transition$.params().personId);
+                    }
                 },
                 templateUrl: 'views/person.html',
                 controller: 'personCtrl',
                 controllerAs: 'vm'
             });
 
+
+            // nested 
+
             $stateProvider.state({
-                name:'nofound',
+                name: 'profile',
+                url: '/profile',
+                // This state defines a 'people' resolve
+                // It delegates to the PeopleService to HTTP fetch (async)
+                // The people component receives this via its `bindings: `
+                resolve: {
+                    userProfileSvc: function(userProfileSve) {
+                        return userProfileSve.getAllUser();
+                    }
+                },
+                templateUrl: 'views/profile.html',
+                controller: 'profileCtrl',
+                controllerAs: 'vm'
+            });
+            $stateProvider.state({
+                name: 'profile.user',
+                // This state takes a URL parameter called personId
+                url: '/{userId}',
+                // This state defines a 'person' resolve
+                // It delegates to the PeopleService, passing the personId parameter
+                resolve: {
+                    singleUserSvc: function(userProfileSve, $stateParams) {
+                        return userProfileSve.getUser($stateParams.userId);
+                        // return userProfileSvc.find(function(person) {
+                        //     console.log(person.id === $stateParams.userId);
+                        //     return person.id === $stateParams.userId;
+                        //     // console.log(person.id);
+                        // });
+                    }
+                },
+                templateUrl: 'views/singleUser.html',
+                controller: 'singleUserCtrl',
+                controllerAs: 'vm'
+            });
+
+            $stateProvider.state({
+                name: 'nofound',
                 url: '*path',
-                template: '<h2>No route found  </h2>'
+                template: '<h2> No route found  </h2>'
             });
         }]);
 
@@ -125,21 +164,21 @@
 
 
     angular.module('appModule').run(['$rootScope', '$state',
-        function ($rootScope, $state) {
+        function($rootScope, $state) {
             $rootScope.$state = $state;
             //   $rootScope.valueA = "hew value";
         }
     ]);
     angular.module('appModule').run(['$http',
-        function ($http) {
+        function($http) {
             $http.get('data/people.json', { cache: true });
             //   $rootScope.valueA = "hew value";
         }
     ]);
-    
-      
 
-  
+
+
+
 
 
 
