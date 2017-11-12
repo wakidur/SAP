@@ -2,3 +2,4 @@ $ node_modules .gitignore
 # exclude everything except sap-ui-router/node_modules
 sap-ui-router/node_modules
 sap-ui-router/example.js
+sap-ui-router/directives/exerciseDirectives.js
