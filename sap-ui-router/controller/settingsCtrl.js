@@ -8,7 +8,15 @@
 
     function constructor($scope, $stateParams) {
         // $scope.grids = ['horizontal','Stacked'];
-        $scope.grids = ['horizontal-1', 'Stacked-2', 'horizontal-2', 'horizontal-3', 'horizontal-4', 'horizontal-5'];
+        $scope.submitForm = function(isValid) {
+            
+                // check to make sure the form is completely valid
+                if (isValid) {
+                  alert('our form is amazing');
+                }
+            
+              };
+       
 
     }
 

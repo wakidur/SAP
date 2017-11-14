@@ -22,3 +22,13 @@ http://jsfiddle.net/gikoo/qNrFX/
 Data Model Architecture in Angular
 https://danmartensen.svbtle.com/data-model-architecture-in-angular
 
+Ultimate Angular
+https://toddmotto.com/
+https://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/
+https://toddmotto.com/categories/angularjs
+
+
+https://www.tensorflow.org/
+https://developers.google.com/maps/
+https://firebase.google.com/
+
