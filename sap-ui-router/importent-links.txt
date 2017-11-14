@@ -1,3 +1,5 @@
+
+
 Directive 
 http://tutorials.jenkov.com/angularjs/custom-directives.html
 https://www.undefinednull.com/2014/02/11/mastering-the-scope-of-a-directive-in-angularjs/
@@ -9,3 +11,14 @@ https://plnkr.co/edit/ny6aqt3kzDyljaGakaEM?p=preview
 
 UI-Router for AngularJS (1.x)
 https://ui-router.github.io/
+
+
+AngularJS Form Validation
+https://scotch.io/tutorials/angularjs-form-validation
+http://dotnetpattern.com/nested-forms-angularjs
+http://jsfiddle.net/gikoo/qNrFX/
+
+
+Data Model Architecture in Angular
+https://danmartensen.svbtle.com/data-model-architecture-in-angular
+

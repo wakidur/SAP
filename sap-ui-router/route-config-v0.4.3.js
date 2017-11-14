@@ -14,6 +14,7 @@
             });
             $stateProvider.state('contacts', {
                 // url: '/contacts/:a/:b',
+                
                 url: '/contacts/{a}/{b}',
                 template: '<h1>My Contacts = {{a}} || {{b}}</h1>',
                 controller: function($scope, $stateParams){

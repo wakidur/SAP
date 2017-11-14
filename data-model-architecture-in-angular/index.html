@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Model Architecture in Angular</title>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="appModule.js"></script>
+    <script src="service/ajaxService.js"></script>
+    <script src="controller/dataModelCtrl.js"></script>
+    
+
+</head>
+<body ng-app="dataModelArchitecture" ng-controller="dataModelCtrl as vm">
+    <h1>{{hello}}</h1>
+    <h1>{{vm.config}}</h1>
+    <h1>{{vm.url}}</h1>
+    <ul>
+        <li ng-repeat="category in vm.categories">{{category.title}}</li>
+    </ul>
+    <div ng-repeat="category in vm.categories" class="category--3-col">
+        <img ng-src="assets/img/{{category.image}}.jpg" class="category__image">
+        <div class="category__title">
+            {{category.title}}
+        </div>
+        <div class="category__description">
+            {{category.description}}
+        </div>
+        <a href="{{category.url}}" class="category__button">
+            {{category.type}}
+        </a>
+    </div>
+</body>
+</html>
