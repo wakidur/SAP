@@ -1,35 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Data Model Architecture in Angular</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <script src="vendor/angular/angular.js"></script>
+
+    <!-- step - 1 -->
+    <!-- <script src="appModule.js"></script>
+    <script src="service/ajaxService.js"></script>
+    <script src="controller/dataModelCtrl.js"></script> -->
+
+    <!-- step - 2 -->
+
     <script src="appModule.js"></script>
     <script src="service/ajaxService.js"></script>
-    <script src="controller/dataModelCtrl.js"></script>
-    
+    <script src="service/DataService.js"></script>
+    <script src="controller/storeCtr.js"></script>
+
 
 </head>
-<body ng-app="dataModelArchitecture" ng-controller="dataModelCtrl as vm">
+<!-- <body ng-app="dataModelArchitecture" ng-controller="dataModelCtrl as vm"> -->
+
+<body ng-app="dataModelArchitecture" ng-controller="storeCtr as vm">
+    <h1 class=" error alert alert-warning"> {{vm.error}}</h1>
     <h1>{{hello}}</h1>
     <h1>{{vm.config}}</h1>
     <h1>{{vm.url}}</h1>
-    <ul>
-        <li ng-repeat="category in vm.categories">{{category.title}}</li>
+    <ul class="list-group">
+        <li class=" list-group-item" ng-repeat="category in vm.categories">{{category.title}}</li>
     </ul>
-    <div ng-repeat="category in vm.categories" class="category--3-col">
-        <img ng-src="assets/img/{{category.image}}.jpg" class="category__image">
-        <div class="category__title">
-            {{category.title}}
+
+    <hr>
+
+
+    <div class="container">
+        <div class="row">
+            <div ng-repeat="category in vm.categories" class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img ng-src="assets/img/{{category.image}}.jpg" alt="{{category.image}}">
+                    <div class="caption">
+                        <h3>{{category.title}}</h3>
+                        <p> {{category.description}}</p>
+                        <p>
+                            <a href="{{category.url}}" class="btn btn-primary" role="button">{{category.type}}</a>
+                            <a href="#" class="btn btn-default" role="button">Back</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
         </div>
-        <div class="category__description">
-            {{category.description}}
+
+        <div class="row">
+            <div ng-repeat="product in vm.products" class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img ng-src="assets/img/{{product.image}}.jpg" alt="{{product.image}}">
+                    <div class="caption">
+                        <h3>{{product.title}}</h3>
+                        <p> {{product.description}}</p>
+                        <p>
+                            <a href="{{product.url}}" class="btn btn-primary" role="button">{{product.type}}</a>
+                            <a href="#" class="btn btn-default" role="button">Back</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a href="{{category.url}}" class="category__button">
-            {{category.type}}
-        </a>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>

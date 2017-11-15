@@ -1,4 +1,4 @@
-/*(function () {
+(function () {
     'use strict';
 
     angular
@@ -15,7 +15,7 @@
                 return $http.get('model-data/modelData.json').then(function (response) {
                     var deferred = $q.defer();
                     if (response.data.categories.length) {
-                        var reponseData = response.data.categories;
+                        var reponseData = response.data;
                         deferred.resolve(reponseData);
                     } else {
                         deferred.reject(response);
@@ -29,8 +29,9 @@
             }
         }
     }
-})();*/
+})();
 
+/*
 (function () {
     'use strict';
 
@@ -65,3 +66,5 @@
         }
     }
 })();
+
+*/
