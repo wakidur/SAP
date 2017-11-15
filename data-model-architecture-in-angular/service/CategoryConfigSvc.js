@@ -20,35 +20,35 @@
 
         function url(record) {
             try {
-                return 'store' + record.properties['seoUrl'][0];
+                return 'store' + record.url;
             } catch (error) {
                 throw error;
             }
          }
         function imagePath(record) {
             try {
-                return '//store.bbcomcdn.com/' + record.properties['category.largeImage'][0];
+                return  record.image;
             } catch (error) {
                 throw error;
             }
          }
         function title(record) {
             try {
-                return record.label;
+                return record.title;
             } catch (error) {
                 throw error;
             }
          }
         function description(record) {
             try {
-                return record.properties["description.en_US"][0];
+                return record.description;
             } catch (error) {
                 throw error;
             }
          }
         function buttonText(record) {
             try {
-                return record.properties.parentDimension;
+                return record.type;
                 
             } catch (error) {
                 throw error;

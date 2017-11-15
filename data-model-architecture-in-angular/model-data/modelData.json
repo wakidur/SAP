@@ -5,21 +5,21 @@
             "title": "B-Elite Fuel",
             "description": "You are elite.  This is your fuel.",
             "type": "brand",
-            "url": "/store/b-elite.htm"
+            "url": "seoUrl"
           },
           {
             "image": "bb",
             "title": "Organic Foods",
             "description": "Make healthy food and snack choices.",
             "type": "goal",
-            "url": "/store/healthy-snacks.htm"
+            "url": "healthy"
           },
           {
             "image": "cc",
             "title": "Organic fdf df",
             "description": "Make healthy food and snack choices.",
             "type": "goal",
-            "url": "/store/healthy-snacks.htm"
+            "url": "healthy-snacks"
           }
        
     ],
