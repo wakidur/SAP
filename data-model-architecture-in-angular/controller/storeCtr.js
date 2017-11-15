@@ -3,21 +3,23 @@
 
     angular
         .module('dataModelArchitecture')
-        .controller('storeCtr', constructor)
+        .controller('storeCtr', constructor);
 
         constructor.$inject = ['$scope', 'dataService', 'modelBuilderSvc', 'categoryConfigSvc'];
 
     function constructor($scope, dataService, modelBuilderSvc, categoryConfigSvc) {
         /* jshint validthis:true */
         var vm = this;
+        vm.categoryList = [];
+        vm.categories = [];
 
         activate();
 
         function activate() { }
         try {
-            var categoryList = dataService.getCategoryList();
+            vm.categoryList = dataService.getCategoryList();
             if(categoryList !== null ){
-                $scope.categories =  modelBuilderSvc.buildModelList(categoryList, categoryConfigSvc);
+                vm.categories =  modelBuilderSvc.buildModelList(vm.categoryList, categoryConfigSvc);
             }
         } catch (error) {
             

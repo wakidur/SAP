@@ -9,6 +9,9 @@
         constructor.$inject = ['$http', 'ajaxService'];
 
     function constructor($http, ajaxService) {
+        /**
+         * hashMap - each key refers to list
+         */
         var hashMap = {};
         var service = {
             getCategoryList: getCategoryList,
@@ -18,15 +21,28 @@
         return service;
 
         
-
+        /**
+         * Fatches JSON, traveres it to build hash map 
+         * of lists for each ui component form json data
+         * object from serve. assigns hashMap where
+         * each key refers to a list
+         */
         (function traversJSON(){
-            var json = ajaxService.makeRequest();
-            hashMap = json;
+            try {
+                return ajaxService.getCategories().then(function (data) {
+                    vm.hashMap = data;
+                    return vm.hashMap;
+                });
+            } catch (error) {
+                throw error;
+            }
+            // var json = ajaxService.makeRequest();
+            // hashMap = json;
         }());
 
         function getCategoryList() {
             try {
-                return hashMap.categories(;)
+                return hashMap.categories;
             } catch (error) {
                 throw error;
             }
