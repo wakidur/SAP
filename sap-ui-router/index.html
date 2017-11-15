@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="dist/css/dashboard.css" rel="stylesheet">
+    <link href="dist/css/style.css" rel="stylesheet">
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -33,7 +34,7 @@
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 
     <script src="main-module.js"></script>
-    <script src="route-config-v0.2.18.js"></script>
+    <script src="route-config-v0.4.3.js"></script>
     <script src="filters/charAtFilter.js"></script>
     <script src="service/peopleSvc.js"></script>
     <script src="service/userProfileSvc.js"></script>
@@ -44,6 +45,7 @@
     <script src="controller/peopleCtrl.js"></script>
     <script src="controller/personCtrl.js"></script>
     <script src="controller/profileCtrl.js"></script>
+    <script src="controller/settingsCtrl.js"></script>
     <!-- <script src="controller/singleUserCtrl.js"></script> -->
     <script src="directives/basicDirective.js"></script>
     <script src="directives/templateUrlPropertiesDirective.js"></script>
@@ -69,22 +71,31 @@
 
 <body ng-app="appModule">
     <!-- header section  -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/layout/header.html'"></nav>
+    <nav ng-if="!($state.current.name === 'logout')" class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/layout/header.html'"></nav>
     <!-- header section  -->
-    <div class="container-fluid">
+    <div class="container-fluid" ng-if="!($state.current.name === 'logout')">
         <div class="row">
             <!-- sidebar navigation  section  -->
-            <div class="col-sm-3 col-md-2 sidebar" ng-include="'views/layout/sidebar-v0.2.18.html'"></div>
+            <div class="col-sm-3 col-md-2 sidebar" ng-include="'views/layout/sidebar-v0.4.3.html'"></div>
             <!-- sidebar navigation  section  -->
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header" ng-if="$state.current.name === 'nofound'">Welcome to Dashboard Template for Bootstrap </h1>
-                <h1 ng-class="{'page-header':$state.current.name.length}" ng-if="!($state.current.name === 'nofound')">{{$state.current.name | capitalize}}</h1>
+                <h1 class="page-header" ng-if="$state.current.name === 'root'">Welcome to Dashboard Template for Bootstrap </h1>
+                <h1 ng-class="{'page-header':$state.current.name.length}" ng-if="!($state.current.name === 'root')">{{$state.current.name | capitalize}}</h1>
                 <!-- dynamic view section  -->
                 <ui-view></ui-view>
                 <!-- dynamic view section  -->
             </div>
         </div>
     </div>
+
+
+
+    <div class="container" ng-if="$state.current.name === 'logout'">
+        <ui-view></ui-view>
+    </div>
+
+
+
 </body>
 
 </html>
