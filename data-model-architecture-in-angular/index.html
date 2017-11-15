@@ -28,6 +28,18 @@
 <!-- <body ng-app="dataModelArchitecture" ng-controller="dataModelCtrl as vm"> -->
 
 <body ng-app="dataModelArchitecture" ng-controller="storeCtr as vm">
+
+        <pre>user = {{vm.newCategoryList | json}}</pre>
+
+        <hr>
+
+        <pre>{{vm.categories | json}}</pre>
+        <hr>
+
+        <pre>{{vm.products | json}}</pre>
+
+
+
     <h1 class=" error alert alert-warning" ng-if="vm.error.length"> {{vm.error}}</h1>
     <h1>{{hello}}</h1>
     <h1>{{vm.config}}</h1>

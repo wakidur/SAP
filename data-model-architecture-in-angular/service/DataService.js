@@ -15,7 +15,6 @@
         var products = [];
         var hashMap = {};
         var service = {
-            // traversJSON: traversJSON,
             getCategoryList: getCategoryList,
             getProductList: getProductList
         };
@@ -29,9 +28,6 @@
          * object from serve. assigns hashMap where
          * each key refers to a list
          */
-
-
-
         function traversJSON() {
             try {
                 return ajaxService.getCategories().then(function (data) {
@@ -41,13 +37,7 @@
             } catch (error) {
                 throw error;
             }
-            // var json = ajaxService.makeRequest();
-            // hashMap = json;
-
         }
-
-     
-
         function getCategoryList() {
             try {
 
@@ -71,7 +61,6 @@
                 throw error;
 
             }
-
         }
     }
 })();
