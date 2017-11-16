@@ -1,20 +1,66 @@
 <div class="col-xs-12" ng-if="formValue.name.length">
-    <pre>{{formValue | json}}</pre>
+  <pre>{{formValue | json}}</pre>
 </div>
-<div class="col-xs-12" >
-    <pre>{{formValue}}</pre>
+<div class="col-xs-12">
+  <pre>{{formValue}}</pre>
 </div>
 
 
 <div class="col-sm-6">
 
+  <form name="customeDirectiveForm" class="css-form" novalidate>
+      
+    <div class="form-group" 
+      ng-class="{'has-error': customeDirectiveForm.size.$error.integer || customeDirectiveForm.size.$error.min || form.size.$error.max }">
+      <label for="size"> Size (integer 0 - 10): {{size}}</label>
+      <input 
+        type="number" 
+        ng-model="size" 
+        name="size"
+        min="0" 
+        max="10" 
+        integer 
+        class="form-control"  
+        placeholder="Size"> {{size}}
+
+        <span ng-show="customeDirectiveForm.size.$error.integer">The value is not a valid integer!</span>
+        <span ng-show="customeDirectiveForm.size.$error.min || customeDirectiveForm.size.$error.max">
+          The value must be in range 0 to 10!</span>
+    </div>
+    <div class="form-group">
+      <label for="name">Username: {{name}}</label>
+      <input type="text" ng-model="name" name="name" username class="form-control"  placeholder="name">{{name}}
+
+      <span ng-show="customeDirectiveForm.name.$pending.username">Checking if this name is available...</span>
+      <span ng-show="customeDirectiveForm.name.$error.username">This username is already taken!</span>
+    </div>
+    
+    
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   <!-- PAGE HEADER -->
-  <div class="page-header">
+  <!-- <div class="page-header">
     <h1>AngularJS Form Validation</h1>
-  </div>
+  </div> -->
 
   <!-- FORM -->
   <!-- pass in the variable if our form is valid or invalid -->
@@ -45,45 +91,120 @@
         </form> -->
 
 
-  <form name="userForm" ng-submit="submitForm()" novalidate>
-    <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
-
-    <!-- NAME -->
+  <!-- <form name="userForm" ng-submit="submitForm()" novalidate>
+   
     <div class="form-group" ng-class="{ 'has-error': userForm.name.$invalid && !userForm.name.$pristine  }">
       <label>Name</label>
       <input type="text" name="name" class="form-control" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" required>
-      <!-- <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p> -->
+      
       <span ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</span>
     </div>
 
-    <!-- USERNAME -->
+  
     <div class="form-group" ng-class="{ 'has-error': userForm.username.$error.minlength || userForm.username.$error.maxlength  }">
       <label>Username</label>
-      <input 
-      type="text" 
-      name="username" 
-      class="form-control" 
-      ng-model="user.username" 
-      ng-minlength="3" 
-      ng-maxlength="8" 
-      ng-model-options="{ updateOn: 'default blur', debounce: { default: 2000, blur: 1000 } }">
+      <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8" ng-model-options="{ updateOn: 'default blur', debounce: { default: 2000, blur: 1000 } }">
       <span ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</span>
       <span ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</span>
-      <!-- <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
-      <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p> -->
+      
     </div>
 
-    <!-- EMAIL -->
+  
     <div class="form-group" ng-class="{ 'has-error': userForm.email.$invalid && !userForm.email.$pristine  }">
       <label>Email</label>
       <input type="email" name="email" class="form-control" ng-model="user.email">
       <span ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</span>
     </div>
 
-    <!-- SUBMIT BUTTON -->
+    
     <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
 
-  </form>
+  </form> -->
 
+
+  <!-- step - 1 -->
+
+  <!-- <hr>
+  <hr>
+
+  <div class="col-xs-12">
+    <pre>user = {{user | json}}</pre>
+    <hr>
+    <pre>master = {{master | json}}</pre>
+  </div>
+
+  <form novalidate name="step1" class=" form-horizontal">
+    <div class="form-group" ng-class="{'has-error': step1.$submitted || step1.useremail.$touched}">
+      <label for="email">User Email address</label>
+      <input type="email" name="useremail" ng-model="user.userEmail" class="form-control" placeholder="Email" required>
+      <span ng-show="step1.useremail.$error.required && step1.useremail.$touched">Tell us your email.</span>
+      <span ng-show="step1.useremail.$error.email">This is not a valid email.</span>
+
+    </div>
+    <div class="form-group">
+      <label for="name">User Name</label>
+      <input type="text" name="name" ng-model="user.userName" class="form-control" placeholder="User name">
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" ng-model="user.gender" value="male" name="male">Male
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" ng-model="user.gender" value="female" name="female"> Female
+      </label>
+    </div>
+
+    <button ng-click="reset()" type="button" class="btn  btn-danger">Reset</button>
+    <button ng-click="update(user)" type="submit" class="btn  btn-success">Submit</button>
+  </form> -->
+
+
+
+<!-- 
+  <hr>
+  <hr> -->
+
+  <!-- <form name="form" class="css-form" novalidate>
+    <label>Name:
+      <input type="text" ng-model="user.secondUsername" name="uName" required="" />
+    </label>
+    <br />
+    <div ng-show="form.$submitted || form.uName.$touched">
+      <div ng-show="form.uName.$error.required">Tell us your name.</div>
+    </div>
+
+    <label>E-mail:
+      <input type="email" ng-model="user.secondUseremail" name="uEmail" required="" />
+    </label>
+    <br />
+    <div ng-show="form.$submitted || form.uEmail.$touched">
+      <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+      <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+    </div>
+
+    Gender:
+    <label>
+      <input type="radio" ng-model="user.secondUsergender" value="male" />male</label>
+    <label>
+      <input type="radio" ng-model="user.secondUsergender" value="female" />female</label>
+    <br />
+    <label>
+      <input type="checkbox" ng-model="user.secondUseragree" name="userAgree" required="" /> I agree:
+    </label>
+    <input ng-show="user.secondUseragree" type="text" ng-model="user.secondUseragreeSign" required="" />
+    <br />
+    <div ng-show="form.$submitted || form.userAgree.$touched">
+      <div ng-show="!user.secondUseragree || !user.secondUseragreeSign">Please agree and sign.</div>
+    </div>
+
+    <input type="button" ng-click="reset(form)" value="Reset" />
+    <input type="submit" ng-click="update(user)" value="Save" />
+  </form>
+  <pre>user = {{user | json}}</pre>
+  <pre>master = {{master | json}}</pre>
+
+   -->
 </div>
 <!-- col-sm-8 -->
