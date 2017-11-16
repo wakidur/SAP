@@ -8,10 +8,18 @@
 
     function constructor($scope, $stateParams) {
         // $scope.grids = ['horizontal','Stacked'];
-        $scope.submitForm = function(isValid) {
+        $scope.user =  [];
+        $scope.formValidate = false;
+        $scope.formValue = {};
+        $scope.submitForm = function() {
+            $scope.formValidate =  userForm.$valid;
+            $scope.formValue.name = $scope.user.name;
+            $scope.formValue.username = $scope.user.username;
+            $scope.formValue.email = $scope.user.email;
+
             
                 // check to make sure the form is completely valid
-                if (isValid) {
+                if ($scope.formValidate) {
                   alert('our form is amazing');
                 }
             
