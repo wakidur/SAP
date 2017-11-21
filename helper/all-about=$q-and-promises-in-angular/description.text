@@ -1,0 +1,22 @@
+https://toddmotto.com/promises-angular-q#qdefer
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+https://developers.google.com/web/fundamentals/primers/promises
+https://scotch.io/tutorials/javascript-promises-for-dummies
+
+
+
+What is Promise?
+A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
+
+A Promise is in one of these states:
+
+a. pending: initial state, neither fulfilled nor rejected.
+b. fulfilled: meaning that the operation completed successfully.
+c. rejected: meaning that the operation failed.
+
+A promise is a special type of Object that we can either use, or construct ourselves to handle asynchronous tasks.
+
+A promise has three state,
+a. pending
+b. resolved
+c. rejected

@@ -1,0 +1,8 @@
+Note: Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
+
+Propertiex for the parent (Flex container);
+Propertiex for the Children (flex items);
+
+#display
+#order
+#flex-direction : Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.
