@@ -1,4 +1,5 @@
 
+tasneem.ahsan501@gmail.com
 
 Directive 
 http://tutorials.jenkov.com/angularjs/custom-directives.html
