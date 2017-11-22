@@ -1,0 +1,20 @@
+WebClient
+    CommonComponents
+    Content
+    GS
+    Helper
+        commonDependencies.js
+        extensions.js
+        javascriptMethods.js
+        javascriptVariables.js
+        moduleLazyLoadable.js
+        niDisplayListData.js
+        routeResolver.js
+        stateDependencyResolveFor.js
+    Vendor
+    appBootstrap.js
+    appConfig.js
+    appModule.js
+    loginState.js
+    main.js
+    index.html
