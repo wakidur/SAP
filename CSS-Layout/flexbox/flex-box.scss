@@ -1,0 +1,204 @@
+@import "mixin/mixin-flexbox"; // custom mixins
+/* Positioning */
+
+/* Display & Box Model */
+$value-0: 0;
+$none: none;
+$display-flex: flex;
+
+$height-300: 300px;
+$height-150: 150px;
+$height-100: 100px;
+
+$width-200: 200px;
+$width-100: 100px;
+
+/* Color */
+$bg-color: #09c;
+$bg-color-child: #cc3a00;
+$bg-color-white: white;
+$text-color: #222;
+
+/* Text */
+$text-align-center: center;
+
+/* Other */
+
+.parent {
+    display: $display-flex;
+    height: $height-300;
+    background-color: $bg-color;
+    border: 5px solid #000000;
+    padding: 40px;
+}
+
+.child {
+    width: $width-100;
+    height: $height-100;
+    margin: auto;
+    background-color: $bg-color-child;
+}
+
+.flex-container-box {
+    /* We first create a flex layout context*/
+    display: flex;
+
+    /* Then we define the flow direction and if we allow the items to wrap
+    * Remember this is the same as
+    * flex-direction : row ;
+    * flex-wrap: wrap;
+    * flex-flow: row wrap;
+    */
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+
+    /* Then we define how is destributed the remaining space*/
+    justify-content: space-around;
+}
+
+.flex-container {
+    @include flexbox;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: $value-0;
+    margin: $value-0;
+    list-style: $none;
+}
+
+.flex-item {
+    width: $width-200;
+    height: $height-150;
+    padding: 5px;
+    margin-top: 5px;
+    line-height: 150px;
+    background-color: tomato;
+    color: $bg-color-white;
+    font-size: 3em;
+    text-align: $text-align-center;
+}
+
+.navigation {
+    @include flexbox;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: $value-0;
+    margin-bottom: 20px;
+    
+    background-color: deepskyblue;
+    line-height: $none;
+
+    a {
+        display: block;
+        padding: 1em;
+        color: $bg-color-white;
+        text-decoration: $none;
+
+        &:hover {
+            background-color: darken(deepskyblue, 2%);
+        }
+    }
+
+    @media all and (width: 800px) {
+        justify-content: space-around;
+    }
+
+    @media all and (width: 600px) {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: $value-0;
+
+        a {
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: $text-align-center;
+        }
+
+        li {
+            &:last-of-type a {
+                border-bottom: $none;
+            }
+        }
+    }
+}
+
+.wrapper {
+    @include flexbox;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: $text-align-center;
+
+    > * {
+        flex: 1 100%;
+        padding: 10px;
+    }
+}
+
+.header {
+    background: tomato;
+}
+
+.footer {
+    background: lightgreen;
+}
+
+.main {
+    text-align: left;
+    background: deepskyblue;
+}
+
+.aside-1 {
+    background: gold;
+}
+
+.main {
+    text-align: left;
+    background: deepskyblue;
+}
+
+.aside-1 {
+    background: gold;
+}
+
+.aside-2 {
+    background: rgb(230, 8, 119);
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 auto;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3 0px;
+    }
+
+    .aside-1 {
+        order: 1;
+    }
+
+    .main {
+        order: 2;
+    }
+
+    .aside-2 {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+// body {
+//     padding: 2em;
+// }

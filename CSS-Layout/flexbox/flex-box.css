@@ -1,0 +1,184 @@
+/* Positioning */
+/* Display & Box Model */
+/* Color */
+/* Text */
+/* Other */
+.parent {
+  display: flex;
+  height: 300px;
+  background-color: #09c;
+  border: 5px solid #000000;
+  padding: 40px;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: #cc3a00;
+}
+
+.flex-container-box {
+  /* We first create a flex layout context*/
+  display: flex;
+  /* Then we define the flow direction and if we allow the items to wrap
+    * Remember this is the same as
+    * flex-direction : row ;
+    * flex-wrap: wrap;
+    * flex-flow: row wrap;
+    */
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  /* Then we define how is destributed the remaining space*/
+  justify-content: space-around;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  width: 200px;
+  height: 150px;
+  padding: 5px;
+  margin-top: 5px;
+  line-height: 150px;
+  background-color: tomato;
+  color: white;
+  font-size: 3em;
+  text-align: center;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  margin: 0;
+  margin-bottom: 20px;
+  background-color: deepskyblue;
+  line-height: none;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: #00b7f5;
+}
+
+@media all and (width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a {
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  flex: 1 100%;
+  padding: 10px;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.aside-2 {
+  background: #e60877;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 auto;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .main {
+    flex: 3 0px;
+  }
+  .aside-1 {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .aside-2 {
+    order: 3;
+  }
+  .footer {
+    order: 4;
+  }
+}
+ 
+
+ /*# sourceMappingURL= flex-box.css.map */
