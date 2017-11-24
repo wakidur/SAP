@@ -1,0 +1,4 @@
+novalidate;
+ng-model
+ng-minlength;
+ng-maxlength;
