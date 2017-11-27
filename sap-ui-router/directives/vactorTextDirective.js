@@ -1,8 +1,10 @@
 (function () {
     'use strict';
-
+/**
+ * The following directive will display NW, NE, SW, or SE depending on where the corsor is relative to it.
+ */
     angular
-        .module ('module')
+        .module ('appModule')
         .directive ('appModule', constructor);
 
         constructor.$inject = ['$window', '$document'];
