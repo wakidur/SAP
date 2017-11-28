@@ -5,13 +5,13 @@
  */
     angular
         .module ('appModule')
-        .directive ('appModule', constructor);
+        .directive ('vectorText', constructor);
 
-        constructor.$inject = ['$window', '$document'];
+        constructor.$inject = ['$window', '$document', '$log'];
 
-    function constructor($window, $document) {
+    function constructor($window, $document, $log) {
         // Usage:
-        //     <div buffer="300" vector-text></div>
+        //     <div vector-text buffer="300"></div>
         // Creates:
         //
         var directiveObject = {
@@ -22,7 +22,42 @@
         return directiveObject;
 
         function link(scope, element, attrs, controller) {
-            ini
+            // initial
+            $log.log("Scope " + scope + " \n");
+            $log.log("Element " + element + " \n");
+            $log.log("attrs " + attrs + " \n");
+            $log.log("controller " + controller + " \n");
+
+            // Initialize the CSS
+            element.css({
+                'float' : 'left',
+                'padding' : attrs.buffer + "px"
+            });
+
+            //initalize the scope variable
+            scope.heading = '';
+
+            // Set event listener and handler
+            $document.on('mousemove', vectorText);
+
+            function vectorText(event) {
+                // mousemove event does not start $digest,
+                // scope.$apply does this manually
+                scope.$apply(function(){
+                    $log.log("pageY " + event.clientY + " \n");
+                    $log.log("pageX " + event.clientX + " \n");
+                    if(event.clientY > 300 ){
+                        scope.heading = "N";
+                    } else {
+                        scope.heading = "S";
+                    }
+                    if(event.clientX > 300 ){
+                        scope.heading += "W";
+                    } else {
+                        scope.heading += "E";
+                    }
+                });
+            }
         }
     }
 

@@ -65,8 +65,14 @@
       </div>
   </form> -->
 
-  <button data-counter-attr increase="40"  class=" btn btn-default"></button>
-  <button data-counter-attr increase="5" class=" btn btn-warning"></button>
+  <!-- <button data-counter-attr increase="40"  class=" btn btn-default"></button>
+  <button data-counter-attr increase="5" class=" btn btn-warning"></button> -->
+
+
+  <!-- <div vector-text buffer="300"></div> -->
+  <div>Outer: {{ outerval }}</div>
+  
+  <div isolate-scope getattrvalue="{{outerval}}"></div>
 
 
 
