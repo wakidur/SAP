@@ -25,9 +25,9 @@
             //     innerval: '=getattrvalue'
             // }
 
-            scope: {
-                innerval: '&getattrvalue'
-            }
+            // scope: {
+            //     innerval: '&getattrvalue'
+            // }
         };
         return directiveObject;
 

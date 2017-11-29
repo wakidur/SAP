@@ -1,0 +1,49 @@
+/* Positioning */
+/* Display & Box Model */
+/* Color */
+/* Text */
+/* Other */
+.introduction {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+}
+
+.introduction:before, .introduction:after {
+  content: '';
+  position: absolute;
+  background-color: #ffe121;
+  border-radius: 100%;
+  z-index: 0;
+}
+
+@media (min-width: 1200px) {
+  .introduction:before {
+    width: 30vw;
+    height: 30vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 600px;
+    max-height: 600px;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%) scale(1);
+    animation: bounceInTopCircle .35s ease 1.35s backwards;
+  }
+  .introduction:after {
+    width: 45vw;
+    height: 45vw;
+    min-width: 600px;
+    min-height: 600px;
+    max-width: 700px;
+    max-height: 700px;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%) scale(1);
+    animation: bounceInBottomCircle .35s ease 1.25s backwards;
+  }
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
