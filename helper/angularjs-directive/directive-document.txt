@@ -1,0 +1,19 @@
+return {
+    compile: compile,
+    link: link,
+    restrict: 'EA'
+};
+
+compile
+The fiest step of execution/ processing a directive for rendering.
+Loads and traverses the DOM (Of template);
+    compiles each of the directive collected thereafter(ex: nested directives)
+Happens for both existing Angular Directives or Custom Directives
+"compile" function : executes code during compilation phase of a template.
+
+
+function compile(tElement, tAttributes) {}
+
+function link(scope, element, attrs) {}
+
+

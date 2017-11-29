@@ -20,10 +20,19 @@
             scope: {
                 innerval: '@getattrvalue'
             }
+
+            // scope: {
+            //     innerval: '=getattrvalue'
+            // }
+
+            scope: {
+                innerval: '&getattrvalue'
+            }
         };
         return directiveObject;
 
         function link(scope, element, attrs) {
+            scope.innerval();
         }
     }
 
