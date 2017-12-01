@@ -55,6 +55,12 @@ http://www.sarasoueidan.com/
 
 Blog project
 http://theme-sphere.com/smart-blog/
-https://themeforest.net/item/blog-theme-smartblog/
+http://theme-sphere.com/smart-blog/
 https://www.storyblocks.com/
+
+
+Wappalyzer
+WhatFont
+Window Resizer
+AngularJS Batarang
 
