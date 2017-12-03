@@ -70,9 +70,9 @@
 
 
   <!-- <div vector-text buffer="300"></div> -->
-  <div>Outer: {{ outerval }}</div>
+  <!-- <div>Outer: {{ outerval }}</div>
   
-  <div isolate-scope getattrvalue="{{outerval}}"></div>
+  <div isolate-scope getattrvalue="{{outerval}}"></div> -->
 
 
 
@@ -248,5 +248,25 @@
   <pre>master = {{master | json}}</pre>
 
    -->
+
+
+   <!-- compile-pre-post-controller -->
+   <!-- <div compile-pre-post-controller text="first">
+     <div compile-pre-post-controller text=".. second">
+       <div compile-pre-post-controller text=".....third"></div>
+     </div>
+   </div> -->
+   <div compile-pre-post-controller text="{{i}}" ng-repeat="i in [1,2,3,4,5,6,7]">
+     {{i}}
+     <!-- <div compile-pre-post-controller text=".. second">
+       <div compile-pre-post-controller text=".....third"></div>
+     </div> -->
+   </div>
+
+
+
+
+
+
 </div>
 <!-- col-sm-8 -->
