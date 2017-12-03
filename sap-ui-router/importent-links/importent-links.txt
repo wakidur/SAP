@@ -59,8 +59,9 @@ http://theme-sphere.com/smart-blog/
 https://www.storyblocks.com/
 
 
-Wappalyzer
-WhatFont
-Window Resizer
-AngularJS Batarang
+how to split the ng-repeat data with three columns using bootstrap
+https://stackoverflow.com/questions/21644493/how-to-split-the-ng-repeat-data-with-three-columns-using-bootstrap
+
+
+
 
