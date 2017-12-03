@@ -107,7 +107,7 @@
                 itme: 1
             }
         ];
-        $scope.arrayOfObject = chunk($scope.arrayOfObjectValude, 3);
+        $scope.arrayOfObject = chunk($scope.arrayOfObjectValude, 2);
 
 
         // $scope.grids = ['horizontal','Stacked'];
