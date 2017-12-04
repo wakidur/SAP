@@ -8,6 +8,7 @@
   overflow: hidden;
   padding-bottom: 50px;
   background-color: #ffffff;
+  border-bottom: 1px solid #cccccc38;
 }
 
 .introduction:before, .introduction:after {
@@ -19,22 +20,6 @@
 }
 
 @media (min-width: 1200px) {
-  .introduction {
-    /*
-        &:after {
-            width: 45vw;
-            height: 45vw;
-            min-width: 600px;
-            min-height: 600px;
-            max-width: 700px;
-            max-height: 700px;
-            left: 0;
-            bottom: 0;
-            transform: translate(-50%, 50%) scale(1);
-            animation: bounceInBottomCircle .35s ease 1.25s backwards;
-        }
-        */
-  }
   .introduction:before {
     width: 30vw;
     height: 30vw;

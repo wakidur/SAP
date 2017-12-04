@@ -63,5 +63,9 @@ how to split the ng-repeat data with three columns using bootstrap
 https://stackoverflow.com/questions/21644493/how-to-split-the-ng-repeat-data-with-three-columns-using-bootstrap
 
 
+Adobe Photoshoep color plate 
+https://color.adobe.com/explore/?filter=most-popular&time=month
+https://color.adobe.com/bank-of-ireland-color-theme-10262359/
+https://color.adobe.com/IE5-color-theme-10297409/?showPublished=true
 
 
