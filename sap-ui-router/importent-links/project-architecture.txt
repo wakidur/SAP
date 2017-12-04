@@ -18,3 +18,26 @@ WebClient
     loginState.js
     main.js
     index.html
+
+****************Project commone service**************
+
+1. $scope
+2. $rootScope
+3. $q
+
+***************
+4. MapModelSvc
+5. MapDataSvc
+6. appConstants
+7. modalSvc
+8. appMsgSvc
+9. generalSetupSvc
+
+10. itemStructureSvc
+11. organizationSvc
+
+
+**********Form*************
+form tag
+
+
