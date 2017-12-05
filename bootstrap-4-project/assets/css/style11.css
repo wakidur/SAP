@@ -67,62 +67,6 @@
   font-size: 14px;
   text-align: center;
 }
-
-.post-share .counters {
-  display: inline-block;
-  vertical-align: top;
-  background: #fafafa;
-  border: 1px solid #e4e4e4;
-  border-radius: 15px;
-  text-align: center;
-  min-width: 70px;
-}
-
-.post-share .count {
-  line-height: 28px;
-  padding-left: 15px;
-  color: #a0a0a0;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.post-share .count .icon {
-  margin-right: 6px;
-}
-
-.post-share .count-share {
-  display: inline-block;
-  padding: 0;
-  padding-right: 15px;
-}
-
-.post-share .count-share:before {
-  content: "";
-  display: inline-block;
-  height: 8px;
-  width: 1px;
-  background: #e4e4e4;
-  margin-left: 10px;
-  margin-right: 12px;
-}
-
-.post-share .post-share-icons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -3px;
-}
-
-.post-share .post-share-icons .link {
-  float: left;
-  margin-left: 4px;
-  width: 28px;
-  border: 1px solid #e4e4e4;
-  border-radius: 50%;
-  font-size: 13px;
-  color: #aaa;
-  text-align: center;
-  line-height: 28px;
-}
  
 
  /*# sourceMappingURL= style.css.map */

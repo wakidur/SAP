@@ -57,6 +57,7 @@ Blog project
 http://theme-sphere.com/smart-blog/
 http://theme-sphere.com/smart-blog/
 https://www.storyblocks.com/
+https://cheerup.theme-sphere.com/rovella/blog/2016/05/15/my-new-yoga-pants/
 
 
 how to split the ng-repeat data with three columns using bootstrap
@@ -74,5 +75,10 @@ FaceBook color plate
 
 https://color.adobe.com/Facebook-color-theme-6766/
 https://color.adobe.com/explore/?q=facebook
+
+
+
+selected theam
+https://demo.ninjateam.org/html/my-admin/light/
 
 
