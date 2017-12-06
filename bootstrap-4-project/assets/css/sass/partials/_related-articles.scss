@@ -1,0 +1,16 @@
+.related-articles-posts {
+    .prev-post,
+    .next-post {
+        font-size: 18px;
+        line-height: 23px;
+        background: #fff;
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        color: #aaa;
+        border: 1px solid #efefef;
+        border-radius: 50%;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}
