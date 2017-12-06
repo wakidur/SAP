@@ -1,0 +1,15 @@
+Installation
+To run AngularJS Gulp Version you will have to install following components in your environment.
+
+Node.js: https://nodejs.org/en/
+npm: https://npmjs.com
+Gulp: http://gulpjs.com
+Bower: https://bower.io
+
+
+https://about.me/welcome
+http://coreui.io/
+https://wrapbootstrap.com/themes/admin?branch=4.x
+
+ui-select
+https://github.com/angular-ui/ui-select

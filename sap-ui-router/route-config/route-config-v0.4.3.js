@@ -34,6 +34,12 @@
             url: '/logout',
             templateUrl: 'views/logout.html'
         });
+        $stateProvider.state('chapter-1', {
+            url: '/chapter-1',
+            templateUrl: 'views/chapter-1-maxinizing-angularjs-directives.html',
+            controller: "chapterOneCtrl",
+            controllerAs: 'vm'
+        });
 
         $urlRouterProvider.otherwise('/logout');
 
