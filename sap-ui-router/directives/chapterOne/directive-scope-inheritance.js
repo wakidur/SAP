@@ -3,7 +3,7 @@
 
     angular
         .module ('appModule')
-        .directive ('directiveScopeInheritance', constructor);
+        .directive ('dirScopeInheritance', constructor);
 
         constructor.$inject = ['$window'];
 
@@ -13,8 +13,10 @@
         // Creates:
         //
         var directive = {
-            link: link,
-            restrict: 'EA'
+            restrict: 'EA',
+            templateUrl: 'views/directiveViews/chapterOne/directive-scope-inheritance.html',
+            link: link
+           
         };
         return directive;
 
