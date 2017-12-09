@@ -81,4 +81,8 @@ https://color.adobe.com/explore/?q=facebook
 selected theam
 https://demo.ninjateam.org/html/my-admin/light/
 
+stackoverflow JOS
+https://stackoverflow.com
+https://stackoverflow.com/jobs?med=site-ui&ref=jobs-tab
+
 
