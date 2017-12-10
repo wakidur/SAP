@@ -6,3 +6,7 @@ A CSS layout mode, sometimes simply called layout, is an algorithm that determin
 4. The positioned layout
 5. The flexible box layout
 6. The grid layout
+
+
+/*===================A Complete Guide to Flexbox==========================*/
+========================Properties for the Parent======================
