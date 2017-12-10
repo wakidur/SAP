@@ -1,0 +1,99 @@
+http://localhost:2000/
+System Admin > Page Settings
+
+State page
+pageState.js
+
+stateConfig-----
+Views
+pageAdmin.html
+
+lazyDependencies
+pageAdminCtrl
+pageDataSvc
+pageModelSvc
+AD_Module
+
+childListConfig----
+Views
+page.html
+
+lazyDependencies
+pageCtrl
+pageDataSvc
+pageModelSvc
+AD_Module
+
+-----------------------------------------------------
+System Admin > User Profiles
+PageName 
+User Profiles
+
+Action
+userState
+
+
+State Name 
+userState
+
+stateConfig----
+Views
+userContainer.html
+    ui-view="view1" 
+    ui-view="view2"
+
+childEntryConfig-----
+Views
+user.html
+    form 
+        validation-msg="validationMsgs.ad_user"
+        ni-form-dirty
+        ni-forattrchange
+        ni-visible="pageButtons" 
+        ni-permission="0"
+        ni-permit-action
+        data-ni-click
+
+
+        ni-auto-complete
+        ni-validate
+
+    Methode -----
+    showEmployeeModal()
+    save($formValidation)
+    reset($formValidation)
+    cancel()
+
+lazyDependencies
+    userCtrl
+        1. $scope
+        2. $rootScope
+        3. $q
+        4. $timeout
+        5. userDataSvc
+        6. userModelSvc
+        7. appMsgSvc
+        8. appConstants
+        9. hrSetupSvc
+       10. appValues
+       11. adminSvc
+       12. domainFolders
+       13. imageFolders
+       14. adminConstants
+       15. modalSvc
+
+userDataSvc
+userModelSvc
+AD_User
+
+childListConfig---
+Views
+userView.html
+
+lazyDependencies
+userViewCtrl
+userDataSvc
+userModelSvc
+AD_User
+
+

@@ -2,10 +2,10 @@
     'use strict';
 
     angular
-        .module ('appModule')
-        .directive ('templateUrlPropertiesDirective', constructor);
+        .module('appModule')
+        .directive('templateUrlPropertiesDirective', constructor);
 
-        constructor.$inject = ['$window'];
+    constructor.$inject = ['$window'];
 
     function constructor($window) {
         // Usage:
@@ -19,8 +19,8 @@
         };
         return directive;
 
-        function link(scope, element, attrs) {
-        }
+        function link(scope, element, attrs) {}
     }
 
 })();
+

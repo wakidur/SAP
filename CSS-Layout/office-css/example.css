@@ -1,0 +1,33 @@
+.fl-stretch-box{
+ /* previous syntax */
+  display: box;
+  /* current syntax */
+  display: flex;
+  /* previous syntax */
+  box-orient: vertical;
+  /* current syntax */
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.fl-box {
+    /* previous syntax */ 
+    display: box;
+    /* current syntax */
+    display: flex;
+}
+.fl-content-box {
+    flex: 1 0 auto; 
+}
+
+.fl-row-box {
+    /* previous syntax */
+    display: box;
+    /* current syntax */
+    display: flex;
+    /* previous syntax */
+    box-orient: horizontal;
+    /* current syntax */
+   
+    flex-direction: row;
+ }
