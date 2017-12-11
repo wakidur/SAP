@@ -96,4 +96,8 @@ userDataSvc
 userModelSvc
 AD_User
 
+-------------------
+Request URL:http://192.168.11.2:2000/adminservice/api/Admin/GetMenus?LocationID=1&userID=100000001
+Remote Address:192.168.11.2:2000
+
 

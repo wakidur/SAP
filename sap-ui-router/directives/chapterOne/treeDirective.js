@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-
+    // http://jsfiddle.net/msfrisbie/ka46yx4u/
     angular
         .module ('appModule')
         .directive ('treeStructure', constructor);
