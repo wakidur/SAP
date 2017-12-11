@@ -68,5 +68,4 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] Default is 0 1 auto.
 6.align-self
     align-self: auto | flex-start | flex-end | center | baseline | stretch;
-7.
-8.
+
