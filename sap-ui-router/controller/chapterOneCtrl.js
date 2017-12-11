@@ -16,6 +16,76 @@
 
         $scope.overwrite = false;
         $scope.origin = 'parnet controller';
+
+        // $scope.data = {
+        //     text: 'Primates',
+        //     items: [{
+        //             text: 'Anthropoidea',
+        //             items: [{
+        //                     text: 'New World Anthropoids'
+        //                 },
+        //                 {
+        //                     text: 'old world Anthropoids',
+        //                     items: [{
+        //                             text: 'Apes',
+        //                             items: [{
+        //                                     text: 'Lesser Apes'
+        //                                 },
+        //                                 {
+        //                                     text: 'Greater Apes'
+        //                                 }
+        //                             ]
+        //                         },
+        //                         {
+        //                             text: 'Monkeys'
+        //                         }
+        //                     ]
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             text: 'Prosimii'
+        //         }
+        //     ]
+        // };
+
+        $scope.data = {
+            text: 'Primates',
+            items: [
+                {
+                    text: 'Anthropoidea',
+                    items: [
+                        {
+                            text: 'New World Anthropoids'
+                        },
+                        {
+                            text: 'Old World Anthropoids',
+                            items: [
+                                {
+                                    text: 'Apes',
+                                    items: [
+                                        {
+                                            text: 'Lesser Apes'
+                                        },
+                                        {
+                                            text: 'Greater Apes'
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: 'Monkeys'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    text: 'Prosimii'
+                }
+            ]
+        };
+
+
         /*
                 function showEmployeeModal() {
                     try {

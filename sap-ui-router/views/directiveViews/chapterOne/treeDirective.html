@@ -1,0 +1,19 @@
+<!-- <div>
+    <span>val.text</span>
+    <button ng-click="deleteSubtree()">
+        Delete
+    </button>
+    <ul ng-if="isParent" style="margin-left: 30px">
+        <li ng-repeat="item in val.items">
+            <tree-structure val="item" parent-data="val.items"></tree-structure>
+        </li>
+    </ul>
+</div> -->
+
+<span>{{ val.text }}</span>
+<button ng-click="deleteSubtree()">delete</button>
+<ul ng-if="isParent" style="margin-left:30px">
+    <li ng-repeat="item in val.items">
+        <tree val="item" parent-data="val.items"></tree>
+    </li>
+</ul>
