@@ -14,7 +14,7 @@
             background: #ccc;
             margin-top: 500px;
         }
-        
+
         .socialmenu {
             bottom: 0;
             left: 0;
@@ -30,84 +30,9 @@
 </head>
 
 <body>
-    <!-- <div class="socialmenu"></div>
-    <div class="content">
-        <h1>dkdjf dkfdkfjkd fkdjfkdfj</h1>
-    </div>
-    <div class="content">
-
-    </div>
-    <div class="content">
-
-    </div> -->
-
-    <form id="myForm" name="theForm">
-        <input type="text" name="user" id="user" value="Arsalan" />
-        <input type="text" name="occopation" id="occopation" value="doctor" />
-        <input type="number" name="age" id="age" value="27" />
-        <input type="text" name="email" id="email" value="johndoe@test.com" />
-        <textarea name="message" id="message">Enter Your Message Her</textarea>
-        <button type="submit" onClick="getSubmitValue()">Place Order</button>
-    </form>
-
     <script src="node_modules/jquery/jquery.min.js"></script>
+    <script></script>
 
-
-    <script>
-        function getSubmitValue(params) {
-            var formObject = document.theForm;
-            var itemnamehere = [];
-            if (formObject.length) {
-                for (var i = 0; i < formObject.length; i++) {
-                    if (formObject[i].value !== "") {
-                        itemnamehere.push(formObject[i].value);
-                    }
-                }
-            } else {
-                alert("Please check your form input value")
-            }
-        }
-
-        /*
-                var contentpost = $('.content'),
-                    socialmenu = $('.socialmenu'),
-                    $window = $(window),
-                    showMenu = function() {
-                        if (isHidden) {
-                            isHidden = false;
-                            socialmenu.show();
-                        }
-                    },
-                    hideMenu = function() {
-                        if (!isHidden) {
-                            isHidden = true;
-                            socialmenu.hide();
-                        }
-                    },
-                    isHidden = true,
-                    scrollTop;
-                if (contentpost.length) {
-                    $window.on('scroll', function() {
-                        var flag = false;
-                        scrollTop = $window.scrollTop();
-                        $.each(contentpost, function(i, content) {
-                            var $content = $(content),
-                                offset = $content.offset().top;
-                            if (offset < scrollTop && offset + $content.height() > scrollTop) {
-                                flag = true;
-                                return false;
-                            }
-                        });
-
-                        if (flag) {
-                            showMenu();
-                        } else {
-                            hideMenu();
-                        }
-                    });
-                }
-                */
-    </script>
 </body>
 
 </html>
