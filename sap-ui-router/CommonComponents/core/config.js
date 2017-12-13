@@ -196,6 +196,8 @@ var productionStatus = {
     Logout: 4
   
 };
+
+
 app.constant("appConstants", {
     'url': url,
     'messageCode': messageCode,

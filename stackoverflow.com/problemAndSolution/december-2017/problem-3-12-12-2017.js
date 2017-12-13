@@ -30,7 +30,6 @@ const names = [{
 
 const result = [...names.reduce((mp, o) => {
     if (!mp.has(o._id)) {
-
         mp.set(o._id, Object.assign({ count: 0 }, o));
         mp.get(o._id).count++;
     }
