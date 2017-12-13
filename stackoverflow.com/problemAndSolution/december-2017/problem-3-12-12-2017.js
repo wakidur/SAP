@@ -44,7 +44,9 @@ console.log(result);
 
 //In brief...I would like to receive the result:
 
-// result = [{ x: 1, y: 2, count: 3 }, { x: 3, y: 4, count: 2 }, { x: 3, y: 12, count: 1 }]
+// result = [
+{ x: 1, y: 2, count: 3 }, { x: 3, y: 4, count: 2 }, { x: 3, y: 12, count: 1 }
+]
 
 /*------------- end question section -----------------*/
 
@@ -77,3 +79,62 @@ const resultOne = Object.values(arrayOfObject.reduce((newObject, e) => {
     return newObject;
 }, {}));
 console.log(resultOne);
+
+
+
+
+You can use `Object.values()`
+and `reduce()`
+methods to
+return new array of objects.
+
+<!-- begin snippet: js hide: false console: true babel: true -->
+
+<!-- language: lang-js -->
+
+const array = [
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 12 }
+]
+
+const result = Object.values(array.reduce((r, e) => {
+    let k = `${e.x}|${e.y}`;
+    if (!r[k]) r[k] = {...e, count: 1 }
+    else r[k].count += 1;
+    return r;
+}, {}))
+
+console.log(result)
+
+<!-- end snippet -->
+
+Here is the solution with `Map`
+and spread syntax `...`
+
+<!-- begin snippet: js hide: false console: true babel: true -->
+
+<!-- language: lang-js -->
+
+const array = [
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 12 }
+]
+
+const result = [...array.reduce((r, e) => {
+    let k = `${e.x}|${e.y}`;
+    if (!r.has(k)) r.set(k, {...e, count: 1 })
+    else r.get(k).count++
+        return r;
+}, new Map).values()]
+
+console.log(result)
+
+<!-- end snippet -->
