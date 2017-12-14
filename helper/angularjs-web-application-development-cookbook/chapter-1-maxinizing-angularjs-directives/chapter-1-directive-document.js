@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-
+    // https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js
     angular
         .module('module')
         .directive('myDirective', constructor);
