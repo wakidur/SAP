@@ -1,4 +1,25 @@
+// (function(){
+//     'use strict';
+
+//     angular
+//         .module('module')
+//         .factory('factory', factory)
+
+//     factory.$inject = ['$http'];
+
+//     function factory($http) {
+//         var service = {
+//             getData: getData
+//         };
+
+//         return service;
+
+//         function getData() { }
+//     }
+// })();
+
 var serviceName = appConstants.url.adminRemoteUrl + 'Admin/';
+
 function _addHttpHeader() {
 
 
@@ -36,10 +57,10 @@ function getUserType(isRefresh) {
             url: serviceName + 'GetUserType',
             method: "GET",
             params: {}
-        }).then(function (results) {
+        }).then(function(results) {
             //adminCache.put("HrEmployees", results.data);
             deferred.resolve(results.data);
-        }).catch(function (ex) {
+        }).catch(function(ex) {
             throw ex;
         });
         //}

@@ -66,6 +66,8 @@ var array = [
 
                 if (!mymap[label]) {
                     mymap[label] = ++n;
+                    console.dir(mymap[label]);
+
                 }
                 console.log(value.concat([mymap[label]]))
                 return value.concat([mymap[label]]);
@@ -83,7 +85,12 @@ var array = [
             ['NY', '2016-10-01'],
             ['LA', '2017-12-01'],
             ['LA', '2017-12-01'],
-            ['LA', '2017-12-01']
+            ['LA', '2017-12-01'],
+            ['NY', '2016-10-01'],
+            ['NY', '2016-10-01'],
+            ['BA', '2016-10-10'],
+            ['BA', '2016-10-10'],
+            ['QA', '2016-13-10'],
         ];
 
         comparingElementsWitOther(xs);

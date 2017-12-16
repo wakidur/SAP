@@ -1,0 +1,18 @@
+let
+======================||***const***||========================
+
+======================||***in***||===========================
+
+Defination: The in operator returns true if the specified property is in the specified object or its prototype chain.
+Syntax : prop in object
+    prop :A string or symbol representing a property name or array index (non-symbols will be coerced to strings).
+    object : Object to check if it (or its prototype chain) contains the property with specified name.
+Description:
+// Arrays
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+0 in trees        // returns true
+'bay' in trees    // returns false (you must specify the 
+                  // index number, not the value at that index)
+// Custom objects
+var mycar = {make: 'Honda', model: 'Accord', year: 1998};
+'make' in mycar  // returns true

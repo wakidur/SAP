@@ -3,7 +3,7 @@
  * ***Javascript - Counting duplicates in object array in es6**
  */
 //I have object array like this.
-
+/*
 const array = [
     { x: 1, y: 2 },
     { x: 3, y: 4 },
@@ -11,10 +11,10 @@ const array = [
     { x: 3, y: 4 },
     { x: 1, y: 2 },
     { x: 3, y: 12 }
-];
+];*/
 //I want to count duplicates objects and store the count as new object field.
 //I found this snippet and it work great but it not exactly what i need.
-const names = [{
+/*const names = [{
         _id: 1
     },
     {
@@ -36,7 +36,7 @@ const result = [...names.reduce((mp, o) => {
     return mp;
 }, new Map).values()];
 console.log(result);
-
+*/
 
 //It works with object with one field _id. In my case there are two, x and y
 
@@ -45,13 +45,13 @@ console.log(result);
 //In brief...I would like to receive the result:
 
 // result = [
-{ x: 1, y: 2, count: 3 }, { x: 3, y: 4, count: 2 }, { x: 3, y: 12, count: 1 }
+/*{ x: 1, y: 2, count: 3 }, { x: 3, y: 4, count: 2 }, { x: 3, y: 12, count: 1 }
 ]
-
+*/
 /*------------- end question section -----------------*/
 
 // You can use Object.values() and reduce() methods to return new arrray of objects.
-
+/*
 const arrayOfObject = [
     { x: 1, y: 2 },
     { x: 3, y: 4 },
@@ -80,18 +80,17 @@ const resultOne = Object.values(arrayOfObject.reduce((newObject, e) => {
 }, {}));
 console.log(resultOne);
 
+*/
 
 
-
-You can use `Object.values()`
+/*You can use `Object.values()`
 and `reduce()`
 methods to
 return new array of objects.
+*/
 
-<!-- begin snippet: js hide: false console: true babel: true -->
-
-<!-- language: lang-js -->
-
+// setp-1
+/*
 const array = [
     { x: 1, y: 2 },
     { x: 3, y: 4 },
@@ -110,15 +109,13 @@ const result = Object.values(array.reduce((r, e) => {
 
 console.log(result)
 
-<!-- end snippet -->
-
+*/
+/*
 Here is the solution with `Map`
 and spread syntax `...`
-
-<!-- begin snippet: js hide: false console: true babel: true -->
-
-<!-- language: lang-js -->
-
+*/
+// setp-2
+/*
 const array = [
     { x: 1, y: 2 },
     { x: 3, y: 4 },
@@ -136,5 +133,72 @@ const result = [...array.reduce((r, e) => {
 }, new Map).values()]
 
 console.log(result)
+*/
+// step - 3
+/*
+One way to do it would be to create an index mapping both x and y to the result entry.
+*/
 
-<!-- end snippet -->
+let index = {};
+let result = [];
+const array = [
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 12 }
+];
+array.forEach(point => {
+    debugger
+    let key = '' + point.x + '||' + point.y;
+    if (key in index) {
+        debugger
+        index[key].count++;
+    } else {
+        let newEntry = {
+            x: point.x,
+            y: point.y,
+            count: 1
+        };
+        index[key] = newEntry;
+        debugger;
+        result.push(newEntry);
+        debugger;
+    }
+});
+console.log(result);
+
+
+function countDuplicatesObjects(arrayOfObject) {
+    let index = {};
+    let result = [];
+    arrayOfObject.forEach(point => {
+        let key = '' + point.x + '||' + point.y;
+        if (key in index) {
+            debugger
+            index[key].count++;
+        } else {
+            let newEntry = {
+                x: point.x,
+                y: point.y,
+                count: 1
+            };
+            index[key] = newEntry;
+            debugger
+            result.push(newEntry);
+            debugger
+
+        }
+    });
+    return result;
+}
+const array = [
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 4 },
+    { x: 1, y: 2 },
+    { x: 3, y: 12 }
+];
+countDuplicatesObjects(array);
