@@ -13,3 +13,12 @@ https://wrapbootstrap.com/themes/admin?branch=4.x
 
 ui-select
 https://github.com/angular-ui/ui-select
+
+
+ui-router
+/**
+    * https://ui-router.github.io/ng1/tutorial/hellosolarsystem
+    * https://github.com/angular-ui/ui-router/wiki/Nested-States-%26-Nested-Views
+    * http://plnkr.co/edit/gmtcE2?p=preview
+    * https://github.com/marklagendijk/ui-router.stateHelper
+*/
