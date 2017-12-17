@@ -48,15 +48,31 @@
         })();
     </script>
     <script src="building-a-simple-element-directive.js"></script>
+    <script src="working-through-the-directive-spectrum-the-element-directive.js"></script>
 </head>
 
 <body>
     <div class="content" ng-controller="appMainController">
-        <h1>Name : {{ObjectValue.id}}</h1>
-        <h2>Name : {{ObjectValue.name}}</h2>
-        <!-- Building a simple element directive -->
-        <building-simple-element></building-simple-element>
+        <!-- <h1>Name : {{ObjectValue.id}}</h1>
+        <h2>Name : {{ObjectValue.name}}</h2> -->
 
+        <!-- Building a simple element directive -->
+        <!-- <building-simple-element></building-simple-element> -->
+        <!-- working-through-the-directive-spectrum-the-element-directive -->
+        <!-- <spectrum-element some-attr="myvalue"></spectrum-element> -->
+        <!-- Working through the directive spectrum - The Element Directive - with "replace" property  -->
+        <!-- <spectrum-element-replace data-attr-value="myValue"></spectrum-element-replace> -->
+        <!-- Working through the directive spectrum - The Attribute Directive -->
+        <!-- <div spectrum-attribute="avater" data-attr-dir-value="myAttribute"></div spectrum-attribute> -->
+        <!-- Working through the directive spectrum - The Class Directive -->
+        <!-- <div class="spectrum-class: cval; normal-class" class-dir-value="myvalue"></div> -->
+        <!-- Manipulating the DOM -->
+        <!-- <div>
+            <button data-counter-dir></button>
+            <button data-counter-dir data-incr="5"></button>
+        </div> -->
+        <!-- Linking directives  -->
+        <div buffer="300" vector-text></div>
     </div>
 
 
