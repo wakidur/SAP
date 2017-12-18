@@ -38,8 +38,18 @@ var grayLightest = '#f8f9fa';
   configConfig.$inject = ['cfpLoadingBarProvider'];
 
   function configConfig(cfpLoadingBarProvider) {
+    
+    //Turn the loading bar on or off:
+     //cfpLoadingBarProvider.includeBar = false;
+    //Customize the template:
+    //cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Loading...</div>';
+    // Turn the spinner on or off:
     cfpLoadingBarProvider.includeSpinner = false;
     cfpLoadingBarProvider.latencyThreshold = 1;
+
+    //Position the template:
+    //cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
+    //cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Custom Loading Message...</div>';
 
   }
 }());
