@@ -2649,3 +2649,32 @@ for (const user of usrNameList) {
     }
 
 }
+
+// -----------------------------------
+const mapped = structured.map(x => {
+    const { usr_name, date } = x;
+    x.date = date.map(dateObj => {
+      return {
+        date: dateObj.date,
+        count: usrNameList.filter((y) => {
+          return y.usr_name === usr_name && y.date.indexOf(dateObj.date) >= 0
+        }).length
+      }
+    })
+  
+    return x;
+  });
+  
+const mapped = structured.map( x => {
+    const { usr_name, date } =  x;
+    x.date = date.map( dateObj => {
+        return {
+            date : dateObj.date,
+            count: usrNameList.filter( (y) => {
+                return y.usr_name === usr_name && y.date.indexOf(dateObj.date) >= 0;
+
+            }).length
+        }
+    })
+    return x;
+})
