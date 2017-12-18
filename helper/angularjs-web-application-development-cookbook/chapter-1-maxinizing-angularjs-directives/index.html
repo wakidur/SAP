@@ -31,14 +31,21 @@
                 .module('appModule')
                 .controller('appMainController', controller)
 
-            controller.$inject = ['$location', '$scope'];
+            controller.$inject = ['$location', '$scope', '$log'];
 
-            function controller($location, $scope) {
+            function controller($location, $scope, $log) {
                 /* jshint validthis:true */
                 var vm = this;
                 $scope.ObjectValue = {
                     name: "Wakidur",
                     id: 1
+                }
+
+                // Interfacing with a directive using isolate scope - @
+                $scope.outerval = "myData";
+                $scope.outerval = "2";
+                $scope.func = function() {
+                    $log.log("invoked!");
                 }
 
                 activate();
@@ -73,6 +80,23 @@
         </div> -->
         <!-- Linking directives  -->
         <div buffer="300" vector-text></div>
+
+        <!-- Interfacing with a directive using isolate scope - @ -->
+        <div>
+            <p>Outer: {{outerval}}</p>
+            <p iso myattr="{{outerval}}"></p>
+        </div>
+        <!-- Interfacing with a directive using isolate scope - = -->
+        <div>
+            <p>Outer: {{outerval}}</p>
+            <p iso myattr="{{outerval}}"></p>
+        </div>
+        <!-- Interfacing with a directive using isolate scope - & -->
+        <div>
+            <p>Outer: {{outerval}}</p>
+            <p iso myattr="func()"></p>
+        </div>
+
     </div>
 
 

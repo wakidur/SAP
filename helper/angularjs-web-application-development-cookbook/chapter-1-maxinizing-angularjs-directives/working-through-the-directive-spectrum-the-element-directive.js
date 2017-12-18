@@ -194,26 +194,26 @@
             // initialize the scope variable
             $rootScope.heading = '';
             // set event listener and handler
+           
+            $document.on('mousemove', (event) => {
+                // Mousemove event does not start $digest,
+                // scope.$apply does this manually
+                $rootScope.$apply( () => {
+                    $log.log(event);
+                    if( event.pageY < 300 ) {
+                        //$log.log(event.pageY)
+                        $rootScope.heading = 'N';
+                    } else {
+                        $rootScope.heading = 'S';
+                    }
+                    if ( event.pageX < 300 ) {
+                        $rootScope.heading += 'W';
+                    } else {
+                        $rootScope.heading  += 'E';
+                    }
+                });
+            });
             /*
-                        $document.on('mousemove', (event) => {
-                            // Mousemove event does not start $digest,
-                            // scope.$apply does this manually
-                            $rootScope.$apply( () => {
-                                $log.log(event);
-                                if( event.pageY < 300 ) {
-                                    //$log.log(event.pageY)
-                                    $rootScope.heading = 'N';
-                                } else {
-                                    $rootScope.heading = 'S';
-                                }
-                                if ( event.pageX < 300 ) {
-                                    $rootScope.heading += 'W';
-                                } else {
-                                    $rootScope.heading  += 'E';
-                                }
-                            });
-                        });
-            */
             element.on('mousemove', (event) => {
 
                 // Mousemove event does not start $digest,
@@ -232,6 +232,121 @@
                     }
                 });
             });
+            */
         }
     }
+})();
+
+/*Interfacing with a directive using isolate scope -*/
+(function () {
+    'use strict';
+
+    angular
+        .module ('appModule')
+        .directive ('iso', isoConstructor);
+
+        isoConstructor.$inject = ['$window'];
+
+    function isoConstructor($window) {
+        // Usage:
+        //     <div iso></div>
+        // Creates:
+        //
+        var directive = {
+            link: link,
+            restrict: 'EA',
+            template: 'Inner: {{ innerval }}',
+            scope: {
+                /*Interfacing with a directive using isolate scope - @*/
+                innerval: '@myattr'
+                /*Interfacing with a directive using isolate scope - =*/
+                //innerval: '=myattr'
+                /*Interfacing with a directive using isolate scope - &*/
+                //innerval: '&myattr'
+            }
+        };
+        return directive;
+        
+        function link(scope, element, attrs) {
+            /*Interfacing with a directive using isolate scope - &*/
+            //scope.innerval();
+        }
+    }
+
+})();
+/*Interaction between nested directives */
+
+(function () {
+    'use strict';
+
+    angular
+        .module ('appModule')
+        .directive ('parentDir', parentDirConstructor);
+
+        parentDirConstructor.$inject = ['$window', '$log'];
+
+    function parentDirConstructor($window, $log) {
+        // Usage:
+        //     <div parent-dir></div>
+        // Creates:
+        //
+        var directive = {
+            controller: constructor,
+            link: link,
+            restrict: 'EA',
+
+            
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+        }
+        function constructor() {
+
+            this.identify = identify;
+
+            function identify(params) {
+                $log.log('Parent!');
+                
+            }
+        }
+    }
+
+})();
+(function () {
+    'use strict';
+
+    angular
+        .module ('appModule')
+        .directive ('siblingDir', siblingDirConstructor);
+
+        siblingDirConstructor.$inject = ['$window', '$log'];
+
+    function siblingDirConstructor($window, $log) {
+        // Usage:
+        //     <div parent-dir></div>
+        // Creates:
+        //
+        var directive = {
+            controller: constructor,
+            link: link,
+            restrict: 'EA',
+
+            
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+        }
+        function constructor() {
+
+            this.identify = identify;
+
+            function identify(params) {
+                $log.log('Sibling!');
+                
+            }
+        }
+    }
+
 })();
