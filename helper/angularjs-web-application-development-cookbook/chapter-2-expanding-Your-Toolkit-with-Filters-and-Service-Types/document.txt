@@ -1,0 +1,64 @@
+there are two kinds: data filters and search filters.
+1. data filters
+2. search filters
+
+The AngularJS service types can appear
+1. values,
+2. constants,
+3. factories,
+4. services,
+5. providers.
+/********************* ***************** ***** /
+
+1. Using the uppercase and lowercase filters
+    1. uppercase
+        <p>{{ data.text | uppercase }}</p>
+    2. lowercase
+        <p>{{ data.text | lowercase }}</p>
+
+example: 
+$scope.data = {
+    text: 'The QUICK brown Fox JUMPS over The LAZY dog',
+    nums: '0123456789',
+    specialChars: '!@#$%^&*()',
+    whitespace: ' '
+};
+<p>{{ data.text | uppercase }}</p>
+<p>{{ data.text | lowercase }}</p>
+How it works....
+The uppercase and lowercase filters are essentially simple AngularJS wrappers used
+for native string methods toUpperCase() and toLowerCase() available in JavaScript.
+These filters ignore
+   number characters,
+   special characters,
+   whitespace
+---------------------------
+2. Using the number and currency filters
+   3. number
+        <p>{{ data.bignum | number }}</p>
+   4. currency
+        <p>{{ 1234.56 | currency }}</p>
+they can be used to format numbers into normalized strings. They also accept optional arguments that can further customize how the filters work.
+
+example:
+$scope.data = {
+    bignum: 1000000,
+    num: 1.0,
+    smallnum: 0.9999,
+    tinynum: 0.0000001
+};
+
+<p>{{ data.bignum | number }}</p>
+Filters can take arguments to further customize the output. The number filter takes a fractionSize argument, which defines how many decimal places it
+will round to, defaulting to 3.
+<!—- data | number : fractionSize(optional) -->
+<p>{{ data.smallnum | number : 4 }}</p>
+<p>{{ data.tinynum | number: 7 }}</p>
+<p>{{ 012345.6789 | number : 2 }}</p>
+<!—- data | currency : symbol(optional) -->
+<p>{{ 1234.56 | currency }}</p>
+
+
+
+
+
