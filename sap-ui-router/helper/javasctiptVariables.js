@@ -1,6 +1,7 @@
-//app is being used for application module. all business module will be loaded into app dynamically.
-//when someone click menu, then clicked menu information is stored into pageInfo
-//for using whole application.
+// webapi list 
+var webApi = {
+    adminLocalUrl : 'http://127.0.0.5500/api'
+}
 var pageInfo = {
     id: '',
     locationID: '',

@@ -27,6 +27,7 @@
 
 // directives that have '=' binding, changing scope value causes error if not specified(optional)
 // https://github.com/angular/angular.js/issues/1435
+// http://merrickchristensen.com/articles/angular-cheat-sheet.html
 (function () {
     'use strict';
 

@@ -4,7 +4,7 @@
  * 
  */
 
-192.168 .11 .67
+
 /**
  * Syntax
  * Object.defineProperty(obj, prop, descriptor);
