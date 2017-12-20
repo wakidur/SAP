@@ -18,12 +18,7 @@ var pageInfo = {
 //before login succesfully, user information is stored into userInfo
 var userInfo = {
     locationID: 0,
-    userPKID: 0,
-    empPKID: 0,
-    employeeID: '',
     userName: "",
-    companyID: 0,
-    company: "",
     password: ""
 };
 //after login succesfully, user information is stored into userInfo

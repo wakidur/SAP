@@ -76,6 +76,32 @@ will round to, defaulting to 3.
     <p>{{ data.unix | date }}</p>
     <p>{{ data.iso | date }}</p>
     <p>{{ data.date | date }}</p>
+    /* AngularJS matches the expression components
+    to datetime components, then stringifies as specified */
+    <p>{{ data.unix | date : "EEEE 'at' H:mma" }}</p>
+    <p>{{ data.iso | date : "longDate" }}</p>
+    <p>{{ data.date | date : "M/d H:m:s.sss" }}</p>
+
+---------------------------------------
+4. Debugging using the json filter
+    6. JSON
+        <pre>{{ user | json }}</pre>
+    The json filter simply wraps the JSON.stringify() method in JavaScript in order to
+    provide you with an easy way to spit out formatted objects for inspection. When the filtered object is fed into a <pre> tag, the JSON string will be properly indented in the rendered
+template. Properties
+    Example:
+    $scope.user = {
+        id: 123,
+        name: {
+            first: 'Jake',
+            last: 'Hsu'
+        },
+        username: 'papatango',
+        friendIds: [5, 13, 3, 1, 2, 8, 21],
+        // properties prefixed with $$ will be excluded
+        $$no_show: 'Hide me!'
+    };
+
 
 
 
