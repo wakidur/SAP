@@ -34,6 +34,7 @@ These filters ignore
    whitespace
 ---------------------------
 2. Using the number and currency filters
+
    3. number
         <p>{{ data.bignum | number }}</p>
    4. currency
@@ -57,6 +58,26 @@ will round to, defaulting to 3.
 <p>{{ 012345.6789 | number : 2 }}</p>
 <!—- data | currency : symbol(optional) -->
 <p>{{ 1234.56 | currency }}</p>
+
+
+-----------------------------------
+3. Using the date filter
+    5.date
+        <p>{{ data.unix | date }}</p>
+    The date filter is an extremely robust and customizable filter that can handle many different kinds of raw date strings and convert them into human readable versions.
+
+    Example:
+    $scope.data = {
+        unix: 1394787566535,
+        iso: '2014-03-14T08:59:26Z',
+        date: new Date(2014, 2, 14, 1, 59, 26, 535)
+    };
+
+    <p>{{ data.unix | date }}</p>
+    <p>{{ data.iso | date }}</p>
+    <p>{{ data.date | date }}</p>
+
+
 
 
 
