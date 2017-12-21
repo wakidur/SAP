@@ -1,0 +1,111 @@
+there are two kinds: data filters and search filters.
+1. data filters
+2. search filters
+
+The AngularJS service types can appear
+1. values,
+2. constants,
+3. factories,
+4. services,
+5. providers.
+/********************* ***************** ***** /
+
+1. Using the uppercase and lowercase filters
+    1. uppercase
+        <p>{{ data.text | uppercase }}</p>
+    2. lowercase
+        <p>{{ data.text | lowercase }}</p>
+
+example: 
+$scope.data = {
+    text: 'The QUICK brown Fox JUMPS over The LAZY dog',
+    nums: '0123456789',
+    specialChars: '!@#$%^&*()',
+    whitespace: ' '
+};
+<p>{{ data.text | uppercase }}</p>
+<p>{{ data.text | lowercase }}</p>
+How it works....
+The uppercase and lowercase filters are essentially simple AngularJS wrappers used
+for native string methods toUpperCase() and toLowerCase() available in JavaScript.
+These filters ignore
+   number characters,
+   special characters,
+   whitespace
+---------------------------
+2. Using the number and currency filters
+
+   3. number
+        <p>{{ data.bignum | number }}</p>
+   4. currency
+        <p>{{ 1234.56 | currency }}</p>
+they can be used to format numbers into normalized strings. They also accept optional arguments that can further customize how the filters work.
+
+example:
+$scope.data = {
+    bignum: 1000000,
+    num: 1.0,
+    smallnum: 0.9999,
+    tinynum: 0.0000001
+};
+
+<p>{{ data.bignum | number }}</p>
+Filters can take arguments to further customize the output. The number filter takes a fractionSize argument, which defines how many decimal places it
+will round to, defaulting to 3.
+<!—- data | number : fractionSize(optional) -->
+<p>{{ data.smallnum | number : 4 }}</p>
+<p>{{ data.tinynum | number: 7 }}</p>
+<p>{{ 012345.6789 | number : 2 }}</p>
+<!—- data | currency : symbol(optional) -->
+<p>{{ 1234.56 | currency }}</p>
+
+
+-----------------------------------
+3. Using the date filter
+    5.date
+        <p>{{ data.unix | date }}</p>
+    The date filter is an extremely robust and customizable filter that can handle many different kinds of raw date strings and convert them into human readable versions.
+
+    Example:
+    $scope.data = {
+        unix: 1394787566535,
+        iso: '2014-03-14T08:59:26Z',
+        date: new Date(2014, 2, 14, 1, 59, 26, 535)
+    };
+
+    <p>{{ data.unix | date }}</p>
+    <p>{{ data.iso | date }}</p>
+    <p>{{ data.date | date }}</p>
+    /* AngularJS matches the expression components
+    to datetime components, then stringifies as specified */
+    <p>{{ data.unix | date : "EEEE 'at' H:mma" }}</p>
+    <p>{{ data.iso | date : "longDate" }}</p>
+    <p>{{ data.date | date : "M/d H:m:s.sss" }}</p>
+
+---------------------------------------
+4. Debugging using the json filter
+    6. JSON
+        <pre>{{ user | json }}</pre>
+    The json filter simply wraps the JSON.stringify() method in JavaScript in order to
+    provide you with an easy way to spit out formatted objects for inspection. When the filtered object is fed into a <pre> tag, the JSON string will be properly indented in the rendered
+template. Properties
+    Example:
+    $scope.user = {
+        id: 123,
+        name: {
+            first: 'Jake',
+            last: 'Hsu'
+        },
+        username: 'papatango',
+        friendIds: [5, 13, 3, 1, 2, 8, 21],
+        // properties prefixed with $$ will be excluded
+        $$no_show: 'Hide me!'
+    };
+
+
+
+
+
+
+
+

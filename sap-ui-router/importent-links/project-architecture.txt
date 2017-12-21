@@ -1,3 +1,40 @@
+**************** Login *******************
+form
+    onsubmit="return validateForm()"
+        input (userName)
+            data-placement="right"
+            title="Please enter your username"
+            type="text" id="userName" 
+            autocomplete="off" 
+            class="form-control input-lg" 
+            maxlength="100" 
+            autofocus 
+            tabindex="1" 
+            spellcheck="false" 
+            onkeyup=" errorMsg()" 
+            placeholder="User Name" 
+            value="" 
+        input (password)
+            data-placement="right" 
+            title="Please enter your password" 
+            type="password" 
+            id="password" 
+            class="form-control input-lg" 
+            maxlength="50" 
+            tabindex="2" 
+            placeholder="Password" 
+            value="" 
+            onkeyup=" errorMsg()"
+        button (submit)
+            id="btnLogIn" 
+            type="submit" 
+            class="btn btn-lg btn-block btn-info" 
+            onclick="login()"
+
+
+
+
+
 WebClient
     CommonComponents
     Content
