@@ -5,10 +5,6 @@ var webApi = {
 var pageInfo = {
     id: '',
     locationID: '',
-    applicationID: '',
-    parentID: '',
-    moduleName: '',
-    pageTitle: '',
     serialNo: '',
     pageType: '',
     imageName: '',

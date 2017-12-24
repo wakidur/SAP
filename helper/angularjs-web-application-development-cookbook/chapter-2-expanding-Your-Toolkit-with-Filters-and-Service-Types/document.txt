@@ -87,8 +87,9 @@ will round to, defaulting to 3.
     6. JSON
         <pre>{{ user | json }}</pre>
     The json filter simply wraps the JSON.stringify() method in JavaScript in order to
-    provide you with an easy way to spit out formatted objects for inspection. When the filtered object is fed into a <pre> tag, the JSON string will be properly indented in the rendered
-template. Properties
+provide you with an easy way to spit out formatted objects for inspection. When the filtered object is fed into a <pre> tag, the JSON string will be properly indented in the rendered template. Properties prefixed with $$ will be skipped by the serializer as this notation is used internally in AngularJS as a private identifier.
+
+
     Example:
     $scope.user = {
         id: 123,
@@ -101,6 +102,78 @@ template. Properties
         // properties prefixed with $$ will be excluded
         $$no_show: 'Hide me!'
     };
+
+
+-----------------------------------------------
+5. Using data filters outside the template
+If, however, the number filter is needed
+to be used in a controller, $filter can be injected and used as follows
+
+angular.module('myApp', []).controller('Ctrl', function ($scope, $filter) {
+    $scope.val = 1234.56789;
+    $scope.filteredVal = $filter('number')($scope.val, 4);
+});
+<div ng-controller="Ctrl">
+    <p>{{ val | number : 4 }}</p>
+    <p>{{ filteredVal }}</p>
+</div>
+----------------------------------------------
+6. Using built-in search filters
+angular.module('myApp', []).controller('Ctrl', function ($scope) {
+    $scope.users = [
+    'Albert Pai',
+    'Jake Hsu',
+    'Jack Hanford',
+    'Scott Robinson',
+    'Diwank Singh'
+    ];
+});
+
+The default search filter is used in the template in the same fashion as a data filter, but invoked with the pipe operator. It takes a mandatory argument, that is, the object that the filter will compare against.
+
+<div ng-app="myApp">
+    <div ng-controller="Ctrl">
+        <input type="text" ng-model="search.val" />
+        <p ng-repeat="user in users | filter : search.val">{{ user }}</p>
+    </div>
+</div>
+
+----------------------------------------
+7. Chaining filters
+When filtering enumerable objects, AngularJS provides two built-in enumeration filters that are commonly used in conjunction with the search filters: limitTo and orderBy.
+
+angular.module('myApp', []).controller('Ctrl', function ($scope) {
+    $scope.users = [
+        {name: 'Albert Pai'},
+        {name: 'Jake Hsu'},
+        {name: 'Jack Hanford'},
+        {name: 'Scott Robinson'},
+        {name: 'Diwank Singh'}
+    ];
+});
+
+<div ng-app="myApp">
+    <div ng-controller="Ctrl">
+        <input type="text" ng-model="search.val" />
+        <!—- simple repeater filtering against search.val -->
+        <p ng-repeat="user in users | filter : search.val">{{ user.name }}</p>
+    </div>
+</div>
+
+<div ng-app="myApp">
+    <div ng-controller="Ctrl">
+        <input type="text" ng-model="search.val" />
+        <!—- simple repeater filtering against search.val -->
+        <p ng-repeat="user in users | filter : search.val">{{ user.name }}</p>
+        <hr />
+        <p ng-repeat="user in users | filter : search.val | limitTo: 2"> {{ user.name }}
+        </p>
+        <hr />
+        <p ng-repeat="user in users | filter : search.val | orderBy: 'name' | limitTo : 3">{{ user.name }}</p>
+    </div>
+</div>
+
+How it works…
 
 
 
