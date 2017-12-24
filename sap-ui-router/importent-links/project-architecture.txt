@@ -1,6 +1,7 @@
 **************** Login *******************
 form
     onsubmit="return validateForm()"
+
         input (userName)
             data-placement="right"
             title="Please enter your username"

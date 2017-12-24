@@ -22,3 +22,6 @@ ui-router
     * http://plnkr.co/edit/gmtcE2?p=preview
     * https://github.com/marklagendijk/ui-router.stateHelper
 */
+
+
+https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
