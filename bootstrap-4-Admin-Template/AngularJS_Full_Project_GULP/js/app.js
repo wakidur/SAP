@@ -20,6 +20,7 @@ var grayLightest = '#f8f9fa';
   angular.module('app', [
     'ui.router',
     'oc.lazyLoad',
+    'pascalprecht.translate',
     'ncy-angular-breadcrumb',
     'angular-loading-bar'
   ]);
@@ -100,6 +101,7 @@ var grayLightest = '#f8f9fa';
 
 //  main 
 // Default colors
+/*
 var brandPrimary =  '#20a8d8';
 var brandSuccess =  '#4dbd74';
 var brandInfo =     '#63c2de';
@@ -133,3 +135,4 @@ angular
         $rootScope.$state = $state;
         return $rootScope.$stateParams = $stateParams;
     }]);
+    */

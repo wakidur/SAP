@@ -1,5 +1,4 @@
 // controller.js
-// controller.js
 angular
     .module('app')
     .controller('languageCtrl', languageCtrl);

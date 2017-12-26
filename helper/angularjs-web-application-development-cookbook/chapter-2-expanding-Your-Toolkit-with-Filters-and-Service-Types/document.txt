@@ -174,9 +174,32 @@ angular.module('myApp', []).controller('Ctrl', function ($scope) {
 </div>
 
 How it works…
+---------------------------26-12-2017--------------------
+1. Creating custom data filters
+truncate(অগ্রভাগ ছাঁটিয়া দেত্তয়া)
+guaranteed(নিশ্চিত)
+whitespace(অমুদ্রণ অঞ্চল)
+The filter you wish to build accepts a string argument and returns another string. For now, the
+filter will truncate the string to 100 characters and append an ellipsis at the point of truncation:
 
+.filter('simpletruncate', function(){
+    // the text parament
+    return function(text) {
+        var truncated = text.slice(0, 100);
+        if(text.length > 100){
+            truncated += '...';
+        }
+        return truncated
+    };
+});
 
-
+<div ng-app="myApp">
+    <div ng-controller="Ctrl">
+        <p>{{ myText | simpletruncate }}</p>
+    </div>
+</div>
+------------------------------------------
+2. Creating custom search filters
 
 
 

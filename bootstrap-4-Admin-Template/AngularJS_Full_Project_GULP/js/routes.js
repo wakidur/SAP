@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
     angular
         .module('app')
@@ -32,7 +32,7 @@
                     skip: true
                 },
                 resolve: {
-                    loadCSS: ['$ocLazyLoad', function($ocLazyLoad) {
+                    loadCSS: ['$ocLazyLoad', function ($ocLazyLoad) {
                         // you can lazy load CSS files
                         return $ocLazyLoad.load([{
                             serie: true,
@@ -44,7 +44,7 @@
                             files: ['css/simple-line-icons.css']
                         }]);
                     }],
-                    loadPlugin: ['$ocLazyLoad', function($ocLazyLoad) {
+                    loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
                         // you can lazy load files for an existing module
                         return $ocLazyLoad.load([{
                             serie: true,
@@ -69,7 +69,7 @@
                     subtitle: 'Welcome to ROOT powerfull Bootstrap & AngularJS UI Kit'
                 },
                 resolve: {
-                    loadPlugin: ['$ocLazyLoad', function($ocLazyLoad) {
+                    loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
                         // you can lazy load files for an existing module
                         return $ocLazyLoad.load([{
                             serie: true,
@@ -80,7 +80,7 @@
                             ]
                         }, ]);
                     }],
-                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                         // you can lazy load controllers
                         return $ocLazyLoad.load({
                             files: ['js/controllers/main.js']
@@ -91,11 +91,11 @@
             .state('appSimple', {
                 abstract: true, // To insert a template with its own ui-view for child states to populate
                 templateUrl: 'views/common/layouts/simple.html',
-                onEnter: function() {
+                onEnter: function () {
                     console.log("enter contacts");
                 },
                 resolve: {
-                    loadPlugin: ['$ocLazyLoad', function($ocLazyLoad) {
+                    loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
                         // you can lazy load files for an existing module
                         return $ocLazyLoad.load([{
                             serie: true,
@@ -110,12 +110,12 @@
                 }
             })
 
-        // Additional Pages
-        .state('appSimple.login', {
+            // Additional Pages
+            .state('appSimple.login', {
                 // loaded into ui-view of parent's template
                 url: '/login',
                 templateUrl: 'views/pages/login.html',
-                onEnter: function() {
+                onEnter: function () {
                     console.log("appSimple.login");
                 }
             })
@@ -123,7 +123,7 @@
                 // loaded into ui-view of parent's template
                 url: '/register',
                 templateUrl: 'views/pages/register.html',
-                onEnter: function() {
+                onEnter: function () {
                     console.log("appSimple.register");
                 }
             })
@@ -131,7 +131,7 @@
                 // loaded into ui-view of parent's template
                 url: '/404',
                 templateUrl: 'views/pages/404.html',
-                onEnter: function() {
+                onEnter: function () {
                     console.log("appSimple.404");
                 }
             })
@@ -139,7 +139,7 @@
                 // loaded into ui-view of parent's template
                 url: '/500',
                 templateUrl: 'views/pages/500.html',
-                onEnter: function() {
+                onEnter: function () {
                     console.log("appSimple.500");
                 }
             })

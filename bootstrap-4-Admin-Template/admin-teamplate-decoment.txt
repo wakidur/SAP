@@ -25,3 +25,7 @@ ui-router
 
 
 https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
+
+//angular-translate
+https://angular-translate.github.io/
+https://github.com/angular-translate/angular-translate
