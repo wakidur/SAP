@@ -70,7 +70,7 @@ foo = function bar(declaration, recurse) {
 bar();
 foo(true);
 
-// Lambdas------------
+//******************************** Lambdas------------
 /*
 A lambda is a function that is used as data. As such, it can be used the same way any
 other expression can: as a parameter for another function, the return value of a function,
@@ -85,3 +85,61 @@ var sum = function sum() {
     });
     return result;
 };
+
+
+//-----------------------
+var lightbulb = function() {
+    this.isOn = false;
+}
+
+lightbulb = new Lightbulb();
+
+Lightbulb.prototype.toggle = function() {
+    this.isOn = !this.inOn;
+    return this.inOn;
+}
+
+Lightbulb.prototype.getState = function getState() {
+    // Implementation....
+}
+
+Linhtbulb.prototype.off = function off() {
+    // Implementation....
+}
+
+Lightbulb.prototype.on = function on() {
+    // Implementation....
+}
+
+Lightbulb.prototype.blink = function blink() {
+    // Implementation....
+}
+
+
+(function() {
+    var isOn = false;
+    toggle = function toggle() {
+            isOn = !isOn;
+            return isOn;
+        },
+        getState = function getState() {
+            // Implementation...
+        },
+        off = function off() {
+            // Implementation...
+        },
+        on = function on() {
+            // Implementation...
+        },
+        blink = function blink() {
+            // Implementation...
+        },
+        lightbulb = {
+            toggle: toggle,
+            getState: getState,
+            off: off,
+            on: on,
+            blink: blink
+        };
+
+}());

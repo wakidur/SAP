@@ -1,0 +1,21 @@
+*****************Lambdas****************
+A lambda is a function that is used as data. As such, it can be used the same way any
+other expression can: as a parameter for another function, the return value of a function,
+or anywhere you might use a literal value.
+
+Example:
+var sum = function sum() {
+    var result = 0;
+    [5, 5, 5].forEach(function addTo(number) { 
+        result += number; 
+        });
+    return result;
+};
+The .addTo() function passed into .forEach() is a lambda.
+
+**Lambdas are frequently confused with 
+1.anonymous functions, 
+2. closures, 
+3. first-class functions, 
+4. higher order functions. 
+The concepts are all similar, but they mean different things

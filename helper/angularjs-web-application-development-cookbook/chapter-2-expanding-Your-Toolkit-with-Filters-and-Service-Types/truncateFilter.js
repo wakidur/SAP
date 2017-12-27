@@ -1,40 +1,50 @@
 // step - 1;
 
-(function(){
+(function() {
     'use strict';
 
     angular
         .module('module')
         .filter('simpletruncate', simpleTruncate)
 
-    function simpleTruncate(){
+    function simpleTruncate() {
 
         return filterFilter;
 
-        function filterFilter( input ){
+        function filterFilter(input) {
             let truncated = input.slice(0, 100);
-            if( input.length > 100 ){
+            if (input.length > 100) {
                 truncated += '...';
-            }       
+            }
             return truncated;
         }
     }
 
-}());
+}()); <
+div ng - app = "myApp" >
+    <
+    div ng - controller = "Ctrl" >
+    <
+    p > {
+        { myText | simpletruncate } } < /p> <
+    /div> <
+    /div>
+
+
 
 // step-2
-(function(){
+(function() {
     'use strict';
 
     angular
         .module('module')
         .filter('regextruncate', regexTruncate);
 
-    function regexTruncate(){
+    function regexTruncate() {
 
         return filterFilter;
 
-        function filterFilter(text, limit, stoptext){
+        function filterFilter(text, limit, stoptext) {
             let regex = /\s/;
 
             if (!angular.isDefined(limit)) {
@@ -49,11 +59,11 @@
                 if (regex.exec(text[limit - i]) && !regex.exec(text[(limit - i) - 1])) {
                     limit = limit - i;
                     break;
-                } 
+                }
             }
 
             let truncated = text.slice(0, limit);
-            if(text.length > limit){
+            if (text.length > limit) {
                 truncated += stoptext;
             }
             return truncated;
@@ -68,3 +78,23 @@
     </div>
 </div>
 */
+
+
+(function() {
+    'use strict';
+
+    angular
+        .module('module')
+        .filter('filter', filter)
+
+    function filter() {
+
+        return filterFilter;
+
+        function filterFilter(input) {
+
+            return input
+        }
+    }
+
+}());

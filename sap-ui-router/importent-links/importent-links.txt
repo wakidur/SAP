@@ -86,3 +86,7 @@ https://stackoverflow.com
 https://stackoverflow.com/jobs?med=site-ui&ref=jobs-tab
 
 
+//Function 
+http://benalman.com/news/2010/11/immediately-invoked-function-expression/
+
+
