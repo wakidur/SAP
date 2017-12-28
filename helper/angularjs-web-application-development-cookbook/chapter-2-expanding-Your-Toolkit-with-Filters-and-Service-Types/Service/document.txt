@@ -1,0 +1,28 @@
+1. Using service values and constants
+AngularJS service types. at their(তাদের) core(মূল), are singleton(একক বস্তু
+) containers used for unified(সমন্বিত) resource access(প্রবেশ) across(দিয়ে, আড়াআড়ি) your application. Sometimes, the resource access will just be a single JS object. For this, AngularJS offers service values and service constants
+
+1. service values
+2. service constant
+3. service factories
+4. services
+5. service providers
+
+--------------------
+1. Service value
+    The service value is the simplest of all service types. The value service acts as a key-value pair and can be injected. Since it is a singleton, any part of your application that injects the value service and reads/writes to it will be accessing the same data. Service values act like service factories (discussed in the Using service factories recipe) and cannot be injected into the providers or the config() phase of your application.
+
+2. Service constant
+    Like service values, service constants also act as singleton key-value pairs. The important difference is that service constants act like service providers and can be injected into the config() phase and service providers.
+
+
+3. service factories
+   The service factory's return value is what will be injected when the factory is listed(তালিকাভুক্ত) as a dependency. A common and useful pattern is to define private data and function outside this object, and define an API to them throught(এর মধ্য দিয়ে) a retuned object.  
+
+4. services
+    Services act in much the same way as service factories. Private data and methods can be defined and an API can be implemented on the service object through(মাধ্যমে) it. A service is consumed(ক্ষয়প্রাপ্ত, খাত্তয়া) in the same way as a factory. It differs(পৃথক) in that the object to be injected(ইনজেকশন করা) is the controller itself.
+    Services invoke(ডাকা) a constructor with the new operator, and the instantiated service object is the delivered injectable. Like a factory, it still exists as a singleton and the instantiation is deferred until the service is actually injected
+
+5. 
+
+
