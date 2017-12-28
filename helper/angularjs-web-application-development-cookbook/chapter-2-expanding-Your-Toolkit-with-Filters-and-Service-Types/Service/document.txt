@@ -23,6 +23,7 @@ AngularJS service types. at their(তাদের) core(মূল), are singleto
     Services act in much the same way as service factories. Private data and methods can be defined and an API can be implemented on the service object through(মাধ্যমে) it. A service is consumed(ক্ষয়প্রাপ্ত, খাত্তয়া) in the same way as a factory. It differs(পৃথক) in that the object to be injected(ইনজেকশন করা) is the controller itself.
     Services invoke(ডাকা) a constructor with the new operator, and the instantiated service object is the delivered injectable. Like a factory, it still exists as a singleton and the instantiation is deferred until the service is actually injected
 
-5. 
+5. Service providers
+    Service providers are the parent(জনক) service type used for factories and services. They are the most configurable and extensible(প্রসার্য) of the service types, and   allow you to inspect(পরিদর্শন করা) and modify(পরিবর্তন) other service types during  the application's initialization(আরম্ভ, শুরু).
 
 
