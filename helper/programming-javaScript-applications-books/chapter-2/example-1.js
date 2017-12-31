@@ -88,7 +88,8 @@ var sum = function sum() {
 
 
 //-----------------------
-var lightbulb = function() {
+// Immediately Invoked Function Expressions
+var Lightbulb = function() {
     this.isOn = false;
 }
 
@@ -143,3 +144,95 @@ Lightbulb.prototype.blink = function blink() {
         };
 
 }());
+
+
+
+// Method Design
+var userProto = {
+    name: '',
+    email: '',
+    alias: '',
+    showInSearch: true,
+    colorScheme: 'light'
+};
+
+function createUser(name, email, alias, showInSearch, colorScheme) {
+    return {
+        name: name || userProto.name,
+        email: email || userProto.email,
+        alias: alias || userProto.alias,
+        showInSearch: showInSearch,
+        colorScheme: colorScheme || userProto.colorScheme
+    };
+}
+
+var newUser = createUser('Tonya', '', '', '', 'dark');
+newUser.colorScheme;
+
+
+function createUser(optionas) {
+    return $.extend({}, userProto, optionas);
+}
+
+
+//------------------------
+var args = Array.prototype.slice.call(arguments, 0);
+
+var args = [].slice.call(arguments, 0);
+
+
+function sort() {
+    var args = [].slice.call(arguments, 0);
+    return args.sort();
+}
+
+var result = sort('b', 'a', 'c');
+result // ['a', 'b', 'c']
+
+var first = args.shift();
+
+function morph(params) {
+    var args = [].slice.call(arguments, 0);
+    animals = 'turtles'; // set a default
+
+    if (typeof options === "string") {
+        animals = options;
+        args.shift();
+    }
+
+    return ('The pet store has ' + args + ' ' + animals + '.');
+}
+
+var test1 = morph('cats', 3);
+var test2 = morph('dogs', 4);
+var test3 = morph(5);
+
+//------------------------------
+// Method dispatch
+var methods = {
+    init: function(args) {
+        return 'initializing....';
+    },
+    hello: function(args) {
+        return 'hello' + args;
+    },
+    goodbye: function(args) {
+        return 'Goodbye, Creue ' + args;
+    }
+};
+
+var greet = function greet(options) {
+    var args = [].slice.call(arguments, 0);
+    var initialized = false;
+    var action = 'init'; // init will run by default
+
+    if (typeof options === 'string' && typeof methods[options] === 'function') {
+        action = options;
+        args.shift();
+    }
+    return methods[action](args);
+};
+
+var test1 = greet();
+var test2 = greet('hello', 'world!');
+var test3 = greet('goodbye', 'world!');
