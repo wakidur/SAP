@@ -132,74 +132,110 @@
                 controllerAs: 'vm'
             });
             $stateProvider.state({
-                name: 'profile.profileuser',
-                // This state takes a URL parameter called personId
-                url: '/{profileuserId}',
-                // This state defines a 'person' resolve
-                // It delegates to the PeopleService, passing the personId parameter
-                // resolve: {
-                //     singleUserSvc: function(userProfileSvc, $stateParams) {
-                //         var containervalu = [];
-                //         //return userProfileSve.getUser($stateParams.userId);
-                //         return userProfileSvc.find(function(profileuser) {
-                //             //console.log(person.id === $stateParams.profileuserId);
-                //             // return profileuser.id == $stateParams.profileuserId;
-                //             if( profileuser.id === $stateParams.profileuserId){
-                //                 return containervalu.push(profileuser);
-                //                 //this.profileuser;
-                //                 console.log(containervalu);
-                //             }
-                //             return containervalu;
-                //         });
-                //     }
-                // },
-                templateUrl: 'views/singleUser.html',
-                // controller: 'singleUserCtrl',
-                controller: function(userProfileSvc, $stateParams) {
-                    // var vm = this;
-                    var vm = this;
-                    vm.singleUser = [];
-                    getsingleUser();
-            
-                    function getsingleUser() {
-                        //return userProfileSve.getUser($stateParams.userId);
-                         userProfileSvc.find(function(profileuser) {
-                            //console.log(person.id === $stateParams.profileuserId);
-                            // return profileuser.id == $stateParams.profileuserId;
-                            if( profileuser.id === $stateParams.profileuserId){
-                                vm.singleUser.push(profileuser);
-                                //this.profileuser;
-                                
-                            }
-                           
+                    name: 'profile.profileuser',
+                    // This state takes a URL parameter called personId
+                    url: '/{profileuserId}',
+                    // This state defines a 'person' resolve
+                    // It delegates to the PeopleService, passing the personId parameter
+                    // resolve: {
+                    //     singleUserSvc: function(userProfileSvc, $stateParams) {
+                    //         var containervalu = [];
+                    //         //return userProfileSve.getUser($stateParams.userId);
+                    //         return userProfileSvc.find(function(profileuser) {
+                    //             //console.log(person.id === $stateParams.profileuserId);
+                    //             // return profileuser.id == $stateParams.profileuserId;
+                    //             if( profileuser.id === $stateParams.profileuserId){
+                    //                 return containervalu.push(profileuser);
+                    //                 //this.profileuser;
+                    //                 console.log(containervalu);
+                    //             }
+                    //             return containervalu;
+                    //         });
+                    //     }
+                    // },
+                    templateUrl: 'views/singleUser.html',
+                    // controller: 'singleUserCtrl',
+                    controller: function(userProfileSvc, $stateParams) {
+                        // var vm = this;
+                        var vm = this;
+                        vm.singleUser = [];
+                        getsingleUser();
+
+                        function getsingleUser() {
+                            //return userProfileSve.getUser($stateParams.userId);
+                            userProfileSvc.find(function(profileuser) {
+                                //console.log(person.id === $stateParams.profileuserId);
+                                // return profileuser.id == $stateParams.profileuserId;
+                                if (profileuser.id === $stateParams.profileuserId) {
+                                    vm.singleUser.push(profileuser);
+                                    //this.profileuser;
+
+                                }
+
+                            });
+                            return vm.singleUser;
+                        }
+
+                    },
+                    controllerAs: 'vm'
+                }),
+
+                $stateProvider.state({
+                    name: 'directive',
+                    url: '/directive',
+                    templateUrl: 'views/directive.html',
+                    controller: function($scope, $http) {
+                        $scope.jakob = {};
+                        $scope.jakob.firstName = "Jakob";
+                        $scope.jakob.lastName = "Jenkov";
+
+                        $scope.john = {};
+                        $scope.john.firstName = "John";
+                        $scope.john.lastName = "Doe";
+                    }
+                }),
+                /*
+                $stateProvider.state({
+                    name: 'angular-data-table',
+                    url: '/angular-data-table',
+                    templateUrl: 'views/angular-data-table.html',
+                    controller: function($scope, $http) {
+                        $scope.hello = "hello ";
+                        $scope.options = {
+                            rowHeight: 50,
+                            headerHeight: 50,
+                            footerHeight: false,
+                            scrollbarV: false,
+                            selectable: false,
+                            columns: [{
+                                name: "Name",
+                                width: 300
+                            }, {
+                                name: "Gender"
+                            }, {
+                                name: "Company"
+                            }]
+                        };
+                        $http.get('data/datatable.json').then(function(data) {
+                            $scope.data = data;
                         });
-                        return vm.singleUser;
-                }
-               
-            },
-            controllerAs:'vm'
-        }),
+                    }
+                }),*/
+                $stateProvider.state({
+                    name: 'angular-datatables',
+                    url: '/angular-datatables',
+                    templateUrl: 'views/angular-datatable.html',
+                    controller: function($scope, $http) {
+                        $scope.hello = "hello ";
 
-            $stateProvider.state({
-                name: 'directive',
-                url: '/directive',
-                templateUrl: 'views/directive.html',
-                controller: function($scope, $http) {
-                    $scope.jakob = {};
-                    $scope.jakob.firstName = "Jakob";
-                    $scope.jakob.lastName  = "Jenkov";
-                
-                    $scope.john = {};
-                    $scope.john.firstName = "John";
-                    $scope.john.lastName  = "Doe";
-                }
-            }),
+                    }
+                }),
 
-            $stateProvider.state({
-                name: 'nofound',
-                url: '*path',
-                template: '<h2> No route found  </h2>'
-            });
+                $stateProvider.state({
+                    name: 'nofound',
+                    url: '*path',
+                    template: '<h2> No route found  </h2>'
+                });
         }]);
 
 

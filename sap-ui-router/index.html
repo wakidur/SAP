@@ -17,6 +17,20 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- dataTable -->
+    <!-- <link href="node_modules/release/dataTable.css" rel="stylesheet">
+    <link href="node_modules/release/material.css" rel="stylesheet">
+    <link href="node_modules/release/icons.css" rel="stylesheet"> -->
+
+
+    <link href="node_modules/datatables.net-dt/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="node_modules/angular-datatables/dist/css/angular-datatables.css" rel="stylesheet">
+
+
+
+
+
+
 
     <!-- Custom styles for this template -->
     <link href="dist/css/dashboard.css" rel="stylesheet">
@@ -27,14 +41,38 @@
     <script src="node_modules/jquery/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="dist/js/holder.min.js"></script>
+    <!-- Angularjs -->
+
     <script src="node_modules/angular/angular.min.js"></script>
-    <!-- <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script> -->
-    <script src="node_modules/angular-ui-router-v0.4.3/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="node_modules/angular-datatables/dist/angular-datatables.min.js"></script>
+    <!-- Angular Material Library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
+    <!-- angular-ui-router -->
+    <!-- <script src="node_modules/angular-ui-router-v0.4.3/release/angular-ui-router.min.js"></script> -->
+
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+    <!-- angular-data-table -->
+    <!-- <script src="node_modules/angular-data-table/release/dataTable.min.js"></script>
+    <script src="node_modules/angular-data-table/release/dataTable.cjs.js"></script>
+    <script src="node_modules/angular-data-table/release/dataTable.es6.js"></script> -->
+
+    <!-- angular-datatables -->
+
+
+
+
+
+
 
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 
     <script src="module/main-module.js"></script>
-    <script src="route-config/route-config-v0.4.3.js"></script>
+
+    <!-- <script src="route-config/route-config-v0.4.3.js"></script> -->
+    <script src="route-config/route-config-v1.x.js"></script>
+
     <script src="filters/charAtFilter.js"></script>
     <script src="service/peopleSvc.js"></script>
     <script src="service/userProfileSvc.js"></script>
@@ -56,7 +94,7 @@
     <script src="directives/vactorTextDirective.js"></script>
     <script src="directives/isolateScopeDirective.js"></script>
     <script src="directives/compile-pre-post-controller.js"></script>
-        <!-- Chapter-1 -->
+    <!-- Chapter-1 -->
     <script src="directives/chapterOne/directive-scope-inheritance.js"></script>
     <script src="directives/chapterOne/treeDirective.js"></script>
 
@@ -85,7 +123,7 @@
     <div class="container-fluid" ng-if="!($state.current.name === 'logout')">
         <div class="row">
             <!-- sidebar navigation  section  -->
-            <div class="col-sm-3 col-md-2 sidebar" ng-include="'views/layout/sidebar-v0.4.3.html'"></div>
+            <div class="col-sm-3 col-md-2 sidebar" ng-include="'views/layout/sidebar-v1.x.html'"></div>
             <!-- sidebar navigation  section  -->
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header" ng-if="$state.current.name === 'root'">Welcome to Dashboard Template for Bootstrap </h1>

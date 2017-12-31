@@ -42,4 +42,8 @@ https://github.com/nervgh/angular-file-upload
 https://lingohub.com/blog/2016/03/angularjs-directives-image-cropping/
 
 //angular-datatables
-http://l-lin.github.io/angular-datatables/archives/#!/gettingStarted
+http://l-lin.github.io/angular-datatables/archives/#!/welcome
+
+//angular-data-table
+https://github.com/swimlane/angular-data-table
+http://swimlane.github.io/angular-data-table/

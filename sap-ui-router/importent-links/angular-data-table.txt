@@ -1,0 +1,3 @@
+https://github.com/swimlane/angular-data-table
+
+It was built for modern browsers using ES6, CSS3 and HTML5 and only supports Evergreen Browsers and Angular >= 1.4.x and < 1.6.0.
