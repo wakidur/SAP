@@ -3,6 +3,7 @@ angular
 .directive('a', preventClickDirective)
 .directive('a', bootstrapCollapseDirective)
 .directive('a', navigationDirective)
+.directive('nav', sidebarNavDynamicResizeDirective)
 .directive('button', layoutToggleDirective)
 .directive('a', layoutToggleDirective)
 .directive('button', collapseMenuTogglerDirective)
@@ -55,7 +56,9 @@ function navigationDirective() {
   return directive;
 
   function link(scope, element, attrs) {
-    if(element.hasClass('nav-dropdown-toggle') && angular.element('body').width() > 782) {
+    // if(element.hasClass('nav-dropdown-toggle') && angular.element('body').width() > 782) 
+    if(element.hasClass('nav-dropdown-toggle') && angular.element('body').hasClass('sidebar-nav') && angular.element('body').width() > 782)
+    {
       element.on('click', function(){
         if(!angular.element('body').hasClass('compact-nav')) {
           element.parent().toggleClass('open').find('.open').removeClass('open');

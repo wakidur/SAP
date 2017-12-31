@@ -56,7 +56,7 @@ https://tympanus.net/codrops/css_reference/
 
 http://www.sarasoueidan.com/
 
-Blog project
+Blog project Front-End-------------------------------------
 https://themeforest.net/item/blog-theme-smartblog/13544895
 http://theme-sphere.com/smart-blog/
 
@@ -70,6 +70,11 @@ https://themeforest.net/item/writing-blog-personal-blog/11547928?s_rank=3
 https://ahmad.works/writing/
 
 https://www.storyblocks.com/
+
+
+Admin template only for Blog -----------------------
+http://jaybabani.com/slant/site/
+http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
 
 
 
