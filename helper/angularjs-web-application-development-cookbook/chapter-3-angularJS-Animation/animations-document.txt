@@ -1,0 +1,20 @@
+********************AngularJS Animations***********************
+Introduction---------------------------------------------------
+incorporates(অন্তর্ভুক্ত,একদেহভুক্ত করা)
+infrastructure(পরিকাঠামো, কাঠামো)
+assumes(অনুমান)
+broadly(বিস্তৃতভাবে, ব্যাপকভাবে)
+AngularJS incorporates its animation infrastructure as a separete module, ngAnimate. With this, you are able to tackle animating your application in several different ways,
+which are as follows:
+    1. CSS3 transitions
+    2. CSS3 animations
+    3. JavaScript animations
+
+
+Creating a simple fade in/out animation-------------------------
+finite(সসীম, সীমাবদ্ধ )
+cyclical(চক্রাকার)
+AngularJS animations work by integrating CSS animations into a directive class-based finite state machine.
+
+
+

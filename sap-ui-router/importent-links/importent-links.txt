@@ -9,6 +9,9 @@ https://jsfiddle.net/shidhincr/q3kex/3/?utm_source=website&utm_medium=embed&utm_
 https://jsfiddle.net/shidhincr/q3kex/4/?utm_source=website&utm_medium=embed&utm_campaign=q3kex
 https://plnkr.co/edit/ny6aqt3kzDyljaGakaEM?p=preview
 
+// angular-styleguide
+https://github.com/johnpapa/angular-styleguide/tree/master/a1#services
+
 
 UI-Router for AngularJS (1.x)
 https://ui-router.github.io/
@@ -53,11 +56,34 @@ https://tympanus.net/codrops/css_reference/
 
 http://www.sarasoueidan.com/
 
-Blog project
+Blog project Front-End-------------------------------------
+https://themeforest.net/item/blog-theme-smartblog/13544895
 http://theme-sphere.com/smart-blog/
-http://theme-sphere.com/smart-blog/
+
+https://themeforest.net/item/the-vicer-professional-news-magazine-wordpress-theme/20905861?s_rank=1
+http://extracoding.com/demo/wp/talktags/
+
+http://theme-sphere.com/demo/cheerup-landing/
+https://cheerup.theme-sphere.com/rovella/
+
+https://themeforest.net/item/writing-blog-personal-blog/11547928?s_rank=3
+https://ahmad.works/writing/
+
 https://www.storyblocks.com/
-https://cheerup.theme-sphere.com/rovella/blog/2016/05/15/my-new-yoga-pants/
+
+
+Admin template only for Blog -----------------------
+http://jaybabani.com/slant/site/
+http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
+
+
+
+
+Blog project new theam list 27-12-2017
+https://github.com/devmark/angular-slick-carousel
+https://themeforest.net/item/talktags-wordpress-magazine-theme-frontend-article-submission/20538717?s_rank=7
+http://extracoding.com/demo/wp/talktags/
+https://themeforest.net/item/alimo-clean-responsive-wordpress-blog-theme/20502627
 
 
 how to split the ng-repeat data with three columns using bootstrap

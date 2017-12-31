@@ -6,6 +6,11 @@ npm: https://npmjs.com
 Gulp: http://gulpjs.com
 Bower: https://bower.io
 
+different color 
+http://coreui.io/docs/admin-templates/angularjs-admin/
+
+http://jaybabani.com/slant/site/
+http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
 
 https://about.me/welcome
 http://coreui.io/
@@ -29,3 +34,12 @@ https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
 //angular-translate
 https://angular-translate.github.io/
 https://github.com/angular-translate/angular-translate
+
+//angular-file-upload
+https://github.com/nervgh/angular-file-upload
+
+//angularjs-directives-image-cropping
+https://lingohub.com/blog/2016/03/angularjs-directives-image-cropping/
+
+//angular-datatables
+http://l-lin.github.io/angular-datatables/archives/#!/gettingStarted
