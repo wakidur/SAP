@@ -62,7 +62,7 @@ function loadApplicationLoginPage(params) {
     xmlHttp.open('GET', 'views/layout/login.html');
     xmlHttp.send();
 }
-
+// show loading bar
 function showLoadingBar(id) {
     let w = 0, h = 0;
     if ( !(document.documentElement.clientWidth  == 0 ) ) {
@@ -85,7 +85,7 @@ function showLoadingBar(id) {
     overlayContainer.style.display = 'block';
     
 }
-
+// hide loading bar
 function hideLoadingBar(id) {
     let overlayContainerId = !id ? "overlay-container" : id;
     let overlayContainer = document.getElementById(overlayContainerId);
@@ -194,6 +194,28 @@ function validateForm() {
     }
 }
 
+function xmlHttpRequest() {
+    try {
+        let httpRequest = null;
+        // Opera 8.0+, Firefox, Chrome, Safari
+        httpRequest = new XMLHttpRequest();
+    } catch (error) {
+        // Internet Explorer Browsers
+        try {
+            httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (error) {
+            try {
+                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (error) {
+                return false;
+            }
+            
+        }
+    }
+    return httpRequest;  
+}
+
+
 // Login Call back 
 
 function processRequest(resultObject) {
@@ -236,7 +258,6 @@ function processRequest(resultObject) {
 }
 
 // for development verison 
-
 function _checkValidLogin(logingdata) {
     try {
         let isValid = false;
@@ -274,3 +295,56 @@ function _checkValidLogin(logingdata) {
         throw error;
     }
 }
+
+//set user information
+function _setUserInformation(logindata) {
+    // this information for valid user
+    let data = {
+        userName: logindata[0].userName,
+        passwor: logindata[0].password
+    }
+    // set login information to javascript variables
+    setLoginInfo(data);
+    
+}
+
+// launch Application
+function runApp(logindata) {
+    if (document.getElementById("companyDropdownList").style.display == "block") {
+        let e = document.getElementById("selectedCompanyName");
+        let defaultText = "Select Company";
+        let companyName = defaultText.toString().toLowerCase().trim();
+        let selectedText = e.textContent.toString().toLowerCase().trim();
+        if (selectedText === companyName) {
+            document.getElementById("errormsg").innerHTML = "Company Name is required.";
+            document.getElementById("errormsg").style.color = "Red";
+            return;
+        } else {
+            document.getElementById("errormasg").innerHTML = " ";
+        }
+        isAdminUser = false;
+        logindata.user[0].companyName = tempCompany.companyName;
+        logindata.user[0].companyID = parseInt(tempCompany.conpanyNameID);
+
+        // set company loaction ID
+        for (let i = 0; i < logindata.comapnyList.length; i++) {
+            if (logindata.user[0].companyID === logindata.user[0].companyID) {
+                logindata.user[0].locationID = logindata.user[0].locationID;
+                break;
+            }
+            
+        }
+    }
+    _setUserInformation(logindata.user);
+    //loadMenu
+    getUserwiseManu();
+    //busines Rules whise are differentcate by Loaction ID
+    getLoacationWiseBusinessRules();
+
+
+
+}
+
+
+
+

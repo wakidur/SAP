@@ -57,10 +57,22 @@ https://tympanus.net/codrops/css_reference/
 http://www.sarasoueidan.com/
 
 Blog project
+https://themeforest.net/item/blog-theme-smartblog/13544895
 http://theme-sphere.com/smart-blog/
-http://theme-sphere.com/smart-blog/
+
+https://themeforest.net/item/the-vicer-professional-news-magazine-wordpress-theme/20905861?s_rank=1
+http://extracoding.com/demo/wp/talktags/
+
+http://theme-sphere.com/demo/cheerup-landing/
+https://cheerup.theme-sphere.com/rovella/
+
+https://themeforest.net/item/writing-blog-personal-blog/11547928?s_rank=3
+https://ahmad.works/writing/
+
 https://www.storyblocks.com/
-https://cheerup.theme-sphere.com/rovella/blog/2016/05/15/my-new-yoga-pants/
+
+
+
 
 Blog project new theam list 27-12-2017
 https://github.com/devmark/angular-slick-carousel
