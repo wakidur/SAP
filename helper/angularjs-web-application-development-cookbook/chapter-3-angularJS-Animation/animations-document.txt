@@ -14,7 +14,10 @@ which are as follows:
 Creating a simple fade in/out animation-------------------------
 finite(সসীম, সীমাবদ্ধ )
 cyclical(চক্রাকার)
+integrating (একীভূত)
+demonstrate(প্রদর্শন করা)
 AngularJS animations work by integrating CSS animations into a directive class-based finite state machine.
-
+** A finite state machine (FSM) is a computational system model defined by
+the states and transition conditions between them.
 
 

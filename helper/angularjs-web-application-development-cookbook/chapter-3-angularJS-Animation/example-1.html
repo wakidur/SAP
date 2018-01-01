@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example-2</title>
+
+    <style>
+        .animated-container {
+            padding: 20px;
+            border: 5px solid black;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-animate.min.js"></script>
+    <script>
+        angular.module('myApp', ['ngAnimate'])
+            .controller('Ctrl', function ($scope) {
+                $scope.boxHidden = true;
+            });
+    </script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="Ctrl">
+            <label>
+                <button ng-click="boxHidden=!boxHidden">
+                    Toggle Visibility
+                </button>
+            </label>
+            <div class="animated-container" ng-hide="boxHidden">
+                Awesome text!
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
