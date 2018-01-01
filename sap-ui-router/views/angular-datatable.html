@@ -1,5 +1,9 @@
-<h1>{{hello}}</h1>
-<table datatable="" class="row-border hover">
+<h1>{{vm.hello}}</h1>
+<h1>{{name}}</h1>
+<p>{{ vm.message }}</p>
+
+<!-- Zero configuration -->
+<!-- <table datatable="" class="row-border hover">
     <thead>
         <tr>
             <th>ID</th>
@@ -24,4 +28,56 @@
             <td>Ofinspiration</td>
         </tr>
     </tbody>
-</table>
+</table> -->
+<!-- With options -->
+<!-- <table datatable="" dt-options="vm.dtOptions" dt-column-defs="vm.dtColumnDefs" class="row-border hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Foo</td>
+            <td>Bar</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>Someone</td>
+            <td>Youknow</td>
+        </tr>
+        <tr>
+            <td>987</td>
+            <td>Iamout</td>
+            <td>Ofinspiration</td>
+        </tr>
+        </tbody>
+    </table> -->
+
+    <!-- With ajax -->
+    <!-- <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns" class="row-border hover"></table> -->
+
+    <!-- With a function that returns a promise -->
+    <!-- <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns" class="row-border hover"></table> -->
+
+    <!-- The Angular way -->
+    <table datatable="ng" class="row-border hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- <tr ng-repeat="person in vm.persons"> -->
+            <tr ng-repeat="person in ::vm.persons">
+                <td>{{ person.id }}</td>
+                <td>{{ person.firstName }}</td>
+                <td>{{ person.lastName }}</td>
+            </tr>
+            </tbody>
+        </table>

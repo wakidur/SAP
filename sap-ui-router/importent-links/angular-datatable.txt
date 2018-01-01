@@ -1,0 +1,5 @@
+http://l-lin.github.io/angular-datatables/
+
+angular-datatables v0.6.x
+
+.notVisible()

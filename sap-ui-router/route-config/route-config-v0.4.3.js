@@ -28,7 +28,7 @@
             url: '/settings',
             templateUrl: 'views/settings.html',
             controller: 'settingsCtrl'
-            
+
         });
         $stateProvider.state('logout', {
             url: '/logout',
@@ -38,8 +38,14 @@
             url: '/chapter-1',
             templateUrl: 'views/chapter-1-maxinizing-angularjs-directives.html',
             controller: "chapterOneCtrl"
-            
+
         });
+        $stateProvider.state('angular-datatables', {
+                url: "/angular-datatables",
+                templateUrl: "views/angular-datatable.html",
+                controller: 'angularDatatable',
+                controllerAs: 'vm'
+            });
 
         $urlRouterProvider.otherwise('/logout');
 

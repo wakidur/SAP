@@ -1,9 +1,9 @@
-(function(angular) {
+(function (angular) {
     'use strict';
 
     angular
         .module('appModule')
-        .config(['$stateProvider', function($stateProvider) {
+        .config(['$stateProvider', function ($stateProvider) {
 
             //$urlRouteProvider.otherwise('');
             // deshboard route
@@ -11,7 +11,7 @@
                 name: 'deshboard',
                 url: '/deshboard',
                 template: '<h1>{{contact.title}}</h1>',
-                controller: function() {
+                controller: function () {
                     this.title = 'Dashboard';
                 },
                 controllerAs: 'contact'
@@ -27,7 +27,7 @@
                 name: 'home.list',
                 url: '/list',
                 templateUrl: 'views/home-list.html',
-                controller: function() {
+                controller: function () {
                     this.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
                 },
                 controllerAs: 'partialContact'
@@ -88,7 +88,7 @@
                 // It delegates to the PeopleService to HTTP fetch (async)
                 // The people component receives this via its `bindings: `
                 resolve: {
-                    peopleresolveSvc: function(peopleService) {
+                    peopleresolveSvc: function (peopleService) {
                         return peopleService.getAllPeople();
                     }
                 },
@@ -104,7 +104,7 @@
                 // This state defines a 'person' resolve
                 // It delegates to the PeopleService, passing the personId parameter
                 resolve: {
-                    peopleresolveSvc: function(peopleService, $transition$) {
+                    peopleresolveSvc: function (peopleService, $transition$) {
                         return peopleService.getPerson($transition$.params().personId);
                     }
                 },
@@ -123,7 +123,7 @@
                 // It delegates to the PeopleService to HTTP fetch (async)
                 // The people component receives this via its `bindings: `
                 resolve: {
-                    userProfileSvc: function(userProfileSve) {
+                    userProfileSvc: function (userProfileSve) {
                         return userProfileSve.getAllUser();
                     }
                 },
@@ -155,7 +155,7 @@
                     // },
                     templateUrl: 'views/singleUser.html',
                     // controller: 'singleUserCtrl',
-                    controller: function(userProfileSvc, $stateParams) {
+                    controller: function (userProfileSvc, $stateParams) {
                         // var vm = this;
                         var vm = this;
                         vm.singleUser = [];
@@ -163,7 +163,7 @@
 
                         function getsingleUser() {
                             //return userProfileSve.getUser($stateParams.userId);
-                            userProfileSvc.find(function(profileuser) {
+                            userProfileSvc.find(function (profileuser) {
                                 //console.log(person.id === $stateParams.profileuserId);
                                 // return profileuser.id == $stateParams.profileuserId;
                                 if (profileuser.id === $stateParams.profileuserId) {
@@ -184,7 +184,7 @@
                     name: 'directive',
                     url: '/directive',
                     templateUrl: 'views/directive.html',
-                    controller: function($scope, $http) {
+                    controller: function ($scope, $http) {
                         $scope.jakob = {};
                         $scope.jakob.firstName = "Jakob";
                         $scope.jakob.lastName = "Jenkov";
@@ -194,42 +194,21 @@
                         $scope.john.lastName = "Doe";
                     }
                 }),
-                /*
-                $stateProvider.state({
-                    name: 'angular-data-table',
-                    url: '/angular-data-table',
-                    templateUrl: 'views/angular-data-table.html',
-                    controller: function($scope, $http) {
-                        $scope.hello = "hello ";
-                        $scope.options = {
-                            rowHeight: 50,
-                            headerHeight: 50,
-                            footerHeight: false,
-                            scrollbarV: false,
-                            selectable: false,
-                            columns: [{
-                                name: "Name",
-                                width: 300
-                            }, {
-                                name: "Gender"
-                            }, {
-                                name: "Company"
-                            }]
-                        };
-                        $http.get('data/datatable.json').then(function(data) {
-                            $scope.data = data;
-                        });
-                    }
-                }),*/
                 $stateProvider.state({
                     name: 'angular-datatables',
                     url: '/angular-datatables',
                     templateUrl: 'views/angular-datatable.html',
-                    controller: function($scope, $http) {
-                        $scope.hello = "hello ";
-
-                    }
+                    controller: 'angularDatatable',
+                    controllerAs: 'vm'
                 }),
+
+                // $stateProvider
+                // .state('angular-datatables', {
+                //   url: "/angular-datatables",
+                //   templateUrl: "views/angular-datatable.html",
+                //   controller: 'angularDatatable',
+                //   controllerAs: 'vm'
+                // }),
 
                 $stateProvider.state({
                     name: 'nofound',
@@ -241,24 +220,45 @@
 
 
 
-
+/*
     angular.module('appModule').run(['$rootScope', '$state',
-        function($rootScope, $state) {
+        function ($rootScope, $state) {
             $rootScope.$state = $state;
             //   $rootScope.valueA = "hew value";
         }
     ]);
     angular.module('appModule').run(['$http',
-        function($http) {
-            $http.get('data/people.json', { cache: true });
+        function ($http) {
+            $http.get('data/people.json', {
+                cache: true
+            });
             //   $rootScope.valueA = "hew value";
         }
     ]);
 
 
+
+*/
 
 
 
 
 
 })(window.angular);
+
+(function(){
+    'use strict';
+
+    angular
+        .module('appModule')
+        .run(runRun)
+
+    runRun.$inject = ['$rootScope', '$state', '$http' , 'DTDefaultOptions'];
+
+    function runRun($rootScope, $state, $http, DTDefaultOptions){
+        $rootScope.$state = $state;
+        $http.get('data/people.json', { cache: true });
+        DTDefaultOptions.setLoadingTemplate('<img src="dist/img/loading.gif">');
+    }
+
+}());
