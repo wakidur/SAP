@@ -20,6 +20,18 @@ AngularJS animations work by integrating CSS animations into a directive class-b
 ** A finite state machine (FSM) is a computational system model defined by
 the states and transition conditions between them.
 
+The animation CSS classes need to cover both cases, 
+where the element is hidden and needs to fade in, and 
+where the element is shown and needs to fade out.  
+As is the case with CSS transitions, 
+    1. you need to define the initial state, 
+    2. the final state, and 
+    3. the transition parameters.
+This can be done as follows
+
+bi-directional(দ্বি-মুখী)
+relevant(প্রাসঙ্গিক)
+
 
 
 

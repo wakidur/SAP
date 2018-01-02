@@ -12,6 +12,21 @@
             padding: 20px;
             border: 5px solid black;
         }
+
+        .animated-container.ng-hide-add,
+        .animated-container.ng-hide-remove {
+            transition: all linear 59s;
+        }
+        /* animated-container ng-animate ng-hide-animate ng-hide-add ng-hide ng-hide-add-active */
+        .animated-container.ng-hide-remove,
+        .animated-container.ng-hide-add.ng-hide-add-active {
+            opacity: 0;
+        }
+        /* animated-container ng-animate ng-hide-animate ng-hide-remove ng-hide-remove-active */
+        .animated-container.ng-hide-add,
+        .animated-container.ng-hide-remove.ng-hide-remove-active {
+            opacity: 1;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
