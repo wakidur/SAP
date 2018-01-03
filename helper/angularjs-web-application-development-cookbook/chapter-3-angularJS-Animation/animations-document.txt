@@ -30,7 +30,29 @@ As is the case with CSS transitions,
 This can be done as follows
 
 bi-directional(দ্বি-মুখী)
-relevant(প্রাসঙ্গিক)
+relevant(প্রাসঙ্গিক);
+
+--------------03-1-2018-----------------
+invert(ত্তলটান)
+
+Replicating jQuery's slideUp() and slideDown() methods----------------------------
+AngularJS provides hooks to define a custom animation when a directive fires an enter(প্রবেশ করান) event. The following directives will generate enter events.
+1. ngIf: This fires the enter event just after the ngIf contents change, and a new
+DOM element is created and injected into the ngIf container
+
+2. ngInclude: This fires the enter event when new content needs to be brought into
+the browser
+
+3.  ngRepeat: This fires the enter event when a new item is added to the list or when
+an item is revealed after a filter
+
+4.  ngSwitch: This fires the enter event after the ngSwitch contents change, and the
+matched child element is placed inside the container
+
+5.  ngView: This fires the enter event when new content needs to be brought into
+the browser
+
+6.  ngMessage: This fires the enter event when an inner message is attached
 
 
 

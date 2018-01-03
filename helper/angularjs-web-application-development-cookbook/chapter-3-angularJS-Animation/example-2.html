@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example-2</title>
+
+    <style>
+        .container {
+            overflow: hidden;
+        }
+
+        .slide-tile {
+            transition: all 0.5s ease-in-out;
+            width: 300px;
+            line-height: 300px;
+            text-align: center;
+            border: 1px solid black;
+            transform: translateY(0);
+        }
+
+        .slide-up {
+            transform: translateY(-100%);
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-animate.min.js"></script>
+    <script>
+        angular.module('myApp', ['ngAnimate'])
+            .controller('Ctrl', function ($scope) {
+                $scope.displayToggle = true;
+            });
+    </script>
+</head>
+
+<body>
+
+    <h1>ng-class</h1>
+
+    <!-- <div ng-app="myApp">
+        <div ng-controller="Ctrl">
+            <button ng-click="displayToggle=!displayToggle">
+                Toggle Visibility
+            </button>
+            <div>Slide me up and down!</div>
+        </div>
+    </div> -->
+
+    <div ng-app="myApp">
+        <div ng-controller="Ctrl">
+            <button ng-click="displayToggle=!displayToggle">
+                Toggle Visibility
+            </button>
+            <div class="container">
+                <div class="slide-tile" ng-class="{'slide-up': !displayToggle}">
+                    Slide me up and down!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>ng-show</h2>
+    <div ng-app="myApp">
+        <div ng-controller="Ctrl">
+            <button ng-click="displayToggle=!displayToggle">
+                Toggle Visibility
+            </button>
+            <div class="container">
+                <div class="slide-tile" ng-show="displayToggle">
+                    Slide me up and down!
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

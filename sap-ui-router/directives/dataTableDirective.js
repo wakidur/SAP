@@ -129,3 +129,50 @@ angular.module('datatables.directive', ['datatables.instances', 'datatables.rend
             }
         }
     }
+
+
+    (function(){
+        'use strict';
+    
+        angular
+            .module('module')
+            .factory('factory', factory)
+    
+        factory.$inject = ['$http'];
+    
+        function factory($http) {
+            var service = {
+                getData: getData
+            };
+    
+            return service;
+    
+            function getData() { }
+        }
+    })();
+
+    (function () {
+        'use strict';
+    
+        angular
+            .module ('module')
+            .directive ('directive', directive);
+    
+        directive.$inject = ['$window'];
+    
+        function directive($window) {
+            // Usage:
+            //     <directive></directive>
+            // Creates:
+            //
+            var directive = {
+                link: link,
+                restrict: 'EA'
+            };
+            return directive;
+    
+            function link(scope, element, attrs) {
+            }
+        }
+    
+    })();
