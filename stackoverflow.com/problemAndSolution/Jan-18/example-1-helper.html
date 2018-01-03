@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .modal,
+        .modal-2,
+        .modal-3 {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+
+        .modal-content,
+        .modal-2-content,
+        .modal-3-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        /* The Close Button */
+
+        .close,
+        .close-modal-2,
+        .close-modal-3 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close,
+        .close-modal-2,
+        .close-modal-3:hover,
+        .close,
+        .close-modal-2,
+        .close-modal-3:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The Modal -->
+    <button  onclick='manageInventory("1", "created a POS", "11")'>Open Modal</button>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close"><a onclick='dataBind()'>&times;</a>
+            </span>
+            <div id="productName"></div>
+            <p id="stock"></p>
+            <p id="id"></p>
+        </div>
+    </div>
+
+    <!--Modal 2-->
+    <button onclick='confirmCartAdd("sampled", " that the code ", "122")'>Open Modal</button>
+    <div id="confirmCartPopUp" class="modal-2">
+
+        <!--Modal 2 content-->
+        <div class="modal-content">
+            <span class="close-modal-2">&times;</span>
+            <div id="confirmCartAdd"></div>
+        </div>
+    </div>
+
+    <script>
+        function manageInventory(id, productName, stock) {
+            var span = document.getElementsByClassName("close")[0];
+            var modal = document.getElementById('myModal');
+            modal.style.display = "block";
+
+            document.getElementById('stock').innerHTML = stock;
+            document.getElementById('productName').innerHTML =
+
+                "<p> Update the physical inventory for " + productName + " by using the '+' or '-' below...</p>" +
+                "<p><button type='submit' formmethod='post' onclick='addInventory()'>+</button>" +
+                "<button type='submit' formmethod='post' onclick='deleteInventory()'>-</button>"; +
+            "<label id='stock'></label>"
+
+            localStorage.setItem('id', id);
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        function confirmCartAdd(productName, img, price) {
+
+            var span = document.getElementsByClassName("close-modal-2")[0];
+            var modal2 = document.getElementById('confirmCartPopUp');
+
+            modal2.style.display = "block";
+            document.getElementById('confirmCartAdd').innerHTML =
+
+                "<p> Do you wish to add this product to your cart?</p>" +
+                "<p>" + img + "</p>" +
+                "<p><button type='submit' formmethod='post' onclick='addToCart()'>Yes, add it to my cart.</button>" +
+                "<button>No, continue shopping</button>";
+            span.onclick = function () {
+                modal2.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
