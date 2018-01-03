@@ -1,0 +1,15 @@
+<h1>{{vm.title}}</h1>
+<!-- Add Angular directive in DOM -->
+<!-- <datatable-wrapper>
+    <table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns" class="row-border hover"></table>
+</datatable-wrapper> -->
+
+<!-- Binding Angular directive to the DataTable -->
+
+
+
+<p class="text-danger">
+    <strong>{{ vm.message }}</strong>
+</p>
+<br>
+<table datatable="" dt-options="vm.dtOptions" dt-columns="vm.dtColumns" dt-instance="vm.dtInstance" class="table table-striped table-bordered"></table>

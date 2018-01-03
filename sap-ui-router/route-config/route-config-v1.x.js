@@ -197,8 +197,15 @@
                 $stateProvider.state({
                     name: 'angular-datatables',
                     url: '/angular-datatables',
-                    templateUrl: 'views/angular-datatable.html',
+                    templateUrl: 'views/angular-datatable/angular-datatable.html',
                     controller: 'angularDatatable',
+                    controllerAs: 'vm'
+                }),
+                $stateProvider.state({
+                    name: 'angular-datatables-advanced',
+                    url: '/angular-datatables-advanced',
+                    templateUrl: 'views/angular-datatable/angular-datatable-advance.html',
+                    controller: 'datatableAdvanced',
                     controllerAs: 'vm'
                 }),
 
