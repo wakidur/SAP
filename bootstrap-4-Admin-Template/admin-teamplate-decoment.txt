@@ -44,6 +44,9 @@ https://lingohub.com/blog/2016/03/angularjs-directives-image-cropping/
 //angular-datatables
 http://l-lin.github.io/angular-datatables/archives/#!/welcome
 
-//angular-datatables
+//angular-data-tables
 https://github.com/swimlane/angular-data-table
 http://swimlane.github.io/angular-data-table/
+
+//Dynamically-Bootstrap-Modal
+https://www.codeproject.com/Articles/1041128/Dynamically-Creating-and-Showing-Bootstrap-Modal
