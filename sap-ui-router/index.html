@@ -8,65 +8,36 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="dist/img/favicon.ico">
+    <link rel="icon" href="assets/img/favicon.ico">
 
     <title>Dashboard Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- dataTable -->
-    <!-- <link href="node_modules/release/dataTable.css" rel="stylesheet">
-    <link href="node_modules/release/material.css" rel="stylesheet">
-    <link href="node_modules/release/icons.css" rel="stylesheet"> -->
-
-
+    <link href="assets/scss/main.css" rel="stylesheet">
 
     <link href="node_modules/datatables.net-dt/css/jquery.dataTables.css" rel="stylesheet">
     <link href="node_modules/angular-datatables/dist/css/angular-datatables.css" rel="stylesheet">
 
-
-
-
-
-
-
-    <!-- Custom styles for this template -->
-    <link href="dist/css/dashboard.css" rel="stylesheet">
-    <link href="dist/css/style.css" rel="stylesheet">
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <script src="dist/js/holder.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+    
     <!-- Angularjs -->
 
     <script src="node_modules/angular/angular.min.js"></script>
+    <!-- angular-datatables -->
     <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
     <script src="node_modules/angular-datatables/dist/angular-datatables.js"></script>
+
+    <!-- angular-resource -->
     <script src="node_modules/angular-resource/angular-resource.min.js"></script>
- 
     <!-- angular-ui-router -->
      <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
    
-    <!-- angular-data-table -->
-    <!-- <script src="node_modules/angular-data-table/release/dataTable.min.js"></script>
-    <script src="node_modules/angular-data-table/release/dataTable.cjs.js"></script>
-    <script src="node_modules/angular-data-table/release/dataTable.es6.js"></script> -->
-
-    <!-- angular-datatables -->
-
-
-
-
-
-
-
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 
     <script src="module/main-module.js"></script>
@@ -100,41 +71,28 @@
     <!-- Chapter-1 -->
     <script src="directives/chapterOne/directive-scope-inheritance.js"></script>
     <script src="directives/chapterOne/treeDirective.js"></script>
-
-
-
-
-
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="dist/js/ie-emulation-modes-warning.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="dist/js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  
 </head>
 
 <body ng-app="appModule">
     <!-- header section  -->
-    <nav ng-if="!($state.current.name === 'logout')" class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/layout/header.html'"></nav>
+    <header>
+            <nav ng-if="!($state.current.name === 'logout')" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" ng-include="'views/layout/header.html'"></nav>
+    </header>
+   
     <!-- header section  -->
     <div class="container-fluid" ng-if="!($state.current.name === 'logout')">
         <div class="row">
             <!-- sidebar navigation  section  -->
-            <div class="col-sm-3 col-md-2 sidebar" ng-include="'views/layout/sidebar-v1.x.html'"></div>
+            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar" ng-include="'views/layout/sidebar-v1.x.html'"></nav>
             <!-- sidebar navigation  section  -->
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style=" margin-top: 56px;">
                 <h1 class="page-header" ng-if="$state.current.name === 'root'">Welcome to Dashboard Template for Bootstrap </h1>
                 <h1 ng-class="{'page-header':$state.current.name.length}" ng-if="!($state.current.name === 'root')">{{$state.current.name | capitalize}}</h1>
                 <!-- dynamic view section  -->
                 <ui-view></ui-view>
                 <!-- dynamic view section  -->
-            </div>
+            </main>
         </div>
     </div>
 

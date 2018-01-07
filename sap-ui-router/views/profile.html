@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="profileuser in vm.allUsers">
         <div class="thumbnail">
-            <img ng-src="dist/img/{{profileuser.images}}.jpg" alt="{{profileuser.name}}">
+            <img ng-src="assets/img/{{profileuser.images}}.jpg" alt="{{profileuser.name}}">
             <div class="caption">
                 <h3>
                     <a ui-sref="profile.profileuser({ profileuserId: profileuser.id })">
