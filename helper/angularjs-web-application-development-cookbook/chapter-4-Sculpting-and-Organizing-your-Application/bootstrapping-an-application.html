@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manually bootstrapping an application</title>
+
+    <style>
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
+
+    <script>
+/*
+    // step-1
+    angular.module('myApp', [])
+        .controller('Ctrl', function ($scope) {
+            $scope.mydata = 'Some scope data';
+        });
+    angular.element(document).ready(function () {
+        angular.bootstrap(document, ['myApp']);
+    });
+    */
+
+                        // step-2
+    angular.module('myApp', [])
+        .controller('Ctrl', function ($scope) {
+            $scope.mydata = 'Some scope data';
+        });
+    angular.element(document).ready(function () {
+        angular.bootstrap(document.getElementById('child'), ['myApp']);
+    });
+    </script>
+</head>
+
+<body>
+    <!-- step-1
+    <div ng-controller="Ctrl">
+        {{ mydata }}
+    </div> -->
+
+    <div id="child">
+        <div ng-controller="Ctrl">
+            {{ mydata }}
+        </div>
+    </div>
+
+
+</body>
+
+</html>

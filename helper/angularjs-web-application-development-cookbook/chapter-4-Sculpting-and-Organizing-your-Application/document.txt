@@ -1,0 +1,7 @@
+/*---------Sculpting(ভাস্কর্য) and Organizing your Application----------*/
+Introduction----------------------
+Manually bootstrapping an application----------------------
+transparently(স্বচ্ছভাবে)
+
+Using safe $apply-----------------------------------------
+implications.(প্রভাব।)

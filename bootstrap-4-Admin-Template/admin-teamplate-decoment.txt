@@ -50,3 +50,6 @@ http://swimlane.github.io/angular-data-table/
 
 //Dynamically-Bootstrap-Modal
 https://www.codeproject.com/Articles/1041128/Dynamically-Creating-and-Showing-Bootstrap-Modal
+
+Lazy load
+https://oclazyload.readme.io
