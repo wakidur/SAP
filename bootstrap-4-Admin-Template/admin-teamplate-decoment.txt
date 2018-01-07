@@ -32,6 +32,7 @@ ui-router
 https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
 
 Angle
+https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123
 http://themicon.co/theme/angle/v3.8.3/frontend/site/
 http://themicon.co/theme/angle/v3.8.3/backend-angular/#!/app/dashboard
 
