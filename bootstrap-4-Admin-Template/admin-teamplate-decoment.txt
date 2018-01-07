@@ -27,9 +27,17 @@ ui-router
     * http://plnkr.co/edit/gmtcE2?p=preview
     * https://github.com/marklagendijk/ui-router.stateHelper
 */
-
+//bootstrap4-angular
 
 https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
+
+Angle
+http://themicon.co/theme/angle/v3.8.3/frontend/site/
+http://themicon.co/theme/angle/v3.8.3/backend-angular/#!/app/dashboard
+
+Admin template only for Blog -----------------------
+http://jaybabani.com/slant/site/
+http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
 
 //angular-translate
 https://angular-translate.github.io/
@@ -53,3 +61,7 @@ https://www.codeproject.com/Articles/1041128/Dynamically-Creating-and-Showing-Bo
 
 Lazy load
 https://oclazyload.readme.io
+
+
+ngDialog
+https://github.com/likeastore/ngDialog

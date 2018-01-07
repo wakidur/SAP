@@ -1,0 +1,120 @@
+https://wrapbootstrap.com/theme/monarch-bootstrap-4-admin-angularjs-WB02R1485
+
+Features---------------------------
+
+Dashboard
+Buttons
+Panels
+Portfolio
+Gallery
+Portlets
+Checkboxs-Radios
+Tabs & Accordions
+Modals
+Progressbars
+Notification
+Bootstrap-Ui
+Typography
+Grid
+Widgets
+Nesteble list
+Range Slider
+Sweet-alert
+Icons
+Form-general Elements
+Form Validation
+Advanced Form
+Form Wizard
+WYSIWYG Editor
+Multiple File-upload
+x-Editable
+Basic Table
+Data Table
+Editable table
+Responsive table
+Morris Chart
+Flot Chart
+Chartist Chart
+Other chart
+Sparkline Chart
+Google Map
+Vector Map
+Inbox
+Compose Mail
+View Mail
+Log in
+Register
+Recover Password
+Lock Screen
+Blank Page
+404 Error
+404 Alt
+500 Error
+Timeline
+Invoice
+Calendar
+Email Templates
+
+
+Credits-----------------
+
+jQuery
+jQueryUI
+Bootstrap
+D3.js
+Greensock
+Modernizr
+RaphaelJS
+Calendar
+justGage
+Morris
+Piegage
+Sparklines
+xCharts
+Chosen
+Minicolors
+Datatables
+Datepicker
+Daterangepicker
+Dropzone
+InputMasks
+InputSwitch
+jCrop
+jGrowl
+Knobs
+Lazyload
+Loading bar
+gMaps
+jVectorMap
+Mixitup
+Multiselect
+Multiupload
+Nestable
+Owlcarousel
+Nicescroll
+Noty
+Parsley
+PrettyPhoto
+Prism
+Rangeslider
+Skrollr
+Skycons
+Fontawesome
+Slidebars
+HGSticky
+Summernote
+Superfish
+Uniform
+Videobg
+WowJS
+Wizard
+Timepicker
+
+
+Images--------------
+
+iStockPhoto
+Fonts
+
+Font Awesome------------
+Open Sans
