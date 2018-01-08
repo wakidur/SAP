@@ -47,8 +47,8 @@ https://github.com/angular-translate/angular-translate
 //angular-file-upload
 https://github.com/nervgh/angular-file-upload
 
-//angularjs-directives-image-cropping
-https://lingohub.com/blog/2016/03/angularjs-directives-image-cropping/
+//ng-img-crop
+https://www.npmjs.com/package/ng-img-crop
 
 //angular-datatables
 http://l-lin.github.io/angular-datatables/archives/#!/welcome
