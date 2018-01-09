@@ -12,7 +12,7 @@
 @import "vendor/normalize/normalize";
 
 // Override Boostrap variables
-@import "base/bootstrap-variables";
+@import "themes/customThemes";
 
 // Import Bootstrap source files
 
@@ -20,7 +20,7 @@
 // To do this please remove @import "bootstrap/bootstrap"; and uncomment proper line.
 
 // Import Bootstrap source files from node_modules
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "vendor/bootstrap/bootstrap";
 
 // Import Bootstrap source files from bower_components
 // @import "bower_components/bootstrap/scss/bootstrap";
@@ -28,14 +28,14 @@
 //font-awesome
 @import "../../node_modules/font-awesome/scss/font-awesome";
 // Import core styles
-@import "custom-variables";
-@import "core/mixins";
+@import "utilities/custom-variables";
+@import "utilities/mixins";
 
 // Import vendors styles
 @import "vendors/vendors";
 
 // Additional typography
-@import "core/typography";
+@import "base/typography";
 
 // Animations
 @import "core/animate";
