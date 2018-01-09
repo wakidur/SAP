@@ -11,25 +11,34 @@
 // Import normalize
 @import "vendor/normalize/normalize";
 
-// Override Boostrap variables
+// avoid modifying Bootstrap’s core files. For Sass, 
+// that means creating your own stylesheet that imports Bootstrap so you can modify and extend it.
+// Override Boostrap variables create a the
 @import "themes/customThemes";
 
-// Import Bootstrap source files
+// If you’ve downloaded our source files and aren’t using a package manager, you’ll want to manually setup something similar to that structure, keeping Bootstrap’s source files separate from your own.
+@import "vendors/bootstrap/bootstrap";
 
 // If you want you can import bootstrap scss files directly from node_modules or bower_components.
 // To do this please remove @import "bootstrap/bootstrap"; and uncomment proper line.
 
 // Import Bootstrap source files from node_modules
-@import "vendor/bootstrap/bootstrap";
+// @import "node_modules/bootstrap/scss/bootstrap";
 
-// Import Bootstrap source files from bower_components
-// @import "bower_components/bootstrap/scss/bootstrap";
 
+// Import Bootstrap source files from node_modules
+// @import "node_modules/bootstrap/scss/bootstrap";
+
+// ----------------Add plug-in--------------
 //font-awesome
 @import "../../node_modules/font-awesome/scss/font-awesome";
+
+
 // Import core styles
 @import "utilities/custom-variables";
 @import "utilities/mixins";
+// Utility classes
+@import "utilities/utilities";
 
 // Import vendors styles
 @import "vendors/vendors";
@@ -38,50 +47,45 @@
 @import "base/typography";
 
 // Animations
-@import "core/animate";
+@import "components/animate";
 
 // Components
-@import "core/aside";
-@import "core/avatars";
-@import "core/badge";
-@import "core/breadcrumb-menu";
-@import "core/breadcrumb";
-@import "core/buttons";
-@import "core/callout";
-@import "core/card";
-@import "core/charts";
-@import "core/dropdown";
-@import "core/footer";
-@import "core/grid";
-@import "core/input-group";
-@import "core/loading";
-@import "core/modal";
-@import "core/nav";
-@import "core/navbar";
-@import "core/progress";
-@import "core/sidebar";
-@import "core/switches";
-@import "core/tables";
-@import "core/widgets";
 
-// Layout Options
-@import "core/layout";
-
-@import "core/others";
-
-// Utility classes
-@import "core/utilities";
+@import "components/avatars";
+@import "components/badge";
+@import "components/breadcrumb-menu";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/callout";
+@import "components/card";
+@import "components/charts";
+@import "components/dropdown";
+@import "components/input-group";
+@import "components/loading";
+@import "components/modal";
+@import "components/nav";
+@import "components/progress";
+@import "components/switches";
+@import "components/tables";
+@import "components/widgets";
+@import "components/others";
 
 // Temporary fixes
-@import "core/temp";
-
+@import "components/temp";
 // Right-to-left
-@import "core/rtl";
+@import "components/rtl";
+
+// Layout Options
+@import "layout/aside";
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/navbar";
+@import "layout/sidebar";
+@import "layout/layout";
 
 // Custom styles
-@import "custom";
+@import "utilities/custom";
 
-// components
 
 // pages
 @import "pages/dashboard";
