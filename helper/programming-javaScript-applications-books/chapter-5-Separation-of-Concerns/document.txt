@@ -1,0 +1,13 @@
+Events------------
+Events are a method of communication between deffernt application modules or components in order to achieve 
+1. loose coupling
+2. Asynchronous communication
+3. inerprocess communication
+
+*** Browser environment is event driven. 
+It presents(বিদ্যমান) DOM elements to users (buttons and form inputs, for example), and then responds to user input by firing(গুলি ছোড়া) events for the application to listen for and handle.
+
+
+Event emitters(এমিটার্স)----------
+
+Event aggregators(সংযোগকারীদের)-----------
