@@ -5,11 +5,8 @@
  */
 // Override Boostrap variables
 //@import "bootstrap-variables";
-
-
-
 // Import normalize
-@import "vendor/normalize/normalize";
+@import "vendors/normalize/normalize";
 
 // avoid modifying Bootstrap’s core files. For Sass, 
 // that means creating your own stylesheet that imports Bootstrap so you can modify and extend it.
@@ -17,7 +14,7 @@
 @import "themes/customThemes";
 
 // If you’ve downloaded our source files and aren’t using a package manager, you’ll want to manually setup something similar to that structure, keeping Bootstrap’s source files separate from your own.
-@import "vendors/bootstrap/bootstrap";
+@import "vendors/bootstrap/bootstrap-main";
 
 // If you want you can import bootstrap scss files directly from node_modules or bower_components.
 // To do this please remove @import "bootstrap/bootstrap"; and uncomment proper line.
@@ -37,20 +34,14 @@
 // Import core styles
 @import "utilities/custom-variables";
 @import "utilities/mixins";
-// Utility classes
-@import "utilities/utilities";
-
 // Import vendors styles
 @import "vendors/vendors";
-
 // Additional typography
 @import "base/typography";
 
 // Animations
 @import "components/animate";
-
-// Components
-
+@import "layout/aside";
 @import "components/avatars";
 @import "components/badge";
 @import "components/breadcrumb-menu";
@@ -60,26 +51,27 @@
 @import "components/card";
 @import "components/charts";
 @import "components/dropdown";
+@import "layout/footer";
+@import "layout/grid";
 @import "components/input-group";
 @import "components/loading";
 @import "components/modal";
 @import "components/nav";
+@import "layout/navbar";
 @import "components/progress";
+@import "layout/sidebar";
 @import "components/switches";
 @import "components/tables";
 @import "components/widgets";
+@import "layout/layout";
 @import "components/others";
-
+// Utility classes
+@import "utilities/background";
+@import "utilities/borders";
+@import "utilities/display";
 // Temporary fixes
 @import "components/temp";
 
-// Layout Options
-@import "layout/aside";
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/navbar";
-@import "layout/sidebar";
-@import "layout/layout";
 @import "layout/rtl";
 
 // Custom styles

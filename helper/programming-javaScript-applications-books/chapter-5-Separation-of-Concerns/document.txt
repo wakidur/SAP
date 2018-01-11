@@ -10,4 +10,13 @@ It presents(বিদ্যমান) DOM elements to users (buttons and form in
 
 Event emitters(এমিটার্স)----------
 
-Event aggregators(সংযোগকারীদের)-----------
+Event aggregators( সংযোগকারীদের )-----------
+an event aggregator is a central object that collects events
+from multiple sources and delivers them to registered subscribers. This is essentially a
+type of publish/subscribe pattern. An aggregator eliminates the need for specialized
+mediators to keep an emitter and listener decoupled.
+
+Queues and stacks--------------
+
+Choosing the right event model----
+

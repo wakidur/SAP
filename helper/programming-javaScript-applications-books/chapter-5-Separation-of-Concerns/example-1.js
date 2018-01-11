@@ -23,3 +23,17 @@ module.exports = api;
 
 
 // step - 2;
+// aggregators
+// set up an aggregator on your app object.
+var app = {
+    bus: _.extend({}, Backbone.Events )
+};
+// in your module , log all invites in the app.
+app.bus.on('invite', function handle(inviteData) {
+    console.log(inviteData)
+});
+// Trigger an event when a user invites a friend.
+app.bus.trigger('invite', {
+    user: 'userId',
+    friend: 'friend.email@example.com'
+});

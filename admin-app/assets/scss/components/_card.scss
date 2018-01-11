@@ -127,22 +127,22 @@
 
 // Cards with color accent
 .card-accent-primary {
-  @include card-accent-variant($btn-primary-bg);
+  @include card-accent-variant($primary);
 }
 .card-accent-secondary {
-  @include card-accent-variant($btn-secondary-border);
+  @include card-accent-variant($secondary);
 }
 .card-accent-info {
-  @include card-accent-variant($btn-info-bg);
+  @include card-accent-variant($info);
 }
 .card-accent-success {
-  @include card-accent-variant($btn-success-bg);
+  @include card-accent-variant($success);
 }
 .card-accent-warning {
-  @include card-accent-variant($btn-warning-bg);
+  @include card-accent-variant($warning);
 }
 .card-accent-danger {
-  @include card-accent-variant($btn-danger-bg);
+  @include card-accent-variant($danger);
 }
 
 // Card Actions
@@ -205,8 +205,8 @@
 
 .card-full {
   margin-top: - $spacer;
-  margin-right: - $grid-gutter-width-base / 2;
-  margin-left: - $grid-gutter-width-base / 2;
+  margin-right: - $grid-gutter-width / 2;
+  margin-left: - $grid-gutter-width / 2;
   border: 0;
   border-bottom: $card-border-width solid $border-color;
 }
