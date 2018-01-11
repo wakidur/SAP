@@ -26,7 +26,7 @@
 
 
     <!-- Main styles for this application -->
-    <link href="assets/sass/main.css" rel="stylesheet">
+    <link href="assets/scss/style.css" rel="stylesheet">
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -58,12 +58,12 @@
     <script src="appBootstrap.js"></script>
     <script src="states/main-route.js"></script>
 
+    <script src="directives/commonDirectives.js"></script>
+
 
   </head>
-  <body>
+  <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden">
     <!-- User Interface -->
     <ui-view></ui-view>
-
-   
   </body>
 </html> 
