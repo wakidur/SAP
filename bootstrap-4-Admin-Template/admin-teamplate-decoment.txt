@@ -31,6 +31,18 @@ ui-router
 
 https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
 
+
+ui-select
+https://github.com/angular-ui/ui-select
+
+//angular-breadcrumb
+//angular-loading-bar
+//angular-chart.js
+//lodash
+https://lodash.com/
+//angular-ui-tree
+https://angular-ui-tree.github.io/angular-ui-tree/#/basic-example
+
 //angular-translate
 https://angular-translate.github.io/
 https://github.com/angular-translate/angular-translate

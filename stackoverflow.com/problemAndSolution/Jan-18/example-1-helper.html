@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- https://stackoverflow.com/questions/48070639/modal-not-working-properly-css-not-populating-span-broken -->
 
 <head>
     <meta charset="UTF-8">
@@ -31,8 +32,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             /* Black w/ opacity */
         }
-
-
+        
         .modal-content,
         .modal-2-content,
         .modal-3-content {
@@ -43,7 +43,7 @@
             width: 80%;
         }
         /* The Close Button */
-
+        
         .close,
         .close-modal-2,
         .close-modal-3 {
@@ -52,7 +52,7 @@
             font-size: 28px;
             font-weight: bold;
         }
-
+        
         .close,
         .close-modal-2,
         .close-modal-3:hover,
@@ -69,9 +69,9 @@
 <body>
 
     <!-- The Modal -->
-    <button  onclick='manageInventory("1", "created a POS", "11")'>Open Modal</button>
+    <button onclick='manageInventory("1", "created a POS", "11")'>Open Modal</button>
 
-    
+
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -110,10 +110,10 @@
             "<label id='stock'></label>"
 
             localStorage.setItem('id', id);
-            span.onclick = function () {
+            span.onclick = function() {
                 modal.style.display = "none";
             }
-            window.onclick = function (event) {
+            window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
@@ -132,10 +132,10 @@
                 "<p>" + img + "</p>" +
                 "<p><button type='submit' formmethod='post' onclick='addToCart()'>Yes, add it to my cart.</button>" +
                 "<button>No, continue shopping</button>";
-            span.onclick = function () {
+            span.onclick = function() {
                 modal2.style.display = "none";
             }
-            window.onclick = function (event) {
+            window.onclick = function(event) {
                 if (event.target == modal2) {
                     modal2.style.display = "none";
                 }
