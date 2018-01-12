@@ -3,10 +3,21 @@
 
     angular
         .module('appModule')
-        .config(['$stateProvider', function ($stateProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
             //$urlRouteProvider.otherwise('');
             // deshboard route
+            $stateProvider.state('settings', {
+                url: '/settings',
+                templateUrl: 'views/settings.html',
+                controller: 'settingsCtrl'
+    
+            });
+            $stateProvider.state('logout', {
+                url: '/logout',
+                templateUrl: 'views/logout.html'
+            });
+            
             $stateProvider.state({
                 name: 'deshboard',
                 url: '/deshboard',
@@ -208,20 +219,12 @@
                     controller: 'datatableAdvanced',
                     controllerAs: 'vm'
                 }),
-
-                // $stateProvider
-                // .state('angular-datatables', {
-                //   url: "/angular-datatables",
-                //   templateUrl: "views/angular-datatable.html",
-                //   controller: 'angularDatatable',
-                //   controllerAs: 'vm'
-                // }),
-
                 $stateProvider.state({
                     name: 'nofound',
                     url: '*path',
                     template: '<h2> No route found  </h2>'
                 });
+               // $urlRouterProvider.otherwise('/logout');
         }]);
 
 
@@ -258,7 +261,7 @@
 
     angular
         .module('appModule')
-        .run(runRun)
+        .run(runRun);
 
     runRun.$inject = ['$rootScope', '$state', '$http' , 'DTDefaultOptions'];
 

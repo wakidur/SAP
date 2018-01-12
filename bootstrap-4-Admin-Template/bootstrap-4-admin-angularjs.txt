@@ -1,0 +1,206 @@
+https://wrapbootstrap.com/theme/monarch-bootstrap-4-admin-angularjs-WB02R1485
+
+Features---------------------------
+
+Dashboard
+Buttons
+Panels
+Portfolio
+Gallery
+Portlets
+Checkboxs-Radios
+Tabs & Accordions
+Modals
+Progressbars
+Notification
+Bootstrap-Ui
+Typography
+Grid
+Widgets
+Nesteble list
+Range Slider
+Sweet-alert
+Icons
+Form-general Elements
+Form Validation
+Advanced Form
+Form Wizard
+WYSIWYG Editor
+Multiple File-upload
+x-Editable
+Basic Table
+Data Table
+Editable table
+Responsive table
+Morris Chart
+Flot Chart
+Chartist Chart
+Other chart
+Sparkline Chart
+Google Map
+Vector Map
+Inbox
+Compose Mail
+View Mail
+Log in
+Register
+Recover Password
+Lock Screen
+Blank Page
+404 Error
+404 Alt
+500 Error
+Timeline
+Invoice
+Calendar
+Email Templates
+
+
+Credits-----------------
+
+jQuery
+jQueryUI
+Bootstrap
+D3.js
+Greensock
+Modernizr
+RaphaelJS
+Calendar
+justGage
+Morris
+Piegage
+Sparklines
+xCharts
+Chosen
+Minicolors
+Datatables
+Datepicker
+Daterangepicker
+Dropzone
+InputMasks
+InputSwitch
+jCrop
+jGrowl
+Knobs
+Lazyload
+Loading bar
+gMaps
+jVectorMap
+Mixitup
+Multiselect
+Multiupload
+Nestable
+Owlcarousel
+Nicescroll
+Noty
+Parsley
+PrettyPhoto
+Prism
+Rangeslider
+Skrollr
+Skycons
+Fontawesome
+Slidebars
+HGSticky
+Summernote
+Superfish
+Uniform
+Videobg
+WowJS
+Wizard
+Timepicker
+
+
+Images--------------
+
+iStockPhoto
+Fonts
+
+Font Awesome------------
+Open Sans
+
+---------------------angle-bootstrap-admin-template--------------------------
+https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123
+
+AngularJS admin template Features-----------
+
+AngularJS 1.5 + AngularUI
+BootstrapUI 3.x
+Bower managed dependencies
+Seed project included
+Pure CSS3 Page Transitions
+Angular UI Router (with nested states)
+3 dashboard variants
+Loading Bar
+Ready for translation
+i18n languages support
+Translation loaded from JSON
+RTL Support
+Lazy Load scripts and styles
+Sortable
+Nestable
+Tree view control
+Icons
+Font Awesome 4 (+400 Retina Ready)
+Weather Icons
+Sidebar
+Loads dynamically from JSON config
+Condensed and Offcanvas
+Forms
+UI Extended
+Validation ready
+File upload (php script included)
+Wizard with validation
+uiSelect
+XEditable
+Image Crop
+Widgets utility classes
+Masonry Grid (css3 columns with fallback)
+CSS3 Spinners
+Fullscreen toggle
+jQuery powered
+Panels & Portlets (with autosave)
+ngDialog
+Markdown based documentation
+Maps
+Google Map
+Vector Map
+Tables
+ngTables (with ajax/json)
+Datatables Integrated with Bootstrap styles
+XEditable
+Charts
+Flot Charts (loads from json)
+Sparkline
+CSS3 Radial Progress bar
+Rickshaw
+Chartist
+Morrisjs
+Animated Radial Loader
+Extra Pages
+Login
+Register
+Recover password
+Lock screen
+404 Not Found
+Extra Designs
+Mailbox
+FullCalendar
+Timeline
+Search results
+Invoice (print ready)
+Todo List
+Profile
+Code Editor
+In-app Settings (with autosave)
+Easily themeable
+Multiple layout options
++25 directives
+CSS optimized for print
+Crossbrowser (IE9+)
+Fully Responsive and Mobile optimized
+Mobile first components
+LESS/SCSS & PUG(jade) source
+Gulp task runner
+Well commented code
+Precise documentation

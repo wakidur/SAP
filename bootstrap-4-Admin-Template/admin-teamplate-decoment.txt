@@ -27,21 +27,18 @@ ui-router
     * http://plnkr.co/edit/gmtcE2?p=preview
     * https://github.com/marklagendijk/ui-router.stateHelper
 */
-
+//bootstrap4-angular
 
 https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
 
+Angle
+https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123
+http://themicon.co/theme/angle/v3.8.3/frontend/site/
+http://themicon.co/theme/angle/v3.8.3/backend-angular/#!/app/dashboard
 
-ui-select
-https://github.com/angular-ui/ui-select
-
-//angular-breadcrumb
-//angular-loading-bar
-//angular-chart.js
-//lodash
-https://lodash.com/
-//angular-ui-tree
-https://angular-ui-tree.github.io/angular-ui-tree/#/basic-example
+Admin template only for Blog -----------------------
+http://jaybabani.com/slant/site/
+http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
 
 //angular-translate
 https://angular-translate.github.io/
@@ -50,8 +47,8 @@ https://github.com/angular-translate/angular-translate
 //angular-file-upload
 https://github.com/nervgh/angular-file-upload
 
-//angularjs-directives-image-cropping
-https://lingohub.com/blog/2016/03/angularjs-directives-image-cropping/
+//ng-img-crop
+https://www.npmjs.com/package/ng-img-crop
 
 //angular-datatables
 http://l-lin.github.io/angular-datatables/archives/#!/welcome
@@ -62,3 +59,10 @@ http://swimlane.github.io/angular-data-table/
 
 //Dynamically-Bootstrap-Modal
 https://www.codeproject.com/Articles/1041128/Dynamically-Creating-and-Showing-Bootstrap-Modal
+
+Lazy load
+https://oclazyload.readme.io
+
+
+ngDialog
+https://github.com/likeastore/ngDialog

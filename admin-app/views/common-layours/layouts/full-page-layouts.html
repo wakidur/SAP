@@ -1,0 +1,14 @@
+<!-- Header  -->
+<header ng-include="'views/common-layours/common-components-layours/navbar.html'"></header>
+<!-- Heade end -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Navigation -->
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar" ng-include="'views/common-layours/common-components-layours/sidebar-nav.html'"></nav>
+        <!-- Main content -->
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+            <ui-view></ui-view>
+        </main>
+
+    </div>
+</div>
