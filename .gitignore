@@ -13,3 +13,5 @@ bootstrap-4-project.zip
 admin-app/node_modules
 admin-app/package-lock.json
 
+express-backend/node_modules
+express-backend/package-lock.json
