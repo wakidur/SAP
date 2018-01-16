@@ -12,6 +12,8 @@ bootstrap-4-project.zip
 
 admin-app/node_modules
 admin-app/package-lock.json
+admin-app/assets/scss/.sass-cache
+
 
 express-backend/node_modules
 express-backend/package-lock.json
