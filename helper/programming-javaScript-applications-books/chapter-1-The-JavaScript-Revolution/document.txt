@@ -1,0 +1,44 @@
+/////////////////////**************************CHAPTER 1***********************/////////////
+/////////////////////**************************The JavaScript Revolution*******////////////
+prevalent(প্রভাবশালী)
+
+-------------Advantages of JavaScript------------
+1. Performance----- 
+worth(মূল্য)
+
+
+2.Objects---------
+
+JavaScript has very rich object-oriented (OO) features. The JSON (JavaScript Object Notation) standard used in nearly all modern web applications for both communication(যোগাযোগ) and data persistence(বিদ্যমানতা) is a subset(উপসেট) of JavaScript’s excellent(চমত্কার) object-literal notation.
+
+JavaScript uses a prototypal inheritance model(মডেল, আদর্শ, নকশা ). Instead of classes, you have object prototypes. New objects automatically inherit methods and attributes of their parent object through(মাধ্যমে) the prototype chain. It’s possible to modify an object’s prototype at any time, making JavaScript a very flexible, dynamic language.
+
+Prototypal OO is so much more flexible than classical inheritance that it’s possible to mimic(অনুকরণমূলক, নকল) Java’s class-based OO and inheritance models in JavaScript virtually  feature for feature, and in most cases, with less code.
+JavaScript supports features like 
+
+a. encapsulation, 
+b. polymorphism,
+c. multiple inheritance
+d. composition.
+
+
+3. Syntax -------------------
+
+The JavaScript syntax should be immediately(অবিলম্বে) familiar to anybody who has experience with C-family languages, such as C++, Java, C#,and PHP. Part of JavaScript’s popularity is due to (কারণে) its familiarity, though it’s important to understand that JavaScript behaves very differently(ভিন্নভাবে, সম্পূর্ণ ভিন্ন, পৃথক্) from all of these under the hood(বোরখা দিয়া ঢাকা, চক্র).
+
+JavaScript’s object-literal syntax is so simple, flexible, and concise(সংক্ষিপ্ত), it was adapted(অভিযোজিত ) to become the dominant(প্রভাবশালী ) standard for client/server communication in the form of JSON, which is more compact and flexible than the XML that it replaced.
+
+4. First-Class Functions------
+
+Nearly everything in JavaScript is an object, including functions. Because of that feature, functions can be used anywhere
+you might use a variable, including the parameters in function calls. That feature is often used to define anonymous callback functions for asynchronous operations, or to create higher order functions (functions that take other functions as parameters, return a function, or both). Higher-order functions are used in the functional programming style to abstract away commonly repeated coding patterns, such as iteration loops or other instruction sets that differ mostly in the variables or data they consume.
+
+5. Events----------
+Inside(ভিতরে) the browser, everything runs in an event loop(ইভেন্ট লুপ).
+
+6. Reusability-----
+JavaScript code, by virtue(পুণ্য,মূল্য) of its ubiquity(সর্বব্যাপিতা), is the most portable, reusable code around. What other language lets you write the same code that runs natively on both the client and the server?
+
+7. The Net Result----
+JavaScript developers are at the heart of what may be the single biggest revolution in the
+history of computing: the dawn of the realtime web.
