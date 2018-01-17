@@ -15752,11 +15752,16 @@ hr.transparent {
   border-right-color: #4dbd74;
 }
 
+/*Some calculations*/
 .h-vh-100 {
   min-height: 100vh !important;
 }
 
 .w-vw-100 {
   min-width: 100vw !important;
+}
+
+.mw-320 {
+  min-width: 20rem !important;
 }
 /*# sourceMappingURL=main.css.map */

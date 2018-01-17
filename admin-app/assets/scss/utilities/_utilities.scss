@@ -3,9 +3,14 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+/*Some calculations*/
+//1. 1rem/1em == 16px == 0.17in == 12pt == 1pc == 4.2mm == 0.42cm == 16px	
 .h-vh-100 {
     min-height: 100vh !important; 
 }
 .w-vw-100 {
     min-width: 100vw !important;
+}
+.mw-320 {
+   min-width: 20rem !important;
 }
