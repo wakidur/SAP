@@ -1,45 +1,46 @@
 <div class=" container-fluid ">
     <div class="row justify-content-center align-items-center h-vh-100">
         <div class="mw-320 align-self-center">
-            <div class="card text-center">
+            <div class="card text-center ">
                 <div class="card-header bg-dark text-white">
-                    Featured
-
+                    <h1 class="font-xl m-0"> {{vm.companyName}}</h1>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">SIGN IN TO CONTINUE.</h5>
-
-                    <form class="form-validate mb-lg" role="form" ng-submit="login.login()" name="login.loginForm" novalidate="">
+                <div class="card-body p-3 ">
+                    <h5 class="card-title font-xs pt-2 pb-3">
+                        {{vm.title}}
+                    </h5>
+                    <form class="form-validate" role="form" ng-submit="login.login()" name="login.loginForm" novalidate="">
                         <div class="form-group ">
-                            <!-- was-validated -->
-                            <div class="input-group mb-2 ">
-                                <input class="form-control border-right-0" id="exampleInputEmail1" type="email" name="account_email" placeholder="Enter email"
-                                    autocomplete="off" ng-model="login.account.email" required="">
+                            <div class="input-group">
+                                <input class="form-control" id="exampleInputEmail" type="email" name="account_email" placeholder="Enter email" autocomplete="off"
+                                    ng-model="login.account.email" required="">
                                 <div class="input-group-prepend ">
                                     <div class="input-group-text border-left-0 bg-transparent">
-                                        <span class="fa fa-envelope invalid-feedback text-muted"></span>
+                                        <span class="fa fa-envelope text-muted"></span>
                                     </div>
                                 </div>
                             </div>
-                            <span class="text-danger  ng-hide" ng-show="login.loginForm.account_email.$dirty && login.loginForm.account_email.$error.required">This field is required</span>
-                            <span class="text-danger ng-hide" ng-show="login.loginForm.account_email.$dirty && login.loginForm.account_email.$error.email">This field must be a valid email address</span>
+                            <span class="text-danger" ng-show="login.loginForm.account_email.$dirty && login.loginForm.account_email.$error.required">
+                                This field is required
+                            </span>
+                            <span class="text-danger" ng-show="login.loginForm.account_email.$dirty && login.loginForm.account_email.$error.email">
+                                This field must be a valid email address
+                            </span>
                         </div>
                         <div class="form-group">
-
-                            <div class="input-group mb-2">
-
-                                <input class="form-control border-right-0" id="exampleInputPassword1" type="password" name="account_password" placeholder="Password"
-                                    ng-model="login.account.password" required="">
+                            <div class="input-group">
+                                <input ng-minlength="6" ng-maxlength="20" class="form-control" id="exampleInputPassword1" type="password" name="account_password"
+                                    placeholder="Password" ng-model="login.account.password" required="" aria-describedby="passwordHelpInline">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-left-0 bg-transparent">
-                                        <span class="fa fa-lock invalid-feedback text-muted"></span>
+                                        <span class="fa fa-lock text-muted"></span>
                                     </div>
                                 </div>
                             </div>
-                            <span class="text-danger ng-hide" ng-show="login.loginForm.account_password.$dirty && login.loginForm.account_password.$error.required">This field is required</span>
+                            <span class="text-muted" ng-show="login.loginForm.account_password.$error.minlength">Input is 6 too short!</span>
+                            <span class="text-muted" ng-show="login.loginForm.account_password.$error.maxlength">Input is 20 too long!</span>
+                            <span class="text-danger" ng-show="login.loginForm.account_password.$dirty && login.loginForm.account_password.$error.required">This field is required</span>
                         </div>
-
-
                         <div class="form-row">
                             <div class="col-auto my-1">
                                 <div class="custom-control custom-checkbox mr-sm-2">
@@ -48,58 +49,20 @@
                                 </div>
                             </div>
                             <div class="col my-1">
-                                <div class="pull-right">
-                                    <a class="text-muted" ui-sref="page.recover" href="#!/page/recover">Forgot your password?</a>
-                                </div>
+                                <a class="text-muted" ui-sref="page.recover">Forgot your password?</a>
                             </div>
                         </div>
-                        <button class=" btn btn-success btn-block" type="submit">Login</button>
+                        <button class="btn btn-secondary btn-block mt-3" type="submit">Login</button>
                     </form>
                     <div class="alert alert-danger text-center ng-binding ng-hide" ng-show="login.authMsg"></div>
-                    <p class="text-center mt-3">Need to Signup?</p>
-                    <a class="btn btn-outline-secondary btn-block" ui-sref="page.register" href="#!/page/register">Register Now</a>
+                    <p class="text-center mt-4 mb-2">Need to Signup?</p>
+                    <a role="button" class="btn btn-outline-dark btn-block" ui-sref="userApps.register">Register Now</a>
                 </div>
-                <div class="card-footer text-muted bg-transparent b-t-0">
+                <div class="card-footer text-muted bg-transparent ">
                     @ 2018 - WKR
                     <br> WKR Bootstrap Admin Template
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
-<div class="panel-body">
-    <p class="text-center pv">SIGN IN TO CONTINUE.</p>
-    <form class="form-validate mb-lg ng-pristine ng-valid-email ng-invalid ng-invalid-required" role="form"
-        ng-submit="login.login()" name="login.loginForm" novalidate="">
-        <div class="form-group has-feedback">
-            <input class="form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required" id="exampleInputEmail1"
-                type="email" name="account_email" placeholder="Enter email" autocomplete="off" ng-model="login.account.email"
-                required="">
-            <span class="fa fa-envelope form-control-feedback text-muted"></span>
-            <span class="text-danger ng-hide" ng-show="login.loginForm.account_email.$dirty &amp;&amp; login.loginForm.account_email.$error.required">This field is required</span>
-            <span class="text-danger ng-hide" ng-show="login.loginForm.account_email.$dirty &amp;&amp; login.loginForm.account_email.$error.email">This field must be a valid email address</span>
-        </div>
-        <div class="form-group has-feedback">
-            <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" id="exampleInputPassword1"
-                type="password" name="account_password" placeholder="Password" ng-model="login.account.password" required="">
-            <span class="fa fa-lock form-control-feedback text-muted"></span>
-            <span class="text-danger ng-hide" ng-show="login.loginForm.account_password.$dirty &amp;&amp; login.loginForm.account_password.$error.required">This field is required</span>
-        </div>
-        <div class="clearfix">
-            <div class="checkbox c-checkbox pull-left mt0">
-                <label>
-                    <input type="checkbox" value="" name="account_remember" ng-model="login.account.remember" class="ng-pristine ng-untouched ng-valid ng-empty">
-                    <span class="fa fa-check"></span> Remember Me</label>
-            </div>
-            <div class="pull-right">
-                <a class="text-muted" ui-sref="page.recover" href="#!/page/recover">Forgot your password?</a>
-            </div>
-        </div>
-        <button class="btn btn-block btn-primary mt-lg" type="submit">Login</button>
-    </form>
-    <div class="alert alert-danger text-center ng-binding ng-hide" ng-show="login.authMsg"></div>
-    <p class="pt-lg text-center">Need to Signup?</p>
-    <a class="btn btn-block btn-default" ui-sref="page.register" href="#!/page/register">Register Now</a>
 </div>
