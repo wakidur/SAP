@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- Bootstrap CSS
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <link href="assets/css/style.css" rel="stylesheet">  -->
-
-
-
-
-
-
-
     <title>Admin-Apps</title>
 
     <!-- Bootstrap core CSS -->
@@ -26,7 +16,7 @@
 
 
     <!-- Main styles for this application -->
-    <link href="assets/sass/main.css" rel="stylesheet">
+    <link href="assets/scss/main.css" rel="stylesheet">
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -58,12 +48,15 @@
     <script src="appBootstrap.js"></script>
     <script src="states/main-route.js"></script>
 
+    <script src="controllers/angular-translateCtrl.js"></script>
+    <script src="directives/commonDirectives.js"></script>
+    <script src="models/translateionModel.js"></script>
+   
+
 
   </head>
-  <body>
+  <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden">
     <!-- User Interface -->
     <ui-view></ui-view>
-
-   
   </body>
 </html> 

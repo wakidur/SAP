@@ -27,7 +27,7 @@ function _addHttpHeader() {
 
         //make authentication object
         var authentication = {
-            userPKID: userInfo.userPKID,
+           
             userID: userInfo.userName,
             password: 'Admin',
             userName: userInfo.userName,
