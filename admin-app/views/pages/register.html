@@ -11,7 +11,7 @@
                     </h5>
                     <form class="form-validate" role="form" name="reg.registerForm" novalidate="" ng-submit="reg.register()">
                         <div class="form-group">
-                            <label for="exampleInputName">Full Name</label>
+                            <label class="sr-only"  for="exampleInputName">Full Name</label>
                             <div class="input-group">
                                 <input class="form-control" id="exampleInputName" type="text" name="account_name" placeholder="Full Name" autocomplete="off"
                                     ng-model="reg.account.name" required="">
@@ -26,7 +26,7 @@
                             </span>
                         </div>
                         <div class="form-group ">
-                            <label for="exampleInputEmail">Email address</label>
+                            <label for="exampleInputEmail" class="sr-only">Email address</label>
                             <div class="input-group">
                                 <input class="form-control" id="exampleInputEmail" type="email" name="account_email" placeholder="Enter email" autocomplete="off"
                                     ng-model="reg.account.email" required="">
@@ -44,9 +44,10 @@
                             </span>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputname">Password</label>
+                            <label for="exampleInputname" class="sr-only">Password</label>
                             <div class="input-group">
-                                <input ng-minlength="6" ng-maxlength="20" class="form-control" id="id-password" type="password" name="account_password" ng-model="reg.register.password"
+                                <input ng-minlength="6" ng-maxlength="20" class="form-control" id="id-password" type="password" 
+                                placeholder="Password" name="account_password" ng-model="reg.register.password"
                                     ng-pattern="/^[a-zA-Z0-9]{6,10}$/" required="" aria-describedby="passwordHelpInline">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-left-0 bg-transparent">
@@ -64,9 +65,10 @@
                             </span>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputname">Retype Password</label>
+                            <label for="exampleInputname" class="sr-only">Retype Password</label>
                             <div class="input-group">
                                 <input class="form-control" type="password" name="account_password_confirm" ng-model="reg.register.account_password_confirm"
+                                placeholder="Retype Password"
                                     ui-validate="'$value==reg.register.password'" ui-validate-watch="'password'">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-left-0 bg-transparent">
@@ -91,11 +93,14 @@
                     <p class="text-center mt-4 mb-2 text-center">Have an account?</p>
                     <a role="button" class="btn btn-outline-dark btn-block" ui-sref="userApps.login">Signup</a>
                 </div>
-                <div class="card-footer text-muted bg-transparent text-center">
+                <!-- <div class="card-footer text-muted bg-light text-center b-t-0">
                     @ 2018 - WKR
                     <br> WKR Bootstrap Admin Template
-                </div>
+                </div> -->
             </div>
+
+            <p class=" text-center text-muted"> @ 2018 - WKR
+                    <br> WKR Bootstrap Admin Template</p>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
 
     angular
         .module('adminApp')
-        .controller('loginCtrl', constructor);
+        .controller('recoverCtrl', constructor);
 
         constructor.$inject = ['$location'];
 
@@ -11,7 +11,8 @@
         /* jshint validthis:true */
         var vm = this;
         vm.companyName = "Featured";
-        vm.title = "SIGN IN TO CONTINUE.";
+        vm.title = "PASSWORD RESET";
+        vm.dilog = "Fill with your mail to receive instructions on how to reset your password. "
 
         activate();
 

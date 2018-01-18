@@ -44,5 +44,23 @@
                 }]
             }
         });
+        $stateProvider.state('userApps.recover', {
+            // loaded into ui-view of parent's template
+            url: '/recover',
+            templateUrl: 'views/pages/recover.html',
+            controller: 'recoverCtrl',
+            controllerAs: 'vm',
+            onEnter: function() {
+                console.log("appSimple.recover");
+            },
+            resolve: {
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    // you can lazy load controllers
+                    return $ocLazyLoad.load({
+                        files: ['controllers/pages/recoverCtrl.js']
+                    });
+                }]
+            }
+        });
     }
 }());

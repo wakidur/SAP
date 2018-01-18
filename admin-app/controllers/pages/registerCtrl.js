@@ -3,7 +3,7 @@
 
     angular
         .module('adminApp')
-        .controller('registerCtrl', constructor)
+        .controller('registerCtrl', constructor);
 
         constructor.$inject = ['$location'];
 
