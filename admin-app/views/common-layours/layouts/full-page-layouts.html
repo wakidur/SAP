@@ -1,14 +1,41 @@
-<!-- Header  -->
-<header ng-include="'views/common-layours/common-components-layours/navbar.html'"></header>
-<!-- Heade end -->
-<div class="container-fluid">
-    <div class="row">
-        <!-- Navigation -->
-        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar" ng-include="'views/common-layours/common-components-layours/sidebar-nav.html'"></nav>
-        <!-- Main content -->
-        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-            <ui-view></ui-view>
-        </main>
+<!-- Navbar -->
+<header ng-include="'views/common-layours/navbar.html'"></header>
 
-    </div>
+<div class="app-body">
+    <!-- Navigation -->
+    <div ng-include="'views/common-layours/sidebar-nav.html'"></div>
+
+    <!-- Main content -->
+    <main class="main">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" breadcrumb>
+                <ncy-breadcrumb></ncy-breadcrumb>
+                <li class="breadcrumb-menu">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-link" href="#">
+                            <i class="icon-speech"></i>
+                        </a>
+                        <a class="btn btn-link" ui-sref="adminApps.dashboard">
+                            <i class="icon-graph"></i> &nbsp;Dashboard</a>
+                        <a class="btn btn-link" ui-sref="adminApps.dashboard">
+                            <i class="icon-settings"></i> &nbsp;Settings</a>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="container-fluid">
+            <ui-view></ui-view>
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+
+
+    <!-- Aside Menu -->
+    <div ng-include="'views/common-layours/aside.html'"></div>
+
 </div>
+
+<!-- Footer -->
+<div ng-include="'views/common-layours/footer.html'"></div>

@@ -1,1 +1,69 @@
-<h1>Login</h1>
+<div class=" container-fluid ">
+    <div class="row justify-content-center align-items-center h-vh-100">
+        <div class="mw-320 align-self-center">
+            <div class="card text-center">
+                <div class="card-header bg-dark text-white">
+                        Featured
+                   
+                </div>
+                <div class="card-body">
+                        <h5 class="card-title">SIGN IN TO CONTINUE.</h5>
+                  
+                    <form class="form-validate mb-lg" role="form" ng-submit="login.login()" name="login.loginForm" novalidate="">
+                        <div class="form-group ">
+                                <!-- was-validated -->
+                            <div class="input-group mb-2 ">
+                                <input class="form-control border-right-0"
+                                id="exampleInputEmail1" type="email" name="account_email" placeholder="Enter email" autocomplete="off"
+                                ng-model="login.account.email" required="">
+                                <div class="input-group-prepend ">
+                                    <div class="input-group-text border-left-0 bg-transparent">
+                                        <span class="fa fa-envelope invalid-feedback text-muted"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-danger  ng-hide" ng-show="login.loginForm.account_email.$dirty && login.loginForm.account_email.$error.required">This field is required</span>
+                            <span class="text-danger ng-hide" ng-show="login.loginForm.account_email.$dirty && login.loginForm.account_email.$error.email">This field must be a valid email address</span>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="input-group mb-2">
+
+                                <input class="form-control border-right-0" id="exampleInputPassword1" type="password"
+                                    name="account_password" placeholder="Password" ng-model="login.account.password" required="">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text border-left-0 bg-transparent">
+                                        <span class="fa fa-lock invalid-feedback text-muted"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-danger ng-hide" ng-show="login.loginForm.account_password.$dirty && login.loginForm.account_password.$error.required">This field is required</span>
+                        </div>
+                        
+
+                        <div class="form-row">
+                                <div class="col-auto my-1">
+                                        <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                                <label class="custom-control-label" for="customControlAutosizing">Remember Me</label>
+                                            </div>
+                                </div>
+                                <div class="col my-1">
+                                        <div class="pull-right">
+                                                <a class="text-muted" ui-sref="page.recover" href="#!/page/recover">Forgot your password?</a>
+                                            </div>
+                                </div>
+                              </div>
+                        <button class=" btn btn-success btn-block" type="submit">Login</button>
+                    </form>
+                    <div class="alert alert-danger text-center ng-binding ng-hide" ng-show="login.authMsg"></div>
+                    <p class="text-center mt-3">Need to Signup?</p>
+                    <a class="btn btn-outline-secondary btn-block" ui-sref="page.register" href="#!/page/register">Register Now</a>
+                </div>
+                <div class="card-footer text-muted bg-transparent b-t-0">
+                    @ 2018 - WKR
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

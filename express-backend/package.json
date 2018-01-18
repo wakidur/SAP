@@ -1,0 +1,15 @@
+{
+  "name": "admin-backend",
+  "version": "1.0.0",
+  "description": "admin tamplate backend ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wakidur",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "express": "^4.16.2"
+  }
+}

@@ -1,0 +1,19 @@
+/*
+***CHAPTER 6
+***Access Control
+*/
+Access control models are responsible for granting(মঞ্জুর হলেই, অনুমতি দেত্তয়া) or restricting(সীমাবদ্ধ) access(প্রবেশ, ) to resources. They depend on two things: 
+1. user identification (verified by one or more authentication schemes) 
+2. feature(বৈশিষ্ট্য) authorization(প্রমাণীকরণ).
+
+
+Authentication(প্রমাণীকরণ )------
+Authentication is the mechanism that confirms the identity of users trying to access a system.
+Generally this is handled by passing a key with each request (often called an access token).
+The server verifies that the access token is genuine(আসল), and that the user does indeed(প্রকৃতপক্ষে) have the required(প্রয়োজনীয়) privileges(বিশেষাধিকার) to access the requested resource. Only then is the request granted.
+
+Passwords------
+malicious(বিদ্বেষপরায়ণ)
+intruder(অনধিকারপ্রবেশকারী)
+obtains(গ্রহণ করে, অর্জন করা)
+Passwords should be stored with a one-way encryption(এনক্রিপশন) hash,
