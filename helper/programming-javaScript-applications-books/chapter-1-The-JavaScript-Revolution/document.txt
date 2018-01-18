@@ -42,3 +42,11 @@ JavaScript code, by virtue(পুণ্য,মূল্য) of its ubiquity(স�
 7. The Net Result----
 JavaScript developers are at the heart of what may be the single biggest revolution in the
 history of computing: the dawn of the realtime web.
+
+
+
+---------- Anatomy of a Typical Modern JavaScript App ------------
+1. Infrastructure 
+2. JSON: Data Storage and Communication
+3. NoSQL Data Stores
+4. RESTful JSON Web Services
