@@ -1,4 +1,4 @@
-/*
+
 test('order with unintentional side effect.', function() {
 
     var cartProto = {
@@ -29,7 +29,7 @@ test('order with unintentional side effect.', function() {
     ok(session.cart.intes.indexOf('grapefruti') !== -1, "passes: session cart has grapfruit");
     ok(savedCart.items.indexOf('grapefruit') === -1)
 });
-*/
+
 // setp-1;
 var a = function x() {
     console.log("x() is usable inside the function.");
