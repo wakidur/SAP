@@ -29,7 +29,8 @@
     overflow-x: hidden;
     overflow-y: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    @include sidebar-width($sidebar-borders, $sidebar-width);
+    //@include sidebar-width($sidebar-borders, $sidebar-width);
+    margin-right: -17px;
 
     &::-webkit-scrollbar {
 
