@@ -26,6 +26,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "jquery-lazyload": "^1.9.7",
+    "ng-dialog": "^1.4.0",
     "ng-img-crop": "^0.3.2",
     "oclazyload": "^1.1.0",
     "simple-line-icons": "^2.4.1",
