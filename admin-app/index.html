@@ -46,6 +46,7 @@
     <script src="appModule.js"></script>
     <script src="appConfig.js"></script>
     <script src="appBootstrap.js"></script>
+
     <!-- Route link -->
     <script src="states/mainRoute.js"></script>
     <script src="states/pagesRoute.js"></script>
@@ -58,7 +59,8 @@
 
 
   </head>
-  <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden">
+  <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden sidebar-off-canvas">
+  <!-- <body  ng-class="{app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden: $state.includes('adminApps.dashboard')}"> -->
     <!-- User Interface -->
     <ui-view></ui-view>
   </body>
