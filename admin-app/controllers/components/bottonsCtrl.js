@@ -11,7 +11,7 @@
         /* jshint validthis:true */
         var vm = this;
 
-        vm.global = userInfor.deg;
+        vm.global = userInfor.deg; // vuserInfo come form golobal variable 
         console.log("valo of " + vm.global);
 
         activate();

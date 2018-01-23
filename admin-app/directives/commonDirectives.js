@@ -3,7 +3,7 @@ angular
 .directive('a', preventClickDirective)
 .directive('a', bootstrapCollapseDirective)
 .directive('a', navigationDirective)
-.directive('nav', sidebarNavDynamicResizeDirective)
+// .directive('nav', sidebarNavDynamicResizeDirective)
 .directive('button', layoutToggleDirective)
 .directive('a', layoutToggleDirective)
 .directive('button', collapseMenuTogglerDirective)
