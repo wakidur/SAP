@@ -1,0 +1,61 @@
+/*
+* Add something different to your website by overriding the default text selection colour
+* highlighting the paragraphs, and add the code to your own website.
+/*
+/*
+    **Table of contents
+        ***CSS (Global Colour Change)
+        ***HTML
+        ***CSS (Specific Area Colour Change)
+*/
+
+/*
+*   ================CSS (Global Colour Change)===========
+*/
+
+/*IE9  - Also picked up by most modern browsers*/
+::selection   {
+    background: #AC2937;
+    color: #fff;
+    text-shadow: none;
+}
+/* Safari & Chrome - Webkit Rendering */
+::-webkit-selection {
+    background: #AC2937;
+    color: #fff;
+    text-shadow: none;
+}
+
+/* Mozilla based - Gecko Rendering */ 
+::-moz-selection{
+    background: #AC2937;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+/*
+* ====================CSS (Specific Area Colour Change)==================
+*/
+/* Green Paragraph Custom Selection Colours */
+.green-select::selection {
+    background-color: #009E30;
+    color: #fff;
+    text-shadow: none;
+}
+.green-select::-webkit-selection {
+    background-color: #009E30;
+    color: #fff;
+    text-shadow: none;
+}
+.green-select::-moz-selection {
+    background-color: #009E30;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+
+
+
