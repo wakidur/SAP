@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company page</title>
+</head>
+
+<body>
+
+    <p>Welcome! Here you can find following things:</p>
+    <ol>
+        <li><a href="#logo"><em>Company's logo </em></a> </li>
+        <li><a href="#employees"> List of employees </a></li>
+    </ol>
+    <h1>Company's logo</h1>
+    <p>Company uses following logos:</p>
+    <ul>
+        <li> New logo: <img src="new_logo.gif" alt="new logo"></li>
+        <li> Old logo <img src="old_logo.gif" alt="old logo"></li>
+    </ul>
+
+
+
+
+    <script type="text/javascript">
+        function removeDiv(btn) {
+            ((btn.parentNode).parentNode).removeChild(btn.parentNode);
+        }
+    </script>
+
+    <div class="image">
+        <img src="http://i.imgur.com/VuKnN5P.jpg" alt="First">
+        <button class="remove" onclick="removeDiv(this);">X</button>
+    </div>
+    <div class="image">
+        <img src="http://i.imgur.com/ee4QOKe.jpg" alt="Second">
+        <button class="remove" onclick="removeDiv(this);">X</button>
+    </div>
+
+</body>
+
+</html>
