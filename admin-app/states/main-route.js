@@ -13,19 +13,18 @@
             //debug: $ocLazyLoad returns a promise that will be rejected when there is an error but if you set debug to true, $ocLazyLoad will also log all errors to the console.
             debug: true
         });
-
         $breadcrumbProvider.setOptions({
             prefixStateName: 'adminApps.dashboard',
             includeAbstract: true,
             template: '<li class="breadcrumb-item" ng-repeat="step in steps" ng-class="{active: $last}" ng-switch="$last || !!step.abstract"><a ng-switch-when="false" href="{{step.ncyBreadcrumbLink}}">{{step.ncyBreadcrumbLabel}}</a><span ng-switch-when="true">{{step.ncyBreadcrumbLabel}}</span></li>'
         });
-
+        
         $urlRouterProvider.otherwise('/dashboard');
         $stateProvider.state('adminApps', {
             name: 'adminApps',
             abstract: true, // To insert a template with its own ui-view for child states to populate
             templateUrl: 'views/common-layours/layouts/full-page-layouts.html',
-            onEnter: function() {
+            onEnter: function () {
                 console.log("appSimple.login");
             },
             //page title goes here
@@ -34,7 +33,7 @@
                 skip: true
             },
             resolve: {
-                loadCSS: ['$ocLazyLoad', function($ocLazyLoad) {
+                loadCSS: ['$ocLazyLoad', function ($ocLazyLoad) {
                     // you can lazy load CSS files
                     return $ocLazyLoad.load([{
                         serie: true,
@@ -42,7 +41,7 @@
                         files: ['node_modules/simple-line-icons/css/simple-line-icons.css']
                     }]);
                 }],
-                loadPlugin: ['$ocLazyLoad', function($ocLazyLoad) {
+                loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
                     // you can lazy load files for an existing module
                     return $ocLazyLoad.load([{
                         serie: true,
@@ -54,7 +53,7 @@
                     }]);
                 }],
             }
-            
+
         });
         $stateProvider.state('adminApps.dashboard', {
             url: '/dashboard',
@@ -65,13 +64,8 @@
             ncyBreadcrumb: {
                 label: 'Home',
             },
-            //page subtitle goes here
-            params: {
-                subtitle: 'Welcome to ROOT powerfull Bootstrap & AngularJS UI Kit'
-            },
             resolve: {
-
-                loadPlugin: ['$ocLazyLoad', function($ocLazyLoad) {
+                loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
                     // you can lazy load files for an existing module
                     return $ocLazyLoad.load([{
                         serie: true,
@@ -79,13 +73,13 @@
                         files: [
                             'node_modules/chart.js/dist/Chart.min.js',
                             'node_modules/angular-chart.js/dist/angular-chart.min.js'
-                        ]
-                    }, ]);
+                        ]} 
+                    ]);
                 }],
-                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                     // you can lazy load controllers
                     return $ocLazyLoad.load({
-                        files: ['controllers/dashboaredCtrl.js']
+                        files: ['controllers/dashboard/dashboaredCtrl.js']
                     });
                 }]
             }
@@ -97,7 +91,7 @@
                 console.log("enter contacts");
             },
             resolve: {
-                loadPlugin: ['$ocLazyLoad', function($ocLazyLoad) {
+                loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
                     // you can lazy load files for an existing module
                     return $ocLazyLoad.load([{
                         serie: true,
@@ -106,16 +100,6 @@
                     }]);
                 }],
             }
-
-        });
-        $stateProvider.state('userApps.login', {
-            // loaded into ui-view of parent's template
-            url: '/login',
-            templateUrl: 'views/pages/login.html',
-            onEnter: function() {
-                console.log("appSimple.login");
-            }
         });
     }
-
 }());

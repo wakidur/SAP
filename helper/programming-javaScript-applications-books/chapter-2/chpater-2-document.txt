@@ -1,3 +1,16 @@
+/***----------------------CHAPTER 2---------------
+**------------------------Functions---------------
+*/
+
+Introduction----
+leverage(উদ্দেশ্যসাধনের উপায়)
+Functions are the building blocks of applications.
+JavaScript supports
+    a. first-class functions
+    b. functions as objects
+    c. runtime function definition
+
+typescript
 *****************Lambdas****************
 A lambda is a function that is used as data. As such, it can be used the same way any
 other expression can: as a parameter for another function, the return value of a function,
