@@ -1,4 +1,4 @@
-
+/* ============Minimize Side Effects=============*/
 test('order with unintentional side effect.', function() {
 
     var cartProto = {
@@ -29,6 +29,73 @@ test('order with unintentional side effect.', function() {
     ok(session.cart.intes.indexOf('grapefruti') !== -1, "passes: session cart has grapfruit");
     ok(savedCart.items.indexOf('grapefruit') === -1)
 });
+
+/** ====================== Function Definition ================== */
+
+//Function Expression
+function foo() {
+    /**
+     * warning: arguments.callee id deprecated use with caution. Used here strictly for illustration
+     */
+    return arguments.callee;
+}
+foo() ;
+
+//can’t declare a function conditionally
+
+let score = 6;
+
+if (score > 5)  {
+    function grade() {
+        return "Pass";
+    }
+} else {
+    function grade() {
+        return "Fail";
+    }
+}
+module('Pass or Fail');
+test('Conditional function declaration.', function(){
+    // Firefox: Pass
+    // Chrome, Safari, IE, Opera : Faill
+    equal(grade(), 'Pass', 'Grade should pass.');
+});  
+
+// Function Expression.
+let bar = () => {
+    return arguments.callee;
+}
+bar();
+// --------------
+let enameFunction = () => {
+
+   return "Hello world"
+}
+enameFunction()
+// ---------------
+let getIntergerValue = ( x, y ) => {
+    let result = Number;
+    if (Number.isInteger( x ) && Number.isInteger( y )) {
+        result = x + y;
+        result += " Great!";
+    } else {
+        result = "Please enter a valid integer value ";
+    }
+    return result;
+};
+
+getIntergerValue(1,3);
+
+// -----------
+let baz = {
+    objproperty : function() {
+        return arguments.callee;
+    }
+};
+baz.functionPro(); // function also anonymous.
+
+//----------------------
+
 
 // setp-1;
 var a = function x() {
