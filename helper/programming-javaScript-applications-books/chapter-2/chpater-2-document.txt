@@ -2,7 +2,9 @@
 **------------------------Functions---------------
 */
 
-Introduction----
+
+/** ======================Introduction ================== */
+
 leverage(উদ্দেশ্যসাধনের উপায়)
 Functions are the building blocks of applications.
 JavaScript supports
@@ -10,7 +12,40 @@ JavaScript supports
     b. functions as objects
     c. runtime function definition
 
-typescript
+------------------------------------------------------------
+/** ======================Function Definition ================== */
+deprecated(অননুমোদিত।)
+caution(সাবধানতা)
+strictly(যথাযথভাবে)
+illustration(চিত্রণ)
+
+// Function declaration
+function foo() {
+    return "Hello";
+}
+foo() // return value "Hello"
+
+foo() is a function declaration
+
+Function declaration tends(তত্ত্বাবধান করা, সহায়ক হত্তয়া) to encourage(উত্সাহিত করা) large piles(পাইলস, গাদা) of loosely(স্বাধীনভাবে, ঢিলেঢালাভাবে) related functions to grow in your module, with no real hints(নির্দেশ) about what goes where, whether it’s public or private, or how the functions work together
+
+//Function Expression
+var bar = function () {
+return arguments.callee;
+};
+bar(); //=> [Function] (Note: It's anonymous.)
+
+The advantage of function expressions
+a. you can assign functions to variables the same way you would assign values to variables.
+
+b. You can "count on"(নির্ভর করা) function expressions to follow your application logic reliably.
+
+c. If you want to do a conditional assignment, it will work as expected.
+d.
+
+
+
+-------------------------------------------------------------------
 *****************Lambdas****************
 A lambda is a function that is used as data. As such, it can be used the same way any
 other expression can: as a parameter for another function, the return value of a function,

@@ -11,6 +11,11 @@ even when signing in with your Skype name.
 
 tasneem.ahsan501@gmail.com
 
+Books name
+
+JavaScript: Novice to Ninja, 2nd Edition
+https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition
+
 Directive 
 http://tutorials.jenkov.com/angularjs/custom-directives.html
 https://www.undefinednull.com/2014/02/11/mastering-the-scope-of-a-directive-in-angularjs/

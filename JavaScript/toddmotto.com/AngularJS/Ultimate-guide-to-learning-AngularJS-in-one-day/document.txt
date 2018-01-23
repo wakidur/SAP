@@ -1,0 +1,32 @@
+/* ==========Ultimate guide to learning AngularJS in one day============*/
+https://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/
+
+
+Angular is a client-side MVC/MVVM framework built in JavaScript, essential for modern single page web applications (and even websites).
+
+Table of contents
+
+1. Terminology
+    a. MVC
+    b. Setting up an AngularJS project (bare essentials)
+    c. Controllers
+    d. Directives
+    e. Services
+    f. Factories
+    g. Filters
+2. Two-way data-binding
+3. XHR/Ajax/$http calls and binding JSON
+4. Declarative data-binding
+5. Scope functions
+6. Declarative DOM methods
+7. Expressions
+8. Dynamic views and routing
+9. Global static data
+10. Minification
+11. Scope comments
+12. Debugging AngularJS
+
+Further reading
+
+
+

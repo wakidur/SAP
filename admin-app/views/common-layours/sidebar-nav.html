@@ -2,9 +2,12 @@
         <nav class="sidebar-nav">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" ui-sref-active="active" ui-sref="adminApps.dashboard"><i class="icon-speedometer"></i> {{ 'DASHBOARD' | translate }} <span class="tag tag-info">NEW</span></a>
+                    <a class="nav-link" ui-sref-active="active"  ui-sref="adminApps.dashboard">
+                        <i class="icon-speedometer"></i> 
+                        {{ 'DASHBOARD' | translate }} 
+                        <span class="tag tag-info">NEW</span>
+                    </a>
                 </li>
-    
                 <li class="divider"></li>
                 <li class="nav-title">
                     UI Elements
@@ -93,6 +96,15 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" ui-sref-active="active" ui-sref="userApps.recover"><i class="icon-star"></i> Recover</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ui-sref-active="active" ui-sref="userApps.lock"><i class="icon-star"></i> Lock </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ui-sref-active="active" ui-sref="userApps.maintenance"><i class="icon-star"></i> Maintenance</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ui-sref-active="active" ui-sref="userApps.template"><i class="icon-star"></i> Blank Page </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" ui-sref-active="active" ui-sref="userApps.404"><i class="icon-star"></i> Error 404</a>

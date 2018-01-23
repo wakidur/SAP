@@ -11,10 +11,10 @@
                     </h5>
                     <form class="form-validate" role="form" name="reg.registerForm" novalidate="" ng-submit="reg.register()">
                         <div class="form-group">
-                            <label class="sr-only"  for="exampleInputName">Full Name</label>
+                            <label class="sr-only" aria-label="Full Name " for="exampleInputName">Full Name</label>
                             <div class="input-group">
                                 <input class="form-control" id="exampleInputName" type="text" name="account_name" placeholder="Full Name" autocomplete="off"
-                                    ng-model="reg.account.name" required="">
+                                    ng-model="reg.account.name" tabindex="1" required="">
                                 <div class="input-group-prepend ">
                                     <div class="input-group-text border-left-0 bg-transparent">
                                         <span class="fa fa-user text-muted"></span>
@@ -29,7 +29,7 @@
                             <label for="exampleInputEmail" class="sr-only">Email address</label>
                             <div class="input-group">
                                 <input class="form-control" id="exampleInputEmail" type="email" name="account_email" placeholder="Enter email" autocomplete="off"
-                                    ng-model="reg.account.email" required="">
+                                    ng-model="reg.account.email" tabindex="2" required="">
                                 <div class="input-group-prepend ">
                                     <div class="input-group-text border-left-0 bg-transparent">
                                         <span class="fa fa-envelope text-muted"></span>
@@ -48,7 +48,7 @@
                             <div class="input-group">
                                 <input ng-minlength="6" ng-maxlength="20" class="form-control" id="id-password" type="password" 
                                 placeholder="Password" name="account_password" ng-model="reg.register.password"
-                                    ng-pattern="/^[a-zA-Z0-9]{6,10}$/" required="" aria-describedby="passwordHelpInline">
+                                    ng-pattern="/^[a-zA-Z0-9]{6,10}$/" tabindex="3" required="" aria-describedby="passwordHelpInline">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-left-0 bg-transparent">
                                         <span class="fa fa-lock text-muted"></span>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="adminApp">
+<html lang="en" data-ng-app="adminApp">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -42,12 +42,19 @@
     <!-- angular-translate -->
     <script src="node_modules/angular-translate/dist/angular-translate.min.js"></script>
 
+    <!-- Helper links -->
+
+    <script src="helpers/javascriptVariable.js"></script>
+
     <!-- AngularJS  scripts -->
     <script src="appModule.js"></script>
     <script src="appConfig.js"></script>
     <script src="appBootstrap.js"></script>
-    <script src="states/main-route.js"></script>
-    <script src="states/pages-route.js"></script>
+
+    <!-- Route link -->
+    <script src="states/mainRoute.js"></script>
+    <script src="states/pagesRoute.js"></script>
+    <script src="states/componentsRoute.js"></script>
 
     <script src="controllers/angular-translateCtrl.js"></script>
     <script src="directives/commonDirectives.js"></script>
@@ -57,6 +64,7 @@
 
   </head>
   <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden">
+  <!-- <body  ng-class="{app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden: $state.includes('adminApps.dashboard')}"> -->
     <!-- User Interface -->
     <ui-view></ui-view>
   </body>

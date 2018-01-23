@@ -13,7 +13,7 @@
                         <div class="form-group ">
                             <div class="input-group">
                                 <input class="form-control" id="exampleInputEmail" type="email" name="account_email" placeholder="Enter email" autocomplete="off"
-                                    ng-model="login.account.email" required="">
+                                    ng-model="login.account.email" tabindex="1" required="">
                                 <div class="input-group-prepend ">
                                     <div class="input-group-text border-left-0 bg-transparent">
                                         <span class="fa fa-envelope text-muted"></span>
@@ -30,7 +30,7 @@
                         <div class="form-group">
                             <div class="input-group">
                                 <input ng-minlength="6" ng-maxlength="20" class="form-control" id="exampleInputPassword1" type="password" name="account_password"
-                                    placeholder="Password" ng-model="login.account.password" required="" aria-describedby="passwordHelpInline">
+                                    placeholder="Password" tabindex="2" ng-model="login.account.password" required="" aria-describedby="passwordHelpInline">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-left-0 bg-transparent">
                                         <span class="fa fa-lock text-muted"></span>
@@ -44,19 +44,19 @@
                         <div class="form-row">
                             <div class="col-auto my-1">
                                 <div class="custom-control custom-checkbox mr-sm-2">
-                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                    <input type="checkbox" tabindex="3" class="custom-control-input" id="customControlAutosizing">
                                     <label class="custom-control-label" for="customControlAutosizing">Remember Me</label>
                                 </div>
                             </div>
                             <div class="col my-1">
-                                <a class="text-muted" ui-sref="page.recover">Forgot your password?</a>
+                                <a class="text-muted" tabindex="6" ui-sref="userApps.recover">Forgot your password?</a>
                             </div>
                         </div>
-                        <button class="btn btn-secondary btn-block mt-3" type="submit">Login</button>
+                        <button class="btn btn-primary  btn-block mt-3" type="submit" tabindex="4">Login</button>
                     </form>
                     <div class="alert alert-danger text-center" ng-show="login.authMsg"></div>
                     <p class="text-center mt-4 mb-2">Need to Signup?</p>
-                    <a role="button" class="btn btn-outline-dark btn-block" ui-sref="userApps.register">Register Now</a>
+                    <a role="button" class="btn btn-outline-dark btn-block" ui-sref="userApps.register" tabindex="5">Register Now</a>
                 </div>
                 <!-- <div class="card-footer text-muted bg-transparent ">
                     @ 2018 - WKR

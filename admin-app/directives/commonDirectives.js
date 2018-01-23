@@ -3,7 +3,7 @@ angular
 .directive('a', preventClickDirective)
 .directive('a', bootstrapCollapseDirective)
 .directive('a', navigationDirective)
-.directive('nav', sidebarNavDynamicResizeDirective)
+// .directive('nav', sidebarNavDynamicResizeDirective)
 .directive('button', layoutToggleDirective)
 .directive('a', layoutToggleDirective)
 .directive('button', collapseMenuTogglerDirective)
@@ -38,7 +38,7 @@ function bootstrapCollapseDirective() {
   return directive;
 
   function link(scope, element, attrs) {
-    if (attrs.toggle=='collapse'){
+    if (attrs.toggle == 'collapse'){
       element.attr('href','javascript;;').attr('data-target',attrs.href.replace('index.html',''));
     }
   }
@@ -112,6 +112,7 @@ function sidebarNavDynamicResizeDirective($window, $timeout) {
 }
 
 //LayoutToggle
+
 layoutToggleDirective.$inject = ['$interval'];
 function layoutToggleDirective($interval) {
   var directive = {
@@ -133,6 +134,53 @@ function layoutToggleDirective($interval) {
     });
   }
 }
+
+// //LayoutToggle
+// layoutToggleDirective.$inject = ['$interval'];
+// function layoutToggleDirective($interval) {
+//     var directive = {
+//         restrict: 'E',
+//         link: link
+//     }
+//     return directive;
+
+//     function link(scope, element, attrs) {
+//         element.on('click', function(){
+
+//             var bodyClass = localStorage.getItem('body-class');
+
+//             if ((element.hasClass('layout-toggler') || element.hasClass('sidebar-close')) && angular.element('body').hasClass('sidebar-off-canvas')) {
+//                 angular.element('body').toggleClass('sidebar-opened').parent().toggleClass('sidebar-opened');
+
+//                 $interval(function () {
+//                     window.dispatchEvent(new Event('resize'));
+//                 }, 100, 5)
+
+//             } else if (element.hasClass('layout-toggler') && (angular.element('body').hasClass('sidebar-nav') || bodyClass == 'sidebar-nav')) {
+//                 angular.element('body').toggleClass('sidebar-nav');
+//                 localStorage.setItem('body-class', 'sidebar-nav');
+//                 if (bodyClass == 'sidebar-nav') {
+//                     localStorage.clear();
+//                 }
+
+//                 $interval(function () {
+//                     window.dispatchEvent(new Event('resize'));
+//                 }, 100, 5)
+//             }
+
+//             if (element.hasClass('aside-toggle')) {
+//                 angular.element('body').toggleClass('aside-menu-open');
+
+//                 $interval(function () {
+//                     window.dispatchEvent(new Event('resize'));
+//                 }, 100, 5)
+//             }
+//         });
+//     }
+// }
+
+
+
 
 //Collapse menu toggler
 function collapseMenuTogglerDirective() {

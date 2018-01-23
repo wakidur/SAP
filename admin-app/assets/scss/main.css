@@ -11724,7 +11724,7 @@ body {
 
 .breadcrumb {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid #cfd8dc;
 }
 
@@ -13249,6 +13249,19 @@ button {
   border: 1px dashed #b0bec5;
 }
 
+.card-profile .card-header {
+  height: 9.375rem;
+  background-size: cover;
+}
+
+.card-profile .card-profile-img {
+  max-width: 6.25rem;
+  margin-top: -4.375rem;
+  margin-bottom: 0.3125rem;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 .chart-wrapper canvas {
   width: 100% !important;
 }
@@ -13327,7 +13340,7 @@ base-chart.chart {
 }
 
 .main .container-fluid {
-  padding: 0 30px;
+  padding: 0 16px;
 }
 
 .input-group-addon,
@@ -13916,7 +13929,7 @@ base::-moz-progress-bar,
   overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  width: 200px;
+  margin-right: -17px;
 }
 
 .sidebar .sidebar-nav::-webkit-scrollbar {

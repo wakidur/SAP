@@ -29,6 +29,7 @@ angular
             LOGOUT:         'Logout',
             CALENDAR:       'Calendar',
             ANIMATIONS:     'Animations'
+            
         })
         .translations('es', {
             CHOOSE_LANGUAGE:'Elige lengua',
