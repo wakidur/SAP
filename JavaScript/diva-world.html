@@ -26,18 +26,18 @@
 
 
     <script type="text/javascript">
-        function removeDiv(btn) {
+        function setup(btn) {
             ((btn.parentNode).parentNode).removeChild(btn.parentNode);
         }
     </script>
 
     <div class="image">
         <img src="http://i.imgur.com/VuKnN5P.jpg" alt="First">
-        <button class="remove" onclick="removeDiv(this);">X</button>
+        <button class="remove" onclick="setup(this);">X</button>
     </div>
     <div class="image">
         <img src="http://i.imgur.com/ee4QOKe.jpg" alt="Second">
-        <button class="remove" onclick="removeDiv(this);">X</button>
+        <button class="remove" onclick="setup(this);">X</button>
     </div>
 
 </body>
