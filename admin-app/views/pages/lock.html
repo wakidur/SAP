@@ -6,12 +6,13 @@
                
                 <div class="card-body p-3 ">
                     <img class="card-profile-img rounded-circle" data-ng-src="assets/images/avatars/5.jpg"  alt="Card image cap">
-                    <h5 class="card-title font-xs pt-2 pb-1">
-                        {{vm.title}}
+                    <h5 class="card-title font-sm pt-2 pb-1">
+                        {{::vm.fieldName.lockTitle }}
                     </h5>
                     <form role="form" name="lockForm" novalidate="">
                         <div class="form-group ">
                             <div class="input-group">
+                                <label for="exampleInputname" class="sr-only">{{::vm.fieldName.password}}</label>
                                 <input 
                                 class="form-control"
                                 data-ng-minlength="6" 
@@ -19,7 +20,7 @@
                                 id="exampleInputPassword1" 
                                 tabindex="1"
                                 type="password" 
-                                placeholder="Password" 
+                                placeholder="{{::vm.fieldName.password}}" 
                                 required="" 
                                 name="lock_password" 
                                 data-ng-model="lock.password" 
@@ -36,11 +37,11 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col  col-sm-4">
-                                    <button class="btn btn-sm btn-primary btn-block" tabindex="2" type="button" data-ng-click="$state.go('adminApps.dashboard')">Unlock</button>
+                            <div class="col-sm-4">
+                                <button class="btn btn-sm btn-primary btn-block" tabindex="2" type="button" data-ng-click="$state.go('adminApps.dashboard')"> {{::vm.fieldName.unlock}} </button>
                             </div>
-                            <div class="col col-sm-8 text-right">
-                                <a class="text-muted" data-ui-sref="userApps.recover">Forgot your password?</a>
+                            <div class="col-sm-8 text-right ">
+                                <a class="text-muted" data-ui-sref="userApps.recover"> {{::vm.fieldName.forgotPassword}}? </a>
                             </div>
                         </div>
                     </form>

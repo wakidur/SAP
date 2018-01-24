@@ -5,13 +5,15 @@
         .module('adminApp')
         .controller('loginCtrl', constructor);
 
-        constructor.$inject = ['$location'];
+        constructor.$inject = ['$location', 'appsFieldServiceSvc', '$log'];
 
-    function constructor($location) {
+    function constructor( $location, appsFieldServiceSvc, $log)
+     {
         /* jshint validthis:true */
         var vm = this;
-        vm.companyName = "Featured";
-        vm.title = "SIGN IN TO CONTINUE.";
+        /* get field data from global place */
+        vm.fieldName = appsFieldServiceSvc.getPagesFieldName();
+        $log.log(vm.fieldName);
 
         activate();
 

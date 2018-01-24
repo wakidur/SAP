@@ -52,6 +52,9 @@
                         ]
                     }]);
                 }],
+                loadMyService: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load('services/commonService/appsFieldServiceSvc.js');
+                }]
             }
 
         });
@@ -99,6 +102,9 @@
                         files: ['node_modules/simple-line-icons/css/simple-line-icons.css']
                     }]);
                 }],
+                loadMyService: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load('services/commonService/appsFieldServiceSvc.js');
+                }]
             }
         });
     }
