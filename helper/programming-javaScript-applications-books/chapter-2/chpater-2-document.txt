@@ -65,6 +65,19 @@ except(ছাড়া) that they have a name that you can use from inside(ভ�
 
 
 
+25-01-2018---
+/*=========================Recursion=================*/
+/*---------------------Recursion, Tail Calls, Proper Tail Calls, Example----------------
+Recursion is the process in which a function is called by itself, either directly or indirectly.
+    a. Every recursive function must have a break condition. Otherwise calling the function will lead to an infinite loop.
+1. Tail(None: কোন কিছুর পশ্চাদ্বর্তী অংশ ,লেঙ্গুড়, Varb:অনুসরণ করা,লেজ লাগাইয়া দেত্তয়া ) Call
+2. Proper Tail Call
+
+
+
+
+
+pitfal(	ভ্রম, ভুল, গুপ্ত বিপদ)
 
 
 

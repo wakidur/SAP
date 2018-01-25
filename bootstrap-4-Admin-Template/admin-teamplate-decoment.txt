@@ -36,6 +36,10 @@ https://wrapbootstrap.com/theme/angle-bootstrap-admin-template-WB04HF123
 http://themicon.co/theme/angle/v3.8.3/frontend/site/
 http://themicon.co/theme/angle/v3.8.3/backend-angular/#!/app/dashboard
 
+Inspinia Admin
+https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S
+http://webapplayers.com/inspinia_admin-v2.7.1/#
+
 Admin template only for Blog -----------------------
 http://jaybabani.com/slant/site/
 http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard

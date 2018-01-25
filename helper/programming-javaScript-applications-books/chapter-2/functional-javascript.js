@@ -1,4 +1,6 @@
 // Recursion example
+
+
 function factorial(n, accumulator) {
     if(n === 0) {
         return accumulator;
