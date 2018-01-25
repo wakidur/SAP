@@ -51,6 +51,7 @@ var grayLightest = '#f8f9fa';
             document.body.scrollTop = document.documentElement.scrollTop = 0;
           });
           $rootScope.$state = $state;
+         $rootScope.$state = $state;
           return $rootScope.$stateParams = $stateParams;
     }
 
