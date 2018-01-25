@@ -63,11 +63,12 @@
 
 
   </head>
-  <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden">
+  <!-- <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden"> -->
   <!-- <body  ng-class="{$state.current.name === 'adminApps' ? 'app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden' : ' '}"> -->
-  <!-- <body  ng-class=" ($state.current.name === 'adminApps') ? 'app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden' : ' '"> -->
+  <body  ng-class=" ($state.current.name === 'adminApps.dashboard') ? 'app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden' : ' '">
       <!-- ng-class="autoScroll ? 'icon-autoscroll' : 'icon-autoscroll-disabled'" -->
-    <!-- User Interface
+    <!-- User Interface-->
+    <h1>{{$state.current.name === 'dashboard'}} : {{$state.current.name}}</h1>
     <ui-view></ui-view>
   </body>
 </html> 
