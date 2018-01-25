@@ -1,10 +1,11 @@
 <div class="sidebar">
         <nav class="sidebar-nav">
-            <ul class="nav">
+            <ul class="nav metismenu" side-navigation  id="side-menu">
                 <li class="nav-item">
                     <a class="nav-link" ui-sref-active="active"  ui-sref="adminApps.dashboard">
                         <i class="icon-speedometer"></i> 
-                        {{ 'DASHBOARD' | translate }} 
+                        <!-- {{ 'DASHBOARD' | translate }}  -->
+                        <span class="nav-label">{{ 'DASHBOARD' | translate }}</span>
                         <span class="tag tag-info">NEW</span>
                     </a>
                 </li>
@@ -13,7 +14,10 @@
                     UI Elements
                 </li>
                 <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('adminApps.components')}">
-                    <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('adminApps.components')}" href="#"><i class="icon-puzzle"></i> {{ 'Components' | translate }}</a>
+                    <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('adminApps.components')}" href="#"><i class="icon-puzzle"></i> 
+                        <!-- {{ 'Components' | translate }} -->
+                        <span class="nav-label">{{ 'Components' | translate }}</span>
+                    </a>
                     <ul class="nav-dropdown-items">
                         <li class="nav-item">
                             <a class="nav-link" ui-sref-active="active" ui-sref="adminApps.components.buttons"><i class="icon-puzzle"></i> {{ 'BUTTONS' | translate }}</a>
