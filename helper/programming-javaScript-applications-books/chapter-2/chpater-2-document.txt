@@ -1,7 +1,8 @@
 /***----------------------CHAPTER 2---------------
 **------------------------Functions---------------
 */
-
+Recursion
+https://medium.com/functional-javascript/recursion-282a6abbf3c5
 
 /** ======================Introduction ================== */
 
@@ -13,7 +14,8 @@ JavaScript supports
     c. runtime function definition
 
 ------------------------------------------------------------
-/** ======================Function Definition ================== */
+/** ======================Function Definition  ================== */
+23-1-2018
 deprecated(অননুমোদিত।)
 caution(সাবধানতা)
 strictly(যথাযথভাবে)
@@ -42,6 +44,45 @@ b. You can "count on"(নির্ভর করা) function expressions to foll
 
 c. If you want to do a conditional assignment, it will work as expected.
 d.
+
+24-1-2018---------
+exhibits(চিত্র প্রদর্শনীতেও)
+bulky(ভারী)
+The advantage of Function Expression
+1. Function expressions assigned to object literals are sometimes called method literals
+Methods are functions attached to objects.
+2. 
+
+/*====================Named Function Expressions====================
+conditional(শর্তাধীন)
+stack(গাদা)
+traces(	 সন্ধান)
+
+Named function expressions are like anonymous function expressions in every way(নামকরণ ফাংশন এক্সপ্রেশন প্রতিটি উপায়ে বেনামী ফাংশন এক্সপ্রেশন মত হয়)
+except(ছাড়া) that they have a name that you can use from inside(ভিতর থেকে
+) the function (for recursion). That name also conveniently(সুবিধামত) appears(প্রতীয়মান হত্তয়া
+) in the function call stack.
+
+
+
+25-01-2018---
+/*=========================Recursion=================*/
+/*---------------------Recursion, Tail Calls, Proper Tail Calls, Example----------------
+Recursion is the process in which a function is called by itself, either directly or indirectly.
+    a. Every recursive function must have a break condition. Otherwise calling the function will lead to an infinite loop.
+1. Tail(None: কোন কিছুর পশ্চাদ্বর্তী অংশ ,লেঙ্গুড়, Varb:অনুসরণ করা,লেজ লাগাইয়া দেত্তয়া ) Call
+2. Proper Tail Call
+
+
+
+
+
+pitfal(	ভ্রম, ভুল, গুপ্ত বিপদ)
+
+
+
+
+
 
 
 

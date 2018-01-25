@@ -3,17 +3,17 @@
         <div class="mw-320 align-self-center">
             <div class="card  ">
                 <div class="card-header bg-dark text-white">
-                    <h1 class="font-xl m-0 text-center"> {{vm.companyName}}</h1>
+                    <h1 class="font-xl m-0 text-center"> {{::vm.fieldName.companyName}} </h1>
                 </div>
                 <div class="card-body p-3 ">
-                    <h5 class="card-title font-xs pt-2 pb-3 text-center">
-                        {{vm.title}}
+                    <h5 class="card-title font-sm pt-2 pb-3 text-center">
+                        {{::vm.fieldName.registerTitle | uppercase }}
                     </h5>
                     <form class="form-validate" role="form" name="reg.registerForm" novalidate="" ng-submit="reg.register()">
                         <div class="form-group">
-                            <label class="sr-only" aria-label="Full Name " for="exampleInputName">Full Name</label>
+                            <label class="sr-only" aria-label="Full Name " for="exampleInputName">{{::vm.fieldName.fullName}}</label>
                             <div class="input-group">
-                                <input class="form-control" id="exampleInputName" type="text" name="account_name" placeholder="Full Name" autocomplete="off"
+                                <input class="form-control" id="exampleInputName" type="text" name="account_name" placeholder="{{::vm.fieldName.fullName}}" autocomplete="off"
                                     ng-model="reg.account.name" tabindex="1" required="">
                                 <div class="input-group-prepend ">
                                     <div class="input-group-text border-left-0 bg-transparent">
@@ -26,9 +26,9 @@
                             </span>
                         </div>
                         <div class="form-group ">
-                            <label for="exampleInputEmail" class="sr-only">Email address</label>
+                            <label for="exampleInputEmail" class="sr-only">Email address {{::vm.fieldName.email}}</label>
                             <div class="input-group">
-                                <input class="form-control" id="exampleInputEmail" type="email" name="account_email" placeholder="Enter email" autocomplete="off"
+                                <input class="form-control" id="exampleInputEmail" type="email" name="account_email" placeholder="{{::vm.fieldName.email}}" autocomplete="off"
                                     ng-model="reg.account.email" tabindex="2" required="">
                                 <div class="input-group-prepend ">
                                     <div class="input-group-text border-left-0 bg-transparent">
@@ -44,10 +44,10 @@
                             </span>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputname" class="sr-only">Password</label>
+                            <label for="exampleInputname" class="sr-only">{{::vm.fieldName.password}}</label>
                             <div class="input-group">
                                 <input ng-minlength="6" ng-maxlength="20" class="form-control" id="id-password" type="password" 
-                                placeholder="Password" name="account_password" ng-model="reg.register.password"
+                                placeholder="{{::vm.fieldName.password}}" name="account_password" ng-model="reg.register.password"
                                     ng-pattern="/^[a-zA-Z0-9]{6,10}$/" tabindex="3" required="" aria-describedby="passwordHelpInline">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-left-0 bg-transparent">
@@ -65,10 +65,10 @@
                             </span>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputname" class="sr-only">Retype Password</label>
+                            <label for="exampleInputname" class="sr-only"> {{::vm.fieldName.retypePassword}}</label>
                             <div class="input-group">
                                 <input class="form-control" type="password" name="account_password_confirm" ng-model="reg.register.account_password_confirm"
-                                placeholder="Retype Password"
+                                placeholder="{{::vm.fieldName.retypePassword}}"
                                     ui-validate="'$value==reg.register.password'" ui-validate-watch="'password'">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-left-0 bg-transparent">
@@ -81,17 +81,17 @@
                         <div class="form-group">
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" required="" name="account_agreed" ng-model="reg.account.agreed" id="customControlAutosizing">
-                                <label class="custom-control-label" for="customControlAutosizing"> I agree with the
-                                    <a class=" btn-link" href="#">terms</a>
+                                <label class="custom-control-label" for="customControlAutosizing">  {{::vm.fieldName.iAgree}}
+                                    <a class=" btn-link" href="#"> {{::vm.fieldName.terms}}</a>
                                 </label>
                             </div>
                             <span class="text-danger" ng-show="reg.registerForm.account_agreed.$dirty && reg.registerForm.account_agreed.$error.required">You must agree the terms</span>
                         </div>
-                        <button class="btn btn-secondary btn-block mt-3" type="submit">Create account</button>
+                        <button class="btn btn-secondary btn-block mt-3" type="submit">{{::vm.fieldName.createAccount}}</button>
                     </form>
                     <div class="alert alert-danger text-center" ng-show="reg.authMsg"></div>
-                    <p class="text-center mt-4 mb-2 text-center">Have an account?</p>
-                    <a role="button" class="btn btn-outline-dark btn-block" ui-sref="userApps.login">Signup</a>
+                    <p class="text-center mt-4 mb-2 text-center">{{::vm.fieldName.haveAccount}}? </p>
+                    <a role="button" class="btn btn-outline-dark btn-block" ui-sref="userApps.login">{{::vm.fieldName.signup}}</a>
                 </div>
                 <!-- <div class="card-footer text-muted bg-light text-center b-t-0">
                     @ 2018 - WKR

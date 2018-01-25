@@ -63,9 +63,15 @@
 
 
   </head>
-  <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden">
-  <!-- <body  ng-class="{app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden: $state.includes('adminApps.dashboard')}"> -->
-    <!-- User Interface -->
+  <!-- <body class="app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden"> -->
+  <!-- <body  ng-class="{$state.current.name === 'adminApps' ? 'app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden' : ' '}"> -->
+  <!-- <body  ng-class=" ($state.current.name === 'adminApps.dashboard') ? 'app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden' : ' '"> -->
+  <body  ng-class=" ($state.current.name.split('.')[0] === 'adminApps') ? 'pace-done app header-fixed sidebar-nav fixed-nav sidebar-fixed aside-menu-fixed aside-menu-hidden' : 'pages'">
+      <!-- ng-class="autoScroll ? 'icon-autoscroll' : 'icon-autoscroll-disabled'" -->
+    <!-- User Interface-->
+    <!-- <h1>{{$state.current.name === 'dashboard'}} : {{$state.current.name}}</h1>
+    <pre>{{$state.current.name.split('.')[0]}}</pre> -->
+    
     <ui-view></ui-view>
   </body>
 </html> 

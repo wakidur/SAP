@@ -5,13 +5,14 @@
         .module('adminApp')
         .controller('lockCtrl', constructor);
 
-        constructor.$inject = ['$location'];
+        constructor.$inject = ['$location', 'appsFieldServiceSvc', '$log'];
 
-    function constructor($location) {
+    function constructor($location, appsFieldServiceSvc, $log) {
         /* jshint validthis:true */
         var vm = this;
-        vm.companyName = "Featured";
-        vm.title = "Please login to unlock your screen.";
+        /* get field data from global place */
+        vm.fieldName = appsFieldServiceSvc.getPagesFieldName();
+        $log.log(vm.fieldName);
 
         activate();
 

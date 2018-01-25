@@ -5,14 +5,14 @@
         .module('adminApp')
         .controller('registerCtrl', constructor);
 
-        constructor.$inject = ['$location'];
+        constructor.$inject = ['$location','appsFieldServiceSvc','$log'];
 
-    function constructor($location) {
+    function constructor($location, appsFieldServiceSvc, $log) {
         /* jshint validthis:true */
         var vm = this;
-        vm.companyName = "Featured";
-        vm.title = "SIGNUP TO GET INSTANT ACCESS.";
-
+        /* get field data from global place */
+        vm.fieldName = appsFieldServiceSvc.getPagesFieldName();
+        $log.log(vm.fieldName);
         activate();
 
         function activate() { }

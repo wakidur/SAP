@@ -102,6 +102,7 @@
         display: block;
         padding: $sidebar-nav-link-padding-y $sidebar-nav-link-padding-x;
         color: $sidebar-nav-link-color;
+        color: #a7b1c2;
         text-decoration: none;
         background: $sidebar-nav-link-bg;
         @include borders($sidebar-nav-link-borders);
@@ -111,7 +112,9 @@
 
         &:hover {
           color: $sidebar-nav-link-hover-color !important;
+
           background: $sidebar-nav-link-hover-bg !important;
+          background-color: #293846 !important;
           @include borders($sidebar-nav-link-hover-borders);
 
           i {
@@ -122,6 +125,9 @@
         &.active {
           color: $sidebar-nav-link-active-color;
           background: $sidebar-nav-link-active-bg;
+          background: #293846;
+          border-left: 2px solid #868e96;
+          
           @include borders($sidebar-nav-link-active-borders);
 
           i {
@@ -182,7 +188,7 @@
 
           .nav-link {
             color: $sidebar-nav-dropdown-color;
-            border-left: 0 !important;
+            // border-left: 0 !important;
           }
 
           > .nav-link.nav-dropdown-toggle::before {

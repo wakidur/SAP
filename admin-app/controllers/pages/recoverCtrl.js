@@ -5,14 +5,14 @@
         .module('adminApp')
         .controller('recoverCtrl', constructor);
 
-        constructor.$inject = ['$location'];
+        constructor.$inject = ['$location', 'appsFieldServiceSvc', '$log'];
 
-    function constructor($location) {
+    function constructor($location, appsFieldServiceSvc, $log) {
         /* jshint validthis:true */
         var vm = this;
-        vm.companyName = "Featured";
-        vm.title = "PASSWORD RESET";
-        vm.dilog = "Fill with your mail to receive instructions on how to reset your password. "
+        /* get field data from global place */
+        vm.fieldName = appsFieldServiceSvc.getPagesFieldName();
+        $log.log(vm.fieldName);
 
         activate();
 

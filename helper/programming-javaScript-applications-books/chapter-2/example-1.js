@@ -30,7 +30,7 @@ test('order with unintentional side effect.', function() {
     ok(savedCart.items.indexOf('grapefruit') === -1)
 });
 
-/** ====================== Function Definition ================== */
+/** ====================== Function Definition 23-1-2018 ================== */
 
 //Function Expression
 function foo() {
@@ -94,7 +94,78 @@ let baz = {
 };
 baz.functionPro(); // function also anonymous.
 
-//----------------------
+//---------------------- 24-1-2018
+
+let lightBulbAPI = {
+    toggle : function() {},
+    getState: function() {},
+    off: function() {},
+    on: function() {},
+    blink: function() {}
+
+}
+
+/** ================== Named Function Expressions============= */
+
+let lightBulbAPIWithFunName  = {
+    toggle: function toggle() {},
+    getState: function getState() {},
+    off: function off() {},
+    on: function on() {},
+    blink: function blink() {}
+}
+
+
+
+test('Named function expressions. ' , function() {
+    let a = function x() {
+        ok(x, 'x() is usable inside the function. ');
+    };
+    a();
+
+    try {
+        x();
+    } catch (error) {
+        ok(true, 'x() is undefined outside the function.');
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // setp-1;
