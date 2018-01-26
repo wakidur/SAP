@@ -39,13 +39,13 @@ function foo() {
      */
     return arguments.callee;
 }
-foo() ;
+foo();
 
 //can’t declare a function conditionally
 
 let score = 6;
 
-if (score > 5)  {
+if (score > 5) {
     function grade() {
         return "Pass";
     }
@@ -55,11 +55,11 @@ if (score > 5)  {
     }
 }
 module('Pass or Fail');
-test('Conditional function declaration.', function(){
+test('Conditional function declaration.', function() {
     // Firefox: Pass
     // Chrome, Safari, IE, Opera : Faill
     equal(grade(), 'Pass', 'Grade should pass.');
-});  
+});
 
 // Function Expression.
 let bar = () => {
@@ -69,13 +69,13 @@ bar();
 // --------------
 let enameFunction = () => {
 
-   return "Hello world"
+    return "Hello world"
 }
 enameFunction()
-// ---------------
-let getIntergerValue = ( x, y ) => {
+    // ---------------
+let getIntergerValue = (x, y) => {
     let result = Number;
-    if (Number.isInteger( x ) && Number.isInteger( y )) {
+    if (Number.isInteger(x) && Number.isInteger(y)) {
         result = x + y;
         result += " Great!";
     } else {
@@ -84,11 +84,11 @@ let getIntergerValue = ( x, y ) => {
     return result;
 };
 
-getIntergerValue(1,3);
+getIntergerValue(1, 3);
 
 // -----------
 let baz = {
-    objproperty : function() {
+    objproperty: function() {
         return arguments.callee;
     }
 };
@@ -97,7 +97,7 @@ baz.functionPro(); // function also anonymous.
 //---------------------- 24-1-2018
 
 let lightBulbAPI = {
-    toggle : function() {},
+    toggle: function() {},
     getState: function() {},
     off: function() {},
     on: function() {},
@@ -107,7 +107,7 @@ let lightBulbAPI = {
 
 /** ================== Named Function Expressions============= */
 
-let lightBulbAPIWithFunName  = {
+let lightBulbAPIWithFunName = {
     toggle: function toggle() {},
     getState: function getState() {},
     off: function off() {},
@@ -117,7 +117,7 @@ let lightBulbAPIWithFunName  = {
 
 
 
-test('Named function expressions. ' , function() {
+test('Named function expressions. ', function() {
     let a = function x() {
         ok(x, 'x() is usable inside the function. ');
     };
@@ -131,7 +131,35 @@ test('Named function expressions. ' , function() {
 })
 
 
+//----
+function test() {
+    var testDeclaration = false;
+    var foo;
+    // this function gets erronesousty overridden in IE8;
+    function bar(arg1, bleed) {
+        if (bleed) {
+            console.log(false + "Declaration bar() should NOT be callable from inside the expression. ");
+        } else {
+            console.log(true + "Declaration bar() should be called outside the expression ");
+        }
+        testDeclaration = true;
+    }
 
+    foo = function bar(declaration, recurse) {
+        if (recurse) {
+            console.log(true + "Expression bar() should suppor secope safe recusion");
+        } else if (declaration === true) {
+            console.log(true + "Expresson bar() should be callable via foo() ");
+            bar(false, true);
+        } else {
+            // Fails in IE8 and older
+            console.log(false + "expression bar() should NOT be callable outside the expression");
+        }
+    };
+    bar();
+    foo(true);
+    console.log(testDeclaraion + "The bar() decatiaon shuld NOT get overridden by the expression bar()");
+}
 
 
 
