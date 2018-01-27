@@ -111,3 +111,15 @@ The .addTo() function passed into .forEach() is a lambda.
 3. first-class functions, 
 4. higher order functions. 
 The concepts are all similar, but they mean different things
+
+27-01-2018-------
+/*========Immediately Invoked Function Expressions======*/
+
+accurate(সঠিক)
+incorrectly(ভুল)
+implies(বোঝা,)
+
+It’s possible in JavaScript to immediately invoke a function as soon as it’s defined. A
+popular name for the technique is a self-invoked anonymous function.
+
+

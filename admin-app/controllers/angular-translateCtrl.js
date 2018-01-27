@@ -4,22 +4,10 @@ angular
     .controller('languageCtrl', languageCtrl);
 
 languageCtrl.$inject = ['$translate', '$scope'];
+
 function languageCtrl($translate, $scope) {
-    function checkLanguage(languages, langKey) {
-        languages.map(function (language) {
-            if (language.langKey == langKey) {
-                $scope.flag = language.flag;
-                $scope.lang = language.lang;
-                return language
-            } else {
 
-                return null
-            }
-        });
-    }
-
-    var languages = [
-        {
+    var languages = [{
             lang: 'Polish',
             langKey: 'pl',
             flag: 'Poland.png'
@@ -35,9 +23,27 @@ function languageCtrl($translate, $scope) {
             flag: 'Spain.png'
         }
     ]
+
+    function checkLanguage(languages, langKey) {
+        languages.map(function(language) {
+            if (language.langKey == langKey) {
+                $scope.flag = language.flag;
+                $scope.lang = language.lang;
+
+                console.log(language);
+                return language;
+            } else {
+                return null;
+            }
+        });
+        console.log(languages);
+    }
+
+
     $scope.languages = languages;
+    // initialize the language chage menu
     checkLanguage(languages, $translate.use())
-    $scope.changeLanguage = function (langKey) {
+    $scope.changeLanguage = function(langKey) {
         $translate.use(langKey);
         checkLanguage(languages, langKey)
     };

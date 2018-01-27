@@ -1,5 +1,5 @@
 /**
- * INSPINIA - Responsive Admin Theme
+ *  Responsive Admin Theme
  *
  */
 function config($translateProvider) {
