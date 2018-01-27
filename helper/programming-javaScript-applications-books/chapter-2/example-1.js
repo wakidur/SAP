@@ -200,6 +200,7 @@ Lightbulb.prototype.on = function on() {
 }
 
 Lightbulb.prototype.blink = function blink() {
+    debugger;
     // Implementation....
 }
 
@@ -232,7 +233,28 @@ Lightbulb.prototype.blink = function blink() {
 
 }());
 
+/*=========Method Context========*/
+function highPass(number, cotoff) {
+    cutoff = cutoff || this.cutoff;
+    return (number >= cutoff);
+}
 
+var filte1 = {
+        highPass: highPass,
+        cutoff: 5
+    },
+    filte2 = {
+        // no highPass here!
+        cutoff: 3
+    };
+
+// function invocation 
+var result = highPass(6, 5);
+
+//It takes the form object.methodName() (dot notation) or object['methodName']() (square bracket notation)
+var result1 = filte1.highPass(3); // '3 >= filter1.cutoff should be false.'
+var result2 = highPass.call(filte2, 3); // '3 >= filter2.cutoff should be true.'
+var result3 = filte1.highPass(6); // '6 >= filter1.cutoff should be true.'
 
 // Method Design
 var userProto = {

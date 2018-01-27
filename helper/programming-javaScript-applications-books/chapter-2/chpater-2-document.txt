@@ -123,3 +123,17 @@ It’s possible in JavaScript to immediately invoke a function as soon as it’s
 popular name for the technique is a self-invoked anonymous function.
 
 
+/*=============Method Context============/*
+slightly()
+altered(রদবদল করা)
+when you invoke a menthod with dot notation, you have access to the object's properties using this.
+
+The .call() method shared by all function allow you to call any method or function on any object. 
+
+someMethod.call(context, argument1, argument2, ...);
+
+If you need to pass an array of
+arguments, use .apply() instead:
+
+someMethod.apply(context, someArray);
+
