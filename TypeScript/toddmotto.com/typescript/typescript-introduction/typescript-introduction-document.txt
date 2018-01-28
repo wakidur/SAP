@@ -1,0 +1,11 @@
+28-01-2018
+https://toddmotto.com/typescript-introduction#typescript-is-a-superset-of-javascript
+
+/**Introduction to TypeScript**/
+inception(গোড়া)
+monumental (স্মারক, )
+expanded(সম্প্রসারিত)
+exceptions(ব্যতিক্রম)
+versatility(বহুমুখিতা)
+mitigate(প্রশমিত করা)
+Since its inception(এর শুরু থেকেই)
