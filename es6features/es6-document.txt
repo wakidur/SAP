@@ -1,0 +1,25 @@
+ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMAScript standard. ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009.
+
+
+ES6 includes the following new features:
+1. arrows
+2. classes
+3. enhanced object literals
+4. template strings
+5. destructuring
+6. default + rest + spread
+7. let + const
+8. iterators + for..of
+9. generators
+10. unicode
+11. modules
+12. module loaders
+13. map + set + weakmap + weakset
+14. proxies
+15.symbols
+16. subclassable built-ins
+17. promises
+18. math + number + string + array + object APIs
+19. binary and octal literals
+20. reflect api
+21. tail calls

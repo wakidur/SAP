@@ -256,6 +256,23 @@ var result1 = filte1.highPass(3); // '3 >= filter1.cutoff should be false.'
 var result2 = highPass.call(filte2, 3); // '3 >= filter2.cutoff should be true.'
 var result3 = filte1.highPass(6); // '6 >= filter1.cutoff should be true.'
 
+
+// 28-1-2018---------------
+/*-----Function.prototype.bind()-----------*/
+var lightbulb = {
+    toggle: function toggle() {
+        this.isOn = !isOn;
+        return this.isOn;
+    },
+    isOn : false
+}
+var toggle = lightbulb.toggle;
+var lightswitch = document.getElementById('lightswitch');
+var lightswitch = document.getElementById('lightswitch');
+lightblightswitchulb.addEventListener('click', lightbulb.toggle, false);
+
+
+
 // Method Design
 var userProto = {
     name: '',

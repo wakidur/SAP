@@ -123,7 +123,7 @@ It’s possible in JavaScript to immediately invoke a function as soon as it’s
 popular name for the technique is a self-invoked anonymous function.
 
 
-/*=============Method Context============/*
+/*=============Method Context(প্রসঙ্গ)============/*
 slightly()
 altered(রদবদল করা)
 when you invoke a menthod with dot notation, you have access to the object's properties using this.
@@ -136,4 +136,10 @@ If you need to pass an array of
 arguments, use .apply() instead:
 
 someMethod.apply(context, someArray);
+
+// 28-1-2018---------------
+Function.prototype.bind()
+as useful as(হিসাবে দরকারী হিসাবে)
+
+The .bind() method is used to permanently(স্থায়িভাবে) set the value of this inside the target function to the passed in context object.
 
