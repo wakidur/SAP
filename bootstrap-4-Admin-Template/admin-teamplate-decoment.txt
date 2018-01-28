@@ -1,34 +1,9 @@
 Installation
 To run AngularJS Gulp Version you will have to install following components in your environment.
 
-Node.js: https://nodejs.org/en/
-npm: https://npmjs.com
-Gulp: http://gulpjs.com
-Bower: https://bower.io
 
-different color 
-http://coreui.io/docs/admin-templates/angularjs-admin/
-
-http://jaybabani.com/slant/site/
-http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
-
-https://about.me/welcome
-http://coreui.io/
-https://wrapbootstrap.com/themes/admin?branch=4.x
-
-ui-select
-https://github.com/angular-ui/ui-select
-
-
-ui-router
-/**
-    * https://ui-router.github.io/ng1/tutorial/hellosolarsystem
-    * https://github.com/angular-ui/ui-router/wiki/Nested-States-%26-Nested-Views
-    * http://plnkr.co/edit/gmtcE2?p=preview
-    * https://github.com/marklagendijk/ui-router.stateHelper
-*/
 //bootstrap4-angular
-
+prime
 https://genesisui.com/demo/prime/bootstrap4-angular/#/dashboard
 
 Angle
@@ -39,11 +14,34 @@ http://themicon.co/theme/angle/v3.8.3/backend-angular/#!/app/dashboard
 Inspinia Admin
 https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S
 http://webapplayers.com/inspinia_admin-v2.7.1/#
+http://webapplayers.com/inspinia_admin-v2.7.1/Angular/#/dashboards/dashboard_1
+
+
 
 Admin template only for Blog -----------------------
 http://jaybabani.com/slant/site/
 http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
 
+Node.js: https://nodejs.org/en/
+npm: https://npmjs.com
+Gulp: http://gulpjs.com
+Bower: https://bower.io
+
+
+
+http://jaybabani.com/slant/site/
+http://jaybabani.com/slant/preview/angular/blog.html#/app/blog/dashboard
+
+https://about.me/welcome
+http://coreui.io/
+https://wrapbootstrap.com/themes/admin?branch=4.x
+
+
+
+// different color 
+http://coreui.io/docs/admin-templates/angularjs-admin/
+// ui-select
+https://github.com/angular-ui/ui-select
 //angular-translate
 https://angular-translate.github.io/
 https://github.com/angular-translate/angular-translate
@@ -64,9 +62,9 @@ http://swimlane.github.io/angular-data-table/
 //Dynamically-Bootstrap-Modal
 https://www.codeproject.com/Articles/1041128/Dynamically-Creating-and-Showing-Bootstrap-Modal
 
-Lazy load
+//Lazy load
 https://oclazyload.readme.io
 
 
-ngDialog
+//ngDialog
 https://github.com/likeastore/ngDialog
