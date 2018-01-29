@@ -265,7 +265,7 @@ var lightbulb = {
         return this.isOn;
     },
     isOn: false
-}
+};
 var toggle = lightbulb.toggle;
 var lightswitch = document.getElementById('lightswitch');
 var lightswitch = document.getElementById('lightswitch');
