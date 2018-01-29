@@ -1,5 +1,5 @@
 /* ============Minimize Side Effects=============*/
-test('order with unintentional side effect.', function() {
+test('order with unintentional side effect.', function () {
 
     var cartProto = {
             items: [],
@@ -8,7 +8,7 @@ test('order with unintentional side effect.', function() {
 
             }
         },
-        createCart = function(items) {
+        createCart = function (items) {
             var cart = Object.create(cartProto);
             cart.items = items;
             return cart;
@@ -55,7 +55,7 @@ if (score > 5) {
     }
 }
 module('Pass or Fail');
-test('Conditional function declaration.', function() {
+test('Conditional function declaration.', function () {
     // Firefox: Pass
     // Chrome, Safari, IE, Opera : Faill
     equal(grade(), 'Pass', 'Grade should pass.');
@@ -72,7 +72,7 @@ let enameFunction = () => {
     return "Hello world"
 }
 enameFunction()
-    // ---------------
+// ---------------
 let getIntergerValue = (x, y) => {
     let result = Number;
     if (Number.isInteger(x) && Number.isInteger(y)) {
@@ -88,7 +88,7 @@ getIntergerValue(1, 3);
 
 // -----------
 let baz = {
-    objproperty: function() {
+    objproperty: function () {
         return arguments.callee;
     }
 };
@@ -97,11 +97,11 @@ baz.functionPro(); // function also anonymous.
 //---------------------- 24-1-2018
 
 let lightBulbAPI = {
-    toggle: function() {},
-    getState: function() {},
-    off: function() {},
-    on: function() {},
-    blink: function() {}
+    toggle: function () {},
+    getState: function () {},
+    off: function () {},
+    on: function () {},
+    blink: function () {}
 
 }
 
@@ -117,7 +117,7 @@ let lightBulbAPIWithFunName = {
 
 
 
-test('Named function expressions. ', function() {
+test('Named function expressions. ', function () {
     let a = function x() {
         ok(x, 'x() is usable inside the function. ');
     };
@@ -176,13 +176,13 @@ var sum = function sum() {
 
 //-----------------------
 // Immediately Invoked Function Expressions
-var Lightbulb = function() {
+var Lightbulb = function () {
     this.isOn = false;
 }
 
 lightbulb = new Lightbulb();
 
-Lightbulb.prototype.toggle = function() {
+Lightbulb.prototype.toggle = function () {
     this.isOn = !this.inOn;
     return this.inOn;
 }
@@ -205,7 +205,7 @@ Lightbulb.prototype.blink = function blink() {
 }
 
 
-(function() {
+(function () {
     var isOn = false;
     toggle = function toggle() {
             isOn = !isOn;
@@ -264,12 +264,92 @@ var lightbulb = {
         this.isOn = !isOn;
         return this.isOn;
     },
-    isOn : false
+    isOn: false
 }
 var toggle = lightbulb.toggle;
 var lightswitch = document.getElementById('lightswitch');
 var lightswitch = document.getElementById('lightswitch');
 lightblightswitchulb.addEventListener('click', lightbulb.toggle, false);
+
+
+//  29-1-2018
+/*-----------------Function Scope--------------*/
+var x = 1;
+(function () {
+    console.log(x);
+    var x = 2;
+}());
+
+// How JavaScript interprets the code
+var x = 1;
+(function () {
+    var x; // Declaration is hoisted and x is undefined.
+    console.log(x);
+    x = 2; // Initialization is still down here.
+}());
+
+function functionDeclarationHoisting() {
+    function number() {
+        return 1;
+    }
+    (function () {
+        console.log(number() + 2 + "Inner scope wins. ");
+
+        function number() {
+            return 2;
+        }
+    }());
+    console.log(number() + 1 + "outer scope still works.");
+}
+
+
+// This code is equivalent to
+function fFunctionDeclarationHoisting() {
+    function number() {
+        return 1;
+    }
+    (function () {
+        try {
+            number();
+        } catch (error) {
+            console.log(true + "number() is undefined.");
+        }
+        var number = function number() {
+            return 2;
+        };
+        console.log(number() + 2 + "number() is defined now. ");
+    }());
+    console.log(number() + 1 + "outer scope still works.");
+}
+
+
+// Function Expression Hoisted
+function functionExpressionHoisted() {
+    function number() {
+        return 1;
+    }
+    (function () {
+        var number; // Declaration initialized to undefined.
+        try {
+            number();
+        } catch (e) {
+            console.log(true + 'number() is undefined.');
+        }
+        number = function number() {
+            return 2;
+        }
+        console.log(number() + 2 + 'number() is defined now.');
+    }());
+    console.log(number() + 1 +  'Outer scope still works.');
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -336,13 +416,13 @@ var test3 = morph(5);
 //------------------------------
 // Method dispatch
 var methods = {
-    init: function(args) {
+    init: function (args) {
         return 'initializing....';
     },
-    hello: function(args) {
+    hello: function (args) {
         return 'hello' + args;
     },
-    goodbye: function(args) {
+    goodbye: function (args) {
         return 'Goodbye, Creue ' + args;
     }
 };

@@ -143,3 +143,21 @@ as useful as(হিসাবে দরকারী হিসাবে)
 
 The .bind() method is used to permanently(স্থায়িভাবে) set the value of this inside the target function to the passed in context object.
 
+
+29-1-2018--------------
+
+/*============= Function Scope ============/*
+arbitrarily(ইচ্ছামত)
+variables scope is the section of code(কোড অধ্যায়) in which(যা) the identifier(শনাক্তকারী) refers to(শনাক্তকারী নির্দেশ করে) the expected value. Outside a variable’s scope, the variable is undefined or replaced by another variable with
+the same name.
+1. The var keyword is not block scoped
+2. Block scope will be available using the let keyword in ES6.
+
+//  Hoisting(উত্তোলন)
+Hoisting is the word most commonly used to describe the illusion(বিভ্রম, মিথ্যা আভাস) that all variable declarations are “hoisted(উত্তোলন)” to the top of the containing function.
+
+
+******
+JavaScript builds its execution(সম্পাদন, নির্বাহ) environment in two passes(পাস, অতিক্রম করা).
+1. The declaration pass sets up the runtime environment, where it scans for all variable and function declarations and creates the identifiers.
+2. The second pass is the execution pass. After the first pass, all declared functions are available, but variables are still undefined.
