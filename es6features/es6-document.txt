@@ -2,7 +2,8 @@ ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMASc
 
 
 ES6 includes the following new features:
-1. arrows
+1. 
+
 2. classes
 3. enhanced object literals
 4. template strings
