@@ -164,3 +164,17 @@ JavaScript builds its execution(সম্পাদন, নির্বাহ) en
 
 30-01-2018----------------
 
+01-02-2018----------------
+/*============= Method Design ============/*
+Several techniques exist in JavaScript to design method APIs. 
+JavaScript supports 
+1. Named parameter lists.
+2. Function polymorphisom 
+3. Method chaining
+4. Lambda expression
+
+/************Named Parameters******
+The number of variables you pass into a function is called its arity.
+
+
+
