@@ -1,0 +1,8 @@
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+Arrows are a function shorthand using the " => " syntax. They are syntactically(চিহ্নগুলি সিন্টেক্সের) similar to the related feature in C#, Java 8 and CoffeeScript. They support both 
+1. statement block bodies 
+    as well as (পাশাপাশি  )
+2. expression bodies which return the value of the expression.
+3. Unlike functions,arrows share the same lexical(আভিধানিক) this as their surrounding code
