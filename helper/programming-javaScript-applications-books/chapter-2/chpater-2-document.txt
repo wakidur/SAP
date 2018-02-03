@@ -173,8 +173,15 @@ JavaScript supports
 3. Method chaining
 4. Lambda expression
 
+
 /************Named Parameters******
 The number of variables you pass into a function is called its arity.
+
+
+// 2-2-2018
+/************Function polymorphisom******
+
+
 
 
 
