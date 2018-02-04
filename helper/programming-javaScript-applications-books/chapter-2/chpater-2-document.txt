@@ -178,8 +178,12 @@ JavaScript supports
 The number of variables you pass into a function is called its arity.
 
 
-// 2-2-2018
+// 2-2-2018--------------
 /************Function polymorphisom******
+
+04-02-2018-------------
+
+
 
 
 
