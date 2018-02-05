@@ -1,3 +1,4 @@
+https://github.com/lukehoban/es6features#arrows
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
@@ -6,3 +7,14 @@ Arrows are a function shorthand using the " => " syntax. They are syntactically(
     as well as (পাশাপাশি  )
 2. expression bodies which return the value of the expression.
 3. Unlike functions,arrows share the same lexical(আভিধানিক) this as their surrounding code
+
+Descripting: -----------
+Two factors(কারণের) influence(প্রভাবিত) the introduction(ভূমিকা) of arraow function.
+    1. Shorter Functions
+    2. non-binding(অ বাঁধাই) of This
+
+No separate this---------
+Until(পর্যন্ত) arrow functions, every new function defined its own this value (a new object in the case of a constructor, undefined in strict mode function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.
+
+
+In ECMAScript 3/5, the this issue was fixable by assigning the value in this to a variable that could be closed over.

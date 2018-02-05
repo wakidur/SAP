@@ -1,0 +1,9 @@
+05-02-2018------------
+/* CHAPTER 3 --- Objects --*/
+expressive(ভাবপূর্ণ)
+melts(গলে)
+cruft()
+precise(যথাযথ)
+firmer(শক্ত হয়ে উঠবে)
+
+/**-----Classical Inheritance Is Obsolete--**/

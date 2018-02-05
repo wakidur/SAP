@@ -111,3 +111,69 @@ parameter => ({ foo: bar });
 // Destructuring within the parameter list is also supported
 var f = ([a, b] = [1, 2], { x: c } = { x: a + b }) => a + b + c;
 f(); // 6
+
+
+//exmaple-1;
+var materials = [
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium'
+  ];
+
+materials.map( matarial => matarial.length );
+// ------------------Shorter functions-----------------
+var materials = [
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium'
+  ];
+
+var getMaterialLength = materials.map(function(material) {
+    return material.length;
+}); // [8,6,7,9]
+
+var getMaterialLengthParm = materials.map((matarial) => {
+    return matarial.length;
+}); // [8,6,7,9]
+
+var getMaterialLengthObj = materials.map(({length}) => length) // [8,6,7,9]
+
+//  ------------------ No separate this--------------------
+
+function Preson(params) {
+    // the Person() constructor defineds 'this' as an instance of itself.
+    this.age = 0;
+
+    setInterval(function growUp() {
+        // In non-strict mode, the growUp() function defines 'this'
+        // as the global object, which is different from the 'this'
+        // defined by the Person() constructor.
+        this.age++;
+    }, 1000);
+}
+
+var p = new Preson();
+
+
+// exmaple - 1
+function Person() {
+    var that = this;
+    that.age = 0;
+    setInterval(function growUp() {
+        // the callback refers to the 'that' variable of which
+        // the value is the expected object
+        that.age++;
+    }, 1000);
+}
+
+// exmape -2 
+function Preson() {
+    this.age = 0;
+    setInterval( () => {
+        this.age ++;// |this| properly refers to the person object
+    }, 1000);
+}
+
+var p = new Preson();
