@@ -1,4 +1,5 @@
 https://github.com/lukehoban/es6features#arrows
+https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
@@ -18,3 +19,12 @@ Until(পর্যন্ত) arrow functions, every new function defined its own
 
 
 In ECMAScript 3/5, the this issue was fixable by assigning the value in this to a variable that could be closed over.
+
+06-02-2018---------------------
+// Relation with strict mode
+Given that this comes from the surrounding lexical context, strict mode rules with regard to this are ignored.
+// Invoked through call or apply
+Since arrow functions do not have their own this, the methods call() or apply() can only pass(অতিক্রম করা) in parameters. thisArg is ignored.
+
+No binding of arguments
+Arrow functions do not have their own arguments object. Thus, in this example, arguments is simply a reference to the the arguments of the enclosing scope:
