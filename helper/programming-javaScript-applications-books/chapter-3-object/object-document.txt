@@ -7,3 +7,7 @@ precise(যথাযথ)
 firmer(শক্ত হয়ে উঠবে)
 
 /**-----Classical Inheritance Is Obsolete--**/
+
+//06-02-2018-------------
+Tight coupling
+Inflexible hierarchies
