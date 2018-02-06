@@ -177,7 +177,7 @@ function dataTable($q, $http, $log, DTRendererFactory, DTRendererService, DTProp
 
     /* @ngInject */
     
-
+    
     function compileDirective(tElm) {
         var _staticHTML = tElm[0].innerHTML;
 
