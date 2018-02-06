@@ -1,1 +1,10 @@
 -----------------CHAPTER 4 Modules--------------
+06-02-2018-----
+Modules are reusable(পুনর্ব্যবহারযোগ্য) software components that form(গঠন) the building(ভবন) blocks(ব্লক) of applications.
+
+=> There are several ways to define modules in JavaScript.
+    1. Module pattern
+    2. CommonJS modules (the inspiration for Node modules),
+    3. AMD (Asynchronous Module Definition)
+
+/******* Principles of Modularity ***//
