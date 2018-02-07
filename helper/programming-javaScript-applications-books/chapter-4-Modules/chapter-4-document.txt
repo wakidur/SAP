@@ -8,3 +8,20 @@ Modules are reusable(পুনর্ব্যবহারযোগ্য) softwa
     3. AMD (Asynchronous Module Definition)
 
 /******* Principles of Modularity ***//
+You can think of modules as small, independent applications that are fully functional  and fully testable in their own right. 
+
+Modules should be 
+1. Specialized
+2. independent
+3. Decomposable
+4. Recomposable
+5. Substitutable
+
+/******************--------Interfaces-----------***************/
+Interfaces are one of the primary tools of modular software design. Interfaces define a contract(চুক্তি) that an implementing module will fulfill.
+
+A better alternative(বিকল্প) is to create a standard interface to provide data access(প্রবেশ) for the post module.
+That way, the module can save data using the same interface, regardless of(নির্বিশেষে, মনোযোগ বিনা) where the data is being(হচ্ছে) stored.
+
+Other languages have native support for interfaces that may enforce that requirements of an interface. You might know them as abstract base classes or pure virtual functions.
+
