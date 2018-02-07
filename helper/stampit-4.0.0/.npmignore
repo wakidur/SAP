@@ -1,0 +1,11 @@
+/.idea/
+/.babelrc
+/.editorconfig
+/.eslintrc
+/.npmignore
+/.travis.yml
+/test/
+/coverage/
+/build/
+/src/
+.npmrc
