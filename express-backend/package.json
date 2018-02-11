@@ -1,15 +1,24 @@
 {
   "name": "admin-backend",
   "version": "1.0.0",
-  "description": "admin tamplate backend ",
+  "description": "A very simple RESTful server. For development use only admin tamplate backend ",
+  "keywords": ["http", "web server", "RESTful web"],
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wakidur/SPA.git"
   },
   "author": "wakidur",
   "license": "ISC",
   "dependencies": {
     "connect": "^3.6.5",
     "express": "^4.16.2"
+  },
+  "engines": {
+    "node": "6.x",
+    "npm": "5.x"
   }
 }
