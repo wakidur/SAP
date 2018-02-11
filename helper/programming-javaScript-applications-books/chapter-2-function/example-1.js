@@ -344,6 +344,41 @@ function functionExpressionHoisted() {
 }
 
 
+// Closures
+var o = function o(params) {
+    var data = 1,
+        get;
+    get = function get(params) {
+        return data;
+    };
+
+    return {
+        get: get
+    }
+};
+
+
+(function() {
+    var arr = [],
+        count = 1,
+        delay = 20,
+        timer,
+        complete;
+    timer = function timer() {
+        setTimeout(function inner(params) {
+            arr.push(count);
+            if (count < 3 ) {
+                count += 1;
+            } else {
+                complete();
+            }
+        }, delay);
+    };
+    complete = function complete(params) {
+        arr.join(',');
+    }
+
+})
 
 
 
