@@ -1,4 +1,4 @@
 node_modules
 package-lock.json
-
+npm-debug.log
 scss/style.css.map
