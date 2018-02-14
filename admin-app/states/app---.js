@@ -3915,6 +3915,8 @@ function() {
     }
     angular.module("app.icons").directive("skycon", e)
 }(),
+    
+    
 function() {
     "use strict";
 
@@ -3927,6 +3929,7 @@ function() {
     }
     angular.module("app.lazyload").config(e), e.$inject = ["$ocLazyLoadProvider", "APP_REQUIRES"]
 }(),
+    
 function() {
     "use strict";
     angular.module("app.lazyload").constant("APP_REQUIRES", {
@@ -4080,6 +4083,8 @@ function() {
     }
     angular.module("app.loadingbar").config(e), e.$inject = ["cfpLoadingBarProvider"]
 }(),
+    
+    
 function() {
     "use strict";
 
@@ -5059,7 +5064,8 @@ function() {
     }
     angular.module("app.preloader").directive("preloader", e), e.$inject = ["$animate", "$timeout", "$q"]
 }(),
-function() {
+*****************************************************************
+    function() {
     "use strict";
 
     function e(e) {
@@ -5100,6 +5106,8 @@ function() {
     }
     angular.module("app.routes").provider("RouteHelpers", e), e.$inject = ["APP_REQUIRES"]
 }(),
+    
+    
 function() {
     "use strict";
 
@@ -5626,6 +5634,16 @@ function() {
     }
     angular.module("app.routes").config(e), e.$inject = ["$stateProvider", "$locationProvider", "$urlRouterProvider", "RouteHelpersProvider"]
 }(),
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 function() {
     "use strict";
 
