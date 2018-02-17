@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- https://www.experts-exchange.com/questions/28437599/JavaScript-Remove-objects-saved-to-localStorage.html -->
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        function CheckPropDoup(array1, propName, propVal) {
+            for (var i = 0, k = array1.length; i < k; i++) {
+                if (array1[i][propName] === propVal) return true;
+            }
+            return false;
+        }
+
+        function saveStore(x, y, z) {
+            if (typeof(Storage) !== "undefined") {
+                var ds = JSON.parse(localStorage.getItem(x)) || [];
+                var obj = {};
+                obj[y] = z;
+                if (!CheckPropDoup(ds, y, obj[y])) ds.push(obj);
+                localStorage.setItem(x, JSON.stringify(ds));
+            }
+        }
+
+        function getStore(x) {
+            if (typeof(Storage) !== "undefined") {
+                return JSON.parse(localStorage.getItem(x)) || [];
+            }
+        }
+
+        function removeStore(x, y, z) {
+            if (typeof(Storage) !== "undefined") {
+                var ds = JSON.parse(localStorage.getItem(x)) || [];
+
+                // REMOVE item !!!
+
+                localStorage.setItem(x, JSON.stringify(ds));
+            }
+        }
+
+        saveStore('food', 'fruit', 'banana');
+        saveStore('food', 'fruit', 'peach');
+        saveStore('food', 'fruit', 'apple');
+
+        removeStore('food', 'fruit', 'apple');
+
+        alert(JSON.stringify(getStore('food')).replace(/,/g, ',\n'));
+    </script>
+
+    <script>
+        function CheckPropDoup(array1, propName, propVal) {
+            for (var i = 0, k = array1.length; i < k; i++) {
+                if (array1[i][propName] === propVal) return true;
+            }
+            return false;
+        }
+
+        function saveStore(x, y, z) {
+            if (typeof(Storage) !== "undefined") {
+                var ds = JSON.parse(localStorage.getItem(x)) || [];
+                var obj = {};
+                obj[y] = z;
+                if (!CheckPropDoup(ds, y, obj[y])) ds.push(obj);
+                localStorage.setItem(x, JSON.stringify(ds));
+            }
+        }
+
+        function getStore(x) {
+            if (typeof(Storage) !== "undefined") {
+                return JSON.parse(localStorage.getItem(x)) || [];
+            }
+        }
+
+        function removeStore(x, y, z) {
+            if (typeof(Storage) !== "undefined") {
+                var ds = JSON.parse(localStorage.getItem(x)) || [];
+                ds.splice(ds.indexOf(z), 1);
+                // REMOVE item !!!
+
+                localStorage.setItem(x, JSON.stringify(ds));
+            }
+        }
+
+
+        function removeStore(x, y, z) {
+            if (typeof(Storage) !== "undefined") {
+                var ds = JSON.parse(localStorage.getItem(x)) || [];
+                for (i = 0; i < ds.length; i++)
+                    if (ds[i].fruit === z) {
+                        ds.splice(i, 1);
+                        break;
+                    }
+                localStorage.setItem(x, JSON.stringify(ds));
+            }
+        }
+
+        saveStore('food', 'fruit', 'banana');
+        saveStore('food', 'fruit', 'apple');
+        saveStore('food', 'fruit', 'peach');
+        saveStore('food', 'fruit', 'grapes');
+        saveStore('food', 'fruit', 'watermelon');
+
+        alert(JSON.stringify(getStore('food')).replace(/,/g, ',\n'));
+
+        removeStore('food', 'fruit', 'apple');
+
+        alert(JSON.stringify(getStore('food')).replace(/,/g, ',\n'));
+    </script>
+
+</body>
+
+</html>
