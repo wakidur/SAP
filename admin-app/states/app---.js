@@ -3216,6 +3216,7 @@ function() {
  }
  angular.module("app.icons").directive("skycon", e)
 }(),
+    
 function() {
  "use strict";
 
@@ -4068,6 +4069,9 @@ function() {
  }
  angular.module("app.pages").controller("RegisterFormController", e), e.$inject = ["$http", "$state"]
 }(),
+    
+    
+//panelCollapse
 function() {
  "use strict";
 
@@ -4102,6 +4106,9 @@ function() {
  }
  angular.module("app.panels").directive("panelCollapse", e), a.$inject = ["$scope", "$element", "$timeout", "$localStorage"]
 }(),
+    
+    
+//panelDismiss
 function() {
  "use strict";
 
@@ -4139,6 +4146,8 @@ function() {
  }
  angular.module("app.panels").directive("panelDismiss", e), a.$inject = ["$scope", "$element", "$q", "Utils"]
 }(),
+    
+//panelRefresh
 function() {
  "use strict";
 
@@ -4168,6 +4177,8 @@ function() {
  }
  angular.module("app.panels").directive("panelRefresh", e), a.$inject = ["$scope", "$element"]
 }(),
+    
+// paneltool 
 function() {
  "use strict";
 
@@ -4195,6 +4206,11 @@ function() {
  }
  angular.module("app.panels").directive("paneltool", e), e.$inject = ["$compile", "$timeout"]
 }(),
+    
+    
+    
+    
+    
 function() {
  "use strict";
 
@@ -4202,9 +4218,11 @@ function() {
   ! function() {
    e.$watch("panelDemo1", function(e) {
     console.log("panelDemo1 collapsed: " + e)
-   }), e.$on("panel-remove", function(e, a, t) {
+   }), 
+    e.$on("panel-remove", function(e, a, t) {
     console.log("Panel #" + a + " removing"), t.resolve()
-   }), e.$on("panel-removed", function(e, a) {
+   }), 
+   e.$on("panel-removed", function(e, a) {
     console.log("Panel #" + a + " removed")
    }), e.$on("panel-refresh", function(t, o) {
     console.log("Refreshing during 3s #" + o), a(function() {
@@ -4227,6 +4245,7 @@ function() {
  }
  angular.module("app.panels").controller("PanelsCtrl", e), e.$inject = ["$scope", "$timeout"]
 }(),
+//DraggablePanelController
 function() {
  "use strict";
 
@@ -4323,6 +4342,8 @@ function() {
  }
  angular.module("app.panels").controller("DraggablePanelController", e), e.$inject = ["$timeout", "$localStorage"]
 }(),
+    
+//preloader
 function() {
  "use strict";
 
@@ -4360,6 +4381,8 @@ function() {
  }
  angular.module("app.preloader").directive("preloader", e), e.$inject = ["$animate", "$timeout", "$q"]
 }(),
+    
+    //************************RouteHelpersProvider************************
 function() {
  "use strict";
 
@@ -4401,7 +4424,9 @@ function() {
  }
  angular.module("app.routes").provider("RouteHelpers", e), e.$inject = ["APP_REQUIRES"]
 }(),
-//************************RouteHelpersProvider************************
+
+    
+//************************routes***********************
 function() {
  "use strict";
 
@@ -5994,6 +6019,8 @@ function() {
  }
  angular.module("app.utils").directive("triggerResize", e), e.$inject = ["$window", "$timeout"]
 }(),
+    
+    
 function() {
  "use strict";
 
@@ -6071,6 +6098,9 @@ function() {
  }
  angular.module("app.utils").service("Utils", e), e.$inject = ["$window", "APP_MEDIAQUERY"]
 }(),
+    
+    
+    
 function() {
  "use strict";
  angular.module("custom", ["angle", "app.core", "app.sidebar"])
