@@ -1,6 +1,43 @@
 //15-02-2018------------
 Separation of concerns: separation of concerns is the idea that each module or layer in an application shoule only be responsible for one thing and should not contain conde that deals with other things.
 
+
+//18-2-2018--------------
+Tiers(স্তরে,স্তর),
+tier(স্তর)
+attempt(চেষ্টা, চেষ্টা-প্রচেষ্টা)
+roughly(মোটামুটিভাবে)
+/* ****************Client-Side Concerns*********************** */
+There are several(বিভিন্ন) client-side concerns(সংস্পর্শ, চিন্তা) that almost every mature JavaScript application might deal with at some point
+
+1. Module management
+2. Event
+3. Presentaion and DOM manipulation
+4. Internationalization
+5. Data management and IO (including AJAX)
+6. Routing(translating URLs to script actions) 
+7. Logging
+8. Analytics tracking
+9. Authentication
+10. Future toggling (decouple code deployment and feature release)
+
+
+/* --------------- 1. Module Management ----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Events------------
 Events are a method of communication between deffernt application modules or components in order to achieve 
 1. loose coupling
