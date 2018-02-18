@@ -68,3 +68,10 @@ https://oclazyload.readme.io
 
 //ngDialog
 https://github.com/likeastore/ngDialog
+
+//animo 
+https://cdnjs.cloudflare.com/ajax/libs/animo.js/1.0.3/animo.min.js
+
+//animejs
+http://animejs.com/
+https://github.com/juliangarnier/anime

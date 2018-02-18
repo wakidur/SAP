@@ -1,8 +1,20 @@
 /*************************************/
 /*******wakidur@outlook.com **********/
 /*************************************/
+//************************ Book**********************
+The Art of Agile Development
+Pragmatic Guide to Agile Software Development
+By Shane Warden, James Shore
+
+Publisher: O'Reilly Media
+
+Release Date: July 2008
+
+Pages: 432
 You have a single password now
 Use the password for 
+
+*********************************************
 
 wakidur@outlook.com 
 wakidur@outlook.com

@@ -1,3 +1,6 @@
+//15-02-2018------------
+Separation of concerns: separation of concerns is the idea that each module or layer in an application shoule only be responsible for one thing and should not contain conde that deals with other things.
+
 Events------------
 Events are a method of communication between deffernt application modules or components in order to achieve 
 1. loose coupling
