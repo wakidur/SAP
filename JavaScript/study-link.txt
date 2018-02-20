@@ -5,3 +5,9 @@ https://github.com/mar10/persisto
 
 //Patterns For Large-Scale JavaScript Application Architecture
 https://addyosmani.com/largescalejavascript/
+
+// Create objects from reusable, composable behaviors (Stampit)
+https://github.com/stampit-org/stampit
+
+// Tinyapp - Simple module management.
+https://github.com/ericelliott/tinyapp
