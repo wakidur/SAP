@@ -43,6 +43,7 @@ There are several(বিভিন্ন) client-side concerns(সংস্পর
 
 
 
+
 Events------------
 Events are a method of communication between deffernt application modules or components in order to achieve 
 1. loose coupling
