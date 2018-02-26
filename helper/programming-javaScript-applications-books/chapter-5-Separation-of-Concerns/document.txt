@@ -25,6 +25,12 @@ There are several(বিভিন্ন) client-side concerns(সংস্পর
 /* --------------- 1. Module Management ----------- */
 19-2-2018-----
 25-2-2018-----
+--------------------------26-2-2018-----
+//Getting started
+// Registration, loading, and rendering
+
+
+
 
 
 
