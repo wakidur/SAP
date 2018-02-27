@@ -1,5 +1,5 @@
 /* --------------- 1. Module Management ----------- */
-// 26-02-2018
+// ---------------26-02-2018------------------------
 
 var app = require('tinyapp');
 app.init({
@@ -36,6 +36,42 @@ module.exports = api;
 module.exports = function hello(param) {
     return "Hello, world";
 }
+
+
+// ------------------27-02-2018-----------------------
+var app = require('tinyapp');
+var view = require('./view');
+var data = [];
+var load = function load() {
+    var url = 'http://api.bandsintown.com/artists/' + 'skrillex.json';
+    whenLoaded = app.get(url);
+    whenLoaded.done((response) => {
+        data = response;
+    });
+    return whenLoaded.promise();
+};
+
+var render = function render(){
+    view.render(data);
+};
+
+app.register({
+    load: load,
+    render: render
+});
+
+module.exports = api;
+
+
+
+/* --------------- 2. Events ----------- */
+
+
+
+
+
+
+
 
 
 

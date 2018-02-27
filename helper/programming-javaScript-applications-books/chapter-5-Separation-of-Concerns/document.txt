@@ -23,11 +23,34 @@ There are several(বিভিন্ন) client-side concerns(সংস্পর
 
 
 /* --------------- 1. Module Management ----------- */
-19-2-2018-----
-25-2-2018-----
---------------------------26-2-2018-----
-//Getting started
-// Registration, loading, and rendering
+//19-2-2018--------------
+//25-2-2018--------------
+//26-2-2018--------------
+// 1.1Getting started
+// 1.2Registration, loading, and rendering
+
+// 27-02-2018-----------------------
+
+/* --------------- 2. Events ----------- */
+Event: Events are a method of communicating between different application modules or components in order to achieve loose coupling, 
+    a. Asynchronous communication
+    b. interprocess communication
+    c. combination of the both
+ ** The Browser environment is event driven;
+
+// ** 2.1 Event emitters 
+  emits(নিঃসরণ করে, প্রেরণ করা)
+
+  DOM elements are event emitters, so that they can notify you of user input or other state changes.
+  .on(),
+  .trigger(),
+  .off();
+
+// ** 2.2 Event aggregators
+
+
+
+
 
 
 
