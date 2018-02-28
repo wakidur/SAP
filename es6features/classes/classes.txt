@@ -15,6 +15,18 @@ An important difference between "function declarations" and "class declarations"
 //-----------Class expressions----------
 A class expression is another way to define a class. Class expressions can be named or unnamed. The name give to a named class expressions is local to the class's body. ( it can be retrived through the class's (not an instanc's).name property, thought);
 
+// 28-2-2018------------------
+//---------1 Class body and method definitions ----------
+
+The body of a class is the part that is in curly brackets {}. This is where you define class members, such as methods or constructor 
+
+//1.1 Strict mode ----------
+The bodies of class declarations and class expressions are executed in strict mode i.e. constructor, static and prototype methods, getter and setter function are executed in strict mode.
+
+//1.1 Constructor ----------
+The constructor method is a special method for creating and initializing an object created with a class.
+
+
 
 
 

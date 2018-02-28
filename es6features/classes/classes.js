@@ -6,7 +6,7 @@
 
 //  Example function expressions and declarations
 // function expression
-var notHoisted = function () {
+var notHoisted = function() {
     console.log('bar');
 };
 //  Function declaration
@@ -17,7 +17,7 @@ function hoisted() {
 /****** Class declarations ***/
 
 
-class Rectangle {
+class Rectangle1 {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -25,8 +25,8 @@ class Rectangle {
 }
 
 /***********Hoisting**********/
-var p = new Rectangle(); // ReferenceEffor
-class Rectangle {
+var p = new Rectangle2(); // ReferenceEffor
+class Rectangle2 {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -37,7 +37,7 @@ class Rectangle {
 /************ Class expressions **/
 
 // unnamed
-var Rectangle  = class {
+var Rectangle3 = class {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -45,9 +45,33 @@ var Rectangle  = class {
 };
 
 // named
-var Rectangle   =  class Rectangle {
+var Rectangle4 = class Rectangle {
     constructor(height, width) {
         this.height = height;
         this.width = width;
     }
 }
+
+// 28-2-2018
+/************ Prototype methods **/
+
+class Rectangle5 {
+    constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+        // Getter 
+    get area() {
+        return this.calcArea();
+    }
+
+    // Method
+
+    calcArea() {
+        return this.height * this.width;
+    }
+}
+
+const square = new Rectangle5(10, 10);
+
+console.log(square.area);
