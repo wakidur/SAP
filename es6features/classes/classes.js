@@ -51,3 +51,42 @@ var Rectangle   =  class Rectangle {
         this.width = width;
     }
 }
+
+// -----------01-03-2018--------------
+// Prototype methods
+
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+    // Getter
+    get area() {
+        return this.calcArea();
+    }
+
+    // Method
+
+    calcArea() {
+        return this.height * this.width;
+    }
+}
+
+const square = new Rectangle(10, 10);
+
+console.log(square.area);
+
+// Static methods
+
+class ClassName {
+  constructor (args) {
+    
+  }
+}
+
+class ClassName extends BaseClass {
+  constructor (args) {
+    super(args)
+    
+  }
+}
