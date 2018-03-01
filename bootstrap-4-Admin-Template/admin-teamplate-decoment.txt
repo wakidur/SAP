@@ -79,3 +79,6 @@ https://github.com/juliangarnier/anime
 
 
 https://morgul.github.io/ui-bootstrap4/
+
+wip-image-zoom
+https://github.com/withinpixels/wip-image-zoom

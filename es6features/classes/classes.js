@@ -6,7 +6,7 @@
 
 //  Example function expressions and declarations
 // function expression
-var notHoisted = function() {
+var notHoisted = function () {
     console.log('bar');
 };
 //  Function declaration
@@ -17,7 +17,7 @@ function hoisted() {
 /****** Class declarations ***/
 
 
-class Rectangle1 {
+class Rectangle {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -25,8 +25,8 @@ class Rectangle1 {
 }
 
 /***********Hoisting**********/
-var p = new Rectangle2(); // ReferenceEffor
-class Rectangle2 {
+var p = new Rectangle(); // ReferenceEffor
+class Rectangle {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -37,7 +37,7 @@ class Rectangle2 {
 /************ Class expressions **/
 
 // unnamed
-var Rectangle3 = class {
+var Rectangle  = class {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -45,22 +45,22 @@ var Rectangle3 = class {
 };
 
 // named
-var Rectangle4 = class Rectangle {
+var Rectangle   =  class Rectangle {
     constructor(height, width) {
         this.height = height;
         this.width = width;
     }
 }
 
-// 28-2-2018
-/************ Prototype methods **/
+// -----------01-03-2018--------------
+// Prototype methods
 
-class Rectangle5 {
+class Rectangle {
     constructor(height, width) {
-            this.height = height;
-            this.width = width;
-        }
-        // Getter 
+        this.height = height;
+        this.width = width;
+    }
+    // Getter
     get area() {
         return this.calcArea();
     }
@@ -72,6 +72,21 @@ class Rectangle5 {
     }
 }
 
-const square = new Rectangle5(10, 10);
+const square = new Rectangle(10, 10);
 
 console.log(square.area);
+
+// Static methods
+
+class ClassName {
+  constructor (args) {
+    
+  }
+}
+
+class ClassName extends BaseClass {
+  constructor (args) {
+    super(args)
+    
+  }
+}

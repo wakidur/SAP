@@ -1,6 +1,7 @@
 
 const express = require('express');
 
+// Create app instance.
 const app = express();
 // make '/app' default route
 app.get('/', function (req, res) {
