@@ -1,6 +1,6 @@
 /*
 ***CHAPTER 6
-***Access Control
+***Access Control(প্রবেশাধিকার নিয়ন্ত্রণ)
 */
 Access control models are responsible for granting(মঞ্জুর হলেই, অনুমতি দেত্তয়া) or restricting(সীমাবদ্ধ) access(প্রবেশ, ) to resources. They depend on two things: 
 1. user identification (verified by one or more authentication schemes) 
