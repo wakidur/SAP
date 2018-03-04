@@ -16,6 +16,8 @@ https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S
 http://webapplayers.com/inspinia_admin-v2.7.1/#
 http://webapplayers.com/inspinia_admin-v2.7.1/Angular/#/dashboards/dashboard_1
 
+HOMER - Responsive Admin Theme
+https://wrapbootstrap.com/theme/homer-responsive-admin-theme-WB055J451
 
 
 Admin template only for Blog -----------------------
