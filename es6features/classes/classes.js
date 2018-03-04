@@ -6,7 +6,7 @@
 
 //  Example function expressions and declarations
 // function expression
-var notHoisted = function () {
+var notHoisted = function() {
     console.log('bar');
 };
 //  Function declaration
@@ -37,7 +37,7 @@ class Rectangle {
 /************ Class expressions **/
 
 // unnamed
-var Rectangle  = class {
+var Rectangle = class {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -45,7 +45,7 @@ var Rectangle  = class {
 };
 
 // named
-var Rectangle   =  class Rectangle {
+var Rectangle = class Rectangle {
     constructor(height, width) {
         this.height = height;
         this.width = width;
@@ -57,10 +57,10 @@ var Rectangle   =  class Rectangle {
 
 class Rectangle {
     constructor(height, width) {
-        this.height = height;
-        this.width = width;
-    }
-    // Getter
+            this.height = height;
+            this.width = width;
+        }
+        // Getter
     get area() {
         return this.calcArea();
     }
@@ -78,15 +78,21 @@ console.log(square.area);
 
 // Static methods
 
-class ClassName {
-  constructor (args) {
-    
-  }
+class point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    static distance() {
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+
+        return Math.hypot(dx, dy);
+    }
 }
 
-class ClassName extends BaseClass {
-  constructor (args) {
-    super(args)
-    
-  }
-}
+const p1 = new point(5, 5);
+const p2 = new point(10, 10);
+
+console.log(point.distance(p1, p2));
