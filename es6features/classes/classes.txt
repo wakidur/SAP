@@ -23,8 +23,14 @@ The body of a class is the part that is in curly brackets {}. This is where you 
 //1.1 Strict mode ----------
 The bodies of class declarations and class expressions are executed in strict mode i.e. constructor, static and prototype methods, getter and setter function are executed in strict mode.
 
-//1.1 Constructor ----------
+//1.2 Constructor ----------
 The constructor method is a special method for creating and initializing an object created with a class.
+
+// 1.3 Prototype methods
+
+
+// 1.4 Static methods
+
 
 
 
