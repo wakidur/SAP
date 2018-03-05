@@ -31,6 +31,18 @@ The constructor method is a special method for creating and initializing an obje
 
 // 1.4 Static methods
 
+// 05-03-2018--------------------
+// 1.5 Boxing with prototype and static methods :
+When a static or prototype method is called without an object valued "this", then the "this" value will be undefined inside the called function. Autoboxing will not heppen. The behavior will be the same even if we write the code in non-strict mode beeause all the function, method, constructor, getters or setters are executed in strict mode. so if we do not specify this value then the this value will be undefined
+ 
+
+
+
+//--------- Sub classing with extends ----------
+
+The extends keyword is used in "class declaration" or "class expressions" to create a class as a child of another class.
+
+
 
 
 
