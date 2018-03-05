@@ -17,3 +17,6 @@ malicious(বিদ্বেষপরায়ণ)
 intruder(অনধিকারপ্রবেশকারী)
 obtains(গ্রহণ করে, অর্জন করা)
 Passwords should be stored with a one-way encryption(এনক্রিপশন) hash,
+1. rainbow tables: enormous, pre-computed hash values for every possible combination of characters.
+2. Password salts. 
+3. Brute force
