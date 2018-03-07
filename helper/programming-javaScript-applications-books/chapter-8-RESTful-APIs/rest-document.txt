@@ -1,4 +1,8 @@
 /********************** ----------Building RESTful APIs---------**********/
+hackit.org.uk/work-with-us/careers
+https://hackney.recruitmentplatform.com/QU2FK026203F3VBQB798M8NQD/UK/login.php
+ID: wakidur@gmail.com
+PW: 713470Wa
 //06-03-2018----------------
  Representational State Transfer (REST) 
 1. client-server architecture
@@ -33,4 +37,5 @@ contained in:
 
 *** The goal of REST is to avoid coupling(সংযোজন, একত্রীকরণ) the "client application" and the "server application". it decouples your client application from your server application such that changes to your API can be published without breaking existing clients
 
+//07-03-2018 ------------
 
