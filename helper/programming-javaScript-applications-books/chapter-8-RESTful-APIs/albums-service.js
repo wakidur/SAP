@@ -15,16 +15,19 @@ app.use(log.requestLogger());
 
 // Response to get requests on / albums 
 
-app.get('/albums', function(req, res) {
+app.get('/albums', function (req, res) {
     res.send({
-        chmzq50np0002qfixtr1: {
-            "id": "chmzq50np0002",
+        chmzq50np0002gfixtr1qp64o: {
+            "id": "chmzq50np0002gfixtr1qp64o",
             "name": "Settle",
             "artist": "Disclosure",
-            "artistId": "chmzq4l480000",
-            "coverImage": "/covers/modium/zrms.jpg",
+            "artistId": "chmzq4l480001gfixe8a3nzhm",
+            "coverImage": "/covers/medium/zrms5gxr.jpg",
             "year": "2013",
-            "genres": ["electronic", "house", "garage", "UK garage", "future garage"]
+            "genres": [
+                "electronic", "house", "garage", "UK garage",
+                "future garage"
+            ]
         }
     });
 });
@@ -49,6 +52,6 @@ app.use(errorHandler({
     server: server
 }));
 
-server.listen(port, function() {
+server.listen(port, function () {
     console.log('Listening on port' + port);
 });

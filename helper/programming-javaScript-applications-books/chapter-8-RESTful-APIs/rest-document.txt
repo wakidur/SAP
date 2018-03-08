@@ -39,3 +39,19 @@ contained in:
 
 //07-03-2018 ------------
 
+
+// 08-03-2018------------
+
+//Resourceful routing
+
+• Create a new entry in the resource collection: HTTP POST.
+• Retrieve a resource representation: HTTP GET verb.
+• Update (replace) the resource: HTTP PUT.
+• Delete a resource: HTTP DELETE.
+
+GET           /albums              -> index
+POST          /albums              -> create, return URL
+GET           /albums/:id         -> show
+PUT           /albums/:id          -> create or update
+DELETE        /albums/:id          -> destroy
+
