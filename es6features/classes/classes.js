@@ -6,7 +6,7 @@
 
 //  Example function expressions and declarations
 // function expression
-var notHoisted = function () {
+var notHoisted = function() {
     console.log('bar');
 };
 //  Function declaration
@@ -57,10 +57,10 @@ var Rectangle = class Rectangle {
 
 class Rectangle {
     constructor(height, width) {
-        this.height = height;
-        this.width = width;
-    }
-    // Getter
+            this.height = height;
+            this.width = width;
+        }
+        // Getter
     get area() {
         return this.calcArea();
     }
@@ -126,7 +126,7 @@ eat(); // undefined
 
 function Animals() {}
 
-Animals.prototype.speak = function () {
+Animals.prototype.speak = function() {
     return this;
 }
 
@@ -134,16 +134,16 @@ Animals.eat = function() {
     return this;
 }
 
-let  objT = new Animals();
+let objT = new Animals();
 let sepek = objT.speak;
 speak();
 
-let  eata = Animals.eat;
+let eata = Animals.eat;
 eata();
 
 // Sub classing with extends
 
-class AnimalParentCla{
+class AnimalParentCla {
     constructor(name) {
         this.name = name;
     }
@@ -170,7 +170,7 @@ function AnimalParent(name) {
     this.name = name;
 }
 
-AnimalParent.prototype.speak = function () {
+AnimalParent.prototype.speak = function() {
     console.log(this.name + ' makes a noise.');
 }
 
@@ -178,15 +178,15 @@ class Dogs extends AnimalParent {
     speak() {
         console.log(this.name + ' barks.');
     }
-} 
+}
 const dogss = new Dogs('Mitzie');
-dogss.speak();// mitzie barks.
+dogss.speak(); // mitzie barks.
 
 
-// want to inherit from a regular object
+// Note that classes cannot extend regular (non-constructible) objects. If you want to inherit from a regular object, you can instead use Object.setPrototypeOf():
 var myAnimal = {
     speak() {
-        console.log( this.name + ' makes a noise.');
+        console.log(this.name + ' makes a noise.');
     }
 };
 
@@ -198,4 +198,60 @@ class myDob {
 
 
 // if you do not do this you will get a TypeError when you invoke speak
-Object.setPrototypeOf(myDob.prototype , myAnimal);
+Object.setPrototypeOf(myDob.prototype, myAnimal);
+
+// 8-3-2018
+// Species (প্রজাতি, রকম)
+
+
+class myArray extends Array {
+    // Overwrite species to the parent Array constructor
+    static get[symbol.species]() {
+        return Array;
+    }
+}
+
+
+
+var a = new myArray(1, 2, 3);
+var mapped = a.map(x => x * x);
+
+console.log(mapped instanceof myArray); // false
+console.log(mapped instanceof Array); // true
+
+
+// Super class calls with super
+// The super keyword is used to call corresponding methods of super class.
+
+class Cat {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(this.name + 'nakes a noise. ');
+    }
+}
+
+class Lion extends Cat {
+    speak() {
+        super.speak();
+        console.log(this.name + ' roars. ');
+    }
+}
+
+var l = new Lion('Fuzzy');
+l.speak();
+
+// Mix-ins
+
+var calculatorMixin = Base => class extends Base {
+    calc() {}
+};
+
+var randomizerMixin = Base => class extends Base {
+    rendomize() {}
+};
+
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo))

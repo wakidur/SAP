@@ -28,6 +28,36 @@ Express was initially released in November 2010 and is currently on version 4.16
 
 2.5 How popular is Node/Express?
 
+2.6 Is Express opinionated(	অটল বিশ্বাসী )?
+Express is unopinionated. You can insert almost any compatible middleware you like into the request handling chain, in almost any order you like. 
+
+
+2.7 What does Express code look like?
+
+	2.7.1 Helloworld Express
+	
+	1. line one => var express = require('express');
+    2. line two => var app = express();
+    3. line three => app.get('/', function(req, res) {
+						res.send('Hello World!');
+					});
+    4. line four => app.listen(3000, function() {
+						console.log('Example app listening on port 3000!');
+					});
+
+	
+The first two lines require() (import) the express module and create an Express application. The object, which is traditionally named app, 
+
+A. has methods for routing HTTP requests,
+B. Configuring middleware,
+C. rendering HTML views,
+D. Registering a template engine
+E. Modifying application settings that control how the application behaves 
+
+The middle part of the code (the three lines starting with app.get) shows a route definition.
+
+
+
 
 
 
