@@ -93,7 +93,9 @@ Express is unopinionated. You can insert almost any compatible middleware you li
 		patch();
 		search();
 		connect();
-
+    2.7.5 Using middleware
+		extensively(ব্যাপকভাবে);
+		compressing (সংকুচিতকারী);
 
 
 
