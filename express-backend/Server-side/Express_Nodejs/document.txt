@@ -93,9 +93,29 @@ Express is unopinionated. You can insert almost any compatible middleware you li
 		patch();
 		search();
 		connect();
+
+//----------14-03-2018-------------
+
     2.7.5 Using middleware
+		Middleware is used extensively(ব্যাপকভাবে) in Express apps, for tasks from serving static files to error handling, to compressing(সংকুচিতকারী) HTTP responses. Whereas route functions end the HTTP request-response cycle by returning some response to the HTTP client middleware functions typically perform some operation on the request or response and then call the next function in the 'stack'(গাদা) which be more middleware or a route handler. The order that middleware is called is up to the app developer.
+
+		Most apps will use third-party middleware in order to simplify common web development tasks like working with 
+		A. cookies
+		B. Sessions
+		C. User authentication
+		D. accessing request POST and JSON data,
+		E. loggin
+
+
+
 		extensively(ব্যাপকভাবে);
 		compressing (সংকুচিতকারী);
+
+	2.7.6 Serving static files
+
+	2.7.7 Handling errors
+		Errors are handled by one or more special middleware function that have four arguments, instead of the usual three: (err, req, res, next). For Example
+		These can return any context required, but must be call after all othe app.use() and routes calls so that they are the last middleware in the request handling process!
 
 
 
