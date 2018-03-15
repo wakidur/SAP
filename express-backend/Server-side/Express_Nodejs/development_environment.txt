@@ -1,0 +1,23 @@
+//*************15-03-2018**************
+1. Express development environment overview
+    1.1 What is the Express development environment?
+        a. Template Engines
+        b. Database Drivers
+        c. Authentication meddleware
+        d. Middleware to serve static file
+    1.2 What operating systems are supported?
+    1.3 What version of Node/Express should you use?
+    1.4 What about databases and other dependencies?
+        a. Database Drivers
+        b. Template Engines
+        C. Authonetication  Engines
+
+2. Installing Node
+    2.1 Windows and macOS
+    2.2 Ubuntu 16.04
+    2.3 Testing your Nodejs and NPM installation
+
+3. Using NPM 
+    3.1. Adding dependencies
+    3.2. Development dependencies
+    3.3. Running tasks
