@@ -21,3 +21,4 @@
     3.1. Adding dependencies
     3.2. Development dependencies
     3.3. Running tasks
+4. Installing the Express Application Generator

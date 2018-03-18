@@ -1,0 +1,27 @@
+//-----------18-03-2018------------
+/****** Express Tutorial: The Local Library website *******************/
+1. Overview
+2. The LocalLibrary website
+3. I'm stuck, where can I get the source?
+
+
+/***** Express Tutorial Part 2: Creating a skeleton website **********/
+    skeleton - (কঙ্কাল);
+    site-specific(সাইট নির্দিষ্ট)
+    1. Overview 
+    2. Using the application generator
+        => npm install express-generator -g
+        => express --help
+        => express --view=hbs --css=sass
+        => express --view=hbs 
+        => cd. && npm install
+        => SET DEBUG=appsName:* & npm start
+
+        2.1 What view engine should I use?
+        2.2 What CSS stylesheet engine should I use?
+
+    
+
+
+
+
