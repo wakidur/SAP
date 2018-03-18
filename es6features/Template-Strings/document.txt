@@ -1,0 +1,21 @@
+//--------------18-03-20118-----------------
+
+http://www.gamesyscorporate.com
+
+I am passionate about technology, front-end development, web frameworks, user
+experience solutions and visual design. I have recently finished General Assembly Full-Stack Web Development course and am looking for Front-End position to work with React and build single page web apps.
+
+/*********** ** Template Strings/ Template literals ******************** */
+1. Template Strings/ Template literals : Template literals are string literals allowing embedded expressions. you can use multi-line strings and string interpolation features with them. They ware called "template strings" in prior editions of the ES2015 specification.
+
+2. Syntax 
+    a => `string text`
+    b => `string text line 1
+          string text line2`
+    c => `string text ${expression} string text`
+    d => `string text ${expression} string text`
+
+3. Description : 
+    3.1 Multi-line strings
+
+
