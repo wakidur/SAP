@@ -4,7 +4,8 @@
 2. The LocalLibrary website
 3. I'm stuck, where can I get the source?
 
-
+Route Detail
+BuyerBankInfo
 /***** Express Tutorial Part 2: Creating a skeleton website **********/
     skeleton - (কঙ্কাল);
     site-specific(সাইট নির্দিষ্ট)
@@ -19,6 +20,9 @@
 
         2.1 What view engine should I use?
         2.2 What CSS stylesheet engine should I use?
+    3. Creating the project
+    4. Running the skeleton website
+
 
     
 
