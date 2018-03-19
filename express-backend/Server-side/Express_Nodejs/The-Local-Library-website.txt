@@ -1,3 +1,14 @@
+Hi all, I recently co-authored a web development book. Today and tomorrow, I'd like to offer a free copy to members of this group.
+
+The book teaches you how to build a JavaScript web app from scratch (with React, Material-UI, Next, Express, Mongoose, MongoDB) and integrate it with third party APIs (Google, Github, AWS SES, Mailchimp, Stripe).
+
+More about the book: https://builderbook.org/book
+
+Introduction chapter: https://builderbook.org/books/builder-book/introduction
+
+Final app you build: https://github.com/builderbook/builderbook
+
+If you're interested, please send me an email at team@builderbook.org by Tuesday, March 20. Mention this post the in the JavaScript group. I'd also love to hear why you're interested or how you think the book will help you
 //-----------18-03-2018------------
 /****** Express Tutorial: The Local Library website *******************/
 1. Overview
@@ -9,6 +20,7 @@ BuyerBankInfo
 /***** Express Tutorial Part 2: Creating a skeleton website **********/
     skeleton - (কঙ্কাল);
     site-specific(সাইট নির্দিষ্ট)
+	irritating (বিরক্তিকর)
     1. Overview 
     2. Using the application generator
         => npm install express-generator -g
@@ -21,7 +33,34 @@ BuyerBankInfo
         2.1 What view engine should I use?
         2.2 What CSS stylesheet engine should I use?
     3. Creating the project
+		=> express express-locallibrary --veiw=bhs
+		=> cd express express-locallibrary && npm install
+		=> SET DEBUG=express-locallibrary:* & npm start
     4. Running the skeleton website
+		=> cd express-locallibrary
+		=> npm install
+		=> SET DEBUG=express-locallibrary:* & npm install
+	
+//19-03-2018
+	5. Enable server restart on file changes
+		=> npm install --save-dev nodemon
+		
+		=> "script" { "start" : "node ./bin/www", "devstart": "nodemon ./bin/www"}
+		
+		=> SET DEBUG=express-locallibrary:* & npm run devstart
+	
+	6.	The generated project
+		6.1 Directory structure
+		6.2 package.json
+		6.3 www file
+			The file /bin/www is the application entry point! The very 
+		6.4 app.js
+			express, server-favicon, morgan, cookie-parser
+			Which is a core Node library for parsing file and directory paths.
+			
+		
+	
+
 
 
     
