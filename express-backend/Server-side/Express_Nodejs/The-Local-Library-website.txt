@@ -1,3 +1,6 @@
+https://www.techaspect.com/careers/apply-now/
+
+
 Hi all, I recently co-authored a web development book. Today and tomorrow, I'd like to offer a free copy to members of this group.
 
 The book teaches you how to build a JavaScript web app from scratch (with React, Material-UI, Next, Express, Mongoose, MongoDB) and integrate it with third party APIs (Google, Github, AWS SES, Mailchimp, Stripe).
