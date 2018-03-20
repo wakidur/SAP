@@ -17,5 +17,8 @@ experience solutions and visual design. I have recently finished General Assembl
 
 3. Description : 
     3.1 Multi-line strings
+    3.2 Expression interpolation
+    3.3 Expression interpolation
+    3.4 Tagged templates
 
 

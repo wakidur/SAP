@@ -83,8 +83,13 @@ BuyerBankInfo
 			f. cost 
 			g. community support
 
-	3. What is the best way to interact with a database?
-	https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+	3. What is the best way to interact(পরস্পরের উপর ক্রিয়া করা) with a database?
+		
+		There are two approaches for interacting with database
+			1. Using the databases native query language ( SQL )
+			2. Using an Object Data Model 
+	
+
 
 
 
