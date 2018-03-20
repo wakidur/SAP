@@ -57,7 +57,34 @@ BuyerBankInfo
 		6.4 app.js
 			express, server-favicon, morgan, cookie-parser
 			Which is a core Node library for parsing file and directory paths.
-			
+		6.5 Routes	
+		6.7 Views (templates)
+
+// 20-03-2018 
+/***** Express Tutorial Part 3: Using a Database (with Mongoose) **********/
+	1. Overview : Library staff will use the Local Library website to store information about books and borrowers(ঋণ গ্রহীতাদের), while library members will use it to browse it to browse and search for books, find out whether there are any copies available, and reserve or borrow(ধার করা) them. In order to store and retrieve information efficiently, we will store it in a Database
+
+	2. What databases can I use?
+		Express apps can use any databases supported by Node( Express itself doesn't define any specific additional behaviour/requirements for database management). There are many popular options, including 
+			a. PostgreSQL
+			b. MySQL 
+			c. Redis
+			d. SQLite
+			e. MongoDB
+		When choosing a database, you should consider things like 
+			a. time-to-productivity
+			b. learning curve
+			c. performance
+			d. easy of replication
+			e. easy backup
+			f. cost 
+			g. community support
+
+	3. What is the best way to interact with a database?
+	https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+
+
+
 		
 	
 
