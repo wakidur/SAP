@@ -65,9 +65,10 @@ BuyerBankInfo
 
 // 20-03-2018 
 /***** Express Tutorial Part 3: Using a Database (with Mongoose) **********/
+
 	1. Overview : Library staff will use the Local Library website to store information about books and borrowers(ঋণ গ্রহীতাদের), while library members will use it to browse it to browse and search for books, find out whether there are any copies available, and reserve or borrow(ধার করা) them. In order to store and retrieve information efficiently, we will store it in a Database
 
-	2. What databases can I use?
+	1.1. What databases can I use?
 		Express apps can use any databases supported by Node( Express itself doesn't define any specific additional behaviour/requirements for database management). There are many popular options, including 
 			a. PostgreSQL
 			b. MySQL 
@@ -83,20 +84,48 @@ BuyerBankInfo
 			f. cost 
 			g. community support
 
-	3. What is the best way to interact(পরস্পরের উপর ক্রিয়া করা) with a database?
+	1.2. What is the best way to interact(পরস্পরের উপর ক্রিয়া করা) with a database?
 		
 		There are two approaches for interacting with database
 			1. Using the databases native query language ( SQL )
-			2. Using an Object Data Model 
-	
+			2. Using an Object Data Model (ODM)/ Object Relational Model
+
+				** The vary best performance can be gained by using SQL
+				** ODM are often slower because they use translation code to map between object and database format, which may not use the most efficient database queries
+				** The benefit of using an ORM is that programmers can continue to think in terms of JavaScript object rether thean database semantics
+			
+	1.3  What ORM/ODM should I use?
+		There are many ODM/ORM solutions available on the NPM package manager site
+		A few solutions that were popular at the time of writing 
+
+			a. Mongoose : Mongoose is a MongoDB object modeling tool designed to work in an asynchronous enviroment.
+			b. Waterline : An ORM extracted form the Express-based Sails web framework. It provides a uniform API for accessing numberours different databases, including 
+				b.a Redis
+				b.b MySQL
+				b.c LDAP
+				b.d MongoDB
+				b.e Postgres
+			c. Bookshelf: Features both promise-based and traditonal callback interfaces, provideing transcation support, eager/nested-eager 
+				relation loading, polymorphic associations, and support for one-to-one, one-to-many, and many-to-many relations. works with 
+				c.a PostgreSQL
+				c.b MySQL
+				c.c SQLLite3
+			d. Objection: Makes it as easy as possible to use the full power of SQL and the underlying database engine supports 
+				d.a SQLite3, 
+				d.b Postgres, 
+			 	d.c MySQL
+			e. Squelize: is a promise-based ORM for node.js and io.js. It supports the dialects 
+				e.a PostgreSQL
+				e.b MySQL
+				e.c MariaDB
+				e.d SQLite
+				e.e MSSQL
+//21-03-2018
+	1.4 Using Mongoose and MongoDb for the LocalLibrary.
 
 
-
-
-		
-	
-
-
+	2.Designing the LocalLibrary models(মডেল)
+		worth (মূল্য)
 
     
 
