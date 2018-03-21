@@ -126,7 +126,59 @@ BuyerBankInfo
 
 	2.Designing the LocalLibrary models(মডেল)
 		worth (মূল্য)
-
+		It's worth taking a few minutes to think about data we need to store and the relationships between the different object.
+		
+		Once we've decided on our models and fields, we need to think about the relationships between them.
+		
+		Book : 	the generic details of the book
+		BookInstance   : status of specific physical copies of the book available in the system
+		Author : 
+		Genre : 
+		
+		var Author = {
+			first_name : String,
+			family_name: string,
+			date_of_brith: Date,
+			date_of_death: Date,
+			name : String,
+			lifespan: String,
+			url: String
+		}
+		
+		var Genre = {
+			name : String,
+			url: string
+		}
+		
+		
+		var Book = {
+		   title: string,
+		   author: Author[1],
+		   summary : String,
+		   ISBN : string
+		   genre: Gener[0..*],
+		   url: String
+		}
+		
+		var BookInstance = {
+			book: Book,
+			imprint : String,
+			status: enum,
+			due_back: Date,
+			url: String
+		}
+	https://www.youtube.com/watch?v=1Wkd8WNdlmY	
+	
+	3. Mongoose primer	
+		This section provides an overview of how to connect Mongoose to a MongoDB database, how to define a schema(পরিকল্পনা, তথ্যকোষ বা ডেটাবেসের একটি ডেটা মডেল) and model, and how to make basic queries.
+		
+		3.1 Installing Mongoose and MongoDB
+		3.2 Connecting to MongoDB
+		3.3 Defining and creating models
+		
+		
+		
+		
     
 
 
