@@ -167,15 +167,34 @@ BuyerBankInfo
 			due_back: Date,
 			url: String
 		}
-	https://www.youtube.com/watch?v=1Wkd8WNdlmY	
+	
 	
 	3. Mongoose primer	
 		This section provides an overview of how to connect Mongoose to a MongoDB database, how to define a schema(পরিকল্পনা, তথ্যকোষ বা ডেটাবেসের একটি ডেটা মডেল) and model, and how to make basic queries.
 		
 		3.1 Installing Mongoose and MongoDB
 		3.2 Connecting to MongoDB
-		3.3 Defining and creating models
-		
+		3.3 Defining and creating models 
+			Models are defined using the Schema interface. The Schema allows you to define the fields stored in each document along with their validation requirements and default values. you can define static and instance helper methods to make it easier to work with your data type, and alos virtual properties that you can use like any other field, but which aren't actually stored in the database
+
+			Schemas are then "Compiled" into models using the mongoose.model() method. Once you have a model you can use it to 
+				find,
+				creat,
+				update,
+				delete
+				object of the given type.
+
+			Note: Each model maps to a "collection of documents" in the MongoDB database. The documents will the fields/schema types defined in the model Schema.
+
+			3.3.1 Defining schemas
+			3.3.2 Creating a model
+				mongoose.model()
+				Note: One you've defined your model classes you can use them to create, update, or delete, and to run queries to get all records or particulat
+				subsets of records. 
+			3.3.3 Schema types (fields)
+				The schema can have an arbitrary(অবাধ, মুক্ত, স্বাধীন) number of fields -- each one represents(প্রতিনিধিত্ব করে)  a field on the documents stored in MongoDB. 
+			3.3.4 Validation
+
 		
 		
 		
