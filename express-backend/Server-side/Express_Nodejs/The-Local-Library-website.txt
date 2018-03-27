@@ -194,8 +194,16 @@ BuyerBankInfo
 			3.3.3 Schema types (fields)
 				The schema can have an arbitrary(অবাধ, মুক্ত, স্বাধীন) number of fields -- each one represents(প্রতিনিধিত্ব করে)  a field on the documents stored in MongoDB. 
 			3.3.4 Validation
+			3.3.5 Virtual properties
 
-		
+//27-03-2018	
+
+			3.3.6 Methods and query helpers	
+				A schema can also have "instance methods", "static methods" and "query helpers". The instance  and static methods are similar, but with the obvious(সুস্পষ্ট)  difference  that an instance method is associated(যুক্ত) with a particular recode and has access to the current object. Query helpers allows you to extend mongoose's chainable query builder API( for example, alowing you to add a query "byName" in addition to the find(), findOne() and findById() methods)
+					3.3.6.1 Using models 
+			3.3.7 Creating and modifying documents
+			3.3.8 Searching for records
+				
 		
 		
     
