@@ -1,0 +1,6 @@
+27-03-2018
+convenient(সুবিধাজনক)
+enumeration (গণনা)
+
+As in JavaScript, all numbers in TypeScript are floation point values.
+

@@ -17,3 +17,7 @@ admin-app/assets/scss/.sass-cache
 
 express-backend/node_modules
 express-backend/package-lock.json
+
+
+component-based-application/node_modules
+component-based-application/package-lock.json 
