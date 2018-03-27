@@ -38,4 +38,8 @@ let sentenceEquivalent = "Hello, my name is " + fullName + ".\n\n" + "I'll be " 
  * Array
  */
 
+ let list: number[] = [1, 3, 4];
+
+ let lists: Array<number> = [1, 2, 3];
+
 
