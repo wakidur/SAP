@@ -58,6 +58,12 @@ let sentenceEquivalent = "Hello, my name is " + fullName + ".\n\n" + "I'll be " 
 
   console.log(x[0].substr(1)); // ok
   console.log(x[1].substr(1)); // Error, 'number' does not have 'substr'
+  
+  x[3] = "world"; // ok, 'string' cna be assigned to 'string | number'
+  
+  console.log(x[5].toString()); // ok, 'string' and 'number' both have toString
+  
+  x[6] = true; // Error , 'boolean' isn't 'string | number'
 
 
 

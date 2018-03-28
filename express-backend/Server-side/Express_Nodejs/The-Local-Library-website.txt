@@ -211,6 +211,38 @@ BuyerBankInfo
 
 				Note: All callbacks in Mongoose use the pattern callback(error, result). if an error occurs executing the query, the error parameter will contain an error document, and result will be null. If the query is successful, the error parameter will be null, and the result will be populated with the results of the query.
 
+				Some methods
+				.find()
+				.where();
+				.equals();
+				.gt();
+				.lt();
+				.limit();
+				.sort();
+				.select();
+				.exec();
+
+				.findById();
+				.findOne();
+				.findByIdAndRemove();
+				.findByIdAndUpdate();
+				.findOneAndRemove();
+				.findOneAndUpdate();
+				.count();
+
+				Note: There is also a count() method that you canuse to get the number of items that match conditions. Thes is usefull if you want to perform a count without actually fatching the records.
+			3.3.9 Working with related documents — population
+				You can create reference(
+উল্লেখ, প্রসঙ্গ) form one document/model instance to amother using the ObjectId sechma field, or from one document to many using and array of ObjectIds. The field stores  id of the related model. if you need the actual content of the associated document, you can use the populate() methods in a query to replace the id with the actual data.
+
+For example, The following schema defines authors and stories(গল্প). Each author can have multiple stories, which we represent as an array of ObjectId. Each story can have a single author. the 'ref' (hightlighted in bold below) tells the schema which model can be assigned to this field.
+
+We can save out reference to the related document by assigning the _id value. 
+
+
+
+
+
 				
 				
 				
