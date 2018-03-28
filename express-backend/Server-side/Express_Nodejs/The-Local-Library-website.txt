@@ -201,8 +201,18 @@ BuyerBankInfo
 			3.3.6 Methods and query helpers	
 				A schema can also have "instance methods", "static methods" and "query helpers". The instance  and static methods are similar, but with the obvious(সুস্পষ্ট)  difference  that an instance method is associated(যুক্ত) with a particular recode and has access to the current object. Query helpers allows you to extend mongoose's chainable query builder API( for example, alowing you to add a query "byName" in addition to the find(), findOne() and findById() methods)
 					3.3.6.1 Using models 
-			3.3.7 Creating and modifying documents
-			3.3.8 Searching for records
+						Once you've created a schema you  can use it to create modeles. The model represents a collection fo documetns in the database that you can search, while the model's instances represent individual documents that you can save and retrieve.
+						
+			3.3.7 Creating and modifying documents: 
+				=> Every model has an associated(যুক্ত) connection (this will be the default connection when you use mongoose.model()). you create a new connection and call .mondel() on it to create the documents on a different database;
+
+			3.3.8 Searching for records 
+				you can search for recodes using query methods, specifying the query condition as JSON document.
+
+				Note: All callbacks in Mongoose use the pattern callback(error, result). if an error occurs executing the query, the error parameter will contain an error document, and result will be null. If the query is successful, the error parameter will be null, and the result will be populated with the results of the query.
+
+				
+				
 				
 		
 		
