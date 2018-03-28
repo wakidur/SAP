@@ -43,3 +43,21 @@ let sentenceEquivalent = "Hello, my name is " + fullName + ".\n\n" + "I'll be " 
  let lists: Array<number> = [1, 2, 3];
 
 
+ /**
+  * Tuple
+  */
+
+  // declare a tuple type
+
+  let x: [string, number];
+
+  // initialize it
+  x = ['hello', 100]; // ok
+
+  x = [102, 'Hello']; // Error
+
+  console.log(x[0].substr(1)); // ok
+  console.log(x[1].substr(1)); // Error, 'number' does not have 'substr'
+
+
+

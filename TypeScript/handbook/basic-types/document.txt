@@ -4,3 +4,6 @@ enumeration (গণনা)
 
 As in JavaScript, all numbers in TypeScript are floation point values.
 
+28-03-2018
+
+Tuple: Tuple types allow you to express an array where the type of a fixed number of elements is known, but need not be the same. 
