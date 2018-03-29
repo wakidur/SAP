@@ -205,7 +205,7 @@ BuyerBankInfo
 						
 			3.3.7 Creating and modifying documents: 
 				=> Every model has an associated(যুক্ত) connection (this will be the default connection when you use mongoose.model()). you create a new connection and call .mondel() on it to create the documents on a different database;
-
+28-03-2018
 			3.3.8 Searching for records 
 				you can search for recodes using query methods, specifying the query condition as JSON document.
 
@@ -231,18 +231,25 @@ BuyerBankInfo
 				.count();
 
 				Note: There is also a count() method that you canuse to get the number of items that match conditions. Thes is usefull if you want to perform a count without actually fatching the records.
+
 			3.3.9 Working with related documents — population
-				You can create reference(
-উল্লেখ, প্রসঙ্গ) form one document/model instance to amother using the ObjectId sechma field, or from one document to many using and array of ObjectIds. The field stores  id of the related model. if you need the actual content of the associated document, you can use the populate() methods in a query to replace the id with the actual data.
+				You can create reference(উল্লেখ, প্রসঙ্গ) form one document/model instance to amother using the ObjectId sechma field, or from one document to many using and array of ObjectIds. The field stores  id of the related model. if you need the actual content of the associated document, you can use the populate() methods in a query to replace the id with the actual data.
 
-For example, The following schema defines authors and stories(গল্প). Each author can have multiple stories, which we represent as an array of ObjectId. Each story can have a single author. the 'ref' (hightlighted in bold below) tells the schema which model can be assigned to this field.
+				For example, The following schema defines authors and stories(গল্প). Each author can have multiple stories, which we represent as an array of ObjectId. Each story can have a single author. the 'ref' (hightlighted in bold below) tells the schema which model can be assigned to this field.
 
-We can save out reference to the related document by assigning the _id value. 
+				We can save out reference to the related document by assigning the _id value. 
+
+29-03-2018
+			3.3.10 One schema/model per file
+			While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module(file), exporting the method to create the model.
 
 
 
 
-
+		4. Setting up the MongoDB database
+		5. Install Mongoose
+		6. Connect to MongoDB
+		7. Defining the LocalLibrary Schema
 				
 				
 				

@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/49529400/angularjs-promises-controller-service-doesnt-work
 
-https://stackoverflow.com/questions/49538970/angularjs-ng-change-only-firing-once-when-the-page-loads
+//https://stackoverflow.com/questions/49538970/angularjs-ng-change-only-firing-once-when-the-page-loads
 (function(){
     'use strict';
 

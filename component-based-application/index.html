@@ -32,6 +32,7 @@
             margin: 0px;
             line-height: 15px;
         }
+
         .grabber:after {
             content: " ";
             width: 15px;
@@ -43,7 +44,7 @@
             cursor: move;
         }
 
-       .grabber:before {
+        .grabber:before {
             content: " ";
             width: 15px;
             height: 15px;
@@ -53,18 +54,34 @@
             left: 0;
             cursor: move;
         }
+
+        /* countdown */
+
+        .ni-count-down {
+            width: 100%;
+            display: table;
+        }
+
+        .cd-row {
+            display: table-row
+        }
+
+        .cd-cell {
+            display: table-cell;
+            /* width: 10%; */
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
         Launch demo modal
-    </button>
+    </button> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -94,7 +111,41 @@
                 <div class="grabber" style=""></div>
             </div>
         </div>
+    </div> -->
+
+
+
+    <!-- ni-coundown -->
+    <div style="width: 250px; height: 250px;">
+        <div class="ni-count-down">
+            <div class="cd-row">
+                <div class="cd-cell">DD</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">HR</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">MN</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">SE</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">MS</div>
+            </div>
+           
+            <div class="cd-row">
+                <div class="cd-cell">100</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">02</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">36</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">47</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">47</div>
+            </div>
+           
+        </div>
     </div>
+
+
 
 </body>
 
