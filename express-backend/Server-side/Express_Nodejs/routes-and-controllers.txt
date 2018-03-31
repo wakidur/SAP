@@ -1,0 +1,70 @@
+//29-03-2018
+/****** Express Tutorial Part 4: Routes and controllers ****/
+interact(পরস্পরের উপর ক্রিয়া করা)
+genre(রীতি);
+Ultimately(চূড়ান্তভাবে);
+concentrate (কেঁদ্রীভূত করা)
+
+1. Overview
+	=> Routes: To forward the supported requests(and any information encoded in request URLs) to the appropriate(যথাযথ, উপযুক্ত) controller function.
+	
+	=> Controller: controller function to get the requested data from the models, create an HTML page displaying the data, and return it ti the user to view in the browser.
+	
+	=> Views(templates) used by the controllers to render the data.
+	
+	Http Request
+	Routes
+	Forward request to appropriate controller
+	controllers
+	views
+	read/write data
+	Models
+	Database
+	
+2. Routes primer
+	Route: A route is a section of Express code that associates an HTTP varb (GET, POST, PUT, DELETE, etc),an url path/pattern, and a function that is called to handle that pattern.
+	
+	2.1 Defining and using separate route modules
+	
+	2.2 Route functions
+	
+	The callback takes three arguments(usually named as shown: req, res, next), that will contain the 
+	HTTP Request object
+	HTTP response
+	Next function in the middleware chain
+	
+	Note: Route function are Express middleware 
+	
+	2.3 HTTP verbs
+		post()
+		put()
+		delete()
+		options()
+		trace()
+		copy()
+		lock()
+		mkcol()
+		move()
+		purge()
+		propfind()
+		proppatch()
+		unlock()
+		report()
+		mkactivity()
+		checkout()
+		merge()
+		m-search()
+		notify()
+		subscripbe()
+		unsubscribe()
+		patch()
+		search()
+		connect();
+		
+	2.4 Route paths
+	
+	
+	
+	
+	
+	
