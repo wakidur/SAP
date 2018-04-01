@@ -8,4 +8,6 @@
     models
     work in practice
     
-2. Displaying library data tutorial subarticles
+2. Displaying library data tutorial subarticles.
+2.1 Asynchronous flow control using async
+
