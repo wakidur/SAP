@@ -1,0 +1,11 @@
+1. Overview
+    In our previous tutorial articles we defined Mongoose models that can use to interact with a database and created some initaal libary recode. We the created all the routes needed for the LocalLibaray website, but with "dummy controller" function (these are skeleton controller function that just return a "not implemented" message when a page is accessed).
+
+    At the end of this article you should have a good end-to-end understanding of 
+    how routes, 
+    asynchonus function,
+    view,
+    models
+    work in practice
+    
+2. Displaying library data tutorial subarticles
