@@ -30,4 +30,16 @@
         2.2.2 Template configuration
 
         https://www.youtube.com/watch?v=AqtyHzG9Ppc&index=4&list=RD9GHrSQ1SYv4
+    
+    2.3 The LocalLibrary base template
+
+    2.4 Home page
+        2.4.1 Route
+        2.4.2 Controller
+            The async.parallel() method is passed an object with functions for getting the counts for each of our models. These functions are all started at the same time. When all them have completed the final callback is invoked the counts in the results parameter(or an error);
+
+        2.4.3 View 
+
+
+    2.5 Book list page
 
