@@ -1,6 +1,7 @@
 /****** Express Tutorial Part 6: Working with forms ******/
 
 1. Overview
+	An HTML Form is a group of one or more fields/ widgets no 
     Working with forms can be complicated! Developers need to write HTML for the form, validate and properly sanitize entered data on the server (and possible also in the borowser), repost(পুনরায় পোস্ট করুন) the form with error messages to inform users of any invalid fields, handle the data when it has successfully been submitted, and finally respond to the user in some way to indicate success.
 
     1.1 HTML Forms
@@ -26,4 +27,43 @@
 
         Sanitization  => sanitization removes/replaces characters in the data that might potentially be used to send malicious  content to the server.
 
-
+		1.3.1 Installation
+		1.3.2 Using express-validator
+		
+		const {body, validationResult } = require('express-validator/check');
+		const {sinitizeBody } = require('express-validator/filter');
+		
+		body('name', 'Empty name').isLength({min: 1}),
+		body('age', 'Invalid age').optional({checkFalsy: true}).isISO8601(),
+		
+		
+		body('name').isLength({min:1}).trim().withMessage('Name emply.').isAlpha().withMessage('Name must be alphabet letters.');
+		
+		
+		sanitizeBody('name').trim.escape(),
+		sanitizeBody('data').toData()
+		
+		
+		validationResult(req)
+		Runs the validation, making errors available in the form of a validation result object.
+		
+		(req, res, next) => {
+		// Extract the validation errors from a 
+		const error = validationResult(req);
+		if(!error.isEmpty()){
+			//there are error.
+			// error message can be returned
+		} else {
+			// data from form  valid.
+		}
+		
+		}
+		
+	1.4 Form design
+	
+	1.5 Routes
+		
+		
+		
+		
+		
