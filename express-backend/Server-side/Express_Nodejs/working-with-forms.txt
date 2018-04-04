@@ -1,0 +1,29 @@
+/****** Express Tutorial Part 6: Working with forms ******/
+
+1. Overview
+    Working with forms can be complicated! Developers need to write HTML for the form, validate and properly sanitize entered data on the server (and possible also in the borowser), repost(পুনরায় পোস্ট করুন) the form with error messages to inform users of any invalid fields, handle the data when it has successfully been submitted, and finally respond to the user in some way to indicate success.
+
+    1.1 HTML Forms
+    <form action="/team_name_url/" method="post">
+        <label for="team_name">Enter name: </label>
+        <input id="team_name" type="text" name="name_field" value="Default name for team.">
+        <input type="submit" value="OK">
+    </form>
+
+    action => The resource/URL where data is to be send for processing when the form is submitted. if this is not set (or set to and emplty string), then the form will be submitted backto the current page URL 
+
+    method => the HTTP method used to send the data : POST or GET
+
+        * The POST method should always be used of the data is going to result(ফল) in a change to the server's database, because this can be made more resistant(প্রতিরোধী) to cross-site forgery request attacks
+
+        * The GET method should only be used for forms that don't change user data (e.g a search form). It is recommended for where you wnat to be able to bookmark or share the URL
+
+    
+    1.2  Form handling process
+
+    1.3 Validation and sanitization
+        Validation => Validation checks that entered values are appropariate for each field (are in the right range, formate, etc.) and that values have been supplied for all required fields.
+
+        Sanitization  => sanitization removes/replaces characters in the data that might potentially be used to send malicious  content to the server.
+
+

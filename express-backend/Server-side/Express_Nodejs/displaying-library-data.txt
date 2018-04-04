@@ -43,3 +43,14 @@
 
     2.5 Book list page
 
+    2.6 BookInstance list page
+
+    2.7 Date formatting using moment
+
+    2.8 Author list page and Genre list page challenge
+
+    2.9 Genre detail page
+    2.10 Book detail page
+    2.11 Author detail page
+    2.12 BookInstance detail page and challenge
+
