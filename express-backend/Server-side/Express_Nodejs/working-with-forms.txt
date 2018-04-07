@@ -85,6 +85,11 @@ Extranct(নির্যাস)
 	1.4 Form design
 	
 	1.5 Routes
+
+	
+2. Express forms subarticles
+	2.1 Create Genre form
+		The first thing to note is that instead of being a single middleware function ( with arguments (req, res, next)) the controller specifies an array of middleware function. The array is 
 		
 		
 		
