@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/favicon.ico">
+
+    <title>Dashboard Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/scss/main.css" rel="stylesheet">
+
+    <link href="node_modules/datatables.net-dt/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="node_modules/angular-datatables/dist/css/angular-datatables.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+    
+    <!-- Angularjs -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <!-- angular-ui-router -->
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    
+
+    <script src="module/main-module.js"></script>
+
+    <!-- <script src="route-config/route-config-v0.4.3.js"></script> -->
+    <script src="route-config/route-config-v1.x.js"></script>
+
+    
+    <script src="service/peopleSvc.js"></script>
+    <script src="service/userProfileSvc.js"></script>
+	
+    <script src="controller/lableCtrl.js"></script>
+	
+
+  
+</head>
+
+<body ng-app="appModule">
+    <!-- header section  -->
+    <header>
+            <nav ng-if="!($state.current.name === 'logout')" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" ng-include="'views/layout/header.html'"></nav>
+    </header>
+   
+    <!-- header section  -->
+    <div class="container-fluid" ng-if="!($state.current.name === 'logout')">
+        <div class="row">
+            <!-- sidebar navigation  section  -->
+            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar" ng-include="'views/layout/sidebar-v1.x.html'"></nav>
+            <!-- sidebar navigation  section  -->
+            <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style=" margin-top: 56px;">
+                <h1 class="page-header" ng-if="$state.current.name === 'root'">Welcome to Dashboard Template for Bootstrap </h1>
+                <h1 ng-class="{'page-header':$state.current.name.length}" ng-if="!($state.current.name === 'root')">{{$state.current.name | capitalize}}</h1>
+                <!-- dynamic view section  -->
+                <ui-view></ui-view>
+                <!-- dynamic view section  -->
+            </main>
+        </div>
+    </div>
+
+
+
+    <div class="container" ng-if="$state.current.name === 'logout'">
+        <ui-view></ui-view>
+    </div>
+
+
+
+</body>
+
+</html>

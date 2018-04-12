@@ -1,0 +1,27 @@
+{
+  "name": "ui-router",
+  "version": "1.0.0",
+  "description": "project study",
+  "main": "app.js",
+  "scripts": {
+    "test": "app.js"
+  },
+  "keywords": [
+    "study"
+  ],
+  "author": "wakidur",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.7",
+    "angular": "^1.6.8",
+    "angular-animate": "^1.6.8",
+    "angular-data-table": "^0.7.0",
+    "angular-datatable": "^2.2.1",
+    "angular-datatables": "^0.6.2",
+    "angular-resource": "^1.6.8",
+    "angular-ui-router": "^0.4.3",
+    "bootstrap": "^4.0.0-beta.3",
+    "font-awesome": "^4.7.0",
+    "metismenu": "^2.7.2"
+  }
+}

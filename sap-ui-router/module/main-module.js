@@ -1,6 +1,6 @@
 (function(angular) {
     'use strict';
     angular
-        .module('appModule', ['ui.router', 'datatables', 'ngResource']);
+        .module('appModule', ['ui.router']);
 
 })(window.angular);

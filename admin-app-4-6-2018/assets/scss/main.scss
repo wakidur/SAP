@@ -1,0 +1,85 @@
+/**
+ * WKR - Open Source Bootstrap Admin Template
+ * @version v1.0.0
+ * 08-01-2018
+ */
+// Override Boostrap variables
+//@import "bootstrap-variables";
+// Import normalize
+@import "vendors/normalize/normalize";
+
+// avoid modifying Bootstrap’s core files. For Sass, 
+// that means creating your own stylesheet that imports Bootstrap so you can modify and extend it.
+// Override Boostrap variables create a the
+@import "themes/customThemes";
+
+// If you’ve downloaded our source files and aren’t using a package manager, you’ll want to manually setup something similar to that structure, keeping Bootstrap’s source files separate from your own.
+@import "vendors/bootstrap/bootstrap-main";
+
+// If you want you can import bootstrap scss files directly from node_modules or bower_components.
+// To do this please remove @import "bootstrap/bootstrap"; and uncomment proper line.
+
+// Import Bootstrap source files from node_modules
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// Import Bootstrap source files from node_modules
+// @import "node_modules/bootstrap/scss/bootstrap";
+
+// ----------------Add plug-in--------------
+//font-awesome
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+
+// Import core styles
+@import "utilities/custom-variables";
+@import "utilities/mixins";
+// Import vendors styles
+@import "vendors/vendors";
+// Additional typography
+@import "base/typography";
+
+// Animations
+@import "components/animate";
+@import "layout/aside";
+@import "components/avatars";
+@import "components/badge";
+@import "components/breadcrumb-menu";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/callout";
+@import "components/card";
+@import "components/charts";
+@import "components/dropdown";
+@import "layout/footer";
+@import "layout/grid";
+@import "components/input-group";
+@import "components/loading";
+@import "components/modal";
+@import "components/nav";
+@import "layout/navbar";
+@import "components/progress";
+@import "layout/sidebar";
+@import "components/switches";
+@import "components/tables";
+@import "components/widgets";
+@import "layout/layout";
+@import "components/others";
+// Utility classes
+@import "utilities/background";
+@import "utilities/borders";
+@import "utilities/display";
+// Temporary fixes
+@import "components/temp";
+
+@import "layout/rtl";
+
+// Custom styles
+@import "utilities/utilities";
+@import "utilities/custom";
+
+
+// pages
+@import "pages/dashboard";
+
+
