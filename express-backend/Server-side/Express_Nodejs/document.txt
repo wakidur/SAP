@@ -1,27 +1,39 @@
 //----------11-02-2018-------------
-/********* 1. Express web framework (Node.js/JavaScript) ***********/
+Fairly(নিরপেক্ষভাবে)
+/********* 0. Express web framework (Node.js/JavaScript) ***********/
 Express is a popular unopinionated(একমত)  web framework, written in JavaScript and hosted within the node.js runtime enviroment.
 
 //----------12-02-2018-------------
-/******************************2. Express/Node introduction**************************/
-2.1. What is Node?
-2.2. What is Express?
-2.3. What makes the Express web framework special.
+/******************************1. Express/Node introduction**************************/
+//====> second revision 12-5-2018
+1.2.  What is Node?
+	Node (or more formally Node.js) is an open-source, cross platform, runtime enviroment that allows developers to create all kinds of server-side tools and application in JavaScript. The runtime is intended(লক্ষ্য)  for use outside of a browser context(প্রসঙ্গ)(i.e runnig directly on a computer or serve OS). As such, the enviroment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and the system libraries.
 
-2.1 & 2.2 => What are Express and Node?
+1.2. What is Express?
+	Express is the most popular node web framework, and is the underliying libary for a number of other popular Node web framework. It provides mechanisms to: 
+		1.2.1. Write handlers for requests with different HTTP verbs at different URL paths (routes).
+		1.2.2. Integrate with "view" rendering engines in order to generate responses by inserting data into templates.
+		1.2.3. Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.
+		1.2.4. Add additional request processing "middleware" at any point within the request handling pipeline.
 
-Node: is a open-source, cross-platform, runtime enviroment that allows developers to create all kinds of server-side tools and applications in JavaScript. The runtime is intended(লক্ষ্য)  for use outside of a browser context. As such, the enviroment omits(বাদ) browser-specific JavaScript APIs and Adds support for more traditional OS APIs including HTTP and file system libraries. 
+		While Express itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with 
+		  a. Cookies
+		  b. Sessions
+		  c. User logins
+		  d. URL parameters
+		  e. POST data
+		  f. security headers
 
-Express: is the most popular Node web framework, and is the underliying libary for a number of other popular Node web framework. it provides mechanisms to.
+1.3 Where did it come from?
 
-*** While Express itself is fairly minimalist, developers have creted compatible middlewar packages  to address almost any web development problem. There are libraries to work with
+1.4 How popular is Node/Express?
 
-A. cookies,
-B. Sessions
-C. User Login,
-D. URL parameters,
-C. POST data,
-E. Security headers
+1.5 Is Express opinionated?
+
+1.6 What does Express code look like?
+	1.6.1 Helloworld Express
+	1.6.2 Using asynchronous APIs
+
 
 
 2.4 Where did it come from?

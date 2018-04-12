@@ -1,0 +1,6 @@
+//12-05-2018
+augmentation(বৃদ্ধি)
+Variable Declarations
+
+let: is similar to var in some respects 
+const: is an augmentation of let in that it prevents reassignment to a variable.
