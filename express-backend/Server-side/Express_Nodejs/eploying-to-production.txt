@@ -1,0 +1,17 @@
+ES modules: A cartoon deep-dive
+https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
+/*** Deploying to production ***/
+
+
+premises -  (প্রাঙ্গনে, পূর্বানুমান)
+1. Overview
+
+2. What is a production environment?
+    The production environment is the environment provided by the server computer where you will run your website for external consumption. 
+
+    IaaS
+    PaaS = (Platform as a Service )
+
+3. Choosing a hosting provider
+
+4. Getting your website ready to publish 
