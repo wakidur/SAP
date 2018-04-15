@@ -1,0 +1,21 @@
+http://mongoosejs.com/docs/guide.html
+1.Schemas
+ 1.2 Defining your schema
+    Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape(আকৃতি) of the documents within that collection.
+    
+    The Primitted SchemaTypes are 
+
+        a. String
+        b. Number
+        c. Data
+        d. Buffer
+        e. Boolean 
+        f. Mixed
+        g. ObjectId
+        h. Array
+    
+    Schemas not only define the structure of your document and casting of properties, they also define documents 
+        instance methodes,
+        static Model methodes,
+        compound indexes,
+        document lifecycle hooks called middleware.
