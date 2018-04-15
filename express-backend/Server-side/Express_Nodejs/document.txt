@@ -1,4 +1,15 @@
 //----------11-02-2018-------------
+"
+If you really 
+want 
+something 
+you will find a 
+way...
+if you don't 
+you will find 
+an Excuse,
+"
+
 Fairly(নিরপেক্ষভাবে)
 /********* 0. Express web framework (Node.js/JavaScript) ***********/
 Express is a popular unopinionated(একমত)  web framework, written in JavaScript and hosted within the node.js runtime enviroment.
@@ -32,9 +43,11 @@ Express is a popular unopinionated(একমত)  web framework, written in Java
 
 1.6 What does Express code look like?
 	1.6.1 Helloworld Express
-	1.6.2 Using asynchronous APIs
+	1.6.2 Importing and creating modules
+	1.6.3 Using asynchronous APIs //====> second revision 15-5-2018
+		JavaScript code frequently uses asynchronous rather than synchronous APIs for operations that may take some time to complete. A synchronous API is one in which each operations must complete before the next operation can start. 
 
-
+	1.6.4 Creating route handlers
 
 2.4 Where did it come from?
 Express was initially released in November 2010 and is currently on version 4.16 of the API. 
