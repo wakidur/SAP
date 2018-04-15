@@ -1,0 +1,35 @@
+https://www.tecknocracy.com/#/blog/5abdc75dbf89383efe6a6d9a
+/**Securing Node.JS and Express.JS RESTful APIs with JSON Web Tokens**/
+14-05-2018
+wondered (বিস্ময়ের);
+mouthful(সামান্য পরিমাণ);
+authenticate(সত্য বা খাঁটি বলে প্রমাণ করা, বিশুদ্ধতা প্রমাণ করা);
+authorize(অনুমোদন করা, অনুমতি প্রদান করা, অনুমতি দেত্তয়া);
+alongside (এর পাশাপাশি)
+spins (ঘূর্ণন)
+brainstorming (চিন্তাভাবনার);
+ease (আরাম);
+solely(কেবলমাত্র)
+Token: It’s a way of encrypting a value, in turn (	
+পালাক্রমে) creating a unique token that users use as an identifier(শনাক্তকারী). This token verifies your identity. It can authenticate(সত্য বা খাঁটি বলে প্রমাণ করা, বিশুদ্ধতা প্রমাণ করা) who you are, and authorize(অনুমোদন করা, অনুমতি প্রদান করা, অনুমতি দেত্তয়া) various resources you have access to.
+
+*** how to add token based authenticate to an existing REST API. 
+
+The authenticate strategy in question is JWT(JSON web Token)
+
+What does JWT actually mean?
+	JSON Web Token (JWT) is compact, URL-safe means of representing claims to be transferred between to parties. 
+	The claims in JWT are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext  of a JSON Web Encryption (JWE) structure, enabling the claims to be digitally signed or integrity protected with a Message Authentication Code(MAC) 
+
+What does this look like like in real life? 
+	Let’s say a user wants to sign in to their account. They send a request with the required credentials (পরিচয়পত্র ) such as email and password to the server. The server checks to see if the credentials (পরিচয়পত্র ) are valid. If they are, the server creates a token using the desired payload and a secret key. This string of characters that results from the encryption is called a token.
+	
+	Then the server sends it back to the client. The client, in turn, saves the token to use it in every other request the user will send. 
+	
+	The practice of adding a token to the request headers is as way of authorize the user to access resources.
+
+Finally, some code.
+	What we want to build.
+	1. We want to add user authenticate. Meaning implementing a system for registering and logging users in.
+	
+	2. we want to add authorize. the act of granting users the permission  to access certain resources on our REST API 

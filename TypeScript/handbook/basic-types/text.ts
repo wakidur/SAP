@@ -118,7 +118,13 @@ let prettySure: Object = 4;
 let list: any[] = [1, true, "free"];
     list[1] = 100;
 
+//Void
 
+function warnUser(): void {
+  alert("This is my warning massage");
+}
+
+let unusable: void = undefined;
 
 
 
