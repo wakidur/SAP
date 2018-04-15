@@ -33,3 +33,10 @@ Finally, some code.
 	1. We want to add user authenticate. Meaning implementing a system for registering and logging users in.
 	
 	2. we want to add authorize. the act of granting users the permission  to access certain resources on our REST API 
+	
+Did someone say login?
+	
+	*** logging out : The act of logging out can solely be done through the client side. A token is usually kept in a cookie or the browser's localstorage. Logging out is as simply as destroying the token on the client. This /logout endpoint is created to logically depict what happens when you log out. The token gets set to null
+	
+Do you have permission to be here?
+	
