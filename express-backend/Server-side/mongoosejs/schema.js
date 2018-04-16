@@ -29,6 +29,7 @@ var Blog = mongoose.model('Blog', blogSchema);
 
 /* Instance methods */
 // define a scheme
+var Schema = mongoose.Schema;
 var animalSchema = new Schema({
 	name: String,
 	type: String
@@ -46,7 +47,7 @@ var dog = new Animal({type: 'dog'});
 	});
 
 /* static */
-
+var Schema = mongoose.Schema;
 var animalSchema = new Schema({ 
 	name: String, 
 	type: String 
@@ -74,6 +75,7 @@ var Animal = mongoose.model('Animal', animalSchema);
 	})
 	
 /* Index*/
+var Schema = mongoose.Schema;
 var animalSchema = new Schema({
     name: String,
     type: String,
@@ -81,4 +83,58 @@ var animalSchema = new Schema({
   });
 
   animalSchema.index({ name: 1, type: -1 }); // schema level
+
+/**
+ * Virtuals
+ */
+
+ // Define a schema
+ var Schema = mongoose.Schema();
+ var personSchema = new Schema({
+     name: {
+         first: String,
+         last: String,
+         virtuals: true
+     }
+ });
+
+personSchema.virtual('fullName').get(function(){
+    return this.name.first + ' ' + this.name.last;
+});
+
+personSchema.virtual('fullName')
+    .get(function () { return this.name.first + ' ' + this.name.last  })
+    .set(function (v) {
+        this.name.first = v.substr(0, v.indexOf(' '));
+        this.name.last = v.substr(v.indexOf(' ') + 1)
+      });
+axl.fullName = 'William Rose';//Now 'axl.name.first' is "William"
+ // compile our model
+ var Person = mongoose.model('Person', personSchema);
+
+ // create a document
+ var axl = new Person({
+     name:{
+         first: 'Axl',
+         last: 'Rose'
+     }
+ });
+
+//  Aliase
+var personSchema = new Schema({
+    n: {
+        type: String,
+        // Now accessing `name` will get you the value of `n`, and setting `n` will set the value of `name`
+        alias: 'name'
+    }
+});
+
+// Setting `name` will propagate to `n`
+var person = new Person({ name: 'Val' });
+console.log(person); // { n: 'Val' }
+console.log(person.toObject({ virtuals: true })); // { n: 'Val', name: 'Val' }
+console.log(person.name); // "Val"
+
+person.name = 'Not Val';
+console.log(person); // { n: 'Not Val' }
  

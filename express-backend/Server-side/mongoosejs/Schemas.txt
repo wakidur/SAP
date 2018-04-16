@@ -38,3 +38,5 @@ http://mongoosejs.com/docs/guide.html
 	1.8 Virtuals
 		Virtuals are document properties that you can get and set but that do not get persisted (স্থায়ী অবস্থায় থাকা,  অবিরত লাগিয়া থাকা) to MongoDB. The getters are useful for formatting or combining fields, while setters are useful for de-composing(গলা) a single value into multiple values for storage.
 		
+		Aliases 
+			Aliases are a particular type of virtual where the getter and setter seamlessly(অঙ্গীভূতভাবে) get and set another property. This is handy(কুশলী) for saving network bandwidth, so you can convert a short property name stored in the database into a longer name for code readability.
