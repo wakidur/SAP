@@ -1,2 +1,2 @@
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/node-jwt-db');
+mongoose.connect('mongodb://localhost/node-jwt-db');
