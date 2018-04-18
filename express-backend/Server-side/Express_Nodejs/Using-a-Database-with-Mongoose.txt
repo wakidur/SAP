@@ -65,6 +65,7 @@
 
 
 	2. Designing the LocalLibrary models(মডেল)
+		
 		worth (মূল্য)
 		It's worth taking a few minutes to think about data we need to store and the relationships between the different object.
 		
@@ -110,6 +111,7 @@
 	
 	
 	3. Mongoose primer	
+	//====> second revision 17-5-2018
 		This section provides an overview of how to connect Mongoose to a MongoDB database, how to define a schema(পরিকল্পনা, তথ্যকোষ বা ডেটাবেসের একটি ডেটা মডেল) and model, and how to make basic queries.
 		
 		3.1 Installing Mongoose and MongoDB
@@ -128,7 +130,10 @@
 
 			3.3.1 Defining schemas
 			3.3.2 Creating a model
-				mongoose.model()
+				var SomeModel = mongoose.model('SomeModel', SomeNewModelSchema) ;
+
+				The first argument is the singular name of the collection that will be created for your model(Mongoose will create the database collection for the above model SomeMode), and the socond argument is the schema you want to use in creating the model.
+
 				Note: One you've defined your model classes you can use them to create, update, or delete, and to run queries to get all records or particulat
 				subsets of records. 
 			3.3.3 Schema types (fields)
@@ -145,11 +150,15 @@
 						
 			3.3.7 Creating and modifying documents: 
 				=> Every model has an associated(যুক্ত) connection (this will be the default connection when you use mongoose.model()). you create a new connection and call .mondel() on it to create the documents on a different database;
-28-03-2018
+
+			28-03-2018
+
 			3.3.8 Searching for records 
 				you can search for recodes using query methods, specifying the query condition as JSON document.
 
 				Note: All callbacks in Mongoose use the pattern callback(error, result). if an error occurs executing the query, the error parameter will contain an error document, and result will be null. If the query is successful, the error parameter will be null, and the result will be populated with the results of the query.
+
+
 
 				Some methods
 				.find()
@@ -190,3 +199,9 @@
 		5. Install Mongoose
 		6. Connect to MongoDB
 		7. Defining the LocalLibrary Schema
+			/models
+				author.js
+				book.js
+				bookinstance.js
+				genre.js
+				

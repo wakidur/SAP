@@ -9,13 +9,13 @@
 	
 	** The following are all the valid SchemaTypes in mongoose.
 	
-	* string
+	* String
 	* Number
 	* Date
 	* Buffer
 	* Boolean
 	* Mixed
-	* Object
+	* ObjectId
 	* Array
 	* Decimal128
 
@@ -27,8 +27,15 @@ var mySchema = new Schema({
 	name: String,
 	binary: Buffer,
 	living: Boolean,
-	update: { type: Date, default: Date.now },
-	age: { type: Number, min: 18, max: 69 },
+	update: {
+		type: Date,
+		default: Date.now
+	},
+	age: {
+		type: Number,
+		min: 18,
+		max: 69
+	},
 	mixed: Schema.Type.Mixed,
 	someId: Schema.Type.ObjectId,
 	decimal: Schema.Type.Decimal128,
@@ -36,12 +43,16 @@ var mySchema = new Schema({
 	ofString: [String],
 	OfNumber: [Number],
 	ofDates: [Date],
-	ofBuffer:   [Buffer],
-	ofBoolean:  [Boolean],
-	ofMixed:    [Schema.Types.Mixed],
+	ofBuffer: [Buffer],
+	ofBoolean: [Boolean],
+	ofMixed: [Schema.Types.Mixed],
 	ofObjectId: [Schema.Types.ObjectId],
-	ofArray: [[]], 
-	ofArrayOfNumbers: [[Number]],
+	ofArray: [
+		[]
+	],
+	ofArrayOfNumbers: [
+		[Number]
+	],
 	nested: {
 		stuff: {
 			type: String,
@@ -50,4 +61,3 @@ var mySchema = new Schema({
 		}
 	}
 })
-	
