@@ -1,5 +1,6 @@
 //29-03-2018
 /****** Express Tutorial Part 4: Routes and controllers ****/
+//====> second revision 17-5-2018
 interact(পরস্পরের উপর ক্রিয়া করা)
 genre(রীতি);
 Ultimately(চূড়ান্তভাবে);
@@ -7,6 +8,8 @@ concentrate (কেঁদ্রীভূত করা)
 extract (নিষ্কাশন করা)
 dummy(কৃত্রিম, কোনো ব্যক্তি বা বস্তুর নকল যা আসল ব্যক্তি বা বস্তুর উপস্থিতির উদ্দেশ্য সিদ্ধ করে, সাজানো)
 skeleton(কঙ্কাল, অস্থি, কাঠাম)
+completion (পরিপূরণ)
+
 1. Overview
 	=> Routes: To forward the supported requests(and any information encoded in request URLs) to the appropriate(যথাযথ, উপযুক্ত) controller function.
 	
@@ -35,33 +38,28 @@ skeleton(কঙ্কাল, অস্থি, কাঠাম)
 	HTTP response
 	Next function in the middleware chain
 	
-	Note: Route function are Express middleware 
+	Note: 
+		Router function are Express middleware, which means that they must either complete(respond to) the request or call next function in the chain. 
+		The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback function. Each function is part of the middleware cahin, and will be called in the order it is added to the chain.
+
+		res.send() => response to return the string
+		res.json() => send a JSON response
+		res.sendFile() => send a file.
+		res.render() => creates and returns HTML files using templates and data.
 	
 	2.3 HTTP verbs
-		post()
-		put()
-		delete()
-		options()
-		trace()
-		copy()
-		lock()
-		mkcol()
-		move()
-		purge()
-		propfind()
-		proppatch()
-		unlock()
-		report()
-		mkactivity()
-		checkout()
-		merge()
-		m-search()
-		notify()
-		subscripbe()
-		unsubscribe()
-		patch()
-		search()
-		connect();
+		1. post() 			2. put()
+		3. delete()			4. options()
+		5. trace() 			6. copy()
+		7. lock() 			8. mkcol()
+		9. move() 			10. purge()
+		11. propfind() 		12. proppatch()
+		13. unlock() 		14. report()
+		15. mkactivity() 	16. checkout()
+		17. merge() 		18. m-search()
+		19. notify() 		20. subscripbe()
+		21. unsubscribe() 	22. patch()
+		23. search() 		24. connect();
 		
 	2.4 Route paths 
 		The route paths define the endpoints at which requests can be made. 
