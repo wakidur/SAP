@@ -43,9 +43,9 @@ by default, enums bening numbering their members starting at 0. you can change t
 
 8. Void: is a little like the opposite of any: the absence of having any type al all. You may commonly see this as the ruturn of functions that do not return a value
 
-functions warnUser(): void {
-    alert("This is my warning message");
-}
+9. Null and Undefined: In TypeScript, both Undefined and Null actually have their own type named Undefined and Null respectively.
+
+10. Naver: The never type represents the type of values that never occur. 
 
 
 

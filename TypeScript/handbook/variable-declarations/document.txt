@@ -4,3 +4,12 @@ Variable Declarations
 
 let: is similar to var in some respects 
 const: is an augmentation of let in that it prevents reassignment to a variable.
+
+
+/***** Scoping rules *****/
+var declaration have some odd scoping rules for those used to other languages.
+
+/********** **** let declarations ************* /
+
+/* Block-scoping */
+When a variable is declared using let, it uses what some call lexical-scoping or block-scoping. 
