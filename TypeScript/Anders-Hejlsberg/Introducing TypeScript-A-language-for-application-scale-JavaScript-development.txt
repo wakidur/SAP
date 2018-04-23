@@ -1,0 +1,7 @@
+/******* 
+    Build 2012
+    Introducing TypeScript: A language for application-scale JavaScript development
+    Oct 29, 2012 at 2:06AM  by Anders Hejlsberg
+***************/
+
+1. Application scale JavaScript development is hard.

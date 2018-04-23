@@ -1,0 +1,18 @@
+/***Let **/
+unlike (অসদৃশ)
+The let statement declares a block scope local variable, optionally initializeg it to a value.
+
+** Syntax
+    let var1 = value1, 
+        var2 = value2
+        varN = valueN
+    
+
+Description: let allows you to declare variables that are limited(সীমিত) in scope(এলাকা) to the block, statement, or expression on which it is used.
+
+Scoping rules: variable declared  by let have their scope in the block for which they are defined, as well as in any contained sub-blocks. In this way, let works very much like var. The main difference is that the scope of a var variable is the entire enclosing(ঘেরাত্ত) function.
+
+At the top level of programs and function, let, unlike var, does not create a property on the global object.
+
+Emulating(নকল করা) private members: in dealing with constructors it is possible to use the let bindings to share one or more provate members without using closurs.
+
