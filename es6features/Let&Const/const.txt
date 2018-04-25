@@ -1,0 +1,21 @@
+//******const***//
+24.04.2018
+
+What is const?
+    Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through(মাধ্যমে) re-assignment(পুনরায় নিয়োগ), and it can't be redeclared(পুনরায় ঘোষিত).
+
+1. Syntax
+    const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+
+2. Description : 
+    This declaration creates a constent whose can be either "global" or "local" to the block in which it is declared. 
+    **Global constants do not become properties of the window object, unlike var variables.
+    An initializer for a constent is required; that is, you must specify its value in the same statement in which it's declared(Which makes sense, given that it can't be changed later);
+
+    The const declaration creates a read-only reference to a value. It does not mean the value it holds is immutable, 
+
+
+    NOTE : Constants can be declared with uppercase or lowercase, but a common convention(সাধারণ প্রচলন)  is to use all-uppercase letters.
+
+    
+    

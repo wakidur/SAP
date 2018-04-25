@@ -53,8 +53,7 @@ console.log(this.y);
  * 
  */
 
-var Thing; 
-{
+var Thing; {
     let privateScope = new WeakMap();
     console.log(typeof privateScope);
     let counter = 0;
@@ -66,11 +65,11 @@ var Thing;
         });
     };
 
-    Thing.prototype.showPublic = function(){
+    Thing.prototype.showPublic = function () {
         return this.someProperty;
     };
 
-    Thing.prototype.showPrivate = function() {
+    Thing.prototype.showPrivate = function () {
         return privateScope.get(this).hidden;
     };
 };
@@ -88,20 +87,20 @@ thing.showPrivate();
  * Temporal Dead Zone and errors with let
  */
 
- if (x) {
+if (x) {
     let foo;
-    let foo;// SyntaxError thrown. 
- }
+    let foo; // SyntaxError thrown. 
+}
 
 
- function doSomeThing(params) {
-     console.log(bar); // undefined
-     console.log(foo); // ReferenceError;
-     var bar = 1;
-     var foo = 2;
- }
+function doSomeThing(params) {
+    console.log(bar); // undefined
+    console.log(foo); // ReferenceError;
+    var bar = 1;
+    var foo = 2;
+}
 
- doSomeThing();
+doSomeThing();
 
 
 let switchValue = 1;
@@ -122,6 +121,65 @@ switch (switchValue) {
  * however, it's important to point out that a block nested inside a case cluse will create a now block scope lexical environment, which will not produce the redeclaration errors show above.
  */
 
- 
+let switchValue1 = 2;
+
+switch (switchValue1) {
+    case 0:
+        {
+            let fooo;
+            break;
+        }
+    case 1:
+        {
+            let fooo;
+            break;
+        }
+    default:
+        break;
+}
+
+/**
+ * Another example of temporal dead zone combined with lexical scoping
+ */
+
+function temporalDeadZone(params) {
+    var foo = 33;
+    if (params) {
+        let foo = (foo + 50);
+    }
+
+}
+
+temporalDeadZone(true);
 
 
+let aa = {
+    a: [1, 2, 3]
+}
+
+function goo(aa) {
+    // n here is defined!
+    for (let n  of aa.a) {
+        console.log(n);
+        
+    }
+}
+
+goo(n);
+
+/**
+ * Other situations
+ */
+var a = 1;
+var b = 2;
+
+if( a === 1) {
+    var a = 11; // this scope is global
+    let b = 22; // the scope is inside the if-block
+
+    console.log(a); // 11
+    console.log(b); // 22
+}
+
+console.log(a); // 11
+console.log(b); // 1
