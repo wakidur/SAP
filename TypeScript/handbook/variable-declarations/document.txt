@@ -7,7 +7,7 @@ const: is an augmentation of let in that it prevents reassignment to a variable.
 
 
 /***** Scoping rules *****/
-var declaration have some odd scoping rules for those used to other languages.
+var declaration have some odd scoping rules for those used to(ব্যবহৃত) other languages.
 
 /********** **** let declarations ************* /
 
