@@ -15,7 +15,9 @@
 		Note: There are a number of other ways to manage asynchronous behaviors and flow control in JavaScript, including relatively recent JavaScript language features like Promises. 
 	
     async.parallel();
+		to execute any operations that must be performed in parallel.
     async.series();
+		for when we need to ensure that asynchronous operations are 
     async.waterfall();
         2.1.1 Why is this needed?
         2.1.2 Asynchronous operations in parallel

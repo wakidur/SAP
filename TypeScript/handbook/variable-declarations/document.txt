@@ -14,6 +14,9 @@ These scoping rules can cause several types of mistakes. One problem they exacer
 May be it was easy to spot(স্থাননির্ণয় করা) out for some, but the inner for loop will accidentlly overwrite the variable i because i refers to the same function-scoped variable. As experienced developers know by now, similar sorts of bugs slip code reviews and code be an endless source of frustration. 
 
 /********** **** let declarations ************* /
-
+26-04-2018
+27-04-2018
+precisely (অবিকল)
+Apart (দূরে, ব্যবধানে)
 /* Block-scoping */
 When a variable is declared using let, it uses what some call lexical-scoping or block-scoping. 
