@@ -33,7 +33,28 @@ The constructor method is a special method for creating and initializing an obje
 
 // 05-03-2018--------------------
 // 1.5 Boxing with prototype and static methods :
-When a static or prototype method is called without an object valued "this", then the "this" value will be undefined inside the called function. Autoboxing will not heppen. The behavior will be the same even if we write the code in non-strict mode beeause all the function, method, constructor, getters or setters are executed in strict mode. so if we do not specify this value then the this value will be undefined
+
+When a static or prototype method is called without a value for this, the this value will be 'undefined' inside the method. This behavour will be the same event if the 'use strict' directive isn't present, because code witing the 'class' syntax is always executed in 'strict mode'
+
+class Animal { 
+  speak() {
+    return this;
+  }
+  static eat() {
+    return this;
+  }
+}
+
+let obj = new Animal();
+obj.speak(); // Animal {}
+let speak = obj.speak;
+speak(); // undefined
+
+Animal.eat() // class Animal
+let eat = Animal.eat;
+eat(); // undefined
+
+If the above is written using traditional function-based syntax, then autoboxing  in method calls will happen in non-strict mode based on the initial this value. If the inital value is 'undefined, this will be set to the global object. 
  
 
 
