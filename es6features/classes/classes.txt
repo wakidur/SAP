@@ -1,4 +1,4 @@
-//----------------------26-20-2018---------------
+//----------------------26-2-2018---------------
 /******************* 1.Defining classes ***************/
 Classes are fact(প্রকৃত ঘটনা, প্রকৃত অবস্থা) "special functions", and just as you can define "function expressions" and "function declaration", the class syntax has two components
 1. class expressions
