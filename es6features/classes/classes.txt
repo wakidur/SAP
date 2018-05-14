@@ -38,9 +38,9 @@ When a static or prototype method is called without an object valued "this", the
 
 
 
-//--------- Sub classing with extends ----------
+//--------- Sub classing with extends(প্রসারিত করা, বাড়ান) ----------
 
-The extends keyword is used in "class declaration" or "class expressions" to create a class as a child of another class.
+The "extends" keyword is used in "class declaration" or "class expressions" to create a class as a child of(একটি শিশু হিসাবে) another class.
 
 
 
