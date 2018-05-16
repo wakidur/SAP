@@ -1,4 +1,12 @@
+/**
+ * Declaring a variable in JavaScript has always tradintilly been done the var keyword.
+ */
 var a = 10;
+// We can also declare a variable inside of a function
+function appreciaMess() {
+    var message = 'Well done';
+    return message;
+}
 // step-1
 function helloWorld() {
     var message = "Hello, world!";
@@ -40,5 +48,22 @@ function scopingRules(shouldInitialize) {
     catch (error) {
         throw error;
     }
+}
+// Step - 5 
+function sumMatrix(matrix) {
+    var sum = 0;
+    for (var i = 0; i < matrix.length; i++) {
+        var currentRow = matrix[i];
+        for (var i = 0; i < currentRow.length; i++) {
+            sum += currentRow[i];
+        }
+    }
+    return sum;
+}
+// Step - 7;
+for (var i = 0; i < 10; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, 100 * i);
 }
 //# sourceMappingURL=text.js.map
