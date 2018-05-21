@@ -1,5 +1,5 @@
 // 16-05-2018
-class Greeter  {
+class Greeter {
     greeting: string;
     constructor(message: string) {
         this.greeting = message;
@@ -17,9 +17,9 @@ console.log(`Greeter Class output: ${greeter}`);
 
 class Animal {
     constructor() {
-        
+
     }
-    move(distanceInMeters: number = 0){
+    move(distanceInMeters: number = 0) {
         console.log(`Animal moved ${distanceInMeters}m.`);
     }
 }
@@ -70,3 +70,55 @@ class Horse extends Animal3 {
 
 let sam = new Snake("Sammy the Python");
 let tom: Animal3 = new Horse("Tommy the palomino");
+
+/**
+ * Public, private, and protected modifiers
+ */
+
+class AnimalPublic {
+    public name: string;
+    public constructor(theName: string) {
+        this.name = theName;
+    }
+
+    public move(destanceInMeters: number) {
+        console.log(`${this.name} moved ${destanceInMeters}m.`);
+    }
+}
+
+class AnimalPrivate{
+    private name: string;
+    constructor(theName: string) {
+        this.name = theName;
+    }
+}
+
+new AnimalPrivate("Cat").name; // Error: 'name' is private; 
+
+
+class Animal4 {
+    private name: string;
+    constructor(theName: string) {
+        this.name = theName;
+    }
+}
+
+class Rhino extends Animal4 {
+    constructor() {
+        super("Rhino");
+    }
+}
+
+class Employee {
+    private name: string;
+    constructor(theName: string) {
+        this.name = theName;
+    }
+}
+
+let animal = new Animal4("Goat");
+let rhino = new Rhino();
+let employee = new Employee("Bob");
+
+animal = rhino;
+animal = employee; // Error 'Animal4' and 'Employee' are not compatible 
