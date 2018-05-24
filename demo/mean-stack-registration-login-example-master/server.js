@@ -6,20 +6,36 @@ var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var config = require('config.json');
 
+// dependent controller 
+var login = require('./controllers/login.controller');
+var register = require('./controllers/register.controller');
+var apps = require('./controllers/app.controller');
+var users = require('./controllers/api/users.controller')
+
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(bodyParser.json());
-app.use(session({ secret: config.secret, resave: false, saveUninitialized: true }));
+app.use(session({
+    secret: config.secret,
+    resave: false,
+    saveUninitialized: true
+}));
 
 // use JWT auth to secure the api
-app.use('/api', expressJwt({ secret: config.secret }).unless({ path: ['/api/users/authenticate', '/api/users/register'] }));
+app.use('/api', expressJwt({
+    secret: config.secret
+}).unless({
+    path: ['/api/users/authenticate', '/api/users/register']
+}));
 
 // routes
-app.use('/login', require('./controllers/login.controller'));
-app.use('/register', require('./controllers/register.controller'));
-app.use('/app', require('./controllers/app.controller'));
-app.use('/api/users', require('./controllers/api/users.controller'));
+app.use('/login', login);
+app.use('/register', register);
+app.use('/app', apps);
+app.use('/api/users', users);
 
 // make '/app' default route
 app.get('/', function (req, res) {
