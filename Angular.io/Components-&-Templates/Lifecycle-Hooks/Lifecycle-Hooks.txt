@@ -28,3 +28,30 @@ Angular create it, renders it, creates and renders its children, checkes it when
 
     8. ngOnDestroy(): Cleanup just before Angular destroys the directive/component. Unsubscribe Observables and detach event handlers to avoid memory leaks. 
     called just berfor Angular destroys the directive/component. 
+
+4. Interfaces are optional (technically)
+
+    The interfaces are optional(ঐচ্ছিক) for JavaScript and Typescript Developers from a purely technical(প্রযুক্তিগত) perspactive(পরিপ্রেক্ষিত). The JavaScript language doesn't have interfaces. 
+    Angular can't see Typescript interfaces at runtime because they disappear(অদৃশ্য) from the transpiled Javascript.
+
+    Fortunately(ভাগ্যক্রমে), they aren't necessary. You don't have to add the lifecycle hook interfaces to directives and components to benefit from the hooks themselves.
+
+    Angular instead inspects(পরিদর্শন করা) directive and component classes and calls the hook methods if they are defined. Angular finds and calls methods like ngOnInit(), with or without the interfaces.
+
+    Nonetheless(তবু, অথচ), it's good pracitce to add interfaces to TypeScript directive classes in order to benefite from strong typing and editor tooling
+
+5. Other Angular lifecycle hooks
+
+//29-05-2018----------------------------------
+6. Lifecycle examples.
+
+Demonstrates(প্রমান, স্পষ্ট করা)
+a. peek-a-boo. (Demonstrates every lifecycle hook. Each hook method writes to the on-screen log);
+b. spy (Directive have lifecycle hooks too. A SpyDirective can log when the element it spies upon is created or destroyed using the ngOnInit and ngOnDestroy hooks)
+c. OnChanges.( See how Angular calls the ngOnChanges() hook with a changes object every time one of the component input properties changes. Shows how to interpret the changes object. ) 
+d. DoCheck (Implements an ngDoCheck() method with custom change detection. See how often Angular calls this hook and watch it post changes to a log.)
+e. AfterView (Shows what Angular means by a view. Demonstrates the ngAfterViewInit and ngAfterViewChecked hooks.)
+f. AfteContent(Shows how to project external content into a component and how to distinguish projected content from a component's view children. Demonstrates the ngAfterContentInit and ngAfterContentChecked hooks.)
+g. Counter ()
+
+
