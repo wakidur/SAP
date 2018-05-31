@@ -63,6 +63,10 @@ rarely(কদাচিৎ),
  expected(প্রত্যাশিত)
 A. Peek-a-boo: all hooks
     The PeekABooComponent Demonstrates all of the hooks in one component. 
+
+// 31-05-2018--------------------
+sneaky(গোপন)
+B. Spying(গোয়েন্দাগিরি) OnInit and OnDestroy
     
 
 
