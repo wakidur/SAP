@@ -67,6 +67,10 @@ A. Peek-a-boo: all hooks
 // 31-05-2018--------------------
 sneaky(গোপন)
 B. Spying(গোয়েন্দাগিরি) OnInit and OnDestroy
+
+// 03-06-2018--------------------------
+E. OnChanges()
+Angular calls its ngOnChanges() method whenever it detectes changes to input properties of the Component or Directive
     
 
 
