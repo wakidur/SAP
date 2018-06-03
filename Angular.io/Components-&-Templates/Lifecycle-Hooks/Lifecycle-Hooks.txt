@@ -83,7 +83,7 @@ sneaky(গোপন)
 spy(গুপ্তচর)
 B. Spying(গোয়েন্দাগিরি) OnInit and OnDestroy
 
-<<<<<<< HEAD
+
 // 01-06-2018 -----------------------
 
 Go undercover with these two spy hooks to discove when an element is initialize or destroyed.
@@ -121,13 +121,12 @@ E. OnChanges()
     Angular call its ngOnChanges() method whenever it detects changes to input properties of the component or Directive. 
 
 
-
-
-=======
 // 03-06-2018--------------------------
 E. OnChanges()
 Angular calls its ngOnChanges() method whenever it detectes changes to input properties of the Component or Directive
->>>>>>> 0a16c479a3ed7b025e564b103d58cf4345532175
+
+The ngOnChange() method takes an object that maps each chanded property name to a SimpleChanges object holding the current and previous property values. This hook iterates over the changed properties and logs them. 
+
     
 
 
