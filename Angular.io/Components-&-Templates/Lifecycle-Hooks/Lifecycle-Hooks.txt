@@ -127,6 +127,20 @@ Angular calls its ngOnChanges() method whenever it detectes changes to input pro
 
 The ngOnChange() method takes an object that maps each chanded property name to a SimpleChanges object holding the current and previous property values. This hook iterates over the changed properties and logs them. 
 
+// 04-06-2018-------------
+
+F. DoCheck 
+    Use the DoCheck hook to detect and act upon changes that Angular doesn't catch on its own. 
+
+    *** Use this method to detect a change that Angular overlooked(উপেক্ষিত).
+
+    The DoCheck sample extends the OnChanges sample with the following ngDoCheck() hook
+
+
+G. AfterView.
+    The AfterView sample explores the AfterViewInit() and AfterViewChecked() hooks that Angular calls after it creates a component's child views.
+    
+
     
 
 
