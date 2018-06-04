@@ -1,2 +1,10 @@
 04-06-2018
-Component Interaction
+Component Interaction(মিথষ্ক্রিয়া)
+
+This cookbook contains recipes for common component communication scenarios in which two or more components share information. 
+
+1. Pass data from parent to child with input binding
+
+2. Intercept input property changes with a setter.
+
+
