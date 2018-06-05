@@ -5,6 +5,15 @@ This cookbook contains recipes for common component communication scenarios in w
 
 1. Pass data from parent to child with input binding
 
-2. Intercept input property changes with a setter.
+2. Intercept(পথিমধ্যে রোধ করা, ধরে রাখা, আটকানো) input property changes with a setter.
+
+    Use an input property setter to intercept and act upon a value from the parent.
+
+3. Intercept input property changes with ngOnChanges()
+    Detect and act upon changes to input property value with the "ngOnChanges()" method of the onChanges lifecycle hook interface.
+
+    *** You may prefer this approach to the property setter when watching multiple, interacting input properties. 
+
+
 
 
