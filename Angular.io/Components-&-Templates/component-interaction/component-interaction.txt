@@ -17,7 +17,13 @@ This cookbook contains recipes for common component communication scenarios in w
 4. Parent listens for child event
     The child component exposes(অনাবৃত) an EventEmitter property with which it "emits" events when something happens. The parent binds to that event property and reacts to this events.
 
-    The child's EventEmitter property is an output property, typically adorned with an @Output decoration as seen in this VoterComponent.
+    The child's EventEmitter property is an output property, typically adorned(সুশোভিত, অলঙ্কৃত) with an @Output decoration as seen in this VoterComponent.
+
+// 06-06-2018 -----------------------
+
+5. Parent interacts with child via local variable 
+
+
 
     
 
