@@ -23,6 +23,10 @@ This cookbook contains recipes for common component communication scenarios in w
 
 5. Parent interacts with child via local variable 
 
+A parent component cannot use data binding to read child properties or invoke child methods. You can do both by creating a template reference variable for the child element and then reference that within the parent template as seen in the following example
+
+
+
 
 
     
