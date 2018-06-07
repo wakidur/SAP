@@ -1,0 +1,14 @@
+/***** 07/06/2018--------------------
+/*** Component Styles ******/
+bundle (পাঁজা,  আটি)
+Angular applications are styled with standard CSS. That measn you can apply everything you know about css stylesheets, selectors, rules, and media queries directly to Angular applications.
+
+1. Using component styles
+    For every Angular component you write, you may define not only an HTML template, but also the css style that go with that template, specifying and selectors, rules, and media queries that you need. 
+
+
+2. Style scope 
+
+3. Special selectors
+
+
