@@ -1,6 +1,7 @@
 /***** 07/06/2018--------------------
 /*** Component Styles ******/
-bundle (পাঁজা,  আটি)
+bundle (পাঁজা,  আটি);
+deprecated(গম্ভীর করা, অবচিত)
 Angular applications are styled with standard CSS. That measn you can apply everything you know about css stylesheets, selectors, rules, and media queries directly to Angular applications.
 
 Additionally, Angular can bundle "component styles" with components, enabling a more modular design than reqular stylesheets.
@@ -18,6 +19,95 @@ Additionally, Angular can bundle "component styles" with components, enabling a 
     
 
 3. Special selectors
+    :host
+
+    :host {
+        display: block;
+        border: 1px solid black;
+    }
+
+    :host(.active) {
+        border-width: 3px;
+    }
+
+    The :host selector is the only way to target the host element. You can't reach the host element from inside the component  with other selectors because it's not part of the component's own template. The host element is in a parent component's template.
+
+    
+
+
+
+/**** 10-06-2018 ----------------
+
+:host-context
+
+:host-context(.theme-light) h2 {
+    background-color: #eef;
+}
+
+
+4. (deprecated) / deep/, >>>, and ::ng-deep
+    :host/deep/h3 {
+        font-style: italic;
+    }
+
+The /deep/ combinator also has the aliases >>>, and ::ng-deep.
+
+5. Loading component styles
+    There are several ways to add styles to a component
+        1. By setting styles or styleUrls metadata.
+        2. Inline in the template HTML
+        3. With css imports.
+    The scoping rules outlined earlier apply to each of these loading patterns.
+
+6. Styles in component metadata
+    styles: ['h1 { font-weight: normal; }']
+    
+7. Style files in component metadata
+    styleUrls: ['./hero-app.component.css']
+
+8. Template inline styles
+    template: `
+    <style>
+      button {
+        background-color: white;
+        border: 1px solid #777;
+      }
+    </style>
+    <h3>Controls</h3>
+    <button (click)="activate()">Activate</button>
+  `
+
+9. Template link tags
+
+template: `
+    <!-- We must use a relative URL so that the AOT compiler can find the stylesheet -->
+    <link rel="stylesheet" href="../assets/hero-team.component.css">
+    <h3>Team</h3>
+    <ul>
+      <li *ngFor="let member of hero.team">
+        {{member}}
+      </li>
+    </ul>`
+
+10. CSS @imports
+    /* The AOT compiler needs the `./` to show that this is local */
+    @import './hero-details-box.css';
+
+11. External and global style files 
+    When building with the CLI, you must configure the angular.json to include all external assets, including external style files.
+
+
+12. Non-CSS style files
+    @Component({
+        selector: 'app-root',
+        templateUrl: './app.component.html',
+        styleUrls: ['./app.component.scss']
+    })
+
+13. View encapsulation
+    encapsulation: ViewEncapsulation.Native
+
+14. Inspecting generated CSS
 
 /**** 08-06-2018 *****/ 
 
