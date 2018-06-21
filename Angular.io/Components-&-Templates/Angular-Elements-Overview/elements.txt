@@ -1,2 +1,11 @@
 // 10-06-2018
 Angular Elements Overview
+Angular elements are Angular components packaged as custom elements, a web standard for defining new HTML elements in a framework-agnostic way. 
+
+Custom elements are a Web platform feature currently supported by Chrome, Opera, and Safari, and available in other browsers through polyfills. A custom element extends HTML by allowing you to define a tag whose content(পরিমাণ) is created and controlled by JavaScritp code. The browser maintains a CustomElementRegistery of defined custom elements, which maps an instantiable JavaScritp class to an HTML tag
+
+The @angular/elements package exports a createCustomElement() API that provies a bridge from Angular's component interface and change detection functionality to the built-in DOM API 
+
+Transforming a component to a custom element makes all of the required Angular infrastructure available to the browser. Creating a custom element is simple and straightforward, and automatically connects your component-defined view with change detection and data binding, mapping Angular functionality to the corresponding native HTML equivalents.
+
+// 12-06-2018 ------------------
