@@ -37,4 +37,14 @@ Transforming a component to a custom element makes all of the required Angular i
 
 3. How it works
 
-	Use the " createCustomElement()" function to convert a component into a class that can be registered with the browser's custom element. After you registry, your configured class with the browser's custom-element registry.
+	Use the " createCustomElement() " function to convert a component into a class that can be registered with he browser as a custom element. After you can use the new element just like a bulit-in HTML element in content that you add directly into DOM.
+
+//24-06-2018------------
+
+<my-popup message="Use Angular!"></my-popup>
+
+When your custom element is placed on a page, the browser creates an instance of the registered class an adds it to the DOM. The content is provided by the component's template, which uses Angular template syntex, and rendered using the component and DOM data. Input properties in the component correspond to input attributes for the element.
+
+4. Transforming components to custom elements
+	
+
