@@ -46,5 +46,7 @@ Transforming a component to a custom element makes all of the required Angular i
 When your custom element is placed on a page, the browser creates an instance of the registered class an adds it to the DOM. The content is provided by the component's template, which uses Angular template syntex, and rendered using the component and DOM data. Input properties in the component correspond to input attributes for the element.
 
 4. Transforming components to custom elements
-	
 
+	
+// 26-06-2018 ----------------
+5. Mapping 
