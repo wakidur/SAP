@@ -1,0 +1,57 @@
+// 26-06-2018 -------------------------
+/******** Book Name: Getting MEAN with Mongo, Express, Angular, and Node, Second Edition  ******/
+Part 1: Setting The Baselin
+1 Introducing full-stack development
+2. Designing a MEAN Stack Architecture
+
+----------------------------------------------
+1. Introducing full-stack development
+    1.1. Why learn the full stack?
+    1.1.1. A very brief history of web development
+    1.1.2. The trend toward full-stack developers
+    1.1.3. Benefits of full-stack development
+    1.1.4. Why the MEAN stack specifically?
+    1.2. Introducing Node.js: The web server/platform
+    1.2.1. JavaScript: The single language through the stack
+    1.2.2. Fast, efficient, and scalable
+    1.2.3. Using prebuilt packages via npm
+    1.3. Introducing Express: The framework
+    1.3.1. Easing your server setup
+    1.3.2. Routing URLs to responses
+    1.3.3. Views: HTML responses
+    1.3.4. Remembering visitors with session support
+    1.4. Introducing MongoDB: The database
+    1.4.1. Relational versus document databases
+    1.4.2. MongoDB documents: JavaScript data store
+    1.4.3. More than just a document database
+    1.4.4. What is MongoDB not good for?
+    1.4.5. Mongoose for data modeling and more
+    1.5. Introducing Angular: The front-end framework
+    1.5.1. jQuery versus Angular
+    1.5.2. Two-way data binding: Working with data in a page
+    1.5.3. Using Angular to load new pages
+    1.5.4. Are there any downsides?
+    1.5.5. Developing in TypeScript
+    1.6. Supporting cast
+    1.6.1. Twitter Bootstrap for user interface
+    1.6.2. Git for source control
+    1.6.3. Hosting with Heroku
+    1.7. Putting it together with a practical example
+    1.7.1. Introducing the example application
+    1.7.2. How the MEAN stack components work together
+    1.8. Summary
+
+// 26-06-2018----------
+1 Introducing full-stack development
+    This chapter covers 
+        The benefits of full-stack development
+        An overview of the MEAN stack components
+        What makes the MEAN stack so compelling
+        A preview of the application we'll build throughout this Book
+
+impatient(অধীর)
+comprised (অন্তর্ভুক্ত)
+
+
+
+
