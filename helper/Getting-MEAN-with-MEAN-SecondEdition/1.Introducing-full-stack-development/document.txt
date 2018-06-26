@@ -74,6 +74,27 @@ Node.js:- the web server (Node.js was created in 2009)
 1.1.3   Benefits of full-stack development
 1.1.4   Why the MEAN stack specifically?
 
+1.2   Introducing Node.js: The web server/platform
+nutshell(বাদামের খোলা);
+on top of it(এটি উপরে)
+nor(না, এবং না)
+contains (রয়েছে)
+foray,(আক্রমণ. হানা, হঠাত্ আক্রমণ)
+obstacles(প্রতিবন্ধকতা)
+mainstream (মূলধারার)
+
+	Node.js is the foundation of the stack!
+	
+	In a nutshell, Node.js is a software platform that allows you to create your own web server and build web application on top of it. 
+	Node.js isn't itself a web server, nor is it a language.
+	It contains a built-in HTTP server library, meaning that you don't need to run a separate web server program such as Nginx, Apache or Internet Information Servers(IIS). This ultimately gives you greater control over how your web server works, but also increases the complexity of getting it up and running, particularly in live environment.
+	
+	1.2.1   JavaScript: The single language through the stack
+	
+	1.2.2   Fast, efficient, and scalable
+		How does it do this? 
+			Node.js is light on system responses because it's single-threaded, whereas tradition web server are multithreaded.
+
 
 
 
