@@ -101,6 +101,9 @@ mainstream (মূলধারার)
     away
     directory (নির্দেশক, নির্দেশপূর্ণ)
     silo(একঘেয়ে রূপ)
+    transactional(লেনদেনের)
+    context(প্রসঙ্গ)
+    wondering (ভাবছি)
         Traditional multithreaded web server
         A single-threaded web server
     1.2.3   Using prebuilt packages via npm
@@ -114,6 +117,45 @@ mainstream (মূলধারার)
             Or, you’ll never guess what: Express has an answer to this too! Express comes with the ability to use sessions so that you can identify individual visitors through multiple requests and pages. Thank you Express!
     
     1.4   Introducing MongoDB: The database
+        1.4.1   Relational versus document databases
+        1.4.2   MongoDB documents: JavaScript data store
+            MongoDB stores documents as BSON, which is binary JSON (JavaScript Serialize Object Notation). Don't worry for now if you're not fully familiar with JSON.
+
+            {
+                "firstName" : "Simon",
+                "lastName" : "Holmes",
+                _id : ObjectId("52279effc62ca8b0c1000007")
+            }
+        1.4.3   More than just a document database
+        1.4.4   What is MongoDB not good for?
+        1.4.5   Mongoose for data modeling and more
+            What is data modeling?
+            Data modeling, in the context of Mongoose and MongoDB, is defining what data can be in a document, and what data must be in a document. When storing user information, you might want to be able to save the first name, last name, email address, and phone number. But you need only the first name and email address, and the email address must be unique. This information is defined in a schema, which is used as the basis for the data model.
+
+            What else does Mongoose offer?
+        
+    1.5   Introducing Angular: The front-end framework
+        1.5.1   jQuery versus Angular
+        1.5.2   Two-way data binding: Working with data in a page
+        1.5.3   Using Angular to load new pages
+        1.5.4   Are there any downsides?
+        1.5.5   Developing in TypeScript
+    
+    1.6   Supporting cast
+        1.6.1   Twitter Bootstrap for user interface
+            Responsive grid layout
+            CSS classes and HTML components
+            Adding themes for a different feel
+        1.6.2   Git for source control
+            How to use Git
+            What are we using Git for here?
+        
+        1.6.3   Hosting with Heroku
+    1.7   Putting it together with a practical example
+        1.7.1   Introducing the example application
+            Real or fake data?
+            End produc
+    1.7.2   How the MEAN stack components work together
 
 
 
