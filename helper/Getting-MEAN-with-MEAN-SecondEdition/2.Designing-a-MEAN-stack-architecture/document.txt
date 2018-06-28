@@ -13,3 +13,13 @@ feeding(প্রতিপালন, চারণভূমি, ভক্ষক, 
         A common way to architect a MEAN stack application is to have a representational state transfer (REST) API feeding a single-page application (SPA).
 
         The API is typically built with MongoDB, Express, and Node.js, with the SPA being built in Angular. 
+
+        Technical Skills:
+✧ JavaScript (ES5, ES6, ES7, ES8)
+✧ Frameworks: React, Express (Node), Vue
+✧ Loved Libraries: React-Router, Redux, Webpack, Babel
+
+Contact Me:
+✉ Email: lydiahallie.dev@gmail.com
+✧ GitHub: www.github.com/lydiahallie
+✧ Resume: https://resume.creddle.io/resume/8exdxmy3yq8
