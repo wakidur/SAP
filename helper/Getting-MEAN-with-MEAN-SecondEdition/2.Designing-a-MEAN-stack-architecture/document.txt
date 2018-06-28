@@ -1,0 +1,15 @@
+// 28-06-2018 -------------
+2 Designing a MEAN stack architecture
+    This chapter covers
+        1. Introducing a common MEAN stack architecture
+        2. Considerations for single-page applications
+        3. Discovering alternative MEAN stack architectures
+        4. Designing an architecture for a real application
+        5. Planning a build based on the architecture design
+    
+feeding(প্রতিপালন, চারণভূমি, ভক্ষক, ভোজ্য সামগ্রী)
+    2.1   A common MEAN stack architecture
+    
+        A common way to architect a MEAN stack application is to have a representational state transfer (REST) API feeding a single-page application (SPA).
+
+        The API is typically built with MongoDB, Express, and Node.js, with the SPA being built in Angular. 
