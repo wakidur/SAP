@@ -1,4 +1,6 @@
 // 28-06-2018 -------------
+feed(ভোজন)
+feeding(প্রতিপালন, চারণভূমি, ভক্ষক, ভোজ্য সামগ্রী)
 encounter (সাক্ষাৎ)
 diverse range of problems (বিভিন্ন ধরণের সমস্যার)
 manner(পদ্ধতি, রকম)
@@ -10,8 +12,7 @@ crawl (হামাগুড়ি)
         3. Discovering alternative MEAN stack architectures
         4. Designing an architecture for a real application
         5. Planning a build based on the architecture design
-feed(ভোজন)
-feeding(প্রতিপালন, চারণভূমি, ভক্ষক, ভোজ্য সামগ্রী)
+
     2.1   A common MEAN stack architecture
 
             representational state transfer (REST) 
@@ -35,6 +36,9 @@ feeding(প্রতিপালন, চারণভূমি, ভক্ষক, 
 
     2.2   Looking beyond SPAs
         2.2.1   Hard to crawl
+            JavaScript applications are very hard for search engines to crawl and index. 
+            Most search engines look at the HTML content on a page but don’t download or execute much JavaScript. 
+
             Making an SPA crawlable
             Does it matter?
         2.2.2   Analytics and browser history
@@ -52,6 +56,11 @@ feeding(প্রতিপালন, চারণভূমি, ভক্ষক, 
         
     2.3   Designing a flexible MEAN architecture
         2.3.1   Requirements for a blog engine
+             A blog engine typically has two sides to it.
+                    1. There’s a public-facing side serving up articles to readers, and hopefully being syndicated and shared across the internet.
+                    2. administrator interface where blog owners log in to write new articles and manage their blogs. 
+
+
         2.3.2   A blog engine architecture
             Admin interface: An Angular SPA
             Blog entries: What to do?
@@ -59,6 +68,8 @@ feeding(প্রতিপালন, চারণভূমি, ভক্ষক, 
             Blog entries: Using more of the stack
             Blog engine: A hybrid architecture
         2.3.3   Best practice: Build an internal API for a data layer
+
+// 01-07-2018----------------
 
 
 
