@@ -59,6 +59,24 @@ crawl (হামাগুড়ি)
              A blog engine typically has two sides to it.
                     1. There’s a public-facing side serving up articles to readers, and hopefully being syndicated and shared across the internet.
                     2. administrator interface where blog owners log in to write new articles and manage their blogs. 
+                
+                Blog entries
+                    Characterietics
+                        conten-rice
+                        Low interaction
+                        Fast first load
+                        Short user duration
+                        public and shareable
+                
+                Admin interface
+                    Characterietics
+                        Feature-rice
+                        High interaction
+                        Fast response to actions 
+                        Long user duration
+                        Private
+
+                
 
 
         2.3.2   A blog engine architecture
