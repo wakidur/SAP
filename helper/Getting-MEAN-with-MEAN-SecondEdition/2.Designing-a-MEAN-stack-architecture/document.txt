@@ -139,6 +139,14 @@ flashy(চটকদার, লোকদেখান)
 
             Going for scale
 
+            you can have a different server for the different parts of your application—a 
+            database server, an 
+            API server, and an 
+            application server. 
+            This will allow you to deal with more traffic as the load is spread across three servers, 
+
+            But it doesn’t stop there. If your traffic starts to overload your three servers, you can have multiple instances—or clusters—of these servers
+
 
 
 
