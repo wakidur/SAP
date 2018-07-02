@@ -119,6 +119,26 @@ flashy(চটকদার, লোকদেখান)
             Stage 5: Augment the application
         
         2.5.2   The steps to build Loc8r
+            Step 2: Design the data model and create the database
+            Step 3: Build our REST API
+            Step 4: Use the API from our application
+            Step 5: Embellish the application
+            Step 6: Refactor the code into an Angular SPA
+            Step 7: Add authentication
+    
+    2.6   Hardware architecture
+        2.6.1   Development hardware
+        2.6.2   Production hardware
+            Starter size
+            Growing up: A separate database server
+            One of the first things to be moved onto a separate server is often the database. So now you have two servers: 
+            1. one for the application code and 
+            2. one for the database.
+
+            This is quite a common model, particularly if you choose to use a platform as a service (PaaS) provider for your hosting. We’ll be using this approach in this book. 
+
+            Going for scale
+
 
 
 
