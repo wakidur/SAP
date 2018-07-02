@@ -5,6 +5,7 @@ encounter (সাক্ষাৎ)
 diverse range of problems (বিভিন্ন ধরণের সমস্যার)
 manner(পদ্ধতি, রকম)
 crawl (হামাগুড়ি)
+flashy(চটকদার, লোকদেখান)
 2 Designing a MEAN stack architecture
     This chapter covers
         1. Introducing a common MEAN stack architecture
@@ -107,6 +108,17 @@ crawl (হামাগুড়ি)
         
         2.4.3   Wrapping everything in an Express project
         2.4.4   The end product
+    
+
+    2.5   Breaking the development into stages
+        2.5.1   Rapid prototype development stages (start .....)
+            Stage 1: Build a static site
+            Stage 2: Design the data model and create the database
+            Stage 3: Build our data API
+            Stage 4: Hook the database into the application
+            Stage 5: Augment the application
+        
+        2.5.2   The steps to build Loc8r
 
 
 
