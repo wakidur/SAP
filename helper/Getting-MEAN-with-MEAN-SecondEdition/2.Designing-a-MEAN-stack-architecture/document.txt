@@ -76,9 +76,6 @@ crawl (হামাগুড়ি)
                         Long user duration
                         Private
 
-                
-
-
         2.3.2   A blog engine architecture
             Admin interface: An Angular SPA
             Blog entries: What to do?
@@ -88,6 +85,32 @@ crawl (হামাগুড়ি)
         2.3.3   Best practice: Build an internal API for a data layer
 
 // 01-07-2018----------------
+// 02-07-2018----------------
+
+    2.4   Planning a real application
+        2.4.1   Planning the application at a high level
+            Planning the screens
+                Loc8r will list nearby places with WiFi where people can go and get some work done. It will also display facilities, opening times, a rating, and a location map for each place. Visitors will be able to submit ratings and reviews.
+
+                From this we can get an idea about some of the screens we’re going to need:
+                    A screen that lists nearby places
+                    A screen that shows details about an individual place
+                    A screen for adding a review about a place
+                    A screen for “about us” information
+                
+            Dividing the screens into collections
+
+        2.4.2   Architecting the application
+            Starting with the API
+            Application architecture options
+            Choosing an application architecture
+        
+        2.4.3   Wrapping everything in an Express project
+        2.4.4   The end product
+
+
+
+        
 
 
 
