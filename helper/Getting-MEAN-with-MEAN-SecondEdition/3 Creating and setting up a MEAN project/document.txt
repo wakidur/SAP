@@ -1,2 +1,22 @@
-
 https://coderprog.com/angular-nodejs-mean-stack-guide/
+https://www.candlecode.com/product/p:B1V8npc6DKg
+
+// 03-07-2018 ---- 
+
+3 Creating and setting up a MEAN project
+    3.1   A brief look at Express, Node, and npm
+        3.1.1   Defining packages with package.json
+            Working with dependency versions in package.json
+        3.1.2   Installing Node dependencies with npm
+            Adding more packages to an existing project
+            Updating packages to later versions
+    3.2   Creating an Express project
+        3.2.1   Installing the pieces
+            Verifying the installations
+        3.2.2   Creating a project folder
+        3.2.3   Configuring an Express installation
+            Configuration options when creating an Express project
+            Different template engines
+            A quick look at Pug
+            A quick intro to .gitignore files
+                A .gitignore file is a simple configuration file that sits in the root of your project folder. This file specifies which files and folders Git commands should ignore; in essence it says “pretend these files don’t exists and don’t track them” meaning that they won’t end up in source control.
