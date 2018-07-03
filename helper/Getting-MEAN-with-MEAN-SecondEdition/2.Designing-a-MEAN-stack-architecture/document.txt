@@ -130,6 +130,7 @@ flashy(চটকদার, লোকদেখান)
         2.6.1   Development hardware
         2.6.2   Production hardware
             Starter size
+            
             Growing up: A separate database server
             One of the first things to be moved onto a separate server is often the database. So now you have two servers: 
             1. one for the application code and 
