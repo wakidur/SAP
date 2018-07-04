@@ -1,0 +1,64 @@
+https://coderprog.com/angular-nodejs-mean-stack-guide/
+https://www.candlecode.com/product/p:B1V8npc6DKg
+https://www.quora.com/Whats-the-difference-between-wireframe-and-mockup/answer/Grace-Jia-1?share=f90469b7&srid=K2Yl
+
+// 03-07-2018 ---- 
+
+3 Creating and setting up a MEAN project
+    3.1   A brief look at Express, Node, and npm
+        3.1.1   Defining packages with package.json
+            Working with dependency versions in package.json
+        3.1.2   Installing Node dependencies with npm
+            Adding more packages to an existing project
+            Updating packages to later versions
+    3.2   Creating an Express project
+        3.2.1   Installing the pieces
+            Verifying the installations
+        3.2.2   Creating a project folder
+        3.2.3   Configuring an Express installation
+            Configuration options when creating an Express project
+            Different template engines
+            A quick look at Pug
+
+                #banner.page-header
+                    h1 My page
+                    p.lead Welcome to my page
+
+                <div id="banner" class="page-header">
+                    <h1>My page</h1>
+                    <p class="lead">Welcome to my page</p>
+                </div>   
+
+            A quick intro to .gitignore files
+                A .gitignore file is a simple configuration file that sits in the root of your project folder. This file specifies which files and folders Git commands should ignore; in essence it says “pretend these files don’t exists and don’t track them” meaning that they won’t end up in source control.
+
+// 04-07-2018--------
+        3.2.4   Creating an Express project and trying it out
+            $ express --view=pug --git;
+            Trying it out
+            How Express handles the requests
+                About Express middleware
+                    In the middle of the app.js file there are a bunch of lines that start with "app.use".
+                    These are known as middleware. When a request comes in to the application it
+                    passes through each piece of middleware in turn. Each piece of middleware may or
+                    may not do something with the request, but it’s always passed on to the next one
+                    until it reaches the application logic itself, which returns a response.
+
+                    All requests to the Express server run through the middleware defined in the app.js
+                    file (see the sidebar “About Express middleware”). As well as doing other things,
+                    there’s a default piece of middleware that looks for paths to static files. When the middleware
+                    matches the path against a file, Express will return this asynchronously, ensuring
+                    that the Node.js process isn’t tied up with this operation and therefore blocking
+                    other operations. When a request runs through all of the middleware, Express will
+                    then attempt to match the path of the request against a defined route.
+            
+        3.2.5 Restarting the application
+            Automatically restarting the application with nodemon
+                $ npm install -g nodemon
+
+    3.3 Modifying Express for MVC  
+        3.3.1 A bird’s eye view of MVC
+        3.3.2 Changing the folder structure
+        3.3.3 Using the new views and routes folders
+
+
