@@ -61,4 +61,72 @@ https://www.quora.com/Whats-the-difference-between-wireframe-and-mockup/answer/G
         3.3.2 Changing the folder structure
         3.3.3 Using the new views and routes folders
 
+            Using the new views folder location
+
+            app.set('views', path.join(__dirname, 'views'));
+            and change it to the following (modifications in bold):
+            app.set('views', path.join(__dirname, 'app_server', 'views'));
+
+            Using the new routes folder location
+
+            var routes = require('./routes/index');
+            var users = require('./routes/users');
+            and change them to the following (modifications in bold):
+            var routes = require('./app_server/routes/index');
+            var users = require('./app_server/routes/users');
+
+        3.3.4   Splitting controllers from routes
+            Understanding route definition
+            /* GET home page. */
+            router.get('/', function(req, res) {
+                res.render('index', { title: 'Express' });
+            });
+
+            Listing 3.2 Taking the controller code out of the route: step 1
+            const homepageController = function (req, res) {
+                res.render('index', { title: 'Express' });
+            };
+            /* GET home page. */
+            router.get('/', homepageController);
+
+            Moving the controller out of the routes file
+
+            module.exports = function () {
+                console.log("This is exposed to the requester");
+            };
+            require('./yourModule');
+
+            module.exports.logThis = function(message){
+                console.log(message);
+            };
+
+            const logThis = function(message) {
+                console.log(message);
+            };
+            module.exports = {
+                logThis
+            };
+
+            const yourModule = require('./yourModule');
+            yourModule.logThis("Hooray, it works!");
+
+            /* GET home page */
+            const index = function(req, res){
+                res.render('index', { title: 'Express' });
+            };
+            module.exports = {
+                index
+            };
+
+            const express = require('express');
+            const router = express.Router();
+            const ctrlMain = require('../controllers/main');
+            /* GET home page. */
+            router.get('/', ctrlMain.index);
+            module.exports = router;
+
+
+    3.4   Import Bootstrap for quick, responsive layouts
+
+
 
