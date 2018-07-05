@@ -127,6 +127,37 @@ https://www.quora.com/Whats-the-difference-between-wireframe-and-mockup/answer/G
 
 
     3.4   Import Bootstrap for quick, responsive layouts
+        3.4.1   Download Bootstrap and add it to the application
+        3.4.2   Using Bootstrap in the application
+            Working with Pug templates
+            Adding Bootstrap to the entire application
+
+            doctype html
+                html
+                    head
+                        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+                        title= title
+                        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+                        link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+                        link(rel='stylesheet', href='/stylesheets/style.css')
+                    body
+                        block content
+                        script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
+                        script(src='
+                        https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+                        script(src='/javascripts/bootstrap.min.js')
+            
+            Verify that it works
+
+    3.5   Make it live on Heroku
+        3.5.1   Getting Heroku set up
+            Creating a Procfile
+            Testing it locally with Heroku Local
+        3.5.2   Pushing the site live using Git
+            Storing the application in Git
+
+
+                
 
 
 
