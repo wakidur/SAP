@@ -1,11 +1,15 @@
-// 28-06-2018 -------------
+﻿// 28-06-2018 -------------
 feed(ভোজন)
 feeding(প্রতিপালন, চারণভূমি, ভক্ষক, ভোজ্য সামগ্রী)
 encounter (সাক্ষাৎ)
 diverse range of problems (বিভিন্ন ধরণের সমস্যার)
 manner(পদ্ধতি, রকম)
 crawl (হামাগুড়ি)
+
+stuck(আটকে পড়া)
+
 flashy(চটকদার, লোকদেখান)
+
 2 Designing a MEAN stack architecture
     This chapter covers
         1. Introducing a common MEAN stack architecture
@@ -62,20 +66,33 @@ flashy(চটকদার, লোকদেখান)
                     2. administrator interface where blog owners log in to write new articles and manage their blogs. 
                 
                 Blog entries
-                    Characterietics
-                        conten-rice
+                    Characteristics
+                        content-rice
                         Low interaction
                         Fast first load
                         Short user duration
                         public and shareable
                 
                 Admin interface
-                    Characterietics
+                    Characteristics
                         Feature-rice
                         High interaction
                         Fast response to actions 
                         Long user duration
                         Private
+
+
+            The blog articles should be quick to load to reduce bouncer rates,
+			
+			users typically stay on a blog entry for a short time.
+			
+			admin interface is very private and an individual user could be logged in for a long time.
+			
+			
+			
+			Admin area should be quick to respond to user input and actions.  
+
+
 
         2.3.2   A blog engine architecture
             Admin interface: An Angular SPA
