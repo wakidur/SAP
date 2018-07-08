@@ -76,6 +76,76 @@
         
         4.3.2   Setting up the HTML framework with Pug templates and Bootstrap
             Looking at the layout
+            Building the navigation
+
+                nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
+                    .container
+                        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
+                        span.navbar-toggler-icon
+                        a.navbar-brand(href='/ ') Loc8r
+                        #navbarMain.navbar-collapse.collapse
+                        ul.navbar-nav.mr-auto
+                            li.nav-item
+                            a.nav-link(href='/about/') About
+
+
+.row.banner
+  .col-12
+    h1 Loc8r
+      small &nbsp;Find places to work with wifi near you!
+.row
+  .col-12.col-md-8
+    p List area.
+  .col-12.col-md-4
+    p.lead Loc8r helps you find places to work when out and about.
 
 
 
+    .card
+  .card-block
+    h4
+      a(href="/location") Starcups
+      small &nbsp;
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-o
+        i.fa.fa-star-o
+      span.badge.badge-pill.badge-default.float-right 100m
+    p.address 125 High Street, Reading, RG6 1PS
+    .facilities
+      span.badge.badge-warning Hot drinks
+      span.badge.badge-warning Food
+      span.badge.badge-warning Premium wifi
+
+
+
+
+      extends layout
+ 
+block content
+  .row.banner
+    .col-12
+      h1 Loc8r
+        small &nbsp;Find places to work with wifi near you!
+  .row
+    .col-12.col-md-8
+      .card
+        .card-block
+          h4
+            a(href="/location") Starcups
+            small &nbsp;
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star-o
+              i.fa.fa-star-o
+            span.badge.badge-pill.badge-default.float-right 100m
+          p.address 125 High Street, Reading, RG6 1PS
+          p.facilities
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning Food
+            span.badge.badge-warning Premium wifi
+    .col-12.col-md-4
+      p.lead Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.
+ 
