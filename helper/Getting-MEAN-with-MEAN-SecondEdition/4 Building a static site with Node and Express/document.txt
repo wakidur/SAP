@@ -78,74 +78,55 @@
             Looking at the layout
             Building the navigation
 
-                nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
-                    .container
-                        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
-                        span.navbar-toggler-icon
-                        a.navbar-brand(href='/ ') Loc8r
-                        #navbarMain.navbar-collapse.collapse
-                        ul.navbar-nav.mr-auto
-                            li.nav-item
-                            a.nav-link(href='/about/') About
 
+//09-07-2018-------------------
+    4.5   Take the data out of the views and make them smarter
+        4.5.1 How to move data from the view to the controller
+            Update the controller
+            Update the view
+        
+        4.5.2 Dealing with complex, repeating data
+            Analyzing the data in the view
 
-.row.banner
-  .col-12
-    h1 Loc8r
-      small &nbsp;Find places to work with wifi near you!
-.row
-  .col-12.col-md-8
-    p List area.
-  .col-12.col-md-4
-    p.lead Loc8r helps you find places to work when out and about.
+            Name 
+            Rating
+            Distance away
+            Address
+            List of facilities
 
+            {
+                name: 'Starcups',
+                address: '125 High Street, Reading, RG6 1PS',
+                rating: 3,
+                facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+                distance: '100m'
+            }
+        
 
-
-    .card
-  .card-block
-    h4
-      a(href="/location") Starcups
-      small &nbsp;
-        i.fa.fa-star
-        i.fa.fa-star
-        i.fa.fa-star
-        i.fa.fa-star-o
-        i.fa.fa-star-o
-      span.badge.badge-pill.badge-default.float-right 100m
-    p.address 125 High Street, Reading, RG6 1PS
-    .facilities
-      span.badge.badge-warning Hot drinks
-      span.badge.badge-warning Food
-      span.badge.badge-warning Premium wifi
-
-
-
-
-      extends layout
- 
-block content
-  .row.banner
-    .col-12
-      h1 Loc8r
-        small &nbsp;Find places to work with wifi near you!
-  .row
-    .col-12.col-md-8
-      .card
-        .card-block
-          h4
-            a(href="/location") Starcups
+            Adding the repeating data array to the controller
+            Looping through arrays in a Pug view
+        
+        4.5.3   Manipulating the data and view with code
             small &nbsp;
-              i.fa.fa-star
-              i.fa.fa-star
-              i.fa.fa-star
-              i.fa.fa-star-o
-              i.fa.fa-star-o
-            span.badge.badge-pill.badge-default.float-right 100m
-          p.address 125 High Street, Reading, RG6 1PS
-          p.facilities
-            span.badge.badge-warning Hot drinks
-            span.badge.badge-warning Food
-            span.badge.badge-warning Premium wifi
-    .col-12.col-md-4
-      p.lead Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.
- 
+                - for (let i = 1; i <= location.rating; i++)
+                    i.fa.fa-star
+                - for (let i = location.rating; i < 5; i++)
+                    i.fa.fa-star-o
+        4.5.4   Using includes and mixins to create reusable layout components
+            Defining Pug mixins
+                mixin welcome
+                    p Welcome
+                
+                mixin outputRating(rating)
+                    - for (let i = 1; i <= rating; i++)
+                        i.fa.fa-star
+                    - for (let i = rating; i < 5; i++)
+                        i.fa.fa-star-o
+            Calling Pug mixins
+        
+                small &nbsp;
+                    +outputRating(location.rating)
+
+        4.5.4   The finished homepage     
+
+        4.5.5   Updating the rest of the views and controllers  
