@@ -1,0 +1,11 @@
+
+5. Building a data model with MongoDB and Mongoose
+    5.1   Connecting the Express application to MongoDB using Mongoose
+        5.1.1   Adding Mongoose to our application
+        5.1.2   Adding a Mongoose connection to our application
+            MongoDB and Mongoose connection
+            Setting up the connection file
+            Creating the Mongoose connection
+            Monitoring the connection with Mongoose connection events
+            Closing a Mongoose connection
+            Capturing the process termination events
