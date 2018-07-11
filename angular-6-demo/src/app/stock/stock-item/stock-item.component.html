@@ -1,0 +1,21 @@
+<div class="box bot-left">
+  <div class="box-title">
+      <div class="title-category">{{item.category | uppercase}}</div>
+      <div class="title-user">{{item.users}}</div>
+      <div class="title-user-icon"><i class="material-icons">person</i></div>
+  </div>
+  <div class="content-img" 
+  [ngStyle]="{'background-image': 'url(assets/auto/'+item.id+'.png)'}"></div>
+  <div class="box-footer">
+    <div class="footer-model">
+        {{ item.model | truncate:[20, '...'] | uppercase }}
+    </div>
+    <div class="footer-price">
+      <div 
+      class="footer-text" 
+      [class.high-price]="item.price>highPrice">
+      {{item.price  | currency:'USD':true:'1.0'}}
+    </div>
+    </div>
+  </div> 
+</div>
