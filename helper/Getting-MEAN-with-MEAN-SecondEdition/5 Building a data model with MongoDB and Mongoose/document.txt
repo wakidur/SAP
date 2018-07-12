@@ -73,11 +73,36 @@ terminates(বন্ধ)
                     Array
                     ObjectI
 
+//12-07-2018-----------------
     5.3   Defining simple Mongoose schemas
+        We’ve just discussed that a Mongoose schema is essentially a JavaScript object, which we define from within the application.
         5.3.1   The basics of setting up a schema
-            const locationSchema = new mongoose.Schema({ });
+
+            "const locationSchema = new mongoose.Schema({ });"
         
             Defining a schema from controller data
+
+//11-07-2018-----------------
+            Assigning default values
+            Adding some basic validation: Required fields
+
+            *** malformed data
+
+            Adding some basic validation: Number boundaries
+        
+        5.3.2   Using geographic data in MongoDB and Mongoose
+        GeoJSON
+
+        5.3.3   Creating more complex schemas with subdocuments
+            Using nested schemas in Mongoose to define subdocuments
+
+                Subdocuments are defined in Mongoose by using nested schemas. So that’s one schema nested inside another.
+            
+            Adding a second set of subdocuments
+        
+        5.3.4   Final schema
+
+        5.3.5   Compiling Mongoose schemas into models
 
 
 
