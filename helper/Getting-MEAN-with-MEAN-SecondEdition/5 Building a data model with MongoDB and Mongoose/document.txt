@@ -103,6 +103,22 @@ terminates(বন্ধ)
         5.3.4   Final schema
 
         5.3.5   Compiling Mongoose schemas into models
+            An application doesn’t interact with the schema directly when working with data; data interaction is done through models.
+            In Mongoose, a model is a compiled version of the schema. Once compiled, a single  instance of the model maps directly to a single document in your database. It’s
+            through this direct one-to-one relationship that the model can create, read, save, and  delete data.
+
+            Compiling a model from a schema
+        
+    
+    5.4   Using the MongoDB shell to create a MongoDB database and add data
+        5.4.1 MongoDB shell basics
+            Starting the MongoDB shell
+            Listing all local databases
+            Using a specific database
+            Listing the collections in a database
+            Seeing the contents of a collection
+        
+        5.4.2 Creating a MongoDB database
 
 
 
