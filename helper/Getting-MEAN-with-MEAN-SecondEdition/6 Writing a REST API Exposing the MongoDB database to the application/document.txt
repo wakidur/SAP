@@ -1,2 +1,18 @@
 // 15-07-2018 -------------------------
 6 Writing a REST API: Exposing the MongoDB database to the application
+This chapter covers
+
+■ Rules of REST APIs
+■ API patterns
+■ Typical CRUD functions (create, read, update, delete)
+■ Using Express and Mongoose to interact with MongoDB
+■ Testing API endpoints
+
+
+
+    6.1   The rules of a REST API
+        6.1.1 Request URLs
+        6.1.2 Request methods
+        6.1.3 Responses and status codes
+            Returning data from an API
+            Using HTTP status codes
