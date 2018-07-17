@@ -1,6 +1,17 @@
 // 11-07-2018-----------
 The Folder structure of an Express project into an MVC architecture
     application_name
+        app_api
+            routes
+                index.js
+                
+            controllers
+                locations.js
+                reviews.js
+            models
+                db.js
+                locations.js
+
         app_server 
             controllers
                 locations.js.

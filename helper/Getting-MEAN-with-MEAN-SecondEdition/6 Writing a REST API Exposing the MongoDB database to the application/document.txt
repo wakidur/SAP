@@ -1,4 +1,12 @@
 // 15-07-2018 -------------------------
+interact(পরস্পরের উপর ক্রিয়া করা)
+rather than(বরং)
+poses(ভঙ্গি)
+trapping(ফাঁদে আটকান)
+trap(ফাঁদ, জাল, পাশ, খপ্পর, কূট, গুপ্ত বিপদ)
+
+
+
 6 Writing a REST API: Exposing the MongoDB database to the application
 This chapter covers
 
@@ -10,9 +18,175 @@ This chapter covers
 
 
 
+
+// 16-07-2018------------------
     6.1   The rules of a REST API
+
+        ■ REST stands for REpresentational State Transfer, which is an architectural style rather than a strict protocol. REST is stateless—it has no idea of any current user
+            state or history.
+        ■ API is an abbreviation for application program interface, which enables applications
+            to talk to each other.
+
+        So a REST API is a stateless interface to your application. In the case of the MEAN stack the REST API is used to create a stateless interface to your database, enabling a way for other applications to work with the data.
+
+        In basic terms a REST API takes an incoming HTTP request, does some processing, and always sends back an HTTP response
+
         6.1.1 Request URLs
+            Requst URLs for a REST API have a simple standard. Following this standard will make your API easy to pick up, use, and maintain.
+    
         6.1.2 Request methods
+            API URLs for subdocuments
+
         6.1.3 Responses and status codes
+            Every single API request should return a response.
+
+            For a successful REST API, standardizing the responses is just as important as standardizing the request format. There are two key components to a response:
+                ■ The returned data
+                ■ The HTTP status code
+            
             Returning data from an API
+            Your API should return a consistent data format. Typical formats for a REST API are XML and JSON. We’ll be using JSON for our API because it’s the natural fit for the
+            MEAN stack, and it’s more compact than XML, so it can help speed up the response
+            times of an API.
+            Our API will return one of three things for each request:
+                ■ A JSON object containing data answering the request query
+                ■ A JSON object containing error data
+                ■ A null response
+
             Using HTTP status codes
+
+            200 OK                      A successful GET or PUT request
+            201 Created                 A successful POST request
+            204 No content              A successful DELETE request
+            400 Bad request             An unsuccessful GET, POST, or PUT request, due to invalid content
+            401 Unauthorized            Requesting a restricted URL with incorrect credentials
+            403 Forbidden               Making a request that isn’t allowed
+            404 Not found               Unsuccessful request due to an incorrect parameter in the URL
+            405 Method not allowed      Request method not allowed for the given URL
+            409 Conflict                Unsuccessful POST request when another object already exists with the same data
+            500 Internal server error   Problem with your server or the database server
+
+
+    6.2   Setting up the API in Express
+        6.2.1   Creating the routes
+            Including the routes in the application
+
+                const index = require('./app_server/routes/index');
+                const apiRoutes = require('./app_api/routes/index');
+
+                app.use('/', routes);
+
+                app.use('/', routes);
+                app.use('/api', apiRoutes);
+
+            Specifying the request methods in the routes
+
+                router.get('/location', ctrlLocations.locationInfo);
+                router.post('/locations', ctrlLocations.locationsCreate);
+            
+            Specifying required URL parameters
+
+                /api/locations/123/reviews/abc
+                /api/locations/:locationid/reviews/:reviewid
+            
+            Defining the Loc8r API routes
+
+
+// 17-07-2018------------------
+        6.2.2   Creating the controller placeholders
+            const locationsCreate = function (req, res) { };
+
+            module.exports = {
+                locationsListByDistance,
+                locationsCreate,
+                locationsReadOne,
+                locationsUpdateOne,
+                locationsDeleteOne
+            };
+        
+
+            Returning JSON from an Express request
+            
+            res //Use the Express response object
+                .status(status) //Send response status code, such as 200
+                .json(content); //Send response data, such as {“status” : “success”}
+
+        6.2.3   Including the model
+            require('./app_api/models/db');
+        
+        6.2.4   Testing the API
+            (Postman REST Client)
+    
+    6.3   GET methods: Reading data from MongoDB
+        6.3.1   Finding a single document in MongoDB using Mongoose
+            Applying the findById method to the model
+            Running the query with the exec method
+            Using the findById method in a controller
+
+            router
+                .get('/api/locations/:locationid', ctrlLocations.locationsReadOne)
+
+
+            Catching errors
+
+    6.3.2   Finding a single subdocument based on IDs
+        Limiting the paths returned from MongoDB
+
+
+            Loc
+                .findById(req.params.locationid)
+                .select('name reviews') // The select method accepts a space-separated string of the paths we want to retrieve.
+                .exec();
+        
+        Using Mongoose to find a specific subdocument
+            Mongoose also offers a helper method for finding a subdocument by ID. Given an array of subdocuments Mongoose has an id method that accepts the ID you want to find. The id method will return the single matching subdocument
+
+            Loc
+                .findById(req.params.locationid)
+                .select('name reviews')
+                .exec((err, location) => {
+                    //Pass reviewid from parameters into id method
+                    const review = location.reviews.id          (req.params.reviewid);
+                    }
+                );
+
+            
+        Adding some error trapping and putting it all together
+
+    6.3.3   Finding multiple documents with geospatial queries
+        The homepage of Loc8r should display a list of locations based on the user’s current geographical location. MongoDB and Mongoose have  some special geospatial query methods to help find nearby places.
+        Here we’ll use the Mongoose method geoNear to find a list of locations close to a  specified point, up to a specified maximum distance. geoNear is a model method that
+        accepts three parameters:
+            ■ A geoJSON geographical point
+            ■ An options object
+            ■ A callback function
+
+            Loc.geoNear(point, options, callback);
+
+            Unlike the findById method, geoNear doesn’t have an "exec" method. Instead, geoNear is
+            executed immediately and the code to run on completion is sent through in the callback
+
+
+            Constructing a geoJSON point
+            
+                var point = {
+                        type: "Point",
+                        coordinates: [lng, lat]
+                    };
+
+                api/locations?lng=-0.7992599&lat=51.378091
+
+            
+
+                const locationsListByDistance = function(req, res) {
+                    const lng = parseFloat(req.query.lng);
+                    const lat = parseFloat(req.query.lat);
+                    const point = {
+                        type: "Point",
+                        coordinates: [lng, lat]
+                    };
+                    Loc.geoNear(point, options, callback);
+                };
+            Adding required query options to geoNear
+
+
