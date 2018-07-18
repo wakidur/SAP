@@ -188,5 +188,26 @@ This chapter covers
                     Loc.geoNear(point, options, callback);
                 };
             Adding required query options to geoNear
+                const geoOptions = {
+                    spherical: true
+                };
+
+                 const geoOptions = {
+                    spherical: true,
+                    num: 10
+                };
 
 
+// 18-07-2018---------------------------------------
+
+            Limiting geoNear results by number
+            Looking at the geoNear output
+            Processing the geoNear output
+            Adding the error trapping
+
+
+    6.4   POST methods: Adding data to MongoDB  
+        6.4.1   Creating new documents in MongoDB   
+            Validating the data using Mongoose     
+
+        6.4.2   Creating new subdocuments in MongoDB 
