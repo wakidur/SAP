@@ -207,7 +207,15 @@ This chapter covers
 
 
     6.4   POST methods: Adding data to MongoDB  
+        POST methods are all about creating documents or subdocuments in the database, and then returning the saved data as confirmation.
+        POST methods work by taking form data posted to them and adding it to the database.
+
         6.4.1   Creating new documents in MongoDB   
             Validating the data using Mongoose     
 
         6.4.2   Creating new subdocuments in MongoDB 
+
+
+// 19-07-2018----------------
+
+    6.5   PUT methods: Updating data in MongoDB

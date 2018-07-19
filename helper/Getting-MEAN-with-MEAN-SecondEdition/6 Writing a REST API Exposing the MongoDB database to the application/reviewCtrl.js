@@ -53,3 +53,215 @@ const reviewsReadOne = function (req, res) {
             });
     }
 };
+
+
+const reviewsCreate = function (req, res) {
+    const locationid = req.params.locationid;
+    if (locationid) {
+        Loc
+            .findById(locationid)
+            .select('reviews')
+            .exec((err, location) => {
+                if (err) {
+                    res
+                        .status(400)
+                        .json(err);
+                } else {
+                    _doAddReview(req, res, location);
+                }
+            });
+    } else {
+        res
+            .status(404)
+            .json({
+                "message": "Not found, locationid required"
+            });
+    }
+};
+
+/**
+ * ************************
+ */
+location.save((err, location) => {
+    if (err) {
+        res
+            .status(400)
+            .json(err);
+    } else {
+        let thisReview = location.reviews[location.reviews.length - 1];
+        res
+            .status(201)
+            .json(thisReview);
+    }
+});
+
+/**
+ * ***********************************************************
+ */
+const _doAddReview = function (req, res, location) {
+    if (!location) {
+        res
+            .status(404)
+            .json({
+                "message": "locationid not found"
+            });
+    } else {
+        location.reviews.push({
+            author: req.body.author,
+            rating: req.body.rating,
+            reviewText: req.body.reviewText
+        });
+        location.save((err, location) => {
+            if (err) {
+                res
+                    .status(400)
+                    .json(err);
+            } else {
+                _updateAverageRating(location._id);
+                let thisReview = location.reviews[location.reviews.length - 1];
+                res
+                    .status(201)
+                    .json(thisReview);
+            }
+        });
+    }
+};
+
+
+const reviewsCreate = function (req, res) {
+    const locationid = req.params.locationid;
+    if (locationid) {
+        Loc
+            .findById(locationid)
+            .select('reviews')
+            .exec((err, location) => {
+                if (err) {
+                    res
+                        .status(400)
+                        .json(err);
+                } else {
+                    _doAddReview(req, res, location);
+                }
+            });
+    } else {
+        res
+            .status(404)
+            .json({
+                "message": "Not found, locationid required"
+            });
+    }
+};
+
+/**
+ * *************************************
+ */
+const _doSetAverageRating = function (location) {
+    if (location.reviews && location.reviews.length > 0) {
+        const reviewCount = location.reviews.length;
+        const ratingTotal = location.reviews.reduce((total, review) => {
+            return total + review.rating;
+        }, 0);
+        let ratingAverage = parseInt(ratingTotal / reviewCount, 10);
+        location.rating = ratingAverage;
+        location.save((err) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("Average rating updated to", ratingAverage);
+            }
+        });
+    }
+};
+
+const _updateAverageRating = function (locationid) {
+    Loc
+        .findById(locationid)
+        .select('rating reviews')
+        .exec((err, location) => {
+            if (!err) {
+                _doSetAverageRating(location);
+            }
+        });
+};
+
+
+const _doAddReview = function (req, res, location) {
+    if (!location) {
+        res
+            .status(404)
+            .json({
+            const openingTimeSchema = new mongoose.Schema({
+    days: {
+        type: String,
+        required: true
+    },
+    opening: String,
+    closing: String,
+    closed: {
+        type: Boolean,
+        required: true
+    }
+});
+
+// Define a schema for opening times
+const reviewSchema = new mongoose.Schema({
+    author: String,
+    rating: {
+        type: Number,
+        required: true,
+        min: 0,
+        max: 5
+    },
+    reviewText: String,
+    createdOn: {
+        type: Date,
+        default: Date.now
+    }
+});    "message": "locationid not found"
+            });
+    } else {
+        location.reviews.push({
+            author: req.body.author,
+            rating: req.body.rating,
+            reviewText: req.body.reviewText
+        });
+        location.save((err, location) => {
+            if (err) {
+                res
+                    .status(400)
+                    .json(err);
+            } else {
+                _updateAverageRating(location._id);
+                let thisReview = location.reviews[location.reviews.length - 1];
+                res
+                    .status(201)
+                    .json(thisReview);
+            }
+        });
+    }
+};
+
+
+const reviewsCreate = function (req, res) {
+    const locationid = req.params.locationid;
+    if (locationid) {
+        Loc
+            .findById(locationid)
+            .select('reviews')
+            .exec((err, location) => {
+                if (err) {
+                    res
+                        .status(400)
+                        .json(err);
+                } else {
+                    _doAddReview(req, res, location);
+                }
+            });
+    } else {
+        res
+            .status(404)
+            .json({
+                "message": "Not found, locationid required"
+            });
+    }
+};
