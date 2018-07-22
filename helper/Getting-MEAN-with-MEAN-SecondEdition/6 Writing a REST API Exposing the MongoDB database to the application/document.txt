@@ -219,3 +219,16 @@ This chapter covers
 // 19-07-2018----------------
 
     6.5   PUT methods: Updating data in MongoDB
+        6.5.1   Using Mongoose to update a document in MongoDB
+            Using the Mongoose save method
+                .select('-reviews -rating')
+                    Previously we’ve used the select method to say which columns we do want to select.
+                    By adding a dash in front of a path name we’re stating that we don’t want to retrieve it
+                    from the database. So this select statement says to retrieve everything except the
+                    reviews and the rating.
+        6.5.2   Updating an existing subdocument in MongoDB
+            Updating a subdocument is exactly the same as updating a document, with one exception. After finding the document you then have to find the correct subdocument to make your changes.
+
+    6.6   DELETE method: Deleting data from MongoDB 
+        6.6.1   Deleting documents in MongoDB
+        6.6.2   Deleting a subdocument from MongoDB
