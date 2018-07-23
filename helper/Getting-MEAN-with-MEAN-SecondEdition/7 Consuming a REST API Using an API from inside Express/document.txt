@@ -17,6 +17,12 @@
 
 
 
-7.2   Using lists of data from an API: The Loc8r homepage
-    7.2.1   Separating concerns: Moving the rendering into a named function
-    7.2.2   Building the API request
+    7.2   Using lists of data from an API: The Loc8r homepage
+        7.2.1   Separating concerns: Moving the rendering into a named function
+        7.2.2   Building the API request
+
+// 23-07-2018-----------------------
+
+        7.2.3   Using the API response data
+        7.2.4   Modifying data before displaying it: Fixing the distances
+        7.2.5   Catching errors returned by the API
