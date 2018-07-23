@@ -1,29 +1,28 @@
-27-03-2018
+// 27-03-2018 ------------------
+// 23-07-2018 - | review |------------ 
 convenient(সুবিধাজনক)
 enumeration (গণনা)
+// 28-03-2018 ----------------------
 
-As in JavaScript, all numbers in TypeScript are floation point values.
-
-28-03-2018
-
-Tuple: Tuple types allow you to express an array where the type of a fixed number of elements is known, but need not be the same. 
-
-
-4-9-2018
+// 9-4-2018 --------------------
 What is TypeScript?
     TypeScript is a superset of JavaScript that compiles to plain JavaScript.
 
-Starts and ends with JavaScript
-    TypeScript starts from the same syntax and semantics(শব্দার্থবিদ্যা) that millions of JavaScript developers know today. use existing(বিদ্যমান) JavaScript code, incorporate(সঙ্ঘবদ্ধ হত্তয়া) popular JavaScript libraries, and call TypeScript code from JavaScript.
+"Starts and ends with JavaScript"
+    TypeScript starts from the same syntax and semantics(শব্দার্থবিদ্যা) that millions of JavaScript developers know today. Use existing(বিদ্যমান) JavaScript code, incorporate(সঙ্ঘবদ্ধ হত্তয়া) popular JavaScript libraries, and call TypeScript code from JavaScript.
     TypeScript compiles to clean, simple JavaScript code which runs on any browser, in Node.js, or in any JavaScript engine that supports ECMAScript 3 (or newer).
 
-Strong tools for large apps
+"Strong tools for large apps"
     Types eneble(সক্ষম করা) JavaScript developers to use highly-productive development tools and practices like static checking and code refactoring when developing JavaScript applications.
     Types are optional, and type inference allows a few type annotations to make a big difference to the static varification of your code. Types let you define interfaces between software components and gain insights into the behavior of existing JavaScript libraries.
-State of the art JavaScript
+
+"State of the art JavaScript"
     TypeScript offers supports for the latest and evolving JavaScript features, including those from ECMAScript 2015 and future proposals, like async functions and decorators, to help build robust components.
 
     These features are available at development time for high-confidence app development, but are compiled into simple JavaScript taht targets ECMAScript 3 (or newer) environments.
+
+
+/******************* Basic Types  ****************************/
 
 1. Boolean: The most basic datatype is the simple true/false value, which JavaScript and TypeScript call a boolean vale.
 
