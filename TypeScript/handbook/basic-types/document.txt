@@ -31,7 +31,9 @@ What is TypeScript?
 3. String: We use the type string to refer to these textual datatypes. Just like JavaScript, 
 we can also use template strings, which can span multiple lines and have embedded expressions.
 
-4. Array: 
+4. Array: Array types can be written in one of two ways. In the first, you use the type of the elements followed by [] to denote an array of that element type
+The second way uses a generic array type, Array<elemType>:
+
 5. Tuple: Tuple type allow you to express an array where the type of a fixed number of elements is known, but need not be the same. 
 
 6. Enum: A helpful addition to the standard set of datatypes from JavaScript is the enum. As in languages like C#, an enum is a way of giving more friendly names to set of numberic values.

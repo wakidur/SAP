@@ -37,6 +37,7 @@
     
     7.3   Getting single documents from an API: The Loc8r Details page
         7.3.1   Setting URLs and routes to access specific MongoDB documents
+        
         7.3.2   Separating concerns: Moving the rendering into a named function
         
 
