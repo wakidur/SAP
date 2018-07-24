@@ -26,3 +26,18 @@
         7.2.3   Using the API response data
         7.2.4   Modifying data before displaying it: Fixing the distances
         7.2.5   Catching errors returned by the API
+
+// 24-07-2018 -----------------------------
+            Making the request callback more robust
+            Defining output messages based on the response data
+            Updating the view to display the error messages
+            Testing the API error trapping
+
+                Our Express application is querying the API we built, which pulls data from the MongoDB database and passes it back to the application. When the application gets a response from the API, it works out what to do with it and either shows the data or an error messages in the browser.
+    
+    7.3   Getting single documents from an API: The Loc8r Details page
+        7.3.1   Setting URLs and routes to access specific MongoDB documents
+        7.3.2   Separating concerns: Moving the rendering into a named function
+        
+
+
