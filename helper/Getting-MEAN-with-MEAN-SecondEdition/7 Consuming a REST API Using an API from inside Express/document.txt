@@ -39,6 +39,20 @@
         7.3.1   Setting URLs and routes to access specific MongoDB documents
         
         7.3.2   Separating concerns: Moving the rendering into a named function
+
+// 25-07-2018 ------------------------------
+        7.3.3   Querying the API using a unique ID from a URL parameter
+        7.3.4   Passing the data from the API to the view
+        7.3.5   Debugging and fixing the view errors
+            Formatting dates using a Pug mixin
+                span.reviewAuthor #{review.author.displayName}
+                small.reviewTimestamp
+                    +formatDate(review.createdOn)
         
+        7.3.6   Creating status-specific error pages
+            Catching all error codes
+            Displaying error messages
+    
+    7.4   Adding data to the database via the API: Add Loc8r reviews
 
 
