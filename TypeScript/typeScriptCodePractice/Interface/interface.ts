@@ -49,3 +49,13 @@ function createSquare(config: SquareConfig): {color: string; area: number} {
 }
 
 let mySqueay = createSquare({color: "black"});
+
+
+/**
+ * *************
+ */
+
+interface SquareConfig {
+    color?: string;
+    width?: 
+}
