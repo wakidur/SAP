@@ -54,5 +54,20 @@
             Displaying error messages
     
     7.4   Adding data to the database via the API: Add Loc8r reviews
+        7.4.1   Setting up the routing and views
+
+            Defining the two review routes
+
+            Fixing the location detail view
+
+            Updating the review form view
+
+            Creating a named function for rendering the Add Review page
+
+            Getting the location detail
+
+            Displaying the location detail
+           
+            
 
 

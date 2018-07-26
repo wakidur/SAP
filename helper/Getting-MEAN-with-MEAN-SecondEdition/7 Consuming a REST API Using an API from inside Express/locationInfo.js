@@ -126,3 +126,20 @@ const _showError = function (req, res, status) {
       content : content
     });
   };
+
+
+
+/**
+ * create an external function to hold the contents of the addReview controller
+ */
+const _renderReviewForm = function(req, res) {
+    res.render('location-review-form', {
+        title: "Review Starcups on Loc8r",
+        pageHeader: {title: "Review Starcups"}
+    });
+};
+
+ // Get 'add review' page
+ const addReview = function(req, res) {
+     _renderReviewForm(req, res);
+ }
