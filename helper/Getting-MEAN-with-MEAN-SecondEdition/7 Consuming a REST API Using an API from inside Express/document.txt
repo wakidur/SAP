@@ -67,6 +67,14 @@
             Getting the location detail
 
             Displaying the location detail
+        
+        7.4.2   POSTing the review data to the API
+
+    7.5   Protecting data integrity with data validation
+        7.5.1   Validating at the schema level with Mongoose
+            Updating the schema
+            Catching Mongoose validation errors
+            Display an error message in the browser
            
             
 
