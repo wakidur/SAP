@@ -67,7 +67,8 @@
             Getting the location detail
 
             Displaying the location detail
-        
+
+// 29-07-2018--------------------
         7.4.2   POSTing the review data to the API
 
     7.5   Protecting data integrity with data validation
