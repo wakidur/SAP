@@ -83,7 +83,14 @@
 
         
         7.5.3   Validating in the browser with jQuery
-           
-            
+
+// 31-07-2018 ---------------------------------
+            Just like application-level validation speeds things up by not requiring a call to the API, Client-side validation in the browser can speed things up by catching an error before the form is submitted to the application by removing yet another call. Catching an error at the point will keep the user on the same page.
+
+            Writing the jQuery validation
+            Adding the jQuery to the page
+
+                       
+
 
 
