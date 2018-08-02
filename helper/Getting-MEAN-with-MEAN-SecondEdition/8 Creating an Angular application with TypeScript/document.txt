@@ -1,0 +1,10 @@
+// 01-08-2018 ----------------------------------
+8 Adding Angular components to an Express application
+
+// 02-08-2018----------------------------------
+    8.1 Getting Angular up and running  
+    8.1.1 Uncovering two-way data binding
+        STARTING WITH A PAGE OF HTML
+        MAKING THE PAGE AN ANGULAR APPLICATION
+        BINDING INPUT AND OUTPUT
+    8.1.2 Setting up for greatness (and JavaScript code)

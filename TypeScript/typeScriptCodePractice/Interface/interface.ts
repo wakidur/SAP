@@ -136,3 +136,21 @@ readOnlyArray[0] = 100; // Error: [ts] Index signature in type 'ReadonlyArray<nu
 readOnlyArray.push(5); // error: Property 'push' does not exist on type 'ReadonlyArray<number>'
 // (property) ReadonlyArray<number>.length: number
 readOnlyArray.length = 100; // Error: [ts] Cannot assign to 'length' because it is a constant or a read-only property.
+
+/**
+ * Excess Property Checks
+ */
+interface SquareConfig {
+    color?: string;
+    width?: number;
+}
+function createSquare3(config:SquareConfig) : {color: string; area: number } {
+    // ...........
+    
+}
+let mySqueay2 = createSquare3({colour: "red", width: 1000});
+
+let mySqueay3 = createSquare3({
+    width: 100, 
+    opacity: 0.5
+} as SquareConfig);

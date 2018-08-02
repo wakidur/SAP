@@ -17,5 +17,6 @@ it's worth pointing out that the type-checker does not require that these proper
 
     2.1 readonly vs const
         Variables use const whereas propeties use readonly.
-
+        
+// 31-07-2018 -------------------------------
 3. Excess Property Checks
