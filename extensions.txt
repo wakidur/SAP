@@ -24,3 +24,5 @@ Wappalyzer
 Web Developer
 WhatFont
 Window Resizer
+
+Angular 6 for Enterprise-Ready Web Applications
