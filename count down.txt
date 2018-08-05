@@ -1,3 +1,0 @@
-1. make a custome directive, ni-count-down
-2. it has to some options(cddate,format='dd,hr,mm,se,ms',updown='+','-'
-3. non stop execution (count up, count down)

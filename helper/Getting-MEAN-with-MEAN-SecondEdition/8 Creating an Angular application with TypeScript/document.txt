@@ -8,3 +8,55 @@
         MAKING THE PAGE AN ANGULAR APPLICATION
         BINDING INPUT AND OUTPUT
     8.1.2 Setting up for greatness (and JavaScript code)
+// 05-08-2018--------------------------
+    
+        Creating an Angular Application as a Module
+            <html ng-app="myApp">
+            angular.module('myApp', []);
+        Desiging a controller
+            <body ng-controller="myController">
+            angular
+                .module('myApp').controller('myController', function() {
+                    // controller code here
+                });
+
+        Introducing Scope
+    
+    8.2 Displaying and filtering the homepage list
+        8.2.1 Adding Angular to an Express application
+
+            Adding the JavaScript files to the Project
+                script(src='/angular/angular.min.js')
+                script(src='/angular/loc8rApp.js')
+            Setting up the HTML
+                html(ng-app='loc8rApp')
+        
+        8.2.2 Moving data delivery from Express to Angular
+            Removing the homepage API call from Express.
+            Adding hard-coded data into the Angular Scope
+            Update the PUG view to bind to the Angular controller
+        
+        8.2.3 Using Angular filters to format data
+            Creating a custom filter
+            Adding and using custom filters
+        
+        8.2.4 Using Angular directives to create HTML snippets
+            Adding a directive to an Angular Application
+            Attaching a directive to the HTML template
+            Passing variables to directives with an isolate Scope
+            Using an External HTML file for the template
+            Filtering a list of results with Angular
+        
+        8.3 Getting data from an API
+
+
+
+
+
+
+
+
+
+
+        
+
