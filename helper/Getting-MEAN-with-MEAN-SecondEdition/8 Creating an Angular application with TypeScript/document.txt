@@ -49,6 +49,24 @@
         
         8.3 Getting data from an API
 
+// 06-08-2018 -----------------------------
+            8.3.1 Using services for data
+                Services are self-container units of functionality that can be combined to provide the complete functionality of a software application. 
+
+                Creating a Simple data services
+                Using a Service from a controller
+            8.3.2 Making HTTP requests from Angular to an API
+Making
+                Adding and using the $http service
+                Handling the asynchronous naturs of $http
+                Telling the user with's going on 
+
+            8.3.3 Adding HTML geolocation to find places near you
+                Adding the geolocation service to the application
+                passing the geolocation coordinates to the data service
+    8.4 Ensuring forms work as expected
+
+
 
 
 
