@@ -1,0 +1,104 @@
+<!-- footerGeneric.template.html -->
+<footer>
+    <div class="row">
+        <div class="col-xs-12">
+            <small>&copy; Simon Holmes 2014</small>
+        </div>
+    </div>
+</footer>
+
+<!-- navigation.template.html -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Loc8r</a>
+            <button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="iconbar"></ span>
+                    <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar-main" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- pageHeader.template.html -->
+<div id="banner" class="page-header">
+    <div class="row">
+        <div class="col-lg-6"></div>
+        <h1>
+            {{ content.title }}
+            <small>{{ content.strapline }}</small>
+        </h1>
+    </div>
+</div>
+
+<page-header content="vm.pageHeader"></page-header>
+
+<!-- Complete homepage view template -->
+<navigation></navigation>
+<div class="container">
+    <page-header content="vm.pageHeader"></page-header>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <label for="filter">Filter results</label>
+            <input id="filter" type="text" , name="filter" , ng-model="textFilter">
+            <div class="error">{{ vm.message }}</div>
+            <div class="row list-group">
+                <div class="col-xs-12 list-group-item" ng-repeat="location in
+vm.data.locations | filter : textFilter">
+                    <h4>
+                        <a href="#/location/{{ location._id }}">{{ location.name }}</a>
+                        <small class="rating-stars" rating-stars rating="location.rating"></small>
+                        <span class="badge pull-right badge-default">{{ location.distance | formatDistance }}</span>
+                    </h4>
+                    <p class="address">{{ location.address }}</p>
+                    <p>
+                        <span class="label label-warning label-facility" ngrepeat="
+facility in location.facilities">
+                            {{ facility }}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <p class="lead">{{ vm.sidebar.content }}</p>
+        </div>
+    </div>
+    <footer-generic></footer-generic>
+</div>
+
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="loc8rApp">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loc8r</title>
+    <link rel="stylesheet" href="/bootstrap/css/amelia.bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body ng-view>
+    <script src="/angular/angular.min.js"></script>
+    <script src="/lib/angular-route.min.js"></script>
+    <script src="/angular/loc8r.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/
+jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/javascript/validation.js"></script>
+</body>
+
+</html>
+
+
+<!-- Applying a filter to a binding is -->
+<p>{{ vm.main.content | addHtmlLineBreaks }}</p>

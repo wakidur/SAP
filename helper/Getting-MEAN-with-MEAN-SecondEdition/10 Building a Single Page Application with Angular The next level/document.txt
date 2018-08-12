@@ -1,0 +1,39 @@
+
+10 Building a Single Page Application with Angular: The next level
+    10.1 A full SPA: Removing reliance on the server-side
+application
+        10.1.1 Creating an isolated HTML host page
+        10.1.2 Making reusable page framework directives
+            Making a footer directives
+            Moving the navigation into a directives
+            Creating a directive for the page Header
+            Final Homepage Template
+
+        10.1.3 Removing the # from URLs
+    10.2 Adding additional pages and dynamically injecting HTML
+        10.2.1 Adding a new route and page to the SPA
+            Adding the route definition
+            Creating the controller
+            Creating the new common Template
+        10.2.2 Creating a filter to transform the line breaks
+            Creating AddHTMLLineBreaks filter
+            Applying the filter to the binding
+        10.2.3 Sending HTML through an Angular binding
+            Adding ngSanitize as an application dependency
+            Binding to the HTML element as a directive
+    10.3 More complex views and routing parameters           10.3.1 Getting the page framework in place
+            Defining the page route
+            Creating the controller file
+            Creating the new Template
+            Updating the links in the homepage list
+
+        10.3.2 Using URL parameters in controllers and services    
+            Using $routeParams to get URL parameters
+            Creating the data Service to call the API 
+            Using the service to get data
+
+
+
+
+
+

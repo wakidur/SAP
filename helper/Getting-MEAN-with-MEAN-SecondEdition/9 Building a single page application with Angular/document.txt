@@ -45,7 +45,11 @@
             Setting up the Homepage view
     
     9.4 Improving browser performance
+// 12-08-2018 ---------------------------------
 
+        9.4.1 Wrap each file in an IIFE
+        9.4.2 Manually injecting dependencies to protect against minification
+        9.4.3 Using UglifyJS to minify and concatenate scripts
 
 
 
