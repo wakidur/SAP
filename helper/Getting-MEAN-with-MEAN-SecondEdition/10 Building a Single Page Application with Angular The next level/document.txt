@@ -31,6 +31,42 @@ application
             Using $routeParams to get URL parameters
             Creating the data Service to call the API 
             Using the service to get data
+        10.3.3 Building the Details page view
+            Getting the main template in place
+            Adding if-else style logic with ng-switch to show the opening times
+            Changing the display order of a list using the orderBy filter
+            Fixing the date format using the date filter
+    10.4 Using AngularUI components to create a modal popup
+        10.4.1 Getting AngularUI in place
+            Downloading AngularUI
+            Using AngularUI in the Application
+        
+        10.4.2 Adding and using a click handler
+            Adding the ng-click handler
+            Adding the method called by the click handler
+        10.4.3 Creating a Bootstrap modal with AngularUI
+            Defining an AngularUI modal instance
+            Adding the modal view
+            Creating the modal controller
+        10.4.4 Passing data into the modal
+            Resolving variables in the modal instance definition
+            Dependincy injecting the resolved parameters and adding to the view model.
+        10.4.5 Using the form to submit a review
+            Adding onSubmit form handlers
+            Validating the submitted form data
+            Updating the data service to accept new reviews
+            Sending the form Data to the data service
+            Closing the modal and displaying the review
+
+
+
+
+
+
+
+
+
+
 
 
 
