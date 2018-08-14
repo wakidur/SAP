@@ -1,0 +1,22 @@
+// 14-08-2018 -------------------------------
+11 Authenticating users, managing sessions, and securing APIs
+    11.1 How to approach authentication in the MEAN stack
+        11.1.1 Traditional server-based application approach
+            Much of the confusion arises because people are vary familiar with the traditional approach of application authentication and user session management.
+
+            In a traditional setup, the application code sits and runs on the server. For users to log in they enter their username and Password into a form that gets posted to the server. The server then checks against a database to validate the login details. Assuming the login is okay, the server will set a flag or session parameter in users, session on the server to declare that they'r logged in. 
+
+            The server may or may not set a cookie on users browsers with the session information. this is quite common, but isn't technically required to manage the authenticated session-it's server that maintains the vital session information, 
+
+            When users then request a secure resource or try to submit some data to the database it's the server that validates their session and whether or not it can continue.
+
+            Using the traditional approach in the MEAN stack
+
+                Express do not maintain sessions for each user the entire application for all users runs on a single thread.
+        11.1.2 Full MEAN stack approach
+            A great way to securely keep user data in the browser in order to maintain a session is to use a JSON Web Token (JWT).
+
+            Managin the login process
+            
+
+

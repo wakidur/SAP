@@ -1,4 +1,4 @@
-
+// 12-08-2018 ------------------------------------
 10 Building a Single Page Application with Angular: The next level
     10.1 A full SPA: Removing reliance on the server-side
 application
@@ -21,7 +21,8 @@ application
         10.2.3 Sending HTML through an Angular binding
             Adding ngSanitize as an application dependency
             Binding to the HTML element as a directive
-    10.3 More complex views and routing parameters           10.3.1 Getting the page framework in place
+    10.3 More complex views and routing parameters           
+        10.3.1 Getting the page framework in place
             Defining the page route
             Creating the controller file
             Creating the new Template
@@ -31,6 +32,7 @@ application
             Using $routeParams to get URL parameters
             Creating the data Service to call the API 
             Using the service to get data
+// 13-08-2018 --------------------
         10.3.3 Building the Details page view
             Getting the main template in place
             Adding if-else style logic with ng-switch to show the opening times
