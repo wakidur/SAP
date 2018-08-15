@@ -17,6 +17,10 @@
             A great way to securely keep user data in the browser in order to maintain a session is to use a JSON Web Token (JWT).
 
             Managin the login process
+                Users post their credentials to the server (vie an API) the server validates these using the database, and returns a token to the browser. The browser will save this token to reuse it later 
+            Changing views during an authenticated session
+            
+
             
 
 
