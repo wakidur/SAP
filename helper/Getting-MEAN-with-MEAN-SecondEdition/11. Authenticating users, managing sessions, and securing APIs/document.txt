@@ -1,24 +1,56 @@
 // 14-08-2018 -------------------------------
+neat (খাঁটি, পরিচ্ছন্ন )
+relies(নির্ভর করা, বিশ্বাস করা)
+poses(অঙ্গভঙ্গি)
+credentials(পরিচয়পত্র)
 11 Authenticating users, managing sessions, and securing APIs
     11.1 How to approach authentication in the MEAN stack
         11.1.1 Traditional server-based application approach
-            Much of the confusion arises because people are vary familiar with the traditional approach of application authentication and user session management.
 
-            In a traditional setup, the application code sits and runs on the server. For users to log in they enter their username and Password into a form that gets posted to the server. The server then checks against a database to validate the login details. Assuming the login is okay, the server will set a flag or session parameter in users, session on the server to declare that they'r logged in. 
+            In a traditional setup, the application code sits and runs on the server. For users to log in they enter their username and Password into a form that gets posted to the server. The server then checks against a database to validate the login details. 
+            Assuming the login is okay, 
+            The server will set a flag or session parameter in users, session on the server to declare that they'r logged in. (সার্ভার ব্যবহারকারীর সেশনে একটি পতাকা বা সেশনের প্যারামিটার সেট করবে যাতে তারা লগ ইন করে বলে ঘোষণা করে।)
 
-            The server may or may not set a cookie on users browsers with the session information. this is quite common, but isn't technically required to manage the authenticated session-it's server that maintains the vital session information, 
+            The server may or may not set a cookie on users browsers with the session information.
+            This is quite common, but isn't technically required to manage the authenticated session-it's server that maintains the vital session information, 
 
             When users then request a secure resource or try to submit some data to the database it's the server that validates their session and whether or not it can continue.
 
             Using the traditional approach in the MEAN stack
 
                 Express do not maintain sessions for each user the entire application for all users runs on a single thread.
+
+                That said, a traditional version of the approach can be used in the MEAN stack if you're using a server-side application based on Express.
+
+                Rather than using server resources to maintain session information, Express can use a database to store the data. MongoDB can be used; another popular option for this is Redis, which is a lightning-fast key-value store.
+
         11.1.2 Full MEAN stack approach
+            Authentication in the MEAN stack poses two problemes.
+            1. The API is stateless as Express and Node have no concept of user session. 
+            2. The application logic is already delivered to the browser, so you can't limit the code that gets delivered. 
+
+            The logical solution to these problems is to maintain some kind of session state in the browser, and let the application decide what it can and cannot desplay to the current user. This is the only fundamental change in approach. There are a few technical differences, but this is the only major shift.
+
             A great way to securely keep user data in the browser in order to maintain a session is to use a JSON Web Token (JWT).
 
             Managin the login process
-                Users post their credentials to the server (vie an API) the server validates these using the database, and returns a token to the browser. The browser will save this token to reuse it later 
+                Users post their credentials to the server (vie an API) the server validates these using the database, and returns a token to the browser. The browser will save this token to reuse it later. This is vary similar to the traditional approach, but instead of storing each user's session data on the server, it's stored in the browser. 
+// 15-08-2018------------------------            
             Changing views during an authenticated session
+                While users are in a session, they will need to be able to change a page or view, and the application will need to know what they should be allowed to see. The application will decode the JWT and use the information to show the appropriate data to users.
+                This is where the change from the traditional application is really obvious. The server is completely unaware that users are doing anything, until they need to access the API and database. 
+
+// 16-08-2018------------------------  
+            Securely calling an API 
+
+    11.2 Creating a user schema for MongoDB        
+        11.2.1 One-way password encryption: Hashes and salts
+            The thing to do here is run a one-way encryption on the password. One-way encryption prevents anything from decrypting the password, while still making it quite easy to validate a correct password. When users try to log in the application can encrypt a given password and see it it matches to stored value.
+
+            Just encrypting isn't quite enough. If several people used the word "password" as their password (it happens!) then the encryption for each will be the same. Any hackers looking through the database could see this pattern and identity poteentially weak password.
+
+            This is where the concept of a salt comes in. A salt is a rendom string generated by the application for each user that's combined with the password befor encry
+
             
 
             
