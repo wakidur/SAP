@@ -45,3 +45,23 @@ user.email = "test@example.com";
 user.setPassward('myPassword');
 use.save();
 
+/**
+ * Create a schema method to generate a JWT
+ */
+
+// const mongoose =  require('package');
+// const crypto = require('crypto');
+const jwt = require('jsonwebtoken');
+
+userSchema.methods.generateJwt = function () {
+    let expiry = new Date();
+    expiry.setDate(expiry.getDate() + 7); // Create expiry date object and set for seven days
+    return jwt.sign({ // Call jwt'sign method and return what it returns
+        _id: this._id, // pass payload
+        email: this.email, // pass payload to method
+        name: this.name, // pass payload to method
+        exp: parseInt(expiry.getTime() / 1000), // including exp as unix time in seconds
+    }, 'thisIsSecret'); // Send secret for hashing algorithm to use 
+};
+
+

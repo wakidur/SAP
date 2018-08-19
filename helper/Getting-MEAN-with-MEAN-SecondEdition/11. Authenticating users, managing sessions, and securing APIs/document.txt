@@ -78,7 +78,10 @@ aspect( দৃষ্টিভঙ্গি, দৃশ্য, চেহারা, 
                 Then we'll use the pbkdf2Sync method to create the encrypted hash form the password and the salt. 
 
             11.2.4 Validating a submitted password
+                The other aspect of storing a password is being able to retrieve it when users try to log in -- we need to be able to validate their credentials. Having encrypted the password we can't decrypt it, so what we need to do is use the same encryption on the password the user is trying to log in with, and see if it matches the stored value.
+                
             11.2.5 Generating a JSON Web Token
+// 19-08-2018 -----------------------------------
 
 
 
