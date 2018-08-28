@@ -1,0 +1,28 @@
+irrespective(নিরপেক্ষ, 	নির্বিশেষ)
+1. Getting Started
+
+    1.1 Angular basics
+
+// 28-08-2018------------------    
+    1.2 The customary Hello Angular app &#x2013; Guess the Number!
+        1.2.1 Building Guess the Number!
+            The standard practice while building user interfaces(UI) is to build them top-down. Start by designing the UI and then plug in the data and behavior according to your needs. With such an approach, the UI, data, and behavioral aspects of the app are all tightly coupled, which is a less than ideal situation!
+
+            With component-based design, we work differently. 
+            We start by looking at the UI and expected behavior, and then we encapsulate all of this into a building block that we call a component.
+            This component is then hosted on our page. Within the component, we separate the 
+                UI into a View
+                behavior into a class
+            with the appropriate properties and methods needed to support the behavior.
+
+        1.2.2 Designing our first component
+            To determine what needs to go into our component, we will start by detailing the features that we want the app to support
+                a. Generating random numbers(original)
+                b. Providing input for a user to guess the value(guess)
+                c. Tracking the number of guesses already made(noOfTries)
+                d. Giving the user hints to improve their guess based on their input(deviation)
+                e. Giving a success message if the user guesses the number correctly(deviation)
+
+
+                *** While building any app, we urge you to first think about the functionality you want to offer, and then the data and behavior that can support the functionality. Lastly, think about how to build a user interface for it. This is a good practice irrespective of the library or framework that you use to build your app.
+

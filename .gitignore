@@ -19,6 +19,6 @@ express-backend/node_modules
 express-backend/package-lock.json
 
 
-component-based-application/node_modules
-component-based-application/package-lock.json 
+angularjs/component-based-application/node_modules
+angularjs/component-based-application/package-lock.json 
 
