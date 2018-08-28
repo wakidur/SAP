@@ -4,6 +4,7 @@ relies(নির্ভর করা, বিশ্বাস করা)
 poses(অঙ্গভঙ্গি)
 credentials(পরিচয়পত্র)
 aspect( দৃষ্টিভঙ্গি, দৃশ্য, চেহারা, মুখাকৃতি, মুখাবয়ব, গ্রহদৃষ্টি )
+spot(স্থাননির্ণয় করা)
 11 Authenticating users, managing sessions, and securing APIs
     11.1 How to approach authentication in the MEAN stack
         11.1.1 Traditional server-based application approach
@@ -82,6 +83,24 @@ aspect( দৃষ্টিভঙ্গি, দৃশ্য, চেহারা, 
                 
             11.2.5 Generating a JSON Web Token
 // 19-08-2018 -----------------------------------
+
+// 28-08-2018 -----------------------------------
+                A JWT is used to pass data around, in our case between the API on the server and the SPA in the browser, A JWT can also be used by the server that generate the token to authenticate a user, when it's returned in a subsequent request.
+
+                Three parts of JWT
+                    Header -- An encoded JSON object containing the type and the hashing algorithm used.
+
+                    Payload -- An encoded JSON object containing the data, the real body of the token 
+
+                    Signature -- An encrypted hash of the header and payload, using a "secret" that only the originating server knows.
+
+                    atob() ------ decode a Base64 string
+                    btoa() ------ encode to a Base64 string;
+
+                    
+
+
+
 
 
 
