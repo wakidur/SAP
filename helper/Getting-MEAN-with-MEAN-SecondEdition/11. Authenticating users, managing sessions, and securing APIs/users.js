@@ -65,3 +65,19 @@ userSchema.methods.generateJwt = function () {
 };
 
 
+/**
+ * Now all that remains is to update the user schema to replace the hard-coded secret with the environment variable,
+ */
+
+userSchema.methods.generateJwt = function() {
+    const expire = new Date();
+    expire.setDate(expire.getDate() + 7);
+
+    return jwt.sign({
+        _id: this._id,
+        email: this.email,
+        name: this.name,
+        exp: parseInt(expire.getTime() / 1000)
+    }, process.env.JWT_SECRET);
+}
+

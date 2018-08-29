@@ -5,6 +5,10 @@ poses(অঙ্গভঙ্গি)
 credentials(পরিচয়পত্র)
 aspect( দৃষ্টিভঙ্গি, দৃশ্য, চেহারা, মুখাকৃতি, মুখাবয়ব, গ্রহদৃষ্টি )
 spot(স্থাননির্ণয় করা)
+dramatically(নাটকীয়ভাবে)
+weakens(দুর্বল হয়ে পড়ে)
+strength(শক্তি)
+strategy(কৌশল)
 11 Authenticating users, managing sessions, and securing APIs
     11.1 How to approach authentication in the MEAN stack
         11.1.1 Traditional server-based application approach
@@ -96,6 +100,35 @@ spot(স্থাননির্ণয় করা)
 
                     atob() ------ decode a Base64 string
                     btoa() ------ encode to a Base64 string;
+// 29-08-2018 ----------------------
+
+                Generating a JWT From Express
+                Keeping the secret with environment variables
+                    If you'r going to be pishing your code around in varsion control, like GitHub for example, you don't want to have the secret published. Exposing your secret dramaticaly weakens your security model with your secret anybody could issue fake tokens that your application believes to be genuine. To keep secrets a secret, it's often a good idea to set them as environment variables.
+
+    11.3 Creating an authentication API with Passport
+
+        Passport is a Node module by Jared Hanson that's designed to make authentication in Node easy.
+        One of its key strengths is that it can accommodete several different methods of authentication, called "strategies". Example of these strategies include 
+        Facebook
+        Twitter
+        OAuth
+        Local username and password
+
+        11.3.1 Installing and configuring Passport
+            Passport is separated out into a core module and separate modules for each of the strategies. So we'll install the core module and the local strategy module via npm, using the following commands in terminal
+
+            npm install password --save
+            npm install password-local --save
+
+            Creating a Passport config file
+            Configuring a local strategy
+                By default a Passport local strategy expects and uses the fields "username" and "password". We have password so that one's okay, but instead of "username" we're using email. Passport allows you to override the username field in the options object as shown in the follwo 
+
+                Passport.use(new LocalStrategy({usernameField: 'email'}, function(username, password, done){}));
+
+
+
 
                     
 
