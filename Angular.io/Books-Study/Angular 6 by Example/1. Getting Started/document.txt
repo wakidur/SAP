@@ -27,3 +27,6 @@ irrespective(নিরপেক্ষ, 	নির্বিশেষ)
                 *** While building any app, we urge you to first think about the functionality you want to offer, and then the data and behavior that can support the functionality. Lastly, think about how to build a user interface for it. This is a good practice irrespective of the library or framework that you use to build your app.
 
 // 29-08-2018 ------------------------
+
+            1.2.3.1 Installing Bootstrap
+// 30-08-2018 -------------------------
