@@ -32,3 +32,4 @@ irrespective(নিরপেক্ষ, 	নির্বিশেষ)
 // 30-08-2018 -------------------------
         1.2.4. What do we have so far?
         1.2.5 The host file - index.html
+        

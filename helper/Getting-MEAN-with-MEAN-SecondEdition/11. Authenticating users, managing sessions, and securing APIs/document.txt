@@ -126,6 +126,20 @@ strategy(কৌশল)
                 By default a Passport local strategy expects and uses the fields "username" and "password". We have password so that one's okay, but instead of "username" we're using email. Passport allows you to override the username field in the options object as shown in the follwo 
 
                 Passport.use(new LocalStrategy({usernameField: 'email'}, function(username, password, done){}));
+        
+// 03-09-2018 -----------------------------
+            Adding Passport and the config to the application
+                To add our passport setting to the application we need to do three things.
+
+                1. Require Passport
+                2. Require the strategy config
+                3. Initialize Passport
+        11.3.2 Creating API endpoints to return JSON Web Tokens
+            Adding the authentication route definitions
+            Createing the register controller
+            
+
+
 
 
 

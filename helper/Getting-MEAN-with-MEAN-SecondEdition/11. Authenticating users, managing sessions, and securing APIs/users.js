@@ -81,3 +81,32 @@ userSchema.methods.generateJwt = function() {
     }, process.env.JWT_SECRET);
 }
 
+
+/**
+    ** Full Passport local strategy definition
+ */
+
+passport.use(new LocalStrategy({
+  usernameField: 'email'  
+}, function (username, password, done) {
+    User.findOne({email:username}, function (err, user) {
+        // Search MongoDB for user with supplied email address
+        if (err) {
+            return done(err);
+        }
+        if(!user){
+            // If no user is found, return false and message
+            return done(null, false, {
+                message: 'Incorrect username.'
+            })
+        }
+        if(!user.validPassword(password)){
+            // call validpassword method, passing supplied password
+            return done(null, false, {
+                // if password is incorre, return false and a message 
+                message: 'incurrect password'
+            })
+        }
+        return done(null, user); // if we've got the end we can return user object 
+    })
+}));
