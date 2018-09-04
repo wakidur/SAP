@@ -135,8 +135,12 @@ strategy(কৌশল)
                 2. Require the strategy config
                 3. Initialize Passport
         11.3.2 Creating API endpoints to return JSON Web Tokens
+            To enable users to log in and register via our API, we'll need to have two new endpoints.
+            
             Adding the authentication route definitions
             Createing the register controller
+
+// 04-09-2018 --------------------------------
             
 
 

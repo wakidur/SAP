@@ -32,4 +32,11 @@ irrespective(নিরপেক্ষ, 	নির্বিশেষ)
 // 30-08-2018 -------------------------
         1.2.4. What do we have so far?
         1.2.5 The host file - index.html
-        
+        1.2.6. The component file
+            1.2.6.1. The import statement
+            1.2.6.2. Decorator
+            1.2.6.3. Defining the class
+03-09-2018 ---------------------------
+        1.2.7 The module file
+        1.2.8  Bootstrapping
+        1.2.9 We're up and running!
