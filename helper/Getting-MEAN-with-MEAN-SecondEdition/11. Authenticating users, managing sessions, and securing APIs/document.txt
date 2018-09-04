@@ -141,6 +141,24 @@ strategy(কৌশল)
             Createing the register controller
 
 // 04-09-2018 --------------------------------
+                The registration process won't actually use Passport at all.
+                The register controller will need to do the following
+
+                    a. validate that the required fields have been sent.
+                    b. Create a new model instance of User.
+                    c. Set the name and email address of the user.
+                    d. use the setPassword method to create and the salt the hash.
+                    e. Save the user.
+                    f. Return a JWT when saved.
+
+
+            Createing the Login controller
+
+            Testing the endpoints and checking the database
+
+            
+    11.4 Securing relevant API endpoints
+
             
 
 
