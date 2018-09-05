@@ -25,3 +25,88 @@ ES6 includes the following new features:
 19. binary and octal literals
 20. reflect api
 21. tail calls
+
+http://es6-features.org/#Constants
+ECMAScript 6 — New Features: Overview & Comparison
+
+1. Constants
+        Constants
+2. Scoping
+        Block-Scoped Variables
+        Block-Scoped Functions
+3. Arrow Functions
+        Expression Bodies
+        Statement Bodies
+        Lexical this
+4. Extended Parameter Handling
+        Default Parameter Values
+        Rest Parameter
+        Spread Operator
+5. Template Literals
+        String Interpolation
+        Custom Interpolation
+        Raw String Access
+6. Extended Literals
+        Binary & Octal Literal
+        Unicode String & RegExp Literal
+7. Enhanced Regular Expression
+        Regular Expression Sticky Matching
+9. Enhanced Object Properties
+        Property Shorthand
+        Computed Property Names
+        Method Properties
+10. Destructuring Assignment
+        Array Matching
+        Object Matching, Shorthand Notation
+        Object Matching, Deep Matching
+        Object And Array Matching, Default Values
+        Parameter Context Matching
+        Fail-Soft Destructuring
+11. Modules
+        Value Export/Import
+        Default & Wildcard
+12. Classes
+        Class Definition
+        Class Inheritance
+        Class Inheritance, From Expressions
+        Base Class Access
+        Static Members
+13. Symbol Type
+        Symbol Type
+        Global Symbols
+14. Iterators
+        Iterator & For-Of Operator
+15. Generators
+        Generator Function, Iterator Protocol
+        Generator Function, Direct Use
+        Generator Matching
+        Generator Control-Flow
+        Generator Methods
+16. Map/Set & WeakMap/WeakSet
+        Set Data-Structure
+        Map Data-Structure
+        Weak-Link Data-Structures
+17. Typed Arrays
+        Typed Arrays
+18. New Built-In Methods
+        Object Property Assignment
+        Array Element Finding
+        String Repeating
+        String Searching
+        Number Type Checking
+        Number Safety Checking
+        Number Comparison
+        Number Truncation
+        Number Sign Determination
+19. Promises
+        Promise Usage
+        Promise Combination
+20. Meta-Programming
+        Proxying
+        Reflection
+21. Internationalization & Localization
+        Collation
+        Number Formatting
+        Currency Formatting
+        Date/Time Formatting
+
