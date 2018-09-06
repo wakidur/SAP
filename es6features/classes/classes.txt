@@ -10,7 +10,8 @@ Classes are in fact(প্রকৃত ঘটনা, প্রকৃত অব�
 One way to define a class is using a class declaration. To declare a class, you use the class keyword with the name of the class("Rectangle" )
 
 A. Hoisting
-An important difference between "function declarations" and "class declarations" is that function declaration are hoisted and class declaration are not. you first need to declare your class and then access it, otherwise code like the following will throw a RefernceError.
+An important difference between "function declarations" and "class declarations" is that function declaration are hoisted and class declaration are not. 
+*** you first need to declare your class and then access it, otherwise code like the following will throw a RefernceError.
 
 //-----------Class expressions----------
 A class expression is another way to define a class. Class expressions can be named or unnamed. The name give to a named class expressions is local to the class's body. ( it can be retrived through the class's (not an instanc's).name property, thought);
