@@ -1,0 +1,6 @@
+// 06-09-2018 ------------------- 
+intriguing (কুচুটে, পরিকল্পনা)
+2. Building Our First App – 7 Minute Workout
+    2.2. Downloading the code base
+    2.3. Setting up the build
+    2.4. Organizing code
