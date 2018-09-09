@@ -1,6 +1,50 @@
 // 06-09-2018 ------------------- 
 intriguing (কুচুটে, পরিকল্পনা)
+dictates (নির্দেশনা)
 2. Building Our First App – 7 Minute Workout
     2.2. Downloading the code base
     2.3. Setting up the build
     2.4. Organizing code
+		projectName 
+				e2e
+					src
+						app.e2e-spec.ts
+						app.po.ts
+					protractor.conf.js
+					tsconfig.e2e.json
+					
+				node_modules
+				src
+					app
+						app.component.css
+						app.component.html
+						app.component.spec.ts
+						app.component.ts
+						app.module.ts
+					assets
+					environments
+					browserslist
+					favicon.ico
+					index.html
+					karma.conf.js
+					main.ts
+					polyfills.ts
+					styles.css
+					test.ts
+				.editorconfig
+				.gitignore
+				angular.json
+				package.json
+				README.md
+				tsconfig.json
+				tslint.json
+// 07-09-2018-------------------
+		2.4.1. Feature folders
+            The style guide recommends us of feature folders to Organizing code. With feature folders, files linked to a single feature are placed togather. If a feature grows, we break it down further into sub features and tuck the code into sub folders. Consider the app fole to be our first feature folders! as the application grows, app will add sub features for better code Organizing 
+    2.5. The 7 Minute Workout model
+    2.6. First feature module
+    2.6. First feature module
+    2.8. Exploring Angular modules
+        2.8.1.	Comprehending Angular modules
+
+			
