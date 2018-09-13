@@ -1,6 +1,14 @@
-// 06-09-2018 ------------------- 
+// 06-09-2018 -------------------
+artifact(হস্তনির্মিত বস্তু) 
 intriguing (কুচুটে, পরিকল্পনা)
 dictates (নির্দেশনা)
+Comprehending (অন্তর্ভুক্ত করা)
+cohesive (সংযোজক)
+segregation (পৃথকীকরণ)
+aggregates (সমষ্টি)
+workout(সম্পূর্ণ করা)
+Remaining(অবশিষ্ট,বাদবাকি)
+demarcate(সীমানা নির্দেশ করা)
 2. Building Our First App – 7 Minute Workout
     2.2. Downloading the code base
     2.3. Setting up the build
@@ -45,6 +53,36 @@ dictates (নির্দেশনা)
     2.6. First feature module
     2.6. First feature module
     2.8. Exploring Angular modules
+
+// 12-09-2018 ------------------------------
+
         2.8.1.	Comprehending Angular modules
+			In Angular, modules are a way to organize code into chunks that belong togather and work as a cohesive unit. 
+
+			CommonModule
+			RouterModule
+			HttpModule
+
+// 13-09-2018 ------------------------------
+	2.9. Our first component - WorkoutRunnerComponent
+		What we are going to do in the WorkoutRunnerComponent implementation is as follows
+
+		1. Start the workout
+		2. Show the workout in progress and show the progress indicator
+		3. After the time elapses for an exercise, show the next exercise
+		4. Repeat this process unitll all the exercises are over.
+
+		From the command line, navigate to the src/app folder and execute the following ng command:
+		 ***	"ng generate component workout-runner -is"
+
+			The -is flag is used to stop generation of a separate CSS file for the component. Since we are using global styles, we do not need component-specific styles
+
+		*** An observant reader might have noticed that the generated selector property value has a prefix abe; this is intentional. Since we are extending the HTML domain-specific language (DSL) to incorporate a new element, the prefix abe helps us demarcate HTML extensions that we have developed. So instead of using <workout-runner></workout-runner> in HTML we use <abe-workout-runner></abe-workout-runner>. The prefix value has been configured in angular.json, see the prefix property.
+
+		ngOnInit is a special function that Angular calls when a component is initialized. 
+		
+
+
+
 
 			
