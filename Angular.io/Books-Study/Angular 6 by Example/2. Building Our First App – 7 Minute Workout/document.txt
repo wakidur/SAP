@@ -80,6 +80,205 @@ demarcate(সীমানা নির্দেশ করা)
 		*** An observant reader might have noticed that the generated selector property value has a prefix abe; this is intentional. Since we are extending the HTML domain-specific language (DSL) to incorporate a new element, the prefix abe helps us demarcate HTML extensions that we have developed. So instead of using <workout-runner></workout-runner> in HTML we use <abe-workout-runner></abe-workout-runner>. The prefix value has been configured in angular.json, see the prefix property.
 
 		ngOnInit is a special function that Angular calls when a component is initialized. 
+
+		2.9.1. Component lifecycle hooks
+
+// 14-09-2018 -------------------------	
+	2.10. Building the 7 Minute Workout view
+		2.10.1. The Angular binding infrastructure
+// 15-09-2018 ---------------------
+		2.10.2. Interpolations
+		2.10.3. Property binding
+			2.10.3.1. Property versus attribute
+			2.10.3.2.Property binding continued
+				2.10.3.2.1. Interpolation syntactic sugar over property binding 
+					<img [src]="'/assets/images/' + currentExercise.exercise.image" />
+					<img src="/assets/images/{{currentExercise.exercise.image}}" />  // interpolation on attribute
+
+					<span [text-content]="helpText"></span>
+					<span>{{helpText}}</span>
+
+				2.10.3.2.2. Quick expression evaluation  
+				2.10.3.2.3. Side effect-free binding expressions 
+
+// 16-09-2018 ---------------------
+			2.10.3.3 Angular directives
+				As a framework, Angular tries to enhance the HTML DSL(short for Domain-Specific Language)
+					a. Component are referenced in HTML using custom tags such as <app-workout-runner></app-workout-runner> (not part of standard HTML constructs). This highlights the first extension point.
+
+					b. The use [] and () for property and event binding defines the second.
+
+					c. And then there are directives, the third dextension point with are further classified into attribute and structural directives, and components(Component are directive too!)
+				
+				while component come with their own view, attribute directive are there to enhance the appearance and/or behavior of existing elements/components
+
+				Structural direcative do not have their own view too; they change the DOM layout of the elements on which they are applied. 
+
+					<div class="progress-bar" role="progressbar"
+						[ngStyle] = "{'width': (exerciseRunningDuration/currentExercise.duration) * 100 + '%'}"></div>
+
+					
+					**** Directive nomenclature *****
+
+						Directives is an unbralla term used for 
+							component directives (also known as components)
+							attribute direcatives
+							structural direcative. 
+				2.10.3.4. Target selection for binding
+					<div [ngStyle]='expression'></div> 
+						NgStyle 
+						ngStyle
+				
+				2.10.4. Attribute binding
+					Attribute directives (such as [ngStyle]) 
+					Attribute directives (such as [ngStyle]) change the appearance or behavior of DOM elements and as the name suggests are directives.
+
+					[attr.aria-valuenow]
+					[attr.aria-valuemax]
+					To support attribute binding, Angular uses a prefix notation, attr, within []. 
+
+					[attr.attribute-name]="expression" 
+
+					Revert to the original aria setup to make attribute binding work
+
+					<div ... [attr.aria-valuenow]="exerciseRunningDuration" 
+							[attr.aria-valuemax]="currentExercise.duration" ...> 
+
+					Remember that unless an explicit attr. prefix is attached, attribute binding does not work.
+
+				2.10.5. Style and class binding
+					We use class binding to set and remove a specific class based on the component state, as follows
+
+					class.class-name]="expression" 
+					<div [class.highlight]="isPreferred">Jim</div> // Toggles the highlight class 
+
+					Use style bindings to set inline styles based on the component state: 
+					[style.style-name]="expression";
+					[style.width.%]="(exerciseRunningDuration/currentExercise.duration) * 100" 
+
+					**** Remember that style. and class. are convenient bindings for setting a single class or style. For more flexibility, there are corresponding attribute directives: ngClass and ngStyle.
+
+				2.10.6. Attribute directives
+					ngStyle
+					ngClass  
+					ngValue, 
+					ngModel, 
+					ngSelectOptions, 
+					ngControl
+					ngFormControl 
+				
+				2.10.7. Styling HTML with ngClass and ngStyle
+					<div [ngStyle]= "{ 
+							'width':componentWidth,  
+							'height':componentHeight,  
+							'font-size': 'larger',  
+							'font-weight': ifRequired ? 'bold': 'normal' 
+						}"></div> 
+					If styles become too unwieldy in HTML, we also have the option of writing in our component a function that returns the object hash, and setting that as an expression:
+						<div [ngStyle]= "getStyles()"></div>
+					
+						Moreover, getStyles on the component looks as follows:
+						getStyles () { 
+							return { 
+							'width':componentWidth, 
+							... 
+							} 
+						} 
+					
+					ngClass works on the same lines too, except that it is used to toggle one or multiple classes. For example, check out the following code:
+
+					<div [ngClass]= "{
+						'required':inputRequired, 
+						'email':whenEmail
+						}"></div> 
+
+					The required class is applied when inputRequired is true and is removed when it evaluates to false.
+
+// 17-09-2018 --------------------------
+	2.11.	Learning more about an exercise
+		2.11.1.	Adding descriptions and video panels
+			An Angular app is nothing but a hierarchy of components, similar to a tree structure.
+
+			2.11.1.1.	Component with inputs
+
+				**** @Input("myAwesomeProperty") myProperty:string ***************
+
+				import {Component, OnInit, Input} from "@angular/core";
+
+				export class ExerciseDescriptionComponent {
+					@Input() descriptions: string;
+					@Input steps: string
+				}
+
+				<div class="card-body">
+					<div class="card-text">{{description}}</div>
+				</div> 
+				...  
+				<div class="card-text">
+					{{steps}}
+				</div> 
+
+
+				<div id="description-panel" class="col-sm-3">
+				<abe-exercise-description 
+					[description]="currentExercise.exercise.description"
+					[steps]="currentExercise.exercise.procedure"></abe-exercise-description>
+				</div>
+
+
+				<my-component [myAwesomeProperty]="expression"....
+
+			
+			2.11.1.2.	Structural directives
+				"Instead of defining and controlling a view like a Component Directive, or modifying the appearance and behavior of an element like an Attribute Directive, the Structural Directive manipulates the layout by adding and removing entire element sub-trees."
+
+				ngClass 
+				ngStyle
+				ngFor
+				ngIf 
+				ngSwitch
+
+				<div *ngFor="let video of safeVideoUrls"> 
+					<iframe width="198" height="132" [src]="video" frameborder="0" allowfullscreen></iframe> 
+				</div>
+
+
+				<div *ngFor="let video of videos; let i=index"> 
+					<div>This is video - {{i}}</div> 
+				</div> 
+
+				<div *ngFor="let video of videos; let i=index; let f=first"> 
+					<div [class.special]="f">This is video - {{i}}</div> 
+				</div> 
+
+
+			2.11.1.3.1.	Asterisk (*) in structural directives
+				<div *ngFor="let video of safeVideoUrls"> 
+					<iframe width="198" height="132" [src]="video" frameborder="0" allowfullscreen></iframe> 
+				</div>
+
+				<ng-template ngFor let-video [ngForOf]="safeVideoUrls">  
+					<div>
+						<iframe width="198" height="132"  [src]="video" ...></iframe>  
+					</div> 
+				</ng-template>  
+		2.11.1.4.	Angular security
+
+				Cross-Site Scripting  ((XSS) )
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
 		
 
 
