@@ -262,9 +262,43 @@ demarcate(সীমানা নির্দেশ করা)
 						<iframe width="198" height="132"  [src]="video" ...></iframe>  
 					</div> 
 				</ng-template>  
-		2.11.1.4.	Angular security
+			2.11.1.4.	Angular security
 
-				Cross-Site Scripting  ((XSS) )
+					Cross-Site Scripting  ((XSS) )
+				2.11.1.4.1 Trusting safe content
+
+			2.11.1.5. OnChange life cycle event
+				The OnChange life cycle event is triggered whenever th component's input(s) change.
+
+				The OnChanges life cycle event is triggered whenever the component's input(s) change. In the case of VideoPlayerComponent, it is the videos array input property that changes whenever a new exercise is loaded. We use this life cycle event to recreate the safeVideoUrls array and re-bind it to the view. Simple!
+
+		2.11.2.	Formatting exercise steps with innerHTML binding
+		2.11.3.	Displaying the remaining workout duration using pipes
+		2.11.4.	Angular pipes
+			The primary aim of a pipe is to format the data displayed in the view
+			The framework itself comes with multiple predefined pipes,
+				date, 
+				currency,
+				lowercase, 
+				uppercase, 
+				slice,
+				json
+
+				This is how we use a pipe with a view:
+				{{expression | pipeName:inputParam1}}
+				{{fullName | slice:0:20}} //renders first 20 characters  
+				{{fullName | slice:0:truncateAt}} //renders based on value truncateAt 
+
+				{{ dateObj | date }}               // output is 'Jun 15, 2015        ' 
+				{{ dateObj | date:'medium' }}      // output is 'Jun 15, 2015, 9:43:11 PM' 
+				{{ dateObj | date:'shortTime' }}   // output is '9:43 PM            ' 
+				{{ dateObj | date:'mmss' }}        // output is '43:11'  
+
+			2.11.4.1. Pipe chaining
+				{{fullName | slice:0:20 | uppercase}} 
+			
+		2.11.5.	Implementing a custom pipe - SecondsToTimePipe
+
 
 
 
