@@ -296,8 +296,35 @@ demarcate(সীমানা নির্দেশ করা)
 
 			2.11.4.1. Pipe chaining
 				{{fullName | slice:0:20 | uppercase}} 
-			
+
+// 18-09-2018 ------------------------			
 		2.11.5.	Implementing a custom pipe - SecondsToTimePipe
+			The pipe that we just created is just a standard TypeScript class. It's the Pipe decorator (@Pipe) that instructs Angular to treat this class as a pipe:
+
+			@Pipe({ 
+				name: 'secondsToTime' 
+			}) 
+
+		2.11.6	Adding the next exercise indicator using ngIf
+			ngIf
+			ngSwitch
+			ngSwitchCase
+			ngSwitchDefault
+		2.11.7.	Pausing an exercise
+		
+		2.11.8.	The Angular event binding infrastructure
+			2.11.8.1.	Event bubbling
+			2.11.8.2.	Event binding an $event object
+
+		2.11.9.	Two-way binding with ngModel
+			<input [(ngModel)]="workout.name"> 
+			Consider the next example; it works in the same way as input before:
+
+			<input 
+				[value]="workout.name" 
+				(input)="workout.name=$event.target.value" > 
+
+
 
 
 
