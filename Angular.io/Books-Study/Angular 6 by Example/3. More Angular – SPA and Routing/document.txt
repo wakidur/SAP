@@ -1,0 +1,110 @@
+// 18-09-2018 --------------------
+devoid (বর্জিত)
+intercept(পথিমধ্যে রোধ করা)
+3. More Angular – SPA and Routing
+    3.1. Exploring Single Page Application capabilities
+        3.1.1. The Angular SPA infrastructure
+            Single Page Application (SPAs) are browser-based apps devoid of any full-page refresh. In such apps, once the initial HTML is loaded, any future page navigations are retrived using AJAX and HTML fragments and injected into the already loaded view. 
+
+            3.1.1.1. Angular routing
+                Angular supports SPA development using its routing infrastructure. 
+                
+                There are four major framework pieces that work together to support the Angular routing infrastructure
+                
+                1. The Router (Router) The primary infrastructure pieces that actually provides component navigations
+
+                2. The Routing configuration (Route): The component router is dependent upout the routeing configuration for setting up routes
+
+                3. The RouterOutlet component: The RouterOutlet component is the placeholder container (Host) Where route-specific views are loaded
+
+                4. The RouterLink directive: The generates hyperlinks that can be embedded in the anchor tags for navigations.
+            
+            3.1.1.2 Angular router
+                If you have worked with any JavaScirpt fragments
+                The framework watches the browser URL and serves views based on the URL loaded. There are dedicated framework components for this job. In the Angular world, this tracking is done by a framework service, the router.
+
+                In Angular, any class, object, or function that provides some generic functionality is termed a service. 
+            
+            3.1.1.3. Routing setup
+                <base href="/">
+        3.1.2. Adding start and finish pages
+            The plan here is to have three pages for 7-Minute Workout:
+                •	Start page: This becomes the landing page for the app
+                •	Workout page: What we have currently
+                •	Finish page: We navigate to this once the workout is complete
+// 19-09-2018 -----------------------
+            3.1.2.1. Route configuration
+                const routes: Routes = [
+                    { path: 'start', component: StartComponent },
+                    { path: '**', redirectTo: '/start' }
+                ];
+
+                @NgModule({
+                    imports: [RouterModule.forRoot(
+                        routes, { 
+                            enableTracing: true 
+                        })],
+                    exports: [RouterModule]
+                })
+                export class AppRoutingModule { }
+
+                We finally create and import a new module into AppRoutingModule with the call to RouterModule.forRoot.  And by re-exporting Angular's RouterModule, we can import AppRoutingModule instead of RouterModule and have access to all of the routing constructs together with our app routes available in AppModule.
+
+                The enableTracing: true property on the forRoot function parameter allows us to monitor the router events (such as NavigationStart, NavigationEnd, and NavigationCancel) that happen when navigation takes place and the correct route is resolved. The logs are visible in the browser's debugger console. Use it for debugging purposes only, remove it from production builds.
+
+                3.1.2.1.1. Pushstate API and server-side url-rewrites
+                    The router used the pushstate API in one of two cases
+                        1. When we click on links embedded in the view (<a> tag)
+                        2. when we use the route API 
+
+                        In both cases, the router intercepts any navigation events, load the appropriate component view, and finally updates the browser URL, The request neve goes to the server. 
+
+                        But what if we refresh the browser window?
+            3.1.2.3. Route navigation
+                <a routerLink="/workout">
+
+                3.1.2.3.1. The link parameter array
+
+                    @RouteConfig([
+                        {path: '/users/:id', component: UserDetail},
+                        {path: '/users', component: UserList}
+                    ])
+                    <a [routerLink]="['/users', 2] // generates /users/2
+
+                    The Angular router is quite a beast and supports almost everything that we expect from a modern router library. It supports 
+                    child routes, 
+                    async routes, 
+                    lifecycle hooks, 
+                    secondary routes, and some other advanced scenarios. We'll delay discussion on these topics until later chapters. This chapter just gets us started with Angular routing, but there is more to come!
+
+                    <a [routerLink]="['/users', {id:2}]  // generates /users;id=2
+
+            
+            3.1.2.4. Using the router service for component navigation
+            3.1.2.5. Using the ActivatedRoute service to access route params
+                { path: '/users/:id', component: UserDetailComponent },
+
+                export class UserDetailComponent {
+                    constructor(private route: ActivatedRoute)
+                }
+
+                ngOnInit() {
+                    let id = +this.route.paramMap.get('id');// (+) converts string 'id' to a number
+                    let currentUser = this.getUser(id);
+                }
+
+                we also look at some advanced routing concepts, including 
+                child routes, 
+                lazy loaded routes, and 
+                guard conditions.
+    3.2. Angular dependency Injection
+
+                    
+
+
+            
+        
+
+
+
+
