@@ -1,6 +1,7 @@
 // 18-09-2018 --------------------
 devoid (বর্জিত)
 intercept(পথিমধ্যে রোধ করা)
+persist(স্থায়ী অবস্থায় থাকা)
 3. More Angular – SPA and Routing
     3.1. Exploring Single Page Application capabilities
         3.1.1. The Angular SPA infrastructure
@@ -97,9 +98,44 @@ intercept(পথিমধ্যে রোধ করা)
                 child routes, 
                 lazy loaded routes, and 
                 guard conditions.
-    3.2. Angular dependency Injection
 
-                    
+// 20-09-2018 -----------------------------
+
+    3.2. Angular dependency Injection
+        3.2.1 Dependency injection 101
+
+            For any application, its components (not to be confused with Angular component) do not work in isolation. There are dependencies between them. A component may use other components to achieve its desired functionality. Dependency injection is a pattern for managing such dependencies.
+
+            The DI pattern is popular in many programming languages as it allows us to manage dependencies in a loosely coupled manner. with such a framework in place, dependent object are managed by a DI container. This makes dependencies swappable and the overall code more decoupled and testable.
+
+            The idea behind DI is that an object does not create/manage its own dependencies. instead, the dependencies are provided from the outside. These dependencies are available either through a constructor, which is called constructor injection (Angular also does this) or by directly setting the object properties, which is called property injection.
+
+            Constructor Injection
+            Property Injection
+        
+        3.2.2. Exploring dependency injection in Angular
+
+    3.3. Tracking workout history
+
+        It would be a great addition to our app if we could track our workout history. 
+
+        *** When did we last exercise? 
+        *** Did we complete it?
+        *** How much time did we spend on it?  
+
+        To answer these questions, we need to track when the workout starts and when it ends. This tracking data then needs to be persisted somewhere.  
+
+        A possible solution could be to extend our WorkoutRunnerComponent with the desired functionality. But that adds unnecessary complexity to WorkoutRunnerComponent and that's not its primary job.
+    
+        3.3.1. Building the workout-history-tracker service
+           Inspired again by the Angular style guide, we are going to create a new module, core module, and add the service to this module. The role of the core module is to host services that are available across the application. It is also a good place to add single-use components that are required when the application starts. A nav bar and busy indicator are good examples of such components. 
+
+        
+
+        
+
+
+
 
 
             
