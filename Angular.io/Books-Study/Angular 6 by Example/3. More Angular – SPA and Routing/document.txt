@@ -2,16 +2,18 @@
 devoid (বর্জিত)
 intercept(পথিমধ্যে রোধ করা)
 persist(স্থায়ী অবস্থায় থাকা)
+rely (নির্ভর করা, বিশ্বাস করা)
+exclusively (কেবলমাত্র,	কেবল ,শুধু)
 3. More Angular – SPA and Routing
     3.1. Exploring Single Page Application capabilities
         3.1.1. The Angular SPA infrastructure
-            Single Page Application (SPAs) are browser-based apps devoid of any full-page refresh. In such apps, once the initial HTML is loaded, any future page navigations are retrived using AJAX and HTML fragments and injected into the already loaded view. 
+            Single Page Application (SPAs) are browser-based apps devoid of any full-page refresh. In such apps, once the initial HTML is loaded, any future page navigations are retrived using AJAX and HTML fragments and injected into the already loaded view.
 
             3.1.1.1. Angular routing
-                Angular supports SPA development using its routing infrastructure. 
-                
+                Angular supports SPA development using its routing infrastructure.
+
                 There are four major framework pieces that work together to support the Angular routing infrastructure
-                
+
                 1. The Router (Router) The primary infrastructure pieces that actually provides component navigations
 
                 2. The Routing configuration (Route): The component router is dependent upout the routeing configuration for setting up routes
@@ -19,13 +21,13 @@ persist(স্থায়ী অবস্থায় থাকা)
                 3. The RouterOutlet component: The RouterOutlet component is the placeholder container (Host) Where route-specific views are loaded
 
                 4. The RouterLink directive: The generates hyperlinks that can be embedded in the anchor tags for navigations.
-            
+
             3.1.1.2 Angular router
                 If you have worked with any JavaScirpt fragments
                 The framework watches the browser URL and serves views based on the URL loaded. There are dedicated framework components for this job. In the Angular world, this tracking is done by a framework service, the router.
 
-                In Angular, any class, object, or function that provides some generic functionality is termed a service. 
-            
+                In Angular, any class, object, or function that provides some generic functionality is termed a service.
+
             3.1.1.3. Routing setup
                 <base href="/">
         3.1.2. Adding start and finish pages
@@ -42,8 +44,8 @@ persist(স্থায়ী অবস্থায় থাকা)
 
                 @NgModule({
                     imports: [RouterModule.forRoot(
-                        routes, { 
-                            enableTracing: true 
+                        routes, {
+                            enableTracing: true
                         })],
                     exports: [RouterModule]
                 })
@@ -56,9 +58,9 @@ persist(স্থায়ী অবস্থায় থাকা)
                 3.1.2.1.1. Pushstate API and server-side url-rewrites
                     The router used the pushstate API in one of two cases
                         1. When we click on links embedded in the view (<a> tag)
-                        2. when we use the route API 
+                        2. when we use the route API
 
-                        In both cases, the router intercepts any navigation events, load the appropriate component view, and finally updates the browser URL, The request neve goes to the server. 
+                        In both cases, the router intercepts any navigation events, load the appropriate component view, and finally updates the browser URL, The request neve goes to the server.
 
                         But what if we refresh the browser window?
             3.1.2.3. Route navigation
@@ -72,15 +74,15 @@ persist(স্থায়ী অবস্থায় থাকা)
                     ])
                     <a [routerLink]="['/users', 2] // generates /users/2
 
-                    The Angular router is quite a beast and supports almost everything that we expect from a modern router library. It supports 
-                    child routes, 
-                    async routes, 
-                    lifecycle hooks, 
+                    The Angular router is quite a beast and supports almost everything that we expect from a modern router library. It supports
+                    child routes,
+                    async routes,
+                    lifecycle hooks,
                     secondary routes, and some other advanced scenarios. We'll delay discussion on these topics until later chapters. This chapter just gets us started with Angular routing, but there is more to come!
 
                     <a [routerLink]="['/users', {id:2}]  // generates /users;id=2
 
-            
+
             3.1.2.4. Using the router service for component navigation
             3.1.2.5. Using the ActivatedRoute service to access route params
                 { path: '/users/:id', component: UserDetailComponent },
@@ -94,9 +96,9 @@ persist(স্থায়ী অবস্থায় থাকা)
                     let currentUser = this.getUser(id);
                 }
 
-                we also look at some advanced routing concepts, including 
-                child routes, 
-                lazy loaded routes, and 
+                we also look at some advanced routing concepts, including
+                child routes,
+                lazy loaded routes, and
                 guard conditions.
 
 // 20-09-2018 -----------------------------
@@ -112,34 +114,167 @@ persist(স্থায়ী অবস্থায় থাকা)
 
             Constructor Injection
             Property Injection
-        
+
         3.2.2. Exploring dependency injection in Angular
 
     3.3. Tracking workout history
 
-        It would be a great addition to our app if we could track our workout history. 
+        It would be a great addition to our app if we could track our workout history.
 
-        *** When did we last exercise? 
+        *** When did we last exercise?
         *** Did we complete it?
-        *** How much time did we spend on it?  
+        *** How much time did we spend on it?
 
-        To answer these questions, we need to track when the workout starts and when it ends. This tracking data then needs to be persisted somewhere.  
+        To answer these questions, we need to track when the workout starts and when it ends. This tracking data then needs to be persisted somewhere.
 
         A possible solution could be to extend our WorkoutRunnerComponent with the desired functionality. But that adds unnecessary complexity to WorkoutRunnerComponent and that's not its primary job.
-    
+
         3.3.1. Building the workout-history-tracker service
-           Inspired again by the Angular style guide, we are going to create a new module, core module, and add the service to this module. The role of the core module is to host services that are available across the application. It is also a good place to add single-use components that are required when the application starts. A nav bar and busy indicator are good examples of such components. 
+           Inspired again by the Angular style guide, we are going to create a new module, core module, and add the service to this module. The role of the core module is to host services that are available across the application. It is also a good place to add single-use components that are required when the application starts. A nav bar and busy indicator are good examples of such components.
 
-        
+// 23-09-2018 ------------------------
+        3.3.2. Integrating with WorkoutRunnerComponent
+            3.3.2.1. Injecting dependencies with Constructor Injection
+                we use constructor injection to consume a dependency.
+                Once the service is injected and available to WorkoutRunnerComponent, the service instance (tracker) needs to be called
+                **when the workout starts,
+                **when an exercise is complete, and
+                **when the workout finishes.
 
-        
+                **What if the user manually navigates away from the workout page? 
+                **How do we stop tracking?
 
-
-
-
-
+                When that happens, we can always rely on the component's life cycle hooks/events to help us. Workout tracking can be stopped when the "NgOnDestroy" event is fired. An appropriate place to perform any cleanup work is before the component is removed from the component tree. 
             
-        
+            3.3.3. Dependency injection in depth
+                3.3.3.1. Registering dependencies
+
+                    The Standard way to register a dependency is to register it at the root/global level. This can be done either by 
+                    1. passing the dependency type into the "providers" attribute (Array) in the NgModule decorator, 
+                    2. Using the "providedIn" attribute on the Injectable service decorator.
+                    
+
+                    Remember our WorkoutHistoryTrackerService registration? Check the following
+                        @Injectable({
+                            providedIn: CoreModule
+                        })
+                        export class WorkoutHistoryTrackerService {}
+
+                    The same thing can be done on the module declaration too, as shown here:
+                    @NgModule({...providers: [WorkoutHistoryTrackerService],})
+
+                    Technically speaking, when using any of the preceding mechanisms, the service gets registered with the "app's root injector, irrespective of the Angular module it is declarad in. Any Angualr artfact across modules henceforth can use the service. No module imports are required at all.
+
+                    This behavior is different from component/directive/pipe registration. Such artifacts have to be exported from a module for another module to use them.
+
+                    Another place where dependencies can be registered is on the component. The @Component decorator has a providers array parameter to register dependencies. With these two levels of dependency registration, the obvious question that we need to answer is, which one to use?
+
+
+                    It seems obvious that if the dependency is exclusively used by a component and its children, it should be registered at the @Component decorator level. 
+
+                    Providers create dependencies when the Angular injector requests them. These providers have the recipe to create these dependencies. While a class seems to be the obvious dependency that can be registered, we can also register
+
+                    3.3.3.1.1. Angular providers
+                        Providers create dependencies that are served by the DI framework.
+
+                        Look at this WorkoutHistoryTrackerService dependency registration done on NgModule:
+
+                        providers: [WorkoutHistoryTrackerService],
+
+                        This syntax is a short-form notation for the following version:
+
+                        providers:({ 
+                            provide: WorkoutHistoryTrackerService, 
+                            useClass: WorkoutHistoryTrackerService 
+                        })
+
+                    3.3.3.1.2. Value providers
+                     {
+                         provide: WorkoutHistoryTrackerService,
+                         useValue: new WorkoutHistoryTrackerService()
+                     }
+
+                     {
+                         provide: WorkoutHistoryTrackerService,
+                         useValue: new WorkoutHistoryTrackerService(new LocalStorage())
+                     }
+
+
+                     {
+                         provide: AppConfig, 
+                         {
+                             userValue: {
+                                 name: 'Test App',
+                                 gridsetting: {...}
+                             }
+                         }
+                     }
+
+
+                3.3.3.1.3. Factory providers
+
+                    {
+                        provide: AppConfig,
+                        useFactory: () => {
+                            if(PRODUCTION) {
+                                return {
+                                    name: 'Production App',
+                                    gridSetting: {}
+                                }
+                            } else {
+                                return {
+                                    name: 'Test App'
+                                    gridsetting: {}
+                                 
+                                }
+                            }
+                        }
+                    }
+
+                    {provide: WorkoutHistoryTrackerService, useFactory: (environment:Environment) => { 
+                        if(Environment.isTest) { 
+                            return new MockWorkoutHistoryTracker(); 
+                        } 
+                        else { 
+                            return new WorkoutHistoryTrackerService(); 
+                        }, 
+                            deps:[Environment]
+                    }
+                
+
+                3.3.3.1.4. Explicit injection using injector
+                    constructor(private router: Router, private injector: Injector){
+                        this.tracker = injector.get(WorkoutHistoryTrackerService);
+                    }
+            
+            3.3.3.2. Dependency tokens
+                3.3.3.2.1. Using InjectionToken
+                    export const APP_CONFIG = new InjectionToken('Application Configuration');
+                3.3.3.2.2. Using string tokens
+
+        -- Adding the workout history page
+        -- Sorting and filtering history data using pipes
+        --Pipe chaining with search pipe
+        --Pipe gotcha with arrays
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
