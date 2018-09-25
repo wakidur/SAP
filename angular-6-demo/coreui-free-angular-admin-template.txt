@@ -1,0 +1,27 @@
+CoreUI for Angular 
+    All Bootstrap 4 Components
+    Free access to updates
+    SCSS Source Files
+    Plugins
+        Chart.js
+        Pace
+        DateRangePicker
+        DataTables
+        Full Calendar
+        Gauge.js
+        Google Maps
+        Ion.RangeSlider
+        jQuery UI
+        jQuery Validation
+        jQuery Masked Input
+        Ladda Buttons
+        Moment.js
+        Select2
+        SpinKit
+        Toastr
+        Quill Text Editor
+    UI Kits
+        Invoicing - Invoice
+        Email - Inbox
+        Email - Message
+        Email - Compose

@@ -2,8 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'dropdowns.component.html',
+  styleUrls: ['dropdowns.component.css']
 })
 export class DropdownsComponent {
+
+  status: { isOpen: boolean } = { isOpen: false };
+  disabled: boolean = false;
+  isDropup: boolean = true;
+  autoClose: boolean = false;
 
   constructor() { }
 
@@ -23,8 +29,6 @@ export class DropdownsComponent {
     console.log('Dropdown state is changed');
   }
 
-  status: { isOpen: boolean } = { isOpen: false };
-
   toggleDropdown($event: MouseEvent): void {
     $event.preventDefault();
     $event.stopPropagation();
@@ -34,10 +38,4 @@ export class DropdownsComponent {
   change(value: boolean): void {
     this.status.isOpen = value;
   }
-
-  disabled: boolean = false;
-
-  isDropup: boolean = true;
-
-  autoClose: boolean = false;
 }
