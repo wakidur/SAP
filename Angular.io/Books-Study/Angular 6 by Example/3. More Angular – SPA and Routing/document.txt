@@ -252,10 +252,45 @@ exclusively (কেবলমাত্র,	কেবল ,শুধু)
                     export const APP_CONFIG = new InjectionToken('Application Configuration');
                 3.3.3.2.2. Using string tokens
 
-        -- Adding the workout history page
-        -- Sorting and filtering history data using pipes
-        --Pipe chaining with search pipe
-        --Pipe gotcha with arrays
+        3.3.4. Adding the workout history page
+        3.3.5. Sorting and filtering history data using pipes
+            3.3.5.1. The orderBy pipe
+            3.3.5.2. Pipe chaining with search pipe
+
+// 24-09-2018 -------------------------------------
+            3.3.5.3. Pipe gotcha with arrays
+
+
+// 25-09-2018 -------------------------------------
+        3.3.6. Angular change detection overview
+            Change detection is all about tracking changes done to the component's model during app execution. This helps Angualr's data-binding infrastructure to identify what parts of the view need to be updated. 
+            Every data binding framework needs to address this issue, and the approach these frameworks take for tracking changes differs. It even differs from AngualrJS to Angualr.
+
+            To understand how change detection works in Angular, there are a few things that we need to keep in mind.
+
+            We now just need to answer two more questions:
+                •	When is a change-detection run triggered?
+                •	How many times does it run?
+                An Angular change-detection run is triggered when any of these events are triggered:
+                •	User input/browser events: We click on a button, enter some text, scroll the content. Each of these actions can update the view (and the underlying model).
+                •	Remote XHR requests: This is another common reason for view updates. Getting data from a remote server to show on the grid and getting user data to render a view are examples of this.
+                •	setTimeout and setInterval: As it turns out, we can use setTimeout and setInterval to execute some code asynchronously and at specific intervals. Such code can also update the model. For example, a setInterval timer may check for stock quotes at regular intervals and update the stock price on the UI.
+        3.3.7. Hierarchical injectors
+            3.3.7.1. Registering component-level dependencies
+                @Component({ 
+                    selector: 'abe-workout-runner', 
+                    providers: [WorkoutHistoryTrackerService] 
+                    })
+                
+            3.3.7.2. Angular DI dependency walk
+        3.3.8. Dependency injection with @Injectable
+
+
+
+
+
+
+
 
 
 
