@@ -1,2 +1,58 @@
 /**** 30-09-2018------------------------------*/
 4.	Personal Trainer
+    Angular form support 
+    client-server communication
+
+    •	Defining Personal Trainer requirements:
+    •	Defining the Personal Trainer model
+    •	Defining the Personal Trainer layout and navigat
+    •	Adding support pages
+    •	Defining the Workout Builder component structure: 
+    •	Building forms
+        •	Form types: 
+        •	ngModel: 
+        •	Reactive Form Controls
+        •	Data formatting
+        •	Input validation: 
+
+    4.1. The Personal Trainer app - the problem scope
+    4.2. Personal Trainer requirements
+        Based on the notion of managing workouts and exercises, these are some of the requirements that our Personal Trainer app should fulfill:
+
+            •	The ability to list all available workouts.
+            •	The ability to create and edit a workout. While creating and editing a workout, it should have:
+                •	The ability to add workout attributes including name, title, description, and rest duration
+                •	The ability to add/remove multiple exercises for workouts
+                •	The ability to order exercises in the workout
+                •	The ability to save workout data
+
+            •	The ability to list all available exercises.
+            •	The ability to create and edit an exercise. While creating and editing an exercise, it should have:
+                •	The ability to add exercise attributes such as name, title, description, and procedure
+                •	The ability to add pictures for the exercise
+                •	The ability to add related videos for the exercise
+                •	The ability to add audio clues for the exercise
+    
+    4.3. The Personal Trainer model
+    4.4. Getting started with the code for Personal Trainer
+    4.5. Using the Personal Trainer model in Workout Builder services
+    4.6. The Personal Trainer layout
+    4.7. Personal Trainer navigation with routes
+
+        Route
+            /builder
+            /builder/workouts
+            /builder/workout/new
+            /builder/workout/:id
+            /builder/exercises
+            /builder/exercise/new
+            /builder/exercise/:id
+        
+        4.7.1. Getting started with Personal Trainer navigation
+
+
+
+
+
+
+

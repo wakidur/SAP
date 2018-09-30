@@ -322,11 +322,16 @@ persist(স্থায়ী অবস্থায় থাকা)
 				•	An exercise-completion audio clip plays when the exercise is about to end
 				•	An audio clip plays during the rest phase and informs users about the next exercise
 				
-				
+				we need to create a wrapper directive that allows us to control audio elements from Angualr. 
+				Remember that Directive are HTML extensions without a view. 
 
 		3.5.2. Building Angular directives to wrap HTML audio
+		
 			If you have worked a lot with JavaScirpt and jQuery, you may have realized we have purposefully shied away from directly accessing the DOM any of our component implementations. There has not been a need to do it. 
-			The Angualr data-binding infrastructure, including property, attribute, and event binding, has help
+			The Angualr data-binding infrastructure, including 
+			property, 
+			attribute, and 
+			event binding, has helped  us mainipulate HTML without touching the DOM 
 			
 			The access pattern should be Angularish. In Angular, the only place where direct DOM manipulation is acceptable and practiced is inside directives 
 		

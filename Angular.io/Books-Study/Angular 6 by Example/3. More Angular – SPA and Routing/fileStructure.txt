@@ -4,18 +4,20 @@ app
         header
             header.component.html
             header.component.ts
-
         core.module.ts
         local-storage.service.ts
         workout-history-tracker.service.ts
+
     finish
         finish.component.html
         finish.component.ts
+
     shared
         my-audio.directive.ts
         order-by.pipe.ts
         search.pipe.ts
         shared.module.ts
+
     start
         start.component.html
         start.component.ts
@@ -23,6 +25,7 @@ app
     workout-history
         workout-history.component.html
         workout-history.component.ts
+        
     workout-runner
         exercise-description
             exercise-description.component.html
@@ -91,3 +94,24 @@ ExerciseChangedEvent {
     public next: ExercisePlan
 }
 ----------------------------------------------
+
+var obj = $('.engineTable tbody tr').map(function() {
+var $row = $(this);
+
+return {
+    td_1: $row.find(':nth-child(1)').text(),
+    td_2: $row.find(':nth-child(2)').text(),
+    td_3: $row.find(':nth-child(3)').text(),
+	td_4: $row.find(':nth-child(4)').text(),
+	td_5 : $row.find(':nth-child(5)').text(),
+	td_6 : $row.find(':nth-child(6)').text(),
+	td_7 : $row.find(':nth-child(7)').text(),
+	td_8 : $row.find(':nth-child(8)').text(),
+	td_9 : $row.find(':nth-child(9)').text(),
+	td_10 : $row.find(':nth-child(10)').text(),
+	td_11 : $row.find(':nth-child(11)').text(),
+	td_12 : $row.find(':nth-child(12)').text(),
+	td_13 : $row.find(':nth-child(13)').text(),
+	td_14 : $row.find(':nth-child(14)').text()
+   };
+}).get();
