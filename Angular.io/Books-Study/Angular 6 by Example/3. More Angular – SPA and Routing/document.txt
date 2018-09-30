@@ -4,6 +4,7 @@ intercept(পথিমধ্যে রোধ করা)
 persist(স্থায়ী অবস্থায় থাকা)
 rely (নির্ভর করা, বিশ্বাস করা)
 exclusively (কেবলমাত্র,	কেবল ,শুধু)
+persist(স্থায়ী অবস্থায় থাকা)
 3. More Angular – SPA and Routing
     3.1. Exploring Single Page Application capabilities
         3.1.1. The Angular SPA infrastructure
@@ -289,8 +290,54 @@ exclusively (কেবলমাত্র,	কেবল ,শুধু)
 // 26-09-2018 -----------------------------
 
         3.3.8. Dependency injection with @Injectable
-            Generics : 
-Introduction
+		3.3.9. Tracking route changes using the router service
+			NavigationStart,
+			NavigationEnd, 
+			NavigationCancel, 
+			NavigationError,
+
+
+	3.4. Fixing the video playback experience
+	
+		The current video panel implementation can at best be termed amateurish. The size of the default player is small. 
+		When we play the video, the workout does not pause. 
+		The video playback is interrupted on exercise transitions. 
+		Also, the overall video-load experience adds a noticeable lag at the start of every exercise routine. 
+		This is a clear indication that this approach to video playback needs some fixing.
+		
+		This is what we are going to do to fix the video panel:
+			•	Show the image thumbnail for the exercise video instead of loading the video player itself
+			•	When the user clicks on the thumbnail, load a popup/dialog with a bigger video player that can play the selected video
+			•	Pause the workout while the video playback is on
+		
+		3.4.2. Using the ngx-modialog library
+			3.4.2.1. Creating custom dialogs
+	
+	
+	3.5. Cross-component communication using Angular events
+		3.5.1. Tracking exercise progress with audio
+			Here is how we are going to support exercise tracking using audio clues:
+				•	A ticking clock soundtrack progress during the exercise
+				•	A half-way indicator sounds, indicating that the exercise is halfway through
+				•	An exercise-completion audio clip plays when the exercise is about to end
+				•	An audio clip plays during the rest phase and informs users about the next exercise
+				
+				
+
+		3.5.2. Building Angular directives to wrap HTML audio
+			If you have worked a lot with JavaScirpt and jQuery, you may have realized we have purposefully shied away from directly accessing the DOM any of our component implementations. There has not been a need to do it. 
+			The Angualr data-binding infrastructure, including property, attribute, and event binding, has help
+			
+			The access pattern should be Angularish. In Angular, the only place where direct DOM manipulation is acceptable and practiced is inside directives 
+		
+		3.5.3. Creating WorkoutAudioComponent for audio support
+			3.5.3.1. Understanding template reference variables
+			
+
+//27-09-2018----------------------------
+		
+			
+            
 
 
 
