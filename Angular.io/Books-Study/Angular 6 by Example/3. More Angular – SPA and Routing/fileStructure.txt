@@ -1,0 +1,93 @@
+3.4 Fle structure----------------------
+app
+    core
+        header
+            header.component.html
+            header.component.ts
+
+        core.module.ts
+        local-storage.service.ts
+        workout-history-tracker.service.ts
+    finish
+        finish.component.html
+        finish.component.ts
+    shared
+        my-audio.directive.ts
+        order-by.pipe.ts
+        search.pipe.ts
+        shared.module.ts
+    start
+        start.component.html
+        start.component.ts
+
+    workout-history
+        workout-history.component.html
+        workout-history.component.ts
+    workout-runner
+        exercise-description
+            exercise-description.component.html
+            exercise-description.component.ts
+
+        shared
+            seconds-to-time.pipe.ts
+        video-player
+            video-dialog
+                video-dialog.component.html
+                video-dialog.component.ts
+            video-player.component.html
+            video-player.component.ts
+        workout-audio
+            workout-audio.component.html
+            workout-audio.component.ts
+        workout-container
+            workout-container.component.html
+            workout-container.component.ts
+        model.ts
+        workout-runner.component.html
+        workout-runner.component.ts
+        workout-runner.module.ts
+-------------------------------------------------
+State
+const routes: Routes = [
+    { path: 'start', component: StartComponent },
+    { path: 'workout', component: WorkoutContainerComponent },
+    { path: 'finish', component: FinishComponent },
+    { path: 'history', component: WorkoutHistoryComponent },
+    { path: '**', redirectTo: '/start' }
+];
+
+---------------------------------------------------------------
+Data Model:
+
+Exercise  {
+    public name: string,
+    public title: string,
+    public description: string,
+    public image: string,
+    public nameSound?: string,
+    public procedure?: string,
+    public videos?: Array<string>
+}
+ExercisePlan  {
+    public exercise: Exercise, 
+    public duration: number
+}
+WorkoutPlan  {
+    public name: string,
+    public title: string,
+    public restBetweenExercise: number,
+    public exercises: ExercisePlan[],
+    public description?: string,
+    totalWorkoutDuration(): number {}
+}
+ExerciseProgressEvent   {
+    public exercise: ExercisePlan,
+    public runningFor: number,
+    public timeRemaining: number,
+    public workoutTimeRemaining: number
+}
+ExerciseChangedEvent {
+    public current: ExercisePlan,
+    public next: ExercisePlan
+}
+----------------------------------------------
