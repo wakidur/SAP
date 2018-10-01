@@ -49,6 +49,13 @@
             /builder/exercise/:id
         
         4.7.1. Getting started with Personal Trainer navigation
+        4.7.2. Introducing child routes to Workout Builder
+        4.7.3. Adding the child routing component
+        4.7.4. Updating the WorkoutBuilder component
+        4.7.5. Updating the Workout Builder module
+        4.7.6. Updating App Routing module
+        4.7.7. Putting it all together
+        4.7.8. Lazy loading of routes
 
 
 

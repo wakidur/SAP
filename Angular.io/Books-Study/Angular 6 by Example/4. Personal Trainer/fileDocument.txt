@@ -74,3 +74,32 @@ const routes: Routes = [
     { path: 'builder', component: WorkoutBuilderComponent },
     { path: '**', redirectTo: '/start' }
 ];
+
+
+
+
+4.2 Structure ----------------------------------------
+
+const routes: Routes = [
+    { path: 'start', component: StartComponent },
+    { path: 'workout', component: WorkoutContainerComponent },
+    { path: 'finish', component: FinishComponent },
+    { path: 'history', component: WorkoutHistoryComponent },
+    { path: '**', redirectTo: '/start' }
+];
+
+const routes: Routes = [
+  {
+    path: 'builder',
+    component: WorkoutBuilderComponent,
+    children: [
+         {path: '', pathMatch: 'full', redirectTo: 'workouts'},
+         {path: 'workouts', component: WorkoutsComponent },
+         {path: 'workout/new',  component: WorkoutComponent },
+         {path: 'workout/:id', component: WorkoutComponent },
+         {path: 'exercises', component: ExercisesComponent},
+         {path: 'exercise/new', component: ExerciseComponent },
+         {path: 'exercise/:id', component: ExerciseComponent }
+    ]
+  },
+];
