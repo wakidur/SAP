@@ -55,7 +55,40 @@
         4.7.5. Updating the Workout Builder module
         4.7.6. Updating App Routing module
         4.7.7. Putting it all together
+
+// 01-10-2018------------------------------------
         4.7.8. Lazy loading of routes
+            Lazy loading allows us to employ an asynchronous approach when loading our modules.
+
+            If you think of our application as a Single Page Application (SPA). 
+            In order to avoid round trips to the server, an SPA will typically load all the resources that will be needed to use the application when it is first started up by a user. 
+
+            But in our case, the important point is that we do not need the Workout Builder when the application is first loaded. 
+            Instead, we would like to load those resources only when the user decides that they want to add or change a workout or exercise.
+
+            Child and asynchronous routing make it straightforward to implement applications that allow us to have our cake and eat it too. On one hand, we can build SPAs with powerful client-side navigation, while on the other hand we can also encapsulate features in separate child routing components and load them only on demand.
+        4.7.9. Integrating sub- and side-level navigation
+            4.7.9.1. Sub-level navigation
+            4.7.9.2. Side navigation
+
+    4.8. Implementing workout and exercise lists
+
+        4.8.1. WorkoutService as a workout and exercise repository
+
+            The plan here is to create a WorkoutService instance that is responsible for exposing the exercise and workout data across the two applications. 
+            The main responsibilities of the service include
+
+            •	Exercise-related CRUD operations: Get all exercises, get a specific exercise based on its name, create an exercise, update an exercise, and delete it
+
+            •	Workout-related CRUD operations: These are similar to the exercise-related operations, but targeted toward the workout entity
+
+            4.8.2. Workout and exercise list components
+            4.8.3. Workout and exercise list views
+
+
+
+
+            
 
 
 
