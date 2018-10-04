@@ -1,4 +1,7 @@
 /**** 30-09-2018------------------------------*/
+driven (পরিচালিত)
+underlying(মূলগত)
+
 4.	Personal Trainer
     Angular form support 
     client-server communication
@@ -83,7 +86,69 @@
             •	Workout-related CRUD operations: These are similar to the exercise-related operations, but targeted toward the workout entity
 
             4.8.2. Workout and exercise list components
+            
+
+// 02-10-2018---------------------
+
             4.8.3. Workout and exercise list views
+                4.8.3.1. Workouts list views
+                4.8.3.2. Exercises list views
+    4.9. Building a workout
+        4.9.1 Finishing left nav
+                so we can implement child/parent inter-component communication to accomplish that.
+        4.9.2. Adding WorkoutBuilderService
+                WorkoutBuilderService monitors the state of the workout that a user of the application is building.
+                    Tracks the current workout
+                    Create a new workout
+                    loads the existing workout
+                    save the workout.
+            
+        4.9.3. Adding exercises using ExerciseNav
+        4.9.4. Implementing the Workout component
+        4.9.5. Route parameters
+        4.9.6. Route guards
+                As the name implies, route guards provide a way to prevent navigation to a route. 
+                A route guard can be used to inject custom logic that can do things such as check authorization, load data, and make other verifications to determine whether the navigation to the component needs to be canceled or not. 
+            
+                Angular offers several route guards, 
+                    CanActivate
+                    CanActivateChild
+                    CanDeActivate
+                    Resolve
+                    CanLoad
+            4.9.6.1. Implementing the resolve route guard
+
+// 03-10-2018--------------------------------
+        4.9.7. Implementing the Workout component continued...
+        4.9.8. Implementing the Workout template
+
+    4.10. Angular forms
+        Allowing user inputs
+        validation those inputs against business rules
+        Submitting the data to the backend server.
+
+        4.10.1. Template-driven and reactive forms
+            Angular offers tow types of forms
+                template-driven
+                reactive
+        4.10.2. Template-driven forms
+        4.10.3. Getting started
+            4.10.3.1. Using NgForm
+                <form 
+                    #f="NgForm" 
+                    name="formWorkout"
+                    (ngSubmit)="save(f.form)">
+            4.10.3.2. ngModel
+                One of the fundamental building blocks for template-driven forms is ngModel,
+                One of the Primary roles of "ngModel" is to support two-way binding between user input and an underlying model. With such a setup, changes in the model are reflected in the view, and update to the view too are reflected back on the model. 
+                *** But, be aware that "ngModel" is only available within "NgForm" for use with elements that allow user input.
+
+                4.10.3.2.1. Using ngModel with input and textarea
+                    The answer to the question is that the combination [()] is shorthend for both binding a model 
+
+            4.10.3.3. Using ngModel with select
+                ngModelGroup will allow us to create a nested group withing our model that will contain the list the list of exercises included in the workout and then in turn loop over each exercise to bind its duration to the model. 
+                
 
 
 
