@@ -148,6 +148,52 @@ underlying(মূলগত)
 
             4.10.3.3. Using ngModel with select
                 ngModelGroup will allow us to create a nested group withing our model that will contain the list the list of exercises included in the workout and then in turn loop over each exercise to bind its duration to the model. 
+
+
+// 4-10-2012 ----------------------------
+    none
+// 5-10-2012 ----------------------------
+        4.10.4. Angular validation
+        4.10.5. ngModel
+            4.10.5.1. The Angular model state
+                Whenever we use 'NgForm', every element within our form, including input, textarea, and select, has some states defined on the associated model. ngModel tracks these states for us. this states trackes are:
+                    pristine
+                    dirty
+                    touched
+                    untouched
+                    valid
+                    invalid
+                    pristinedirty
+                    toucheduntouched
+
+            4.10.5.2. Angular CSS classes
+                ng-valid
+                ng-invalid
+                ng-pristine
+                ng-dirty
+                ng-untouched
+                ng-touched
+            4.10.6. Workout validation
+                4.10.6.1 Displaying appropriate validation messages
+//6-10-2018-------------------------------------
+                4.10.6.2. Adding more validation
+                    required
+                    minLenght
+                    maxLength
+                    email
+                    pattern
+
+                4.10.6.3. Managing multiple validation messages
+
+                4.10.6.3.1. Custom validation messages for an exercise
+            4.10.7. Saving the workout
+                4.10.7.1. More on NgForm
+                4.10.7.2. Fixing the saving of forms and validation messages
+            
+            4.10.8. Reactive forms
+                4.10.8. 1. Getting started with reactive forms
+
+
                 
 
 

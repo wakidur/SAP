@@ -12,7 +12,10 @@ export class Exercise {
 }
 
 export class ExercisePlan {
-  constructor(public exercise: Exercise, public duration: number) {}
+  constructor(
+    public exercise: Exercise, 
+    public duration: number
+    ) {}
 }
 
 export class WorkoutPlan {
@@ -24,6 +27,6 @@ export class WorkoutPlan {
     public description?: string
   ) {}
   totalWorkoutDuration(): number {
-    //llll
+    return ;
   }
 }
