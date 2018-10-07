@@ -32,3 +32,11 @@
 <input type="hidden" name="exerciseCount" #exerciseCount="ngModel" ngControl="exerciseCount" [(ngModel)]="workout.exercise.length" pattern="[1-9][0-9]*">
 
 <label for="" *ngIf="exerciseCount.control.hasError('pattern')">the workout should have at least one exercise!</label>
+
+
+<!-- Exercise form -->
+<form action="" [formGroup]="exerciseForm" (ngSubmit)="onSubmit(exerciseForm)"></form>
+
+<input type="text" formControlName="name">
+
+<label for="" *ngIf="exerciseForm.controls['name'].hasError('required') && (exerciseForm.controls['name'].touched || submitted)"></label>

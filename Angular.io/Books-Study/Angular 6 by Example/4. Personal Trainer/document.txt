@@ -193,6 +193,18 @@ underlying(মূলগত)
             4.10.8. Reactive forms
                 4.10.8. 1. Getting started with reactive forms
 
+//07-10-2018----------------------------------
+                4.10.8. 2. Using the FormBuilder API
+                4.10.8. 3. Adding the form model to our HTML view
+                    <form class="row" [formGroup]="exerciseForm" (ngSubmit)="onSubmit(exerciseForm)">  
+                4.10.8. 4. Adding form controls to our form inputs
+                    <input name="name" formControlName="name" class="form-control" id="name" placeholder="Enter exercise name. Must be unique.">
+
+                4.10.8. 5. Adding validation 
+                    <label *ngIf="exerciseForm.controls['name'].hasError('required') && (exerciseForm.controls['name'].touched || submitted)" class="alert alert-danger validation-message">Name is required</label> 
+
+                    'name': [this.exercise.name, validations.required]
+                4.10.8. 6. Adding dynamic form controls
 
                 
 
