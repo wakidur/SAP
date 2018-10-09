@@ -194,17 +194,32 @@ underlying(মূলগত)
                 4.10.8. 1. Getting started with reactive forms
 
 //07-10-2018----------------------------------
-                4.10.8. 2. Using the FormBuilder API
-                4.10.8. 3. Adding the form model to our HTML view
+                4.10.8.2. Using the FormBuilder API
+                4.10.8.3. Adding the form model to our HTML view
                     <form class="row" [formGroup]="exerciseForm" (ngSubmit)="onSubmit(exerciseForm)">  
-                4.10.8. 4. Adding form controls to our form inputs
+                4.10.8.4. Adding form controls to our form inputs
                     <input name="name" formControlName="name" class="form-control" id="name" placeholder="Enter exercise name. Must be unique.">
 
-                4.10.8. 5. Adding validation 
+                4.10.8.5. Adding validation 
                     <label *ngIf="exerciseForm.controls['name'].hasError('required') && (exerciseForm.controls['name'].touched || submitted)" class="alert alert-danger validation-message">Name is required</label> 
 
                     'name': [this.exercise.name, validations.required]
-                4.10.8. 6. Adding dynamic form controls
+                4.10.8.6. Adding dynamic form controls
+// 09-10-2018 -----------------------------------------
+                4.10.8.7. Saving the form
+                4.10.8.8. Custom validators
+                4.10.8.9. Integrating a custom validator into our forms
+            4.10.9. Configuration options for running validation
+                <form 
+                    #f="ngForm" 
+                    name="formWorkout" 
+                    (ngSubmit)="save(f.form)" 
+                    [ngFormOptions]="{
+                        updateOn: 'submit'
+                        }" 
+                    class="row">
+
+                This instructs Angular to run our validations only upon submit. Try it and you’ll see that no validations appear when you make entries into the form. Leave the form blank and press the Save button, and you will see the validation messages appear. 
 
                 
 

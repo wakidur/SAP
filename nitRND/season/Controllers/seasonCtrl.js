@@ -30,6 +30,7 @@ define([ERP_MODULES.GS.name + '/gsModule'], function (controllers) {
 
         // set focus
         CONTROL.setFocus('season');
+      
 
         // binding variable 
         vm.validationMsgs = {};
