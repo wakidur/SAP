@@ -8,26 +8,25 @@ class newGreeter {
     }
 }
 
-let greeter = new newGreeter("world");
+let greeterInstance = new newGreeter("world");
 
 /**
  * Inheritance 
  */
-class Animal  {
+class Animals{
     constructor() {}
     move(distanceInMeters: number = 0) {
         console.log(`Animal moved ${distanceInMeters}m.`);
     }
 }
 
-class Dog  extends Animal {
-    constructor() {}
+class Dogs  extends Animals {
     bark() {
         console.log(`Woof! Woof!`);
     }
 }
 
-const dog = new Dog();
+const dogs = new Dog();
 dog.bark();
 dog.move();
 dog.bark();
