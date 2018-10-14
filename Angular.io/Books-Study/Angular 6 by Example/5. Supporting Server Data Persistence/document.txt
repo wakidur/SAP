@@ -1,0 +1,18 @@
+/*
+* 14-10-2018 ------------
+*/
+
+5. Supporting Server Data Persistence
+    5.1. Angular and server interactions
+        5.1.1. Setting up the persistence store
+        5.1.2. Seeding the database
+    5.2. The basics of the HTTPClient module
+    5.3. Personal Trainer and server integration
+        5.3.1. Loading exercise and workout data
+        5.3.2. Loading exercise and workout lists from a server
+            5.3.2.1. Adding the HTTPClient module and RxJS to our project
+            5.3.2.2. Updating workout-service to use the HTTPClient module and RxJS
+            5.3.2.3. Modifying getWorkouts () to use the HTTPClient module
+        5.3.3. Updating the workout/exercise list pages
+        5.3.4. Mapping server data to application models
+        5.3.5. Loading exercise and workout data from the server
