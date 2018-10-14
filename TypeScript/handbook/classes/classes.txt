@@ -1,3 +1,4 @@
+prior (পূর্বে)
 /*
 * 10-10-2018
 */
@@ -7,3 +8,18 @@ Classes
         
     Inheritance
         One of the most fundamental patterns in class-based programming is being able to extend existing classes to create new ones using inheritance.
+
+    
+/*
+* 14-10-2018 --------------------------
+*/
+        one of the most fundamental patterns is class-based programming is being able to extend existing classes to create new ones using inheritance;
+
+        Derived class are often called subclasses
+        Base class are often called Superclasses.
+
+        On
+
+        Public, private, and protected modifiers
+
+
