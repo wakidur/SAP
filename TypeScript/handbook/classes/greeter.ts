@@ -73,3 +73,91 @@ toms.move(35);
 /**
  * Public, private, and protected modifiers
  */
+
+// Public 
+class AnimalPublicClass {
+    public name: string;
+    public constructor(theName: string) {
+        this.name = theName;
+    }
+    /**
+     * move
+     */
+    public move(distanceInMeters: number) {
+        console.log(`${this.name} moved ${distanceInMeters}m.`);
+    }
+}
+
+// private
+class AnimalPrivateClass {
+    private name: string;
+    constructor(theName: string) {
+        this.name = theName;
+    }
+}
+/**
+ * new AnimalPrivateClass('Cat').name; // Property 'name' is private and only accessible within class 'AnimalPrivateClass'.
+ */
+
+class AnimalPribateCompatible {
+    private name: string;
+    constructor(theName: string) {
+        this.name = theName;
+    }
+}
+class Rhinos extends AnimalPribateCompatible {
+    constructor() {
+        super('Rhino');
+    }
+}
+
+class Employeer {
+    private name: string;
+    constructor(theName: string) {
+        this.name = theName;
+    }
+}
+
+let animalPribateCompatible = new AnimalPribateCompatible('Goat');
+let rhinos = new Rhinos();
+
+let employees = new Employeer('Bob');
+
+/**
+ * animalPribateCompatible = rhinos;
+ * AnimalPribateCompatible = employees; // Cannot assign to 'AnimalPribateCompatible' because it is not a variable.
+ */
+
+// protected 
+
+class PersonProtectedClass {
+    protected name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+class EmployeeProtected extends PersonProtectedClass {
+    private department: string;
+    constructor(name: string, department: string) {
+        super(name);
+        this.department = department;
+    }
+    /**
+     * getElevatorPitch
+     */
+    public getElevatorPitch() {
+        return `Hello, my name is ${this.name} and I work in ${this.department}.`;
+    }
+}
+
+let howard = new EmployeeProtected("Howard", "Sales");
+console.log(howard.getElevatorPitch());
+/**
+ * console.log(howard.name); Property 'name' is protected and only accessible within class 'PersonProtectedClass' and its subclasses.
+ */
+
+
+
+
+

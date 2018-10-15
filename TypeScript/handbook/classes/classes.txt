@@ -1,4 +1,8 @@
 prior (পূর্বে)
+explicity labeled - স্পষ্ট লেবেলযুক্ত
+compatible - উপযুক্ত,
+regardless  - নির্বিশেষে
+modifier  - পরিবর্তক
 /*
 * 10-10-2018
 */
@@ -19,7 +23,15 @@ Classes
         Base class are often called Superclasses.
 
         On
+/*
+* 15-10-2018 --------------------------
+*/
+    Public, private, and protected modifiers
 
-        Public, private, and protected modifiers
+    Public by default : In TypeScript, each member is public by default
 
+    Understanding private: When a member is marked private, it cannot be accessed from outside of its containing class.
+
+    protected: The protected modifier acts much like the private modifier with the exception that members declared protected can also accessed within deriving classes.
+    
 
