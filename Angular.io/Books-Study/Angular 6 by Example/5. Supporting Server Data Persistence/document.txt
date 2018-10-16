@@ -15,4 +15,7 @@
             5.3.2.3. Modifying getWorkouts () to use the HTTPClient module
         5.3.3. Updating the workout/exercise list pages
         5.3.4. Mapping server data to application models
+/*
+* 15-10-2018 ------------
+*/
         5.3.5. Loading exercise and workout data from the server

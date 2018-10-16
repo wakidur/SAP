@@ -157,6 +157,29 @@ console.log(howard.getElevatorPitch());
  * console.log(howard.name); Property 'name' is protected and only accessible within class 'PersonProtectedClass' and its subclasses.
  */
 
+class personConstructorProtected {
+    protected name: string;
+    protected constructor(theName: string) {
+        this.name = theName;
+    }
+}
+
+// Employee can extend Preson 
+class EmployeeClassProtector extends  personConstructorProtected {
+    private department: string;
+    constructor(name: string, department: string) {
+        super(name);
+        this.department = department;
+    }
+
+    /**
+     * getElevatorPitch
+     */
+    public getElevatorPitch() {
+        return `Hello, my name is ${this.name} and I work in ${this.department}.`;
+    }
+}
+
 
 
 

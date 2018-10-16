@@ -33,5 +33,11 @@ Classes
     Understanding private: When a member is marked private, it cannot be accessed from outside of its containing class.
 
     protected: The protected modifier acts much like the private modifier with the exception that members declared protected can also accessed within deriving classes.
-    
+
+
+/*
+* 15-10-2018 --------------------------
+*/
+
+Readonly modifier
 
