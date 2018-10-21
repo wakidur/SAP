@@ -201,3 +201,82 @@ let dad = new Octopus("Man with the 8 strong legs");
 // dad.name = "Man with the 3-piece suit"; // error! name is readonly.
 
 
+/**
+ * Accessors
+ */
+
+class EmployeeAccessors {
+    fullName: string;
+}
+
+let empAccessors = new EmployeeAccessors();
+empAccessors.fullName = "Bob Smith";
+if (empAccessors.fullName) {
+    console.log(empAccessors.fullName);
+}
+
+let passcode = 'secret passcode';
+
+class EmployeeGetSet {
+    private _fullName: string;
+    
+    public get fullName() : string {
+        return this._fullName;
+    }
+
+    
+    public set fullName(newName : string) {
+        if (passcode && passcode == 'secret passcode') {
+            this._fullName = newName;
+        } else {
+            console.log("Error: Unauthorezed update of employee!");
+        }
+    }
+}
+
+let employeeGetSet = new EmployeeGetSet();
+employeeGetSet.fullName = "Bob Smith";
+if ( employeeGetSet.fullName ) {
+    console.log(employeeGetSet.fullName);
+}
+
+/**
+ * Static Properties
+ */
+
+class GridStaticProperties {
+    static origin = {
+        x: 0,
+        y: 0
+    }
+
+    calculateDistanceFromOrigin(point: {x: number; y: number;}){
+        let xDist  = (point.x - GridStaticProperties.origin.x);
+        let yDist  = (point.y - GridStaticProperties.origin.y);
+        return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+    }
+    constructor(public scale: number) {}
+}
+
+let grid1 = new GridStaticProperties(1.0);
+let grid2 = new GridStaticProperties(5.0);
+
+console.log( grid1.calculateDistanceFromOrigin({x:10, y: 10}));
+console.log( grid2.calculateDistanceFromOrigin({x:10, y: 10}));
+
+
+/**
+ * Advance Techniques
+ */
+class GreeterAdvanced  {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeters: GreeterAdvanced; // Here, when we say let greeter: Greeter, we’re using Greeter as the type of instances of the class Greeter. This is almost second nature to programmers from other object-oriented languages.
+greeter = new GreeterAdvanced("world");

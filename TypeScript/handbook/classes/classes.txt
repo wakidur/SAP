@@ -3,6 +3,9 @@ explicity labeled - স্পষ্ট লেবেলযুক্ত
 compatible - উপযুক্ত,
 regardless  - নির্বিশেষে
 modifier  - পরিবর্তক
+intercepting - (আটকাচ্ছে, পথিমধ্যে আটক করা)
+getter (সংগ্রহকারী)
+setter (গোয়েন্দা, গুপ্তচর)
 /*
 * 10-10-2018
 */
@@ -43,5 +46,14 @@ Classes
 * 17-10-2018 --------------------------
 */
 
-Readonly modifier
+    Readonly modifier
+/*
+* 21-10-2018 --------------------------
+*/
+Accessors
+    TypeScript supports getters/setters as a way of intercepting accesses to a member of an object.
+
+
+Static Properties 
+    We can also create static members of a class, those that are visible on the class itself reather then on the instances. 
 
