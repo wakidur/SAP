@@ -1,0 +1,12 @@
+/*
+* 22-10-2018 -----------------------
+*/
+
+Function 
+    Function Types 
+        Typing the function
+            we can add types to each of the parameters and then to the function itself to add a return type. 
+            TypeScript can figure the return type out by looking at the return statements, so we can also optionlly leave this off in many cases.
+
+
+Inferring the types
