@@ -8,5 +8,10 @@ Function
             we can add types to each of the parameters and then to the function itself to add a return type. 
             TypeScript can figure the return type out by looking at the return statements, so we can also optionlly leave this off in many cases.
 
+/*
+* 23-10-2018 -----------------------
+*/
+Inferring the types: In playing with the example, you may notice that the TypeScript compiler can figure out the type if you have types on one side of the equation but not the other:
+This is called “contextual typing”, a form of type inference. This helps cut down on the amount of effort to keep your program typed.
 
-Inferring the types
+Optional and Default Parameters

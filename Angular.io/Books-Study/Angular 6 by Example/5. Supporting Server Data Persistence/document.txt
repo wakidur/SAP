@@ -19,3 +19,17 @@
 * 15-10-2018 ------------
 */
         5.3.5. Loading exercise and workout data from the server
+        5.3.6. Fixing the builder services
+        5.3.7. Updating the resolvers
+        5.3.8. Fixing the Workout and Exercise components
+
+/*
+* 22-10-2018 ------------
+*/
+    5.4. Performing CRUD on exercises/workouts
+        5.4.1. Creating a new workout
+        5.4.2. Updating a workout
+        5.4.3. Deleting a workout
+        5.4.4. Fixing the upstream code
+    
+    5.5. Using promises for HTTP requests

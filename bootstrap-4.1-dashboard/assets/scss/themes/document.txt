@@ -1,0 +1,220 @@
+Theming Bootstrap
+/*
+theming is accomplished by Sass variables, Sass maps, and custom CSS. 
+There’s no more dedicated theme stylesheet; instead, you can enable the built-in theme to add 
+gradients, shadows, and more.
+
+File structure
+Whenever possible, avoid modifying Bootstrap’s core files. For Sass, that means creating your own stylesheet that imports Bootstrap so you can modify and extend it. Assuming you’re using a package manager like npm, you’ll have a file structure that looks like this:
+
+your-project/
+├── scss
+│   └── custom.scss
+└── node_modules/
+    └── bootstrap
+        ├── js
+        └── scss
+
+If you’ve downloaded our source files and aren’t using a package manager, you’ll want to manually setup something similar to that structure, keeping Bootstrap’s source files separate from your own.
+
+your-project/
+├── scss
+│   └── custom.scss
+└── bootstrap/
+    ├── js
+    └── scss
+
+In your custom.scss, you’ll import Bootstrap’s source Sass files. You have two options: include all of Bootstrap, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components.
+
+Variable defaults----------
+
+Every Sass variable in Bootstrap 4 includes the !default flag allowing you to override the variable’s default value in your own Sass without modifying Bootstrap’s source code. Copy and paste variables as needed, modify their values, and remove the !default flag. If a variable has already been assigned, then it won’t be re-assigned by the default values in Bootstrap.
+
+Variable defaults
+Every Sass variable in Bootstrap 4 includes the !default flag allowing you to override the variable’s default value in your own Sass without modifying Bootstrap’s source code. Copy and paste variables as needed, modify their values, and remove the !default flag. If a variable has already been assigned, then it won’t be re-assigned by the default values in Bootstrap.
+
+// Your variable overrides
+$body-bg: #000;
+$body-color: #111;
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Bootstrap overrides===========================================================================================================
+
+//
+// Color system
+//
+
+// $white:                           #fff;
+// $gray-100:                        #f0f3f5;
+// $gray-200:                        #c2cfd6;
+// $gray-300:                        #a4b7c1;
+// $gray-400:                        #869fac;
+// $gray-500:                        #678898;
+// $gray-600:                        #536c79;
+// $gray-700:                        #3e515b;
+// $gray-800:                        #29363d;
+// $gray-900:                        #151b1e;
+// $black:                           #000 !default;
+
+// $blue:                            #20a8d8;
+// $indigo:                          #6610f2 !default;
+// $purple:                          #6f42c1 !default;
+// $pink:                            #e83e8c !default;
+// $red:                             #f86c6b;
+// $orange:                          #f8cb00;
+// $yellow:                          #ffc107 !default;
+// $green:                           #4dbd74;
+// $teal:                            #20c997 !default;
+// $cyan:                            #63c2de;
+
+// $colors: (
+//   blue:                           $blue,
+//   indigo:                         $indigo,
+//   purple:                         $purple,
+//   pink:                           $pink,
+//   red:                            $red,
+//   orange:                         $orange,
+//   yellow:                         $yellow,
+//   green:                          $green,
+//   teal:                           $teal,
+//   cyan:                           $cyan,
+//   white:                          $white,
+//   gray:                           $gray-600,
+//   gray-dark:                      $gray-800
+// );
+
+// $theme-colors: (
+//   primary:                        $blue,
+//   secondary:                      $gray-300,
+//   success:                        $green,
+//   info:                           $cyan,
+//   warning:                        $yellow,
+//   danger:                         $red,
+//   light:                          $gray-100,
+//   dark:                           $gray-800
+// );
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+// $enable-transitions:              true;
+// $enable-rounded:                  false;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+// $body-bg:                         #e4e5e6;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// $font-size-base:                  0.875rem;
+
+// Breadcrumbs
+
+// $breadcrumb-bg:                   #fff;
+// $breadcrumb-margin-bottom:        1.5rem;
+
+// Cards
+
+// $card-border-color:               $gray-200;
+// $card-cap-bg:                     $gray-100;
+
+// Dropdowns
+
+// $dropdown-padding-y:              0;
+// $dropdown-border-color:           $gray-200;
+// $dropdown-divider-bg:             $gray-100;
+
+// Buttons
+
+// $btn-secondary-border:            $gray-300;
+
+// Progress bars
+
+// $progress-bg:                     $gray-100;
+
+// Tables
+
+// $table-bg-accent:                 $gray-100;
+// $table-bg-hover:                  $gray-100;
+
+// Forms
+
+// $input-group-addon-bg:            $gray-100;
+// $input-border-color:              $gray-200;
+// $input-group-addon-border-color:  $gray-200;
+//------------------------10-jan-2018--------------------------------------------
+
+/* 
+* Variables
+*
+* Variables should follow the `$component-state-property-size` formula for
+* consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+* you can begin to modify any of the
+* Sass variables
+* maps 
+* in your custom.scss.
+
+***
+*/
+
+/***
+* Rule(নিয়ম)
+* 
+* Variable defaults
+
+* 1.Every Sass variable in Bootstrap 4 includes the !default flag allowing you to override the variable’s default value in your own Sass             without modifying Bootstrap’s source code.
+    Copy and paste variables as needed, modify their values, and remove the !default flag. 
+    If a variable has already been assigned, then it won’t be re-assigned by the default values in Bootstrap.
+
+
+* 2. However, when overriding across Sass files, your overrides must come before you import Bootstrap’s Sass files.
+* Example:
+*  Your variable overrides
+    $body-bg: #000;
+    $body-color: #111;
+
+    Bootstrap and its default variables
+    @import "node_modules/bootstrap/scss/bootstrap";
+
+
+* Maps and loops
+
+* Sass maps include the !default flag and can be overridden and extended.
+* to modify an existing color in our $theme-colors map, add the following to your custom Sass file
+* For example
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+
+*/
+
+
+
+
+
+

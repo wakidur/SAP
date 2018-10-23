@@ -1,0 +1,14 @@
+//** Page name and Component list **//
+01- Landing Page
+    Login to your Account (Local plateform)
+        Your email
+        Your password
+        Remembe me
+        Forge my password
+        Login
+    
+    Login to Account (social networks)
+        Login with Facebook
+        Login with Twitter
+    
+    Don't you have an account? Registe Now! it's really simple and you can start enjo

@@ -26,6 +26,11 @@ let addMyType = function(x: number, y: number): number {
   return x + y;
 };
 
+/**
+ * Writing the function type
+ * @param x
+ * @param y
+ */
 let myFunctionType: (x: number, y: number) => number = function(
   x: number,
   y: number
@@ -33,4 +38,20 @@ let myFunctionType: (x: number, y: number) => number = function(
   return x + y;
 };
 
+let myAddDifParm: (baseValue: number, increment: number) => number = function(
+  x: number,
+  y: number
+): number {
+  return x + y;
+};
 
+/**
+ * Inferring the types
+ */
+
+let addInference = function(x: number, y: number): number {
+  return x + y;
+}
+
+
+let addInferenceVar: (baseValeu: number, increment: number) => number = function(x, y) { return x + y};
