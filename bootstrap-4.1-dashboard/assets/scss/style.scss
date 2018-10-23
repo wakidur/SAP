@@ -1,7 +1,7 @@
 /**
  * WKR - Open Source Bootstrap Admin Template
  * @version v1.0.0
- * 08-01-2018
+ * 23-10-2018
  */
 // Override Boostrap variables
 //@import "bootstrap-variables";
@@ -22,17 +22,12 @@
 // Import Bootstrap source files from node_modules
  @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
-// Import Bootstrap source files from node_modules
-// @import "node_modules/bootstrap/scss/bootstrap";
-
 // ----------------Add plug-in--------------
 //font-awesome
-// @import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 
 
 // Import core styles
-@import "utilities/custom-variables";
 @import "utilities/mixins";
 // Import vendors styles
 @import "vendors/vendors-list";
