@@ -1,7 +1,7 @@
 /*
 * 22-10-2018 -----------------------
 */
-
+assumes (অনুমান)
 Function 
     Function Types 
         Typing the function
@@ -14,4 +14,20 @@ Function
 Inferring the types: In playing with the example, you may notice that the TypeScript compiler can figure out the type if you have types on one side of the equation but not the other:
 This is called “contextual typing”, a form of type inference. This helps cut down on the amount of effort to keep your program typed.
 
+/*
+* 24-10-2018 -----------------------
+*/
 Optional and Default Parameters
+    *** In TypeScript, every parameter is assumed to be required by the function. ****
+    *** In JavaScript, every parameter is optional, and users may leave them off as they see fit. *** 
+    *** In TypeScript, we can also set a value that a parameter will be assigned if the user does not provide one, ***
+    1. The number of arguments given to a function has to match the number of parameters the function expects.
+
+    2. In JavaScript, every parameter is optional, and users may leave them off as they see fit. When they do, their value is undefined.
+    we can get this functionality in TypeScript by adding a " ? " to the end of parameters we want to be optional.
+
+    3. In TypeScript, we can also set a value that a parameter will be assigned if the user does not provide one, or if the user passes undefined in its place. These are called default-initialized parameters.
+
+
+Rest Parameters  
+

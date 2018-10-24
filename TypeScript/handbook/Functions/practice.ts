@@ -55,3 +55,30 @@ let addInference = function(x: number, y: number): number {
 
 
 let addInferenceVar: (baseValeu: number, increment: number) => number = function(x, y) { return x + y};
+
+
+/**
+ * Optional and Default Parameters
+ */
+function buildName1(firstName: string, lastName: string) {
+  return firstName + " " + lastName;
+}
+
+let result1 = buildName1("hell", "worl"); // ah, just right
+/**
+ * let result2 = buildName1("hell"); // error, Expected 2 arguments, but got 1. 
+ * let result3 = buildName1("hell", "worl", "ser"); // Error, Expected 2 arguments, but got 3. 
+ */
+
+function buildNameOptional(firstName: string, lastName?: string) {
+  if(lastName) 
+    return firstName + " " + lastName;
+  else 
+    firstName
+}
+
+function bulidNameDefaultInitialized(f: string, l: string = "Smith") {
+  return f + " "  + l;
+}
+
+
