@@ -28,6 +28,8 @@ Optional and Default Parameters
 
     3. In TypeScript, we can also set a value that a parameter will be assigned if the user does not provide one, or if the user passes undefined in its place. These are called default-initialized parameters.
 
-
-Rest Parameters  
+/*
+* Rest Parameters
+*/
+ 
 
