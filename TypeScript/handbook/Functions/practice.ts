@@ -84,5 +84,43 @@ function bulidNameDefaultInitialized(f: string, l: string = "Smith") {
 /**
  * Rest Parameters
  */
+function buildNameWithRestParameters(firstName: string, ...restOfName: string[]) {
+  return firstName + " " + restOfName.join(" ");
+}
+let employeeNameRestParameters = buildNameWithRestParameters("Joseph", "Samuel", "Lucas", "Mackinize");
 
 
+// other exampl
+function restParameters(firstName: string, ...restOfNameIs: string[]) {
+  return firstName + " " + restOfNameIs.join(" ");
+}
+
+let buildNameFun: (fname: string, ...restName: string[]) => string = restParameters;
+
+/**
+ * this
+ * this and arrow function
+ */
+
+let deck = {
+  suits: ["hearts", "spades", "clubs", "diamonds"],
+  cards: Array(52),
+  createCardPicker: function() {
+    return function() {
+      let pickedCard = Math.floor(Math.random() * 52);
+      let pickedSuit = Math.floor(pickedCard / 13);
+      return {
+        suit : this.suits[pickedSuit],
+        card: pickedCard % 13
+      };
+    }
+  }
+}
+
+
+let cardPicker  = deck.createCardPicker();
+let pickedCard = cardPicker();
+alert(`card: ${pickedCard.card} of ${pickedCard.suit}`);
+
+
+let useArrowFunction = []

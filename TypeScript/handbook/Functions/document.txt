@@ -31,5 +31,14 @@ Optional and Default Parameters
 /*
 * Rest Parameters
 */
- 
+
+/*
+* 29-10-2018 -------------------
+*/
+
+ this
+
+ this and arrow functions 
+
+ In JavaScript, this is variable that's set when a function is called. This makes it a very powerful and flexible feature, 
 
