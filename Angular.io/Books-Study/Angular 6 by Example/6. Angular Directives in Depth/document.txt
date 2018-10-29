@@ -30,3 +30,32 @@ remote (দূরবর্তী)
     
         6.2.1. Validating workout names using async validators
 
+/*
+* 29-10-2018 
+*/
+    6.3. Building a busy indicator directive
+        6.3.1. Injecting optional dependencies with the @Optional decorator
+        6.3.2. Implementation one – using renderer
+        6.3.3. Angular renderer, the translation layer
+            One of the primary design golals of Angular 2 was to make it run across enviroments, frameworks, and devices. 
+            Angular enabled this by dividing the core framework implementation into an "application layer " and rendering layer. 
+            The application layer has the API we interact with, whereas the rendering layer provides an abstrication that the application layer can use without worrying about how and whare the actural view is being renderer. 
+
+            By separating the rendering layer, Angular can theoretically run in various setups. These include (but are not limited to):
+
+            Browser
+            Browser main thread and web worker thread, for obvious performance reasonse 
+            Server-side rendering
+            Native app frameworks; efforts are underway to integrate Angular with NativeScript with ReactNative
+            Testing, allowing us to test the app UI outside the web Browser
+
+        6.3.4. Host binding in directives
+            In the Angular kingdom, the component/element that a directive gets attached to is termed the host element: a container that hosts our directive/component. For the BusyIndicatorDirective, the input element is the host.
+
+            6.3.4.1. Property binding using @HostBinding
+            6.3.4.2. Attribute binding
+            
+
+
+
+
