@@ -123,4 +123,4 @@ let pickedCard = cardPicker();
 alert(`card: ${pickedCard.card} of ${pickedCard.suit}`);
 
 
-let useArrowFunction = []
+// ECMAScript 6 arrow syntax
