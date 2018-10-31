@@ -1,6 +1,7 @@
 /*
 * 23-10-2018 -----------------------
 */
+No one is born hating another person because of the color of his skin, or his background, or his religion. People must learn to hate, and if they can learn hete, they can be taught to love, for love comes more naturally to the human heart then its opposite. :Nelson Mandela:
 remote (দূরবর্তী)
 6. Angular Directives in Depth
 
@@ -50,11 +51,21 @@ remote (দূরবর্তী)
             Testing, allowing us to test the app UI outside the web Browser
 
         6.3.4. Host binding in directives
-            In the Angular kingdom, the component/element that a directive gets attached to is termed the host element: a container that hosts our directive/component. For the BusyIndicatorDirective, the input element is the host.
 
+            In the Angular kingdom, the component/element that a directive gets attached to is termed the host element: a container that hosts our directive/component. For the BusyIndicatorDirective, the input element is the host.
+                "<input type="text" appBusyIndicator>" 
             6.3.4.1. Property binding using @HostBinding
             6.3.4.2. Attribute binding
-            
+
+/* 
+* 31-10-2018 -------------------  
+*/
+            6.3.4.3. Event binding
+                event binding is used to subscribe to the events raised by the host component/element. 
+
+        6.3.5. Implementation two - BusyIndicatorDirective with host bindings
+    
+    6.4. Directive injection
 
 
 
