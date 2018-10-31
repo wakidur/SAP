@@ -124,3 +124,48 @@ alert(`card: ${pickedCard.card} of ${pickedCard.suit}`);
 
 
 // ECMAScript 6 arrow syntax
+
+let deckArrowSyntax = {
+  suits: ["hearts", "spades", "clubs", "diamonds"],
+  cards: Array(52),
+  createCardPicker: function() {
+    // Note: the line below is now an arrow function, allowing us to capture "this" right here
+    debugger
+    return () => {
+      let pickedCard = Math.floor(Math.random() * 52);
+      let pickedSuit = Math.floor(pickedCard/ 13);
+      debugger;
+      return {
+        suit: this.suits[pickedSuit],
+        card: pickedCard % 13
+      };
+    }
+  }
+}
+
+let cardPickerArrow = deckArrowSyntax.createCardPicker();
+let pickedCardArrow = cardPickerArrow();
+
+console.log(`card: ${pickedCardArrow.card} of ${pickedCardArrow.suit}`)
+alert(`card: ${pickedCardArrow.card} of ${pickedCardArrow.suit}`);
+
+var arr  = [1,2,3,4,5,6]
+var n = 3;
+function getRandom(arr, n) {
+  var result = new Array(n),
+      len = arr.length,
+      taken = new Array(len);
+  if (n > len)
+      throw new RangeError("getRandom: more elements taken than available");
+  var y = "";
+  while (n--) {
+      var x = Math.floor(Math.random() * len);
+      result[n] = arr[x in taken ? taken[x] : x];
+      taken[x] = --len in taken ? taken[len] : len;
+      debugger;
+      y += arr[x].toString();
+  }
+  return y;
+}
+
+getRandom(arr, n);
