@@ -1,3 +1,5 @@
+influence (প্রভাব)
+Acquaintance (জানাশোনা)
 /*
 * 23-10-2018 -----------------------
 */
@@ -65,7 +67,20 @@ remote (দূরবর্তী)
 
         6.3.5. Implementation two - BusyIndicatorDirective with host bindings
     
+    
+
+/* 
+* 04-11-2018 -------------------  
+*/
     6.4. Directive injection
+        6.4.1. Injecting directives defined on the same element
+        6.4.2. Injecting directive dependency from the parent
+        6.4.3. Injecting a child directive (or directives)
+        6.4.4. Injecting descendant directive(s)
+
+    
+
+    6.5. Building an Ajax button component
 
 
 
