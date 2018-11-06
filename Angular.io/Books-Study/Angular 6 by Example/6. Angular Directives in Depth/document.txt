@@ -79,8 +79,15 @@ remote (দূরবর্তী)
         6.4.4. Injecting descendant directive(s)
 
     
-
+/* 
+* 06-11-2018 -------------------  
+*/
     6.5. Building an Ajax button component
+        the execute property points to the function that is invoked on the Ajax button click.
+        the parameter is the data can be passed to this function 
+
+        6.5.1. Transcluding external components/elements into a component
+
 
 
 
