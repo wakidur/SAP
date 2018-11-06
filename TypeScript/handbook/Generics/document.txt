@@ -1,6 +1,40 @@
+consistent(সঙ্গত)
+generic(জাতিবাচক,)
+certainly(নিশ্চিতভাবে, অবশ্যই)
+explicitly (স্পষ্টভাবে)
+inference(অনুমান, )
 // 26-09-2018 -----------------------
 Generics 
 
     Introduction: 
         A major part of software engineering is building components that not only have well-defined and consistent APIs, but are also reusable. Components that are capable of working on the data of today as well as the data of tomorrow will give you the most flexible capabilities for building 
 
+/*
+* 06-11-2018 ----------------------
+*/
+A major part of software ngineering is building components that not only have well-defined and consistent APIs, but are also reusable. Components that are capable of working on the data today as well as the data of tomorrow will give you the most flexible capabilities for building up large software systems. 
+
+In languages like c# and Java, one of the main tools in the toolbox for creating reusable components is generics, that is, being able to create a component that can work over a variety of types rather than a single one. This allows users to consume these components and use their own types. 
+
+function identity(arg: any): any {
+    return arg;
+}
+
+While using "any" is certainly generic in that it will causes the function to accept any and all types for the type of "arg", We actually are losing the information about what that type was when the function returns. if we passesd in a number, the only information we have is that "any" type could be returned. 
+
+Instead, we need a way of capturing the type of the argument in such a way we can also use it to denote what is being returned. Here, we will use "type variable" a special kind of variable that works on types rather than values.
+
+function identity<T>(arg: T): T {
+    return arg;
+}
+
+We’ve now added a type variable T to the identity function. This T allows us to capture the type the user provides (e.g. number), so that we can use that information later. Here, we use T again as the return type. On inspection, we can now see the same type is used for the argument and the return type. This allows us to traffic that type information in one side of the function and out the other.
+
+Once we’ve written the generic identity function, we can call it in one of two ways. 
+
+angle brackets (<>)
+
+Working with Generic Type Variables
+
+
+Generic Types
