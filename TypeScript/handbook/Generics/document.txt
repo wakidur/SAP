@@ -36,5 +36,11 @@ angle brackets (<>)
 
 Working with Generic Type Variables
 
+/*
+* 08-11-2018 ----------------------
+*/
 
-Generic Types
+Generic Types 
+    The type of generic function is just like those of non-generic functions, with the ype parameters listed first, similarity to function declarations.
+
+    

@@ -51,3 +51,25 @@ function loggingIdentityThird<T>(arg: Array<T>): Array<T> {
     console.log(arg.length);// Error: T doesn't have .length
     return arg;
 }
+
+// Generic Types
+
+function identityGenericType<T>(agr: T): T {
+    return agr;
+}
+
+let myIdentityGenericType: <T>(agr: T) => T = identityGenericType;
+
+
+function identityDifferntname<T>(arg: T): T {
+  return arg;   
+}
+let myIdentityDifferentName: <U>(arg: U) => U = identityDifferntname; 
+
+// signature of an object literal type
+
+function signatureObjectLiteral<T>(arg: T): T {
+    return arg;
+}
+
+let signatureOfObjectLiteral: {<T>(arg: T): T} = signatureObjectLiteral;
