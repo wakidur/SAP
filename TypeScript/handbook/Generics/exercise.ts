@@ -73,3 +73,26 @@ function signatureObjectLiteral<T>(arg: T): T {
 }
 
 let signatureOfObjectLiteral: {<T>(arg: T): T} = signatureObjectLiteral;
+
+// generic interface 
+
+interface GenericIdentityFn {
+    <T>(arg: T): T;
+}
+
+function identityGenericInterface<T>(arg: T): T {
+    return arg;
+}
+
+let myIdentityGenericInterface: GenericIdentityFn = identityGenericInterface;
+
+
+interface GenericIdentityFnFirst<T> {
+    (arg: T) : T;
+}
+
+function identityGenericInterfaceFirst<T>(arg: T): T {
+    return arg;
+}
+
+let myIdentityGenericInterfaceFirst: GenericIdentityFnFirst<number> = identityGenericInterfaceFirst
