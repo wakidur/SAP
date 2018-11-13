@@ -15,84 +15,111 @@ function identityType<T>(arg: T): T {
  */
 
 function identitySpecificType(arg: number): number {
-    return arg;
+  return arg;
 }
 
 function identityAnyType(arg: any): any {
-    return arg;
+  return arg;
 }
-
 
 function identityTypeVariable<T>(arg: T): T {
-    return arg;
+  return arg;
 }
 
-// Once we’ve written the generic identity function, we can call it in one of two ways. 
-let outputFirst = identityTypeVariable<string>('myString'); // type of output will be 'string'
+// Once we’ve written the generic identity function, we can call it in one of two ways.
+let outputFirst = identityTypeVariable<string>("myString"); // type of output will be 'string'
 
 // The second way is also perhaps the most common. Here we use type argument inference – that is, we want the compiler to set the value of T for us automatically based on the type of the argument we pass in
-let outputSecond = identityTypeVariable('myString'); // type of output will be 'string'
+let outputSecond = identityTypeVariable("myString"); // type of output will be 'string'
 
 function identityTypeOne<T>(arg: T): T {
-    return arg;
+  return arg;
 }
 
 function loggingIdentity<T>(arg: T): T {
-    console.log(arg.length);// Error: T doesn't have .length
-    return arg;
+  console.log(arg.length); // Error: T doesn't have .length
+  return arg;
 }
 
 function loggingIdentitysecond<T>(arg: T[]): T[] {
-    console.log(arg.length);// Error: T doesn't have .length
-    return arg;
+  console.log(arg.length); // Error: T doesn't have .length
+  return arg;
 }
 
 function loggingIdentityThird<T>(arg: Array<T>): Array<T> {
-    console.log(arg.length);// Error: T doesn't have .length
-    return arg;
+  console.log(arg.length); // Error: T doesn't have .length
+  return arg;
 }
 
 // Generic Types
 
 function identityGenericType<T>(agr: T): T {
-    return agr;
+  return agr;
 }
 
 let myIdentityGenericType: <T>(agr: T) => T = identityGenericType;
 
-
 function identityDifferntname<T>(arg: T): T {
-  return arg;   
+  return arg;
 }
-let myIdentityDifferentName: <U>(arg: U) => U = identityDifferntname; 
+let myIdentityDifferentName: <U>(arg: U) => U = identityDifferntname;
 
 // signature of an object literal type
 
 function signatureObjectLiteral<T>(arg: T): T {
-    return arg;
+  return arg;
 }
 
-let signatureOfObjectLiteral: {<T>(arg: T): T} = signatureObjectLiteral;
+let signatureOfObjectLiteral: { <T>(arg: T): T } = signatureObjectLiteral;
 
-// generic interface 
+// generic interface
 
 interface GenericIdentityFn {
-    <T>(arg: T): T;
+  <T>(arg: T): T;
 }
 
 function identityGenericInterface<T>(arg: T): T {
-    return arg;
+  return arg;
 }
 
 let myIdentityGenericInterface: GenericIdentityFn = identityGenericInterface;
 
-
 interface GenericIdentityFnFirst<T> {
-    (arg: T) : T;
+  (arg: T): T;
 }
 
 function identityGenericInterfaceFirst<T>(arg: T): T {
-    return arg;
+  return arg;
 }
 
-let myIdentityGenericInterfaceFirst: GenericIdentityFnFirst<number> = identityGenericInterfaceFirst
+let myIdentityGenericInterfaceFirst: GenericIdentityFnFirst<
+  number
+> = identityGenericInterfaceFirst;
+
+/**
+ * Generic Classes
+ */
+
+class GenericNumber<T> {
+  zeroValue: T;
+  add: (x: T, y: T) => T;
+}
+
+let myGenericNumber = new GenericNumber<number>();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function(x, y) {
+  return x + y;
+};
+
+let stringNumeric = new GenericNumber<string>();
+stringNumeric.zeroValue = "";
+stringNumeric.add = function(x, y) {
+  return x + y;
+};
+
+console.log(stringNumeric.add(stringNumeric.zeroValue, "test"));
+
+/**
+ * Generic Constraints
+ */
+
