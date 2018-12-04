@@ -1,0 +1,25 @@
+/*
+* 25-11-2018 -------------
+*/
+
+7.	Testing Personal Trainer
+    7.1. The need for automation
+    7.2. Testing in Angular
+        7.2.1. Types of testing
+        7.2.2. Testing – who does it and when?
+        7.2.3. The Angular testing ecosystem
+            At the moment, the Angular testing library works by default with Jasmine
+            All the tests in this chapter are written using Jasmine (both unit and integration tests). Karma will be our test runner for unit tests and Protractor for E2E tests.
+
+    7.3. Getting started with unit testing
+        The ultimate aim of unit testing is to test a specific piece of code/component in isolation to make sure that the components work according to the specification. This reduces the chances of failures/bugs in the component when integrated with other parts of the software. 
+            7.3.1. Setting up Karma and Jasmine for unit testing
+            7.3.2. Organization and naming of our test files
+            7.3.3. Unit-testing Angular applications
+                7.3.3.1. Unit-testing pipes
+                7.3.3.2. Running our test files
+               
+/*
+* 26-11-2018 -------------
+*/
+            7.3.4. Unit-testing components
