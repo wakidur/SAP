@@ -28,6 +28,13 @@ impose (আরোপ করা, )
 avenues(রাজপথ)
 superb (চমত্কার, অতীব কার্যকর)
 roughly (মোটামুটিভাবে)
+hierarchy (যাজকতন্ত্র)
+parsing(পদপরিচয়, শব্দবিশ্লেষণ )
+worth(মূল্য, গুরুত্ব, দাম)
+constantly(প্রতিনিয়ত, সর্বদা)
+underlying (নিম্নাবস্থিত, মূলগত, ভিত্তিস্বরূপ,অবলম্বনস্বরুপ)
+intercept (পথিমধ্যে রোধ করা)
+feat(কৃতিত্ব)
 /*
     *03-12-2018
 */
@@ -95,8 +102,42 @@ roughly (মোটামুটিভাবে)
                 While this problem of keeping the model and view in sync may sound simple, it's a tough nut to creck. Unlike the component tree, the interconnection between multiple models can be complex. 
                 Changes in one componet model can trigger changes in muluple component models. 
                 Furthermore, these interconnection may have cycles. A single model property could be bound to multiple views. All thes complex scenarios need to be managed using  a robust change detection infrastructure.
-
+/*
+    * 05-12-2018
+*/
             8.2.7.2. Change detection setup 
+                A change detector attached to a component has the responsibility of detecting changes in the component. It does that by parsing the binding on the component's template HTML and setting up the necessery change detection watches.
+
+                Remember, the detector only sets up watches on model properties used in the template, not on all component properties.
+
+                Another important point worth highlighting here is that change detection is set up one way, from model to view. Angular does not have the concept of two-way data binding and hence the preceding figure is a directed tree without cycles. This also makes change detection more predictable. Interleaving model and view updates are disallowad. 
+            
+            8.2.7.3. When does change detection kick in?
+                Does Angular constantly check for changes in the model data? 
+                    Ans: change detection runs get executed only at specific times during app execution.
+
+                what causes a view to update?
+                    A view can get updated due to:
+
+                    •	User input/browser events: We click on a button, enter some text, or scroll the content. Each of these actions can update the view (and the underlying model).
+
+                    •	Remote XHR requests: This is another common reason for view updates. Getting data from a remote server to show on the grid and getting user data to render a view are examples of this.
+                    
+                    •	setTimeout and setInterval timers: As it turns out, we can use setTimeout and setInterval to execute some code asynchronously and at specific intervals. Such code can also update the model. For example, a setInterval timer may check for stock quotes at regular intervals and update the stock price on the UI.
+
+                The interesting part here is not when Angular's change detection kicks in but how Angular is able to intercept all browser events, XHR requests, and setTimeout and setInterval functions.
+
+                This feat in Angular is performed by a library called zone.js. As the documentation describes:
+
+                "A Zone is an execution context that persists across async tasks."
+                
+            8.2.7.4 How does change detection work?
+
+
+
+
+
+
 
 
             
