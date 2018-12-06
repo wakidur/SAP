@@ -38,6 +38,23 @@ feat(কৃতিত্ব)
 non-intrusive (অ অনধিকারমূলক)
 bare (নগ্ন, খালি)
 implicitly (পরোক্ষভাবে)
+susceptible (সমর্থ)
+embark (জাহাজের তুলা, জাহাজের উঠা)
+circumvent (ফাঁদে ফেলা, পরিবেষ্টন করা, প্রতারণা করা, অবরোধ করা, বোকা বানান)
+irrespective (নিরপেক্ষ)
+
+authentication(প্রমাণীকরণ)
+authorization(অনুমোদন,অনুমতি,ক্ষমতাপ্রদান, কর্তৃত্বদান )
+
+
+
+
+
+
+
+
+
+
 /*
     *03-12-2018
 */
@@ -182,7 +199,44 @@ implicitly (পরোক্ষভাবে)
                 •	The server may not support generating cookies, or the server only exposes token-based authentication.
                 •	Token-based solutions are easy to integrate with a native mobile application and desktop clients.
 
+        8.3.2. Token-based authentication
+            Token-based access is all about sending a token (typically in HTTP headers) with each request instead of a cookie.
+            Many public APIs (such as Facebook and Twitter) use token-based authentication. The 
 
+            The formate of the token,
+            Where it goes,
+            and how it is generated depends on the protocol used and the server implementation. 
+
+
+            **** Enabling token authentication is a good amount of work in Angular. 
+            It involves setting up a 
+                login page/component, 
+                guard conditions
+                authentication service,
+                authentication context shared across the application.
+        
+        8.3.3. Handling authorization
+            When working on an authorization requirement for any application, there are three essential elements that are part of the setup:
+
+                •	The resources that need to be secured/authorized
+                •	A list of roles and users that are part of these roles
+                •	A mapping between the resources and the roles that define who can access what
+
+
+                From an Angular app perspective, 
+                the resource are 
+                    the pages and, 
+                    sometimes, 
+                    sections of pages 
+                    that need to be restricted to specific roles.
+                    If the user is in a specific role, depending upon the role-resource mapping, they get access to some pages; otherwise, they are denied access. 
+
+            8.3.3.1. Adding authorization support
+                To enable authorization, the first thing that we need to do is expose the logged in user data, including his/her roles, throughout the application.
+                
+                8.3.3.1.1. Sharing user authentication context
+                8.3.3.1.2. Restricting routes
+                8.3. 3.1.3. Conditionally rendering content based on roles
 
             
 
