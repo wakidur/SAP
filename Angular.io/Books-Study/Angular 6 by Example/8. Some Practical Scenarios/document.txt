@@ -35,6 +35,9 @@ constantly(প্রতিনিয়ত, সর্বদা)
 underlying (নিম্নাবস্থিত, মূলগত, ভিত্তিস্বরূপ,অবলম্বনস্বরুপ)
 intercept (পথিমধ্যে রোধ করা)
 feat(কৃতিত্ব)
+non-intrusive (অ অনধিকারমূলক)
+bare (নগ্ন, খালি)
+implicitly (পরোক্ষভাবে)
 /*
     *03-12-2018
 */
@@ -130,8 +133,58 @@ feat(কৃতিত্ব)
                 This feat in Angular is performed by a library called zone.js. As the documentation describes:
 
                 "A Zone is an execution context that persists across async tasks."
-                
+
+/*
+    * 06-12-2018
+*/
             8.2.7.4 How does change detection work?
+                As soon as any of the asynchronous event callbacks are triggered (the execution of an event handler is also an async activity), Angular first executes the application code we attached to the callback. This code execution may result in some model updates. After the execution of the callback, Angular needs to respond to the changes by triggering a change detection run.
+
+                In a change detection run, starting from the top of the component tree, every change detector evaluates its respective component's template bindings to see if the value of the binding expression has changed
+
+                There are some things that we need to highlight regarding this execution:
+                    •  Angular does a strict equality check (using ===) to detect changes. Since it's not a deep comparison, for a binding that refers to an object, Angular will only update the view when the object reference changes.
+
+                    •	The change detection flow is unidirectional (starting from root), from parent to child in a top-down fashion. The detectors on the parent component run before the child detectors.
+
+                    •	Change detectors only track properties that are part of template bindings, not the complete object/component properties.
+
+                    •	To detect changes in the bound value, the change detectors need to track the previous value of the expression evaluated during the last change detection run. Clearly, some amount of bookkeeping is required for every template binding we use.
+
+                   ***  The obvious next question would be what happens when a change is detected (by a change detector)?
+
+                   doWork() {
+                       this.firstName = "David";
+                       this.lastName = "Ruiz";
+
+                   }
+
+            8.2.8. Change detection performance
+                8.2.8.1. Using immutable data structures
+                8.2.8.2. Using Observables
+                8.2.8.3. Manual change detection
+    
+
+    8.3. Handling authentication and authorization
+        There are primarily two broad approaches to securing any web applications
+            1. cookie-based authentication
+            2. token-based authentication
+        
+
+        8.3.1. Cookie-based authentication
+            Cookie-based authentication involves setting the browser cookie to track the user authentication session.
+
+            The cookie-based authentication flow may vary depending on the server framework, but the general pattern of setting a cookie and attaching a cookie with every subsequent request remains the same.
+        
+            Cookie-based authentication is definitely less work on the client side, but there are times when you have to revert to token-based access. 
+ 
+                •	Cookies and cross-domain requests do not play nicely across browsers. Specifically, IE8 and IE9 do not support them.
+                •	The server may not support generating cookies, or the server only exposes token-based authentication.
+                •	Token-based solutions are easy to integrate with a native mobile application and desktop clients.
+
+
+
+            
 
 
 
