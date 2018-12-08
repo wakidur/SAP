@@ -1,3 +1,23 @@
+Angular 6 for Enterprise-Ready Web Applications (Book)
+    ⦁ Create full-stack web applications using Angular and RESTful APIs
+    ⦁ Master Angular fundamentals, RxJS, CLI tools, unit testing, GitHub, and Docker
+    ⦁ Design and architect responsive, secure and scalable apps to deploy on AWS
+    ⦁ Adopt a minimalist, value-first approach to delivering your app with  Kanban
+    ⦁ Get introduced to automated testing with continuous integration on  CircleCI
+    ⦁ Optimize Nginx and Node.js web servers with load testing tools
+
+Architecting Angular Applications with Redux, RxJS, and NgRx (Book)
+https://www.safaribooksonline.com/library/view/architecting-angular-applications/9781787122406/e359d09c-1007-4d53-af97-338e234a7c40.xhtml
+    ⦁ Understand the one-way data flow and Flux pattern
+    ⦁ Work with functional programming and asynchronous data streams
+    ⦁ Figure out how RxJS can help us address the flaws in promises
+    ⦁ Set up different versions of cascading calls
+    ⦁ Explore advanced operators
+    ⦁ Get familiar with the Redux pattern and its principles
+    ⦁ Test and debug different features of your application
+    ⦁ Build your own lightweight app using Flux, Redux, and NgRx
+
+https://www.safaribooksonline.com/library/view/angular-design-patterns/9781786461728/
 /*
 * 11-11-2019 -------------------------
 */
