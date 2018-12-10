@@ -65,6 +65,17 @@ demarcate(সীমানা নির্দেশ করা)
 			RouterModule
 			HttpModule
 
+			As a standard practice, module segregation is feature-based. One divides the app into features or subfeatures (for large features) and modules are created for each of the features.
+
+			The decorator has multiple attributes that allow us to define:
+				•	External dependencies (using imports).
+				•	Module artifacts (using declarations).
+				•	Module exports (using exports).
+				•	The services defined inside the module that need to be registered globally (using providers).
+				•	The main application view, called the root component, which hosts all other app views. Only the root module should set this using the bootstrap property.
+
+
+
 // 13-09-2018 ------------------------------
 	2.9. Our first component - WorkoutRunnerComponent
 		What we are going to do in the WorkoutRunnerComponent implementation is as follows
