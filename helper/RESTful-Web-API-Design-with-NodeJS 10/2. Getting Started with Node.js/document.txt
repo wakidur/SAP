@@ -1,0 +1,7 @@
+11-12-2018 ----------------
+2. Getting Started with Node.js
+    Installing Node.js
+    Npm
+    Installing the Express framework and other modules
+    Setting up a development environment
+    Handling HTTP requests

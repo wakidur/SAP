@@ -10,6 +10,7 @@ aggregates (সমষ্টি)
 workout(সম্পূর্ণ করা)
 Remaining(অবশিষ্ট,বাদবাকি)
 demarcate(সীমানা নির্দেশ করা)
+lapses(ভ্রষ্টতা,অক্ষম হত্তয়া )
 
 2. Building Our First App – 7 Minute Workout
     2.2. Downloading the code base
@@ -74,7 +75,9 @@ demarcate(সীমানা নির্দেশ করা)
 				•	The services defined inside the module that need to be registered globally (using providers).
 				•	The main application view, called the root component, which hosts all other app views. Only the root module should set this using the bootstrap property.
 
-
+			CommonJS,
+			AMD
+			ES2015 
 
 // 13-09-2018 ------------------------------
 	2.9. Our first component - WorkoutRunnerComponent
