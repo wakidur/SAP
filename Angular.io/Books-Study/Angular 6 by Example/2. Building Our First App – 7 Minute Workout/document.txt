@@ -1,5 +1,6 @@
 // 06-09-2018 -------------------
 // Review 07-12-2018 ------------
+tap(টোকা)
 artifact(হস্তনির্মিত বস্তু) 
 intriguing (কুচুটে, পরিকল্পনা)
 dictates (নির্দেশনা)
@@ -98,6 +99,20 @@ lapses(ভ্রষ্টতা,অক্ষম হত্তয়া )
 		ngOnInit is a special function that Angular calls when a component is initialized. 
 
 		2.9.1. Component lifecycle hooks
+			The life of an Angular component is eventful. Component get created, change state during their lifetime, and finally, they are destroyed. Angular provides some lifecycle hooks/function that the framework invokes (on the component) when such an event occers.
+
+			The ngOnInit function gets fired the first time the component's data-bound properties are initialized, but before the view initialization starts.
+
+			While ngOnInit and the class constructs seem to look similar they have a different purpose. A constructor is a language feature and it is used to initialize class memebers. ngOnInit on the other hand, is used to do some initialization stuff once the component is ready. Avoid use of a constructor for anything other than member initialization
+
+			the AppComponent template cannot locate the WorkoutRunnerComponent. Is it because WorkoutRunnerComponent and AppComponent are in different modules? 
+
+			While WorkoutRunnerModule has been imported into AppModule, WorkoutRunnerModule still does not export the new WorkoutRunnerComponent that will allow AppComponent to use it.
+
+			Remember, adding a component/directive/pipe to  
+			the "declaration" section of a module makes them available inside the module. It's only after we "export" the component/directive/pipe that it becomes available to be used across modules.
+
+
 
 // 14-09-2018 -------------------------	
 	2.10. Building the 7 Minute Workout view
