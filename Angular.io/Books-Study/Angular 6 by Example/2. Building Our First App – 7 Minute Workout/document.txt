@@ -117,6 +117,21 @@ lapses(ভ্রষ্টতা,অক্ষম হত্তয়া )
 // 14-09-2018 -------------------------	
 	2.10. Building the 7 Minute Workout view
 		2.10.1. The Angular binding infrastructure
+			Based on the data flow direction, these bindings can be of three types:
+				•	One-way binding from model to view
+				•	One-way binding from view to model
+				•	Two-way/bidirectional binding
+			
+			Let's understand how to utilize the binding capabilities of Angular to support view templatization. 
+				•	Interpolations
+				•	Property binding
+				•	Attribute binding
+				•	Class binding
+				•	Style binding
+				•	Event binding
+
+
+
 // 15-09-2018 ---------------------
 		2.10.2. Interpolations
 		2.10.3. Property binding
@@ -232,6 +247,8 @@ lapses(ভ্রষ্টতা,অক্ষম হত্তয়া )
 
 			2.11.1.1.	Component with inputs
 
+				The @Input decorator signifies that the component property is available for data binding. 
+
 				**** @Input("myAwesomeProperty") myProperty:string ***************
 
 				import {Component, OnInit, Input} from "@angular/core";
@@ -259,6 +276,8 @@ lapses(ভ্রষ্টতা,অক্ষম হত্তয়া )
 
 				<my-component [myAwesomeProperty]="expression"....
 
+				ng 
+					The @Input decoration can take a property alias as a parameter, which means the following: consider a property declaration such as: @Input("myAwesomeProperty") myProperty:string. It can be referenced in the view as follows: <my-component [myAwesomeProperty]="expression"....
 			
 			2.11.1.2.	Structural directives
 				"Instead of defining and controlling a view like a Component Directive, or modifying the appearance and behavior of an element like an Attribute Directive, the Structural Directive manipulates the layout by adding and removing entire element sub-trees."
