@@ -27,9 +27,22 @@ persist(স্থায়ী অবস্থায় থাকা)
                 If you have worked with any JavaScirpt fragments
                 The framework watches the browser URL and serves views based on the URL loaded. There are dedicated framework components for this job. In the Angular world, this tracking is done by a framework service, the router.
 
-                In Angular, any class, object, or function that provides some generic functionality is termed a service.
+                In Angular, any class, object, or function that provides some generic functionality is termed a service.Angular does not provide any special construct to declare a service as it does for components, directives, and pipes.
+
+                *** Anything that can be consumed by components/directives/pipes can be termed a service. **
+                    ***The router is one such service. 
+
+                The Angular router is there to:
+                •	Enable navigation between components on route change
+                •	Pass routing data between component views
+                •	Make the state of the current route available to active/loaded components
+                •	Provide APIs that allow navigation from component code
+                •	Track the navigation history, allowing us to move back and forward between component views using browser buttons
+                •	Provide life cycle events and guard conditions that allow us to affect navigation based on some external factors
+
 
             3.1.1.3. Routing setup
+            
                 <base href="/">
         3.1.2. Adding start and finish pages
             The plan here is to have three pages for 7-Minute Workout:
