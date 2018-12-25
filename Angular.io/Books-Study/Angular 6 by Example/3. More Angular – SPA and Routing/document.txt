@@ -78,6 +78,14 @@ persist(স্থায়ী অবস্থায় থাকা)
 
                         But what if we refresh the browser window?
             3.1.2.3. Route navigation
+
+                Like standard browser navigation, Angular navigation happens:
+                    •	When a user enters a URL directly into the browser address bar
+                    •	On clicking on a link on the anchor tag
+                    •	On using a script/code to navigate
+                
+                To change it to hash-based routing, the route configuration for the top-level routes should be augmented with an extra useHash:true property in the RouterModule.forRoot function (second parameter).
+
                 <a routerLink="/workout">
 
                 3.1.2.3.1. The link parameter array
@@ -98,6 +106,7 @@ persist(স্থায়ী অবস্থায় থাকা)
 
 
             3.1.2.4. Using the router service for component navigation
+            
             3.1.2.5. Using the ActivatedRoute service to access route params
                 { path: '/users/:id', component: UserDetailComponent },
 
