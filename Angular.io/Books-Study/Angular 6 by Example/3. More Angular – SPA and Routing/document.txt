@@ -5,6 +5,8 @@ persist(স্থায়ী অবস্থায় থাকা)
 rely (নির্ভর করা, বিশ্বাস করা)
 exclusively (কেবলমাত্র,	কেবল ,শুধু)
 persist(স্থায়ী অবস্থায় থাকা)
+Tracker (যে ব্যক্তি অনুসরণ করে)
+Logger (a device or computer program for making a systematic recording of events, observations, or measurements.)
 3. More Angular – SPA and Routing
     3.1. Exploring Single Page Application capabilities
         3.1.1. The Angular SPA infrastructure
@@ -127,6 +129,8 @@ persist(স্থায়ী অবস্থায় থাকা)
 // 20-09-2018 -----------------------------
 
     3.2. Angular dependency Injection
+        Angular makes heavy use of dependency injection to manage app and framework dependencies.
+
         3.2.1 Dependency injection 101
 
             For any application, its components (not to be confused with Angular component) do not work in isolation. There are dependencies between them. A component may use other components to achieve its desired functionality. Dependency injection is a pattern for managing such dependencies.
@@ -137,6 +141,26 @@ persist(স্থায়ী অবস্থায় থাকা)
 
             Constructor Injection
             Property Injection
+
+
+            class Tracker() { 
+                logger:Logger; 
+                constructor() { 
+                    this.logger = new Logger();    
+                } 
+            }
+
+            class Tracker { 
+                logger:Logger; 
+                constructor(logger:Logger) { 
+                    this.logger = logger;    
+                } 
+            }
+
+            var trackerWithDBLog = new Tracker(new DBLogger()); 
+            var trackerWithMemoryLog = new Tracker(new MemoryLogger()); 
+
+
 
         3.2.2. Exploring dependency injection in Angular
 
