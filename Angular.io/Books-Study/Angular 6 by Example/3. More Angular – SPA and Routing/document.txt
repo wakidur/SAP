@@ -163,6 +163,10 @@ Logger (a device or computer program for making a systematic recording of events
 
 
         3.2.2. Exploring dependency injection in Angular
+            •	The what: What is the dependency? The dependency could be a class, an object, a factory function, or a value. Every dependency needs to be registered with the DI framework before it can be injected.
+            •	The where/when: The DI framework needs to know where to inject a dependency and when.
+            •	The how: The DI framework also needs to know the recipe for creating the dependency when requested.
+
 
     3.3. Tracking workout history
 
