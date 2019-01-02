@@ -7,6 +7,9 @@ exclusively (কেবলমাত্র,	কেবল ,শুধু)
 persist(স্থায়ী অবস্থায় থাকা)
 Tracker (যে ব্যক্তি অনুসরণ করে)
 Logger (a device or computer program for making a systematic recording of events, observations, or measurements.)
+dubbed (খেতাব দেত্তয়া)
+wired (টেলিগ্রাম করা)
+desire(ইচ্ছা)
 3. More Angular – SPA and Routing
     3.1. Exploring Single Page Application capabilities
         3.1.1. The Angular SPA infrastructure
@@ -168,6 +171,10 @@ Logger (a device or computer program for making a systematic recording of events
             •	The how: The DI framework also needs to know the recipe for creating the dependency when requested.
 
 
+            The Angular injector creates and caches dependencies for future reuse, and hence these services are singleton in nature.
+
+
+
     3.3. Tracking workout history
 
         It would be a great addition to our app if we could track our workout history.
@@ -181,7 +188,14 @@ Logger (a device or computer program for making a systematic recording of events
         A possible solution could be to extend our WorkoutRunnerComponent with the desired functionality. But that adds unnecessary complexity to WorkoutRunnerComponent and that's not its primary job.
 
         3.3.1. Building the workout-history-tracker service
-           Inspired again by the Angular style guide, we are going to create a new module, core module, and add the service to this module. The role of the core module is to host services that are available across the application. It is also a good place to add single-use components that are required when the application starts. A nav bar and busy indicator are good examples of such components.
+           Inspired again by the Angular style guide, 
+           we are going to create a new module, 
+            core module, and add the service to this module.
+                1. The role of the core module is to host services that are available across the application. 
+                2. It is also a good place to add single-use components that are required when the application starts. 
+                3. A nav bar and busy indicator are good examples of such components.
+
+
 
 // 23-09-2018 ------------------------
         3.3.2. Integrating with WorkoutRunnerComponent
@@ -203,7 +217,16 @@ Logger (a device or computer program for making a systematic recording of events
                     The Standard way to register a dependency is to register it at the root/global level. This can be done either by 
                     1. passing the dependency type into the "providers" attribute (Array) in the NgModule decorator, 
                     2. Using the "providedIn" attribute on the Injectable service decorator.
-                    
+                    * A service in Angular is just a class that has been registered with Angular's DI framework. Nothing special about them!
+                    *  @Injectable({
+                        providedIn: 'root'
+                        })
+                        export class WorkoutHistoryTrackerService {
+                            ...
+                        }
+                    * The providedIn:'root' property on Injectable instructs Angular to create a provider with the root injector.
+                    * The sole job of this provider is to create the WorkoutHistoryTrackerService service and return it when Angular's DI injector desires.
+                    *
 
                     Remember our WorkoutHistoryTrackerService registration? Check the following
                         @Injectable({
