@@ -10,6 +10,8 @@ Logger (a device or computer program for making a systematic recording of events
 dubbed (খেতাব দেত্তয়া)
 wired (টেলিগ্রাম করা)
 desire(ইচ্ছা)
+advisable (যুক্তিসংগত, যুক্তিযুক্ত, যুক্তিসম্মত, যুক্তির বিচারে ঠিক, কাণ্ডজ্ঞানসম্পন্ন)
+
 3. More Angular – SPA and Routing
     3.1. Exploring Single Page Application capabilities
         3.1.1. The Angular SPA infrastructure
