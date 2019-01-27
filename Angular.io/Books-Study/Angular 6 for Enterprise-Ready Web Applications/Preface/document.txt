@@ -1,0 +1,33 @@
+entrepreneur(উদ্যোক্তা, ব্যবসায়ে ঝুঁকিদার)
+culinary (রন্ধনসম্পর্কীয়)
+proficient (দক্ষ)
+grabbed (দখল করা)
+/*
+    27-01-2019 -----------
+*/
+
+Preface: 
+    This book will aim to instill an Agile and DevOps mindset in you so that you confidently create reliable and flexible solutions. 
+
+    Whether you consider yourself 
+       1. a freelancer developing software for small businesses,
+       2. a full-stack developer
+       3. an enterprise developer
+       4. a web developer
+    
+    what you need to know to 
+        1. design
+        2. architect 
+        3. develop
+        4. maintain
+        5. deploy a web application 
+        6. the best practices and patterns  
+    
+    If you're delivering an application to an audience of users, in a sense, you are a full-stack developer, since you must be aware of a lot of server technologies
+
+    By some definitions, a full-stack developer needs to know everything from catering to international copyright law to successfully creating and operating an application on today's web. 
+
+Download the example code files
+https://github.com/PacktPublishing/Angular-6-for-Enterprise-Ready-Web-Applications
+https://github.com/duluca/local-weather-app
+https://github.com/duluca/lemon-mart

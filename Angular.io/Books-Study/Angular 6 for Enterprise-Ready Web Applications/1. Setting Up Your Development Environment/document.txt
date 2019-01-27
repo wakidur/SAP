@@ -1,0 +1,30 @@
+questioning(জিজ্ঞাসাবাদ)
+perspective (পরিপ্রেক্ষিত)
+continuum (কন্টিনাম)
+tough (শক্তিশালী, শক্ত )
+seasoned (পাকা, )
+strategies (কৌশল)
+
+/* 
+    27-01-2019 
+*/
+1. Setting Up Your Development Environment
+    It can be tough for beginners to create the correct development environment, which is essential for a frustration-free development experience. For seasoned developers and teams, achieving a consistent and minimal development environment remains a challenge. Once achieved, such a development environment helps avoid many IT-related issues, including ongoing maintenance, licensing, and upgrade costs.
+
+        Instructions on installing 
+            GitHub Desktop
+            Node.js
+            Angular CLI
+            Docker 
+        
+        development environment
+        •	Working with CLI package managers to install and update software
+            •	Chocolatey on Windows 10
+        •	Using scripting to automate installation using
+            •	Powershell on Windows 10
+        •	Achieving a consistent and cross-platform development environment
+    
+        You should be familiar with these
+            •	JavaScript ES2015+
+            •	Frontend development basics
+            •	RESTful APIs
