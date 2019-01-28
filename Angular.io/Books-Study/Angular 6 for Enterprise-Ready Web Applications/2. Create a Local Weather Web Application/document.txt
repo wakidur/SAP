@@ -1,0 +1,14 @@
+iterative (পুনরাবৃত্তিমূলক, পুনরাবৃত্ত)
+nuances (সামান্য পার্থক্য, তারতম্য)
+Leveraging (ওঠানামা)
+/**
+ 28-01-2019------------------
+*/
+Local Weather app 
+
+2. Create a Local Weather Web Application
+    Angular, 
+    TypeScript, 
+    Visual Studio Code, 
+    Reactive Programming, 
+    and RxJS.

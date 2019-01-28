@@ -14,8 +14,9 @@ strategies (কৌশল)
         Instructions on installing 
             GitHub Desktop
             Node.js
-            Angular CLI
+            Angular CLI / React
             Docker 
+            Visual Studio Code
         
         development environment
         •	Working with CLI package managers to install and update software
@@ -28,3 +29,20 @@ strategies (কৌশল)
             •	JavaScript ES2015+
             •	Frontend development basics
             •	RESTful APIs
+
+        The supported operating system are as follows:
+            •	Windows 10 Pro v1703+ with PowerShell v5.1+
+            •	macOS Sierra v10.12.6+ with Terminal (Bash or Oh My Zsh)
+            •	Most of the suggested software also works on Linux systems, but your experience may vary
+        The suggested cross-platform software is as follows:
+            •	Node 8.10+ (except non-LTS versions)
+            •	npm 5.7.1+
+            •	GitHub Desktop 1.0.0+
+            •	Visual Studio Code v1.16.0+
+            •	Google Chrome 64+
+
+
+/* 
+    28-01-2019 
+*/ 
+  
