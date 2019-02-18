@@ -1,4 +1,8 @@
-footprint(পদচিহ্ন, )
+adequate(পর্যাপ্ত)
+decent-sized(শালীন আকারের)
+invariably(অপরিবর্তনীয়ভাবে)
+mundane (পার্থিব, জাগতিক)
+footprint(পদচিহ্ন,)
 tweak(খামচি, খামচি মারা)
 trick(কৌশল, চাল)
 impressive (গভীর, হৃদয়গ্রাহী)
@@ -46,6 +50,8 @@ irrespective (নিরপেক্ষ)
 authentication(প্রমাণীকরণ)
 authorization(অনুমোদন,অনুমতি,ক্ষমতাপ্রদান, কর্তৃত্বদান )
 
+tweak(খামচি)
+
 
 
 
@@ -56,12 +62,26 @@ authorization(অনুমোদন,অনুমতি,ক্ষমতাপ্�
 
 
 /*
-    *03-12-2018
+    * 03-12-2018
+    * 17-02-2018
 */
 
 8. Some Practical Scenarios
     8.1. Building a new app
+        Setting up a new project typically involves:
+            1. Creating a standard folder structure. This is at times influenced by the server framework (such as RoR, ASP.Net, Node.js, and others). 
+            2. Adding standard assets to specific folders.
+            3. Setting up the build, which in the case that, we are developing an Angular-based web application, includes:
+                •	Compiling/transpiling content if using TypeScript
+                •	Configuring the Module loader
+                •	Dependency management in terms of framework and third-party components
+                •	Setting up unit/E2E testing
+            4. Configuring builds for different environments such as dev, test, and production. Again, this is influenced by the server technology involved.
+            5.	Code bundling and minification.
+
         8.1.1. Seed projects
+            •	Angular Starter 
+            •	Angular Seed 
     8.2. Angular performance
         Every part of the framework, 
             Starting from the framework footprint, 
@@ -73,6 +93,7 @@ authorization(অনুমোদন,অনুমতি,ক্ষমতাপ্�
     * 04-12-2018
 */
         8.2.1. Byte size
+        Angular bundle
             The standard techniques of 
                 Minification 
                 gzipping 

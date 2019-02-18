@@ -1,6 +1,8 @@
 /*
 * 25-11-2018 -------------
 * 11-02-2019 -------------
+* 13-02-2019 -------------
+* Eevey day is a new day, and you will never be able to find happiness if you don't move on.
 */
 
 plethora (আধিক্য)
@@ -42,6 +44,10 @@ changing landscape(পরিবর্তন আড়াআড়ি)
 
     7.3. Getting started with unit testing
         The ultimate aim of unit testing is to test a specific piece of code/component in isolation to make sure that the components work according to the specification. This reduces the chances of failures/bugs in the component when integrated with other parts of the software. 
+
+        Before we start writing tests, there are some guidelines that can help us write good and maintainable tests:
+            1. 
+
             7.3.1. Setting up Karma and Jasmine for unit testing
             7.3.2. Organization and naming of our test files
             7.3.3. Unit-testing Angular applications
