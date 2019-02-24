@@ -37,7 +37,7 @@ parsing(পদপরিচয়, শব্দবিশ্লেষণ )
 worth(মূল্য, গুরুত্ব, দাম)
 constantly(প্রতিনিয়ত, সর্বদা)
 underlying (নিম্নাবস্থিত, মূলগত, ভিত্তিস্বরূপ,অবলম্বনস্বরুপ)
-intercept (পথিমধ্যে রোধ করা)
+intercept (পথিমধ্যে রোধ করা, রূখা)
 feat(কৃতিত্ব)
 non-intrusive (অ অনধিকারমূলক)
 bare (নগ্ন, খালি)
@@ -51,6 +51,8 @@ authentication(প্রমাণীকরণ)
 authorization(অনুমোদন,অনুমতি,ক্ষমতাপ্রদান, কর্তৃত্বদান )
 
 tweak(খামচি)
+
+assumption (ধৃষ্টতা)
 
 
 
@@ -134,9 +136,14 @@ tweak(খামচি)
             In today's world, CPUs with multiple cores are the norm, but JavaScript execution is still single-threaded. There is a need for a standard/mechanism to utilize these idle cores for our apps. Web workers fit the bill perfectly, and since most modern browsers support them, we all should be writing code that utilizes web workers.
         
         8.2.6. Performant mobile experience
+
         8.2.7. Change detection improvements
             8.2.7.1. Change detection
-                Angular's data binding engine does a great job of binding the view with the model data (component data). These are live bindings where Angular keeps the view in sync with model changes. Any time the model changes, the binding engine re-renders parts of the view that are dependent on the model. To manage this view-model synchronization, Angular needs to know when the model changed and what changed exactly. This is what change detection is all about. During app execution, Angular frequently does what we call change detection runs to determine what changed.
+                Angular's data binding engine does a great job of binding the view with the model data (component data). 
+                These are live bindings where Angular keeps the view in sync with model changes. 
+                Any time the model changes, the binding engine re-renders parts of the view that are dependent on the model. 
+                To manage this view-model synchronization, Angular needs to know when the model changed and what changed exactly. This is what change detection is all about. 
+                During app execution, Angular frequently does what we call change detection runs to determine what changed.
 
                 If you are from AngularJS, a change detection run is roughly equivalent to digest cycles, except that in Angular there are no cycles
 
@@ -198,7 +205,14 @@ tweak(খামচি)
                    }
 
             8.2.8. Change detection performance
+                If you think checking the complete component tree every time for change is inefficient, you will be surprised to know how fast it is. Due to some optimization around how expressions are evaluated and compared, Angular can perform thousands of checks in a couple of milliseconds.
+
+                The reason Angular needs to do the complete tree walk is that model changes in one place may trigger model changes at other places. 
+
+                If we can help Angular determine what parts of the application state are updated, Angular can be pretty smart about what part of the component tree it traverses to detect changes. We do this by storing the app data in some special data structures that help Angular decide what components need to be checked for changes.
+
                 8.2.8.1. Using immutable data structures
+                    immediately object/collections are object that cannot be changed once created. Any 
                 8.2.8.2. Using Observables
                 8.2.8.3. Manual change detection
     
