@@ -1,0 +1,26 @@
+underlying(ভিত্তিস্বরূপ, অবলম্বনস্বরুপ, নিম্নাবস্থিত)
+constrain (বাধ্য করা, )
+relevant (প্রাসঙ্গিক, সম্পর্কিত)
+Cohesion (সংযোগ, সম্পর্ক, সূত্র, সংস্রব, সংলগ্নতা, অনুষঙ্গ, সংসক্তি, যুক্তিসিদ্ধ সম্বন্ধ, সংযোগ, সংযোগ-প্রবণতা)
+tedious (ক্লান্তিকর, ক্লান্তিজনক, অবসাদদায়ক, শ্রমসাধ্য)
+
+/****************** 01-03-2019 *******************/ 
+1. Quick Look Back at Data Services for Simple Apps
+    This book is about learning to structure your application and learning how to set up and communicate your application's state, and its changes, in a way that all parts of your application are in agreement on what is happening.
+
+    The underlying architectural pattern for NgRx is Redux, which constrains data to live in only one place and ensures data is flowing in only one direction. 
+
+    The Flux pattern has a lot in common with Redux and it is its shortcomings that led to Redux being created. NgRx itself is implemented using RxJS, which promotes a functional reactive style of programming. 
+
+
+/****************** 02-03-2019 *******************/ 
+1.1.	Model-View-Controller – the pattern we all know
+1.1.1.	Cohesion and coupling – establishing a common language
+    Cohesion: Cohesion is about focus and what the class should do. 
+    The lower the cohesion/connection/linkage, the more different thing are performed by a class and therfor it has no clear intention of what it should perform. 
+
+    What about coupling? 
+        Coupling is about how strongly connected a software element is to another software element.    
+
+
+/****************** 03-03-2019 *******************/ 
