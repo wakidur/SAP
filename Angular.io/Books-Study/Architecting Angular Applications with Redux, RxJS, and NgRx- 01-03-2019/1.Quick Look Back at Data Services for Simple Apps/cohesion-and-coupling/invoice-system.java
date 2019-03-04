@@ -27,7 +27,7 @@ class Invoice {
 public class Program {
     private Printer printer = new Printer();
     public void run(ArrayList list) {
-        for(int i=0; i < list.length; i++ ) {
+        for(int i = 0; i < list.length; i++ ) {
             Object item = list.getItem(i);
             if(item instanceof Invoice) {
                 Invoice invoice = (Invoice) item;

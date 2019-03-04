@@ -14,13 +14,43 @@ tedious (ক্লান্তিকর, ক্লান্তিজনক, অ�
 
 
 /****************** 02-03-2019 *******************/ 
-1.1.	Model-View-Controller – the pattern we all know
-1.1.1.	Cohesion and coupling – establishing a common language
-    Cohesion: Cohesion is about focus and what the class should do. 
-    The lower the cohesion/connection/linkage, the more different thing are performed by a class and therfor it has no clear intention of what it should perform. 
-
-    What about coupling? 
-        Coupling is about how strongly connected a software element is to another software element.    
+    1.1.	Model-View-Controller – the pattern we all know
+   
 
 
 /****************** 03-03-2019 *******************/ 
+        1.1.1.	Cohesion and coupling – establishing a common language
+            Cohesion: Cohesion is about focus and what the class should do. 
+            The lower the cohesion/connection/linkage, the more different thing are performed by a class and therfor it has no clear intention of what it should perform. 
+
+            What about coupling? 
+                Coupling is about how strongly connected a software element is to another software element. 
+
+/****************** 03-03-2019 *******************/ 
+
+        1.1.2.	Explaining the components of MVC
+            1.1.2.1.	The model
+            1.1.2.2.	The view
+            1.1.2.3.	The controller
+        1.1.3.	Interactions – the behavior between the components
+        1.1.4.	MVC summary
+
+    1.2.	An MVC flow in Angular
+        1.2.1.	The model
+        1.2.2.	The component – a controller and a building block
+            In the context of MVC, the component is the V and C, the view and the controller. The component allows you to define either a separate template file or an inline template. The template is the view part.
+
+            The controller in this context is a component class file that handles user interactions and also fetches the necessary data for the template to display.
+
+            Components have come to be a central concept for a lot of frameworks that are popular today, such as React, Vue.js, and Polymer. 
+
+            A component can take inputs, which are either data or methods. It consists of a piece of code and an HTML template, which render interesting data, living on the component. A component in Angular consists of three major parts:
+                •	A decorator function
+                •	A class
+                •	A template
+            
+            A component consists of a controller class and a template. It can play two different roles in an Angular application: either it can be the responder to the route or it can serve as a building block. In the first case, Angular will instantiate it when a new route happens and respond with that component. In the latter case, the component is created directly by existing as a child component within another component.
+
+            1.2.2.1.	 First responder to a route
+
+
