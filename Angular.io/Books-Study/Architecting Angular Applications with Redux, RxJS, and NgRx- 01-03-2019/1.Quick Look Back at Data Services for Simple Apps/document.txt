@@ -2,7 +2,12 @@ underlying(ভিত্তিস্বরূপ, অবলম্বনস্ব�
 constrain (বাধ্য করা, )
 relevant (প্রাসঙ্গিক, সম্পর্কিত)
 Cohesion (সংযোগ, সম্পর্ক, সূত্র, সংস্রব, সংলগ্নতা, অনুষঙ্গ, সংসক্তি, যুক্তিসিদ্ধ সম্বন্ধ, সংযোগ, সংযোগ-প্রবণতা)
+cohesive (সংযোজক)
 tedious (ক্লান্তিকর, ক্লান্তিজনক, অবসাদদায়ক, শ্রমসাধ্য)
+facade (Synonyms(front show window dressing frontal) )(অট্টালিকার সদরের বহির্ভাগ, অট্টালিকাদির সংমুখভাগ)
+belonging (একাত্মতার, অধিকারভুক্ত হত্তয়া, যুক্ত হত্তয়া )
+belongs to (সম্পর্কিত, )
+beyond (তার পরেও,)
 
 /****************** 01-03-2019 *******************/ 
 1. Quick Look Back at Data Services for Simple Apps
@@ -26,7 +31,7 @@ tedious (ক্লান্তিকর, ক্লান্তিজনক, অ�
             What about coupling? 
                 Coupling is about how strongly connected a software element is to another software element. 
 
-/****************** 03-03-2019 *******************/ 
+/****************** 04-03-2019 *******************/ 
 
         1.1.2.	Explaining the components of MVC
             1.1.2.1.	The model
@@ -51,6 +56,52 @@ tedious (ক্লান্তিকর, ক্লান্তিজনক, অ�
             
             A component consists of a controller class and a template. It can play two different roles in an Angular application: either it can be the responder to the route or it can serve as a building block. In the first case, Angular will instantiate it when a new route happens and respond with that component. In the latter case, the component is created directly by existing as a child component within another component.
 
-            1.2.2.1.	 First responder to a route
+                1.2.2.1.	 First responder to a route
+                1.2.2.2.	Used as a building block
+
+/****************** 05-03-2019 *******************/ 
+
+                1.2.2.3. Components from an architectural standpoint
+
+                @NgModule({
+                    imports: [],
+                    exports: [MyComponent],
+                    declarations: [MyComponent, MyPipe],
+                    providers: []
+                })
+        1.3.	Using ES2015 modules
+            1.3.1.	Consuming a module
+                1.3.1.1.	An Angular example
+                1.3.1.2.	Multiple exports
+                1.3.1.3.	The default import/export
+                1.3.1.4.	 Renaming imports
+            1.3.2.	The service
+                Services can be of two types
+                    1. Services without dependencies
+                    2. Services with dependencies
+                
+                1.3.2.1.	Service without dependencies
+                    A service without dependencies is a service whose constructor is empty:
+
+                    export Sercice {
+                        constructor() {}
+                        getData() {}
+                    }
+                To use it, you simply type:
+                import { Service } from './service'
+                let service = new Service();
+                service.getData();
+
+
+                class Service {
+                    constructor() {}
+                    getData() {}
+                }
+                const service = new Service();
+                export default service;
+
+
+                1.3.2.2.	 Service with dependencies
+
 
 
