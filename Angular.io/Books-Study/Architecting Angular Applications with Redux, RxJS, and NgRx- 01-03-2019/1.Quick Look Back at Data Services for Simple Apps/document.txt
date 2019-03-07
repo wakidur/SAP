@@ -8,6 +8,15 @@ facade (Synonyms(front show window dressing frontal) )(অট্টালিক�
 belonging (একাত্মতার, অধিকারভুক্ত হত্তয়া, যুক্ত হত্তয়া )
 belongs to (সম্পর্কিত, )
 beyond (তার পরেও,)
+construct(গড়া, গঠন করা, নির্মাণ করা) 
+instance (উদাহরণ)
+anew(নতুনভাবে, পুনরায়)
+crawl (হামাগুড়ি, ধীরে ধীরে চলা)
+attempt(চেষ্টা, প্রয়াস)
+resolution(সমাধান)
+express (প্রকাশ করা, দ্রুতগামী,স্পষ্ট)
+persist(জিদ করা, অবিরত লাগিয়া থাকা,স্থায়ী অবস্থায় থাকা )
+cumbersome (কষ্টকর, অসুবিধাজনক)
 
 /****************** 01-03-2019 *******************/ 
 1. Quick Look Back at Data Services for Simple Apps
@@ -102,6 +111,48 @@ beyond (তার পরেও,)
 
 
                 1.3.2.2.	 Service with dependencies
+
+                
+/****************** 06-03-2019 *******************/ 
+
+        1.4.	Dependency Injection
+            A DI system can act in one of two ways when asked to resolve an instance:
+                •	Transient mode: The dependency is always created anew
+                •	Singleton mode: The dependency is reused
+
+
+                Angular only creates singletons though which means every time we ask for a dependency it will only be created once and we will be given an already existing dependency if we are not the first construct to ask for that dependency.
+
+                The default behavior of any DI framework is to use the default constructor on a class and create an instance from a class. 
+
+                The DI framework would crawl the chain of dependencies, find the construct that does not have any dependencies, and instantiate that first. 
+                Then it would crawl upwards and finally resolve the construct you asked for.
+
+            1.4.1.	Dependency Injection in Angular using providers
+                We can see here that adding our Service to a component's providers array has limitations. Adding it to an Angular module is the sure way to ensure it can be resolved by all constructs residing inside of that array. This is not all though. Adding our Service to an Angular module's providers array ensures it is accessible throughout our entire application.
+
+                So the rule of thumb here is if you want to expose a service to your application, then put it in the Angular module's providers array. If you want to limit access to the service, then place it into a component's providers array. Then, you will ensure it can only be reached by that component and its view children.
+            
+            1.4.2.	Overriding an existing construct
+                 There are cases when you want to override the default resolution of your construct. You can do so at the module level, but also at the component level. 
+
+                 @Component({
+                        providers: [
+                            { 
+                                provide: Service, 
+                                useClass : FakeService 
+                            }
+                        ]
+                    })
+
+                1.4.2.1.	Overriding at runtime
+                1.4.2.2.	Overriding constants
+                1.4.2.3.	Resolving your dependencies with @Injectable
+
+        1.5.	Fetching and persisting data with HTTP – introducing services with Observables
+            1.5.1.	Fetching data with the HTTP service
+                   
+
 
 
 
