@@ -1,0 +1,55 @@
+/****************** 10-03-2019 *******************/ 
+predict (ভবিষ্যদ্বাণী করা, গণনা করা)
+predictable(আন্দাজের)
+stress (জোর, কঠিন চাপ)
+2.	Asynchronous Programming
+    To learn what asynchronous conde is, let's first conver what synchronous code is.
+
+    Synchornous: With synchronous code, you have one statement being executed after another.
+    the code is predictable; you know what happens  and when.
+
+    print('a'); 
+    print('b'); 
+    print('c'); 
+
+    // Output
+    a, b, c;
+
+    Asynchronous: With asynchronous code you lose all the nice predictability that the synchronous code offers. In fact, there is very little you know about asynchronous code other than that it finishes executing, eventually. 
+
+    asyncPrint('a')
+    asyncPrint('b')
+    asyncPrint('c')
+
+    // output
+    c, b, a
+
+    As you can see, the order in which a statement finishes is not determined by when a statement occurs in the code. Instead, there is a time element involved that decides when a statement has run its course.
+
+
+
+
+    Asynchronous code runs in an event loop. 
+    This means that async code runs in the following order: 
+        1. Run async code 
+        1. Wait for the response to be ready, then fire an interrupt
+        1. Run the event handler
+
+    An important thing to stress here is that async code is non-blocking.
+    other operations can take place while async code is running.
+
+    Therefore, async code is a good candidate to be used when dealing with 
+    I/O, 
+    long-running tasks, and 
+    network requests.
+
+/****************** 11-03-2019 *******************/ 
+
+    3.1. The callback pattern
+        An operating system deals with asynchronous code by thinking of it in terms of the following concepts:
+        •	Events, these are messages that signals to the operating system that a certain type of action has occurred
+        •	Event handler, this is the piece of code that should run when an event has occurred
+        •	Event queue, this is where all events and their event handlers are placed, waiting to be executed
+
+
+
