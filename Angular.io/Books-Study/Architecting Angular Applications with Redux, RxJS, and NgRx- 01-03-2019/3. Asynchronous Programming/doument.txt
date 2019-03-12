@@ -2,6 +2,7 @@
 predict (ভবিষ্যদ্বাণী করা, গণনা করা)
 predictable(আন্দাজের)
 stress (জোর, কঠিন চাপ)
+arrival (উপস্থিতি)
 2.	Asynchronous Programming
     To learn what asynchronous conde is, let's first conver what synchronous code is.
 
@@ -52,4 +53,8 @@ stress (জোর, কঠিন চাপ)
         •	Event queue, this is where all events and their event handlers are placed, waiting to be executed
 
 
+/****************** 12-03-2019 *******************/
+        3.1.1. The callback pattern on the web
 
+            As the web is single-threaded
+        3.1.2. The callback pattern in Node.js
