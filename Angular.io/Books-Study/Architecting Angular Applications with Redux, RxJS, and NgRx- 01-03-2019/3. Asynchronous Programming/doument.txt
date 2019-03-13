@@ -3,6 +3,11 @@ predict (ভবিষ্যদ্বাণী করা, গণনা করা)
 predictable(আন্দাজের)
 stress (জোর, কঠিন চাপ)
 arrival (উপস্থিতি)
+emerging (উদীয়মান, উঠতি, উত্থিত, উঠন্ত, বর্ধনশীল, ঊর্ধ্বগামী)
+tabulation (ছককাটা তালিকাভুক্ত করণ)
+tabbed  (ট্যাবযুক্ত স্থির করা)
+shallow (অগভীর স্থান, অগভীর)
+cognitive (জ্ঞান সম্বন্ধীয়)
 2.	Asynchronous Programming
     To learn what asynchronous conde is, let's first conver what synchronous code is.
 
@@ -57,4 +62,9 @@ arrival (উপস্থিতি)
         3.1.1. The callback pattern on the web
 
             As the web is single-threaded
+
+/****************** 13-03-2019 *******************/
         3.1.2. The callback pattern in Node.js
+            Node.js is single-threaded just like the web.
+    
+    3.2. Problems with structuring async code – callback hell
