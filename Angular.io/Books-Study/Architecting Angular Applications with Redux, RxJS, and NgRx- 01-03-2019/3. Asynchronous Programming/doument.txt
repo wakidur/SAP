@@ -8,6 +8,9 @@ tabulation (ছককাটা তালিকাভুক্ত করণ)
 tabbed  (ট্যাবযুক্ত স্থির করা)
 shallow (অগভীর স্থান, অগভীর)
 cognitive (জ্ঞান সম্বন্ধীয়)
+stretching (প্রসারিত)
+straight (সোজা, সরাসরিভাবে)
+ away
 2.	Asynchronous Programming
     To learn what asynchronous conde is, let's first conver what synchronous code is.
 
@@ -68,3 +71,15 @@ cognitive (জ্ঞান সম্বন্ধীয়)
             Node.js is single-threaded just like the web.
     
     3.2. Problems with structuring async code – callback hell
+
+/****************** 14-03-2019 *******************/
+    3.3. Promises
+        The idea of a Promise is to flatten out async code. 
+        A promise is said to have the following states:
+
+        •	Pending: This means it has not yet been decided or that the data is not available yet
+        •	Fulfilled: The data has come back
+        •	Rejected: An error happened during the operation
+        
+        3.3.1. Thenables
+            3.3.1.1. Handling rejected promises
