@@ -129,7 +129,34 @@ Using asynchronous JavaScript (such as callbacks, promises, and async/await), yo
             JavaScript has a single call stack because it's a single-threaded programming language. 
 
             The call stack has a LIFO(Last in, First out)  structure which means that the items can be added or removed from the top of the stack only.
+   
+/****************** 19-03-2019 *******************/
     2. How Does Asynchronous JavaScript Work?
+        2.1. What is Blocking?
+        2.2. So what’s the solution?
+            2.2.1. We use asynchronous callbacks to make our code non-blocking.
+                *** note
+                    "Please keep in mind that the setTimeout is not a part of the JavaScript engine, it’s a part of something known as web APIs (in browsers) and C/C++ APIs (in node.js)."
+
+                To understand how this code is executed we have to understand a few more concepts such event loop and the callback queue (also known as task queue or the message queue).
+                1. Event loop
+                2. Callback Queur
+                3. Task Queur/ Message queue
+
+                *** note
+                    The Event Loop, the Web APIs and Message Queue/Task Queur are not the part of the JavaScript engine, it's part of browser's runtime environment or Nodejs JavaScript runtime environment (in case of Nodejs). 
+                    In Nodejs. the web APIs are replace by the C/C++ APIs
+            
+             2.2.2. The Event Loop
+             
+
+
+
+
+
+            
+
+
 
 
 
