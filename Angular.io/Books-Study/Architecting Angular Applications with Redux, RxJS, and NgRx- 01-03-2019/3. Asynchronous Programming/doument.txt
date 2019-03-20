@@ -146,8 +146,19 @@ Using asynchronous JavaScript (such as callbacks, promises, and async/await), yo
                 *** note
                     The Event Loop, the Web APIs and Message Queue/Task Queur are not the part of the JavaScript engine, it's part of browser's runtime environment or Nodejs JavaScript runtime environment (in case of Nodejs). 
                     In Nodejs. the web APIs are replace by the C/C++ APIs
+
+/****************** 20-03-2019 *******************/            
+            2.2.2. The Event Loop
+                Event loop : The job of the Event loop is to look into the call stack and determine if the call stack is empty or not. If the call stack is empty, it looks into the message queue to see if there's any pending callback waiting to be executed. 
+
+            2.2.3. DOM Events
+                The Message Queue also contains the callbacks from the DOM events such as Click events and keyboard events 
+
+            2.2.4. ES6 Job Queue/ Micro-Task queue
             
-             2.2.2. The Event Loop
+
+
+
              
 
 

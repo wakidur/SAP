@@ -57,3 +57,9 @@ const networkRequestAsyncProcess = () => {
   console.log('Hello World');
   networkRequestAsyncProcess();
   console.log('The End');
+
+
+// DOM Events
+document.querySelector('.btn').addEventListener('click', (event) => {
+    console.log("Button Clicked");
+})
