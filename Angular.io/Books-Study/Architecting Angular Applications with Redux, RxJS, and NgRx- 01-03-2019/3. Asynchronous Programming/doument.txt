@@ -154,7 +154,33 @@ Using asynchronous JavaScript (such as callbacks, promises, and async/await), yo
             2.2.3. DOM Events
                 The Message Queue also contains the callbacks from the DOM events such as Click events and keyboard events 
 
+/****************** 21-03-2019 *******************/  
+
             2.2.4. ES6 Job Queue/ Micro-Task queue
+                ES6 introduced the concept of job queue/ micro-task queue which is used by Promises in JavaScript. The difference between the message queue and the job queue is that the job queue has a higher priority than the message queue, which means that promise jobs inside the job queue/ micro-task queue will be executed before the callbacks inside the message queue. 
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
 
 
