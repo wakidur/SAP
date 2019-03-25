@@ -1,0 +1,37 @@
+paradigm (দৃষ্টান্ত, উদাহরণ)
+overaching (সর্বাধিক, চরম, শীর্ষস্থানীয়, মহত্তম, জ্যেষ্ঠ, সর্বোচ্চ)
+stream(প্রবাহ, প্রবাহিত হত্তয়া)
+arrive( পৌঁছা, আসা, ঘটা, পড়া, উপনীত হত্তয়া, আগমন করা, আগত হত্তয়া)
+Imperative (উপদেশমূলক)
+/****************** 24-03-2019 *******************/ 
+4.	Functional Reactive Programming
+    Functional Reactive Programming (FRP) is a programming paradigm for reactive programming, which uses the building blocks of functional programming. 
+
+    To understand the whole sentence, we need to break it apart a bit, Let's try to define the following 
+
+        1. A Programming Paradigm : is an overaching theory, or way of working, centered around how a program should be organized and structured. Object-oriented programming and functional programming are examples of programming paradigms.
+
+        2. Reactive Programming: in Short, is programming with asynchronous data streams. Asynchronous data streams are streams of data whose values can arrive at any point in time. 
+
+        3. Functional programming: is a programming paradigam that takes a more mathematical approach, in that it sees a functional call as  a mathematical computation and thereby avoids changing states or dealing with mutable data. 
+
+        So, In short, We have a functional programming approach to values that might arrive at any point in time.
+
+/****************** 25-03-2019 *******************/ 
+
+        4.1.  Functional programming versus imperative programming
+            Two different styles of programming, 
+            1. Imperative programming and 
+            2. Declarative programming
+
+            Functional programming is a subset of declarative programming.
+
+            Imperative programming: focuses on how the program should achieve its result. 
+
+            Functional Programming: is a declarative programming paradigam, which means its focus is on what the programming should accomplish, or the what. 
+
+        4.1.1. Imperative programming versus declarative programming
+
+
+
+        
