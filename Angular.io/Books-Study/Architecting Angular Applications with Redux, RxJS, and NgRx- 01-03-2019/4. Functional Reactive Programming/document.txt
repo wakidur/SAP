@@ -3,6 +3,8 @@ overaching (সর্বাধিক, চরম, শীর্ষস্থান�
 stream(প্রবাহ, প্রবাহিত হত্তয়া)
 arrive( পৌঁছা, আসা, ঘটা, পড়া, উপনীত হত্তয়া, আগমন করা, আগত হত্তয়া)
 Imperative (উপদেশমূলক)
+declarative(ঘোষণামূলক)
+
 /****************** 24-03-2019 *******************/ 
 4.	Functional Reactive Programming
     Functional Reactive Programming (FRP) is a programming paradigm for reactive programming, which uses the building blocks of functional programming. 
@@ -31,6 +33,24 @@ Imperative (উপদেশমূলক)
             Functional Programming: is a declarative programming paradigam, which means its focus is on what the programming should accomplish, or the what. 
 
         4.1.1. Imperative programming versus declarative programming
+
+    /****************** 31-03-2019 *******************/ 
+        4.1.2. First-class higher-order functions
+            The term first class means that the language itself treats functional as values; they can be passed around as example arguments to other functions. 
+
+            >>> A higher-order function is a function that takes other function as parameters. 
+
+            function project(obj, fn) {
+                result fu(obj);
+            }
+
+            project({name: 'chris', age: 37}, (obj) => obj['name'] ); // chris
+            project({name: 'chris', age: 37}, (obj) => obj['age'] ); // chris
+        
+
+        4.1.3. Pure functions
+        
+
 
 
 
