@@ -4,6 +4,7 @@ stream(প্রবাহ, প্রবাহিত হত্তয়া)
 arrive( পৌঁছা, আসা, ঘটা, পড়া, উপনীত হত্তয়া, আগমন করা, আগত হত্তয়া)
 Imperative (উপদেশমূলক)
 declarative(ঘোষণামূলক)
+Recursion (পুনরাবৃত্তির)
 
 /****************** 24-03-2019 *******************/ 
 4.	Functional Reactive Programming
@@ -47,8 +48,25 @@ declarative(ঘোষণামূলক)
             project({name: 'chris', age: 37}, (obj) => obj['name'] ); // chris
             project({name: 'chris', age: 37}, (obj) => obj['age'] ); // chris
         
+ /****************** 1-04-2019 *******************/ 
 
         4.1.3. Pure functions
+
+/****************** 2-04-2019 *******************/ 
+
+            A pure function is a function that does not have a side-effect. Nothing the function does will ever affect a variable outside of it.
+
+/****************** 3-04-2019 *******************/ 
+
+/****************** 08-04-2019 *******************/ 
+    4.2. Recursion   
+        Recursion is a mathematical concept.
+        Recursion is the process a procedure goes through when one of the steps of the procedure involves invoking the procedure itself. 
+        A procedure that goes through recursion is said to be 'recursive'.  
+
+
+             
+
         
 
 
