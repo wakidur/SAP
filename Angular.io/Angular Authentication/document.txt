@@ -1,0 +1,14 @@
+1. Angular Authentication: Using the Http Client and Http Interceptors
+https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
+
+intercept (পথিমধ্যে রোধ করা, বাঁধা, ব্যাঘাত ঘটান, ঠেকান, বন্ধন করা, বাধা দেত্তয়া, ব্যাঘাত করা) 
+
+So why are HTTP interceptors useful? 
+    There are many reasons
+    1. To automatically attach authentication information to requests.
+        This can take several different forms but most often involves attaching a JSON Web Token (or other form of access token) as an Authorization header with the Bearer scheme.
+
+1.1. Make an Authentication Service
+1.2. Create an Interceptor
+2. Angular Authentication: Using Route Guards
+https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3
