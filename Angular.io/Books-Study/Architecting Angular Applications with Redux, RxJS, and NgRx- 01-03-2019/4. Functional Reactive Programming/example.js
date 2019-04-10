@@ -41,9 +41,39 @@ function something(params) {
   statement;
   statement;
   if (condition) {
+    // We can see that the function something() at some point in its body calls itself
     something();
   } else {
     
   }
   return someValue;
+}
+
+
+// A linked list consists of nodes that know about the node they are connected to.
+
+class Node {
+  constructor( 
+    public left,  
+    public value 
+    ) {}
+}
+
+// using such a structure as a Node, we can construct a linked list consisting of several linked nodes. 
+// we can connect a set of node instances in the following 
+const head = new Node(null, 1);
+const firstNode = new Node(head, 2);
+const secondNode = new Node(firstNode, 3);
+
+
+// demo of how to find the head node, imperative style
+const head = new Node(null, 1);
+const firstNode = new Node(head, 2);
+const secondNode = new Node(firstNode, 3);
+
+function findHeadImperative(startNode) {
+  while (startNode.left !== null) {
+    startNode = startNode.left;
+  }
+  return startNode;
 }

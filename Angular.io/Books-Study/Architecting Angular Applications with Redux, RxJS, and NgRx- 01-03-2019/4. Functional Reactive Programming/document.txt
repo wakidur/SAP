@@ -5,6 +5,10 @@ arrive( পৌঁছা, আসা, ঘটা, পড়া, উপনীত হ
 Imperative (উপদেশমূলক)
 declarative(ঘোষণামূলক)
 Recursion (পুনরাবৃত্তির)
+standing(স্থায়ী, খাড়া)
+abide (মেনে চলা)
+eternity(অনন্তকাল)
+although (যদিও)
 
 /****************** 24-03-2019 *******************/ 
 4.	Functional Reactive Programming
@@ -59,10 +63,34 @@ Recursion (পুনরাবৃত্তির)
 /****************** 3-04-2019 *******************/ 
 
 /****************** 08-04-2019 *******************/ 
-    4.2. Recursion   
+/****************** 10-04-2019 *******************/ 
+    4.2. Recursion   পুনরাবৃত্তির
         Recursion is a mathematical concept.
-        Recursion is the process a procedure goes through when one of the steps of the procedure involves invoking the procedure itself. 
-        A procedure that goes through recursion is said to be 'recursive'.  
+
+        Recursion is the process(প্রক্রিয়া) a procedure(কার্যপ্রণালী) goes through(মাধ্যমে যায়) when one of the steps of the procedure involves(জড়িত) invoking(আবাহন) the procedure itself. A procedure that goes through recursion is said to be 'recursive'. 
+
+        A recursive function should abide to the following rules:
+            •	Should call itself
+            •	Should eventually meet an exit condition
+
+        if a recursive function donesn't have an exit condition, we will run out(ফুরিয়ে যাওয়া
+        , শেষ হয়ে যাওয়া, কমিয়া যাত্তয়া, কমিয়া যাত্তয়া) of memory as the function will call itself for all eternity(অনন্তকাল, চিরকাল, অমরত্ব, নিত্যতা, চিরস্থায়িত্ব, অবিনশ্বর যশ). 
+
+        There are certain types of problems that are more suitable than others to apply recursive programming to. Examples of these are:
+        •	Traversing trees
+        •	Compiling code
+        •	Writing algorithms for compression
+        •	Sort lists
+
+
+        Our example is a linked list. A linked list consists of nodes that know about the node they are connected to. The code for the Node structure looks like this:
+
+        class Node {
+            constructor(public left, public value) {}
+        }
+
+
+
 
 
              
