@@ -9,6 +9,7 @@ standing(স্থায়ী, খাড়া)
 abide (মেনে চলা)
 eternity(অনন্তকাল)
 although (যদিও)
+leaf(গাছের পাতা)
 
 /****************** 24-03-2019 *******************/ 
 4.	Functional Reactive Programming
@@ -89,7 +90,9 @@ although (যদিও)
             constructor(public left, public value) {}
         }
 
-
+/****************** 11-04-2019 *******************/ 
+        4.2.1. No more loops
+        4.2.2. Reoccurring pattern   
 
 
 

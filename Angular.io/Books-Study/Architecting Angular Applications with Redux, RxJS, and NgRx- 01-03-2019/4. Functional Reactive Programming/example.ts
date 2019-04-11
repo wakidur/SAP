@@ -27,3 +27,6 @@ function findHeadsImperative(startNode:any) {
 const foundImp = findHeadsImperative(greenNodes);
 console.log('found', foundImp);
 console.log(foundImp === radNodes)
+ 
+
+

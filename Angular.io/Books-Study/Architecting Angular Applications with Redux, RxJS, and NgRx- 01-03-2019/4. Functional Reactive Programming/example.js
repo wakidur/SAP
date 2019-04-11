@@ -1,6 +1,7 @@
 // 4.1.1. Imperative programming versus declarative programming
 
 let sum = 0;
+
 function updateSum(records) {
   for (let i = 0; i < records.length; i++) {
     sum += records[i];
@@ -29,10 +30,10 @@ function calculateSum(rows) {
 }
 
 function getRows(filePath) {
-    // still not pure, but some things needs to perform side effects
-    const fileContent = fs.readFileStyst(filePath);
-    const rows = fileContent.split(',');
-    
+  // still not pure, but some things needs to perform side effects
+  const fileContent = fs.readFileStyst(filePath);
+  const rows = fileContent.split(',');
+
 }
 
 // Recursion
@@ -44,36 +45,39 @@ function something(params) {
     // We can see that the function something() at some point in its body calls itself
     something();
   } else {
-    
+
   }
   return someValue;
 }
 
 
-// A linked list consists of nodes that know about the node they are connected to.
+/**
+ *  No more loops
+ * 
+ */
+// Demo of printing an array, imperative style
+let numaricValueArray = [1, 2, 3, 4, 5, 6];
 
-class Node {
-  constructor( 
-    public left,  
-    public value 
-    ) {}
-}
-
-// using such a structure as a Node, we can construct a linked list consisting of several linked nodes. 
-// we can connect a set of node instances in the following 
-const head = new Node(null, 1);
-const firstNode = new Node(head, 2);
-const secondNode = new Node(firstNode, 3);
-
-
-// demo of how to find the head node, imperative style
-const head = new Node(null, 1);
-const firstNode = new Node(head, 2);
-const secondNode = new Node(firstNode, 3);
-
-function findHeadImperative(startNode) {
-  while (startNode.left !== null) {
-    startNode = startNode.left;
+function printArrayValue(arr) {
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    console.log(element);
   }
-  return startNode;
 }
+printArrayValue(numaricValueArray);
+
+// the corresponding code using recursion looks like this
+// Printing an array using recursion
+
+let arrayValueForRecursion = [1, 2, 3, 4, 5];
+
+function getArrayValueUsingRecursion(arr, pos, len) {
+  if (pos < len) {
+    console.log(arr[pos]);
+    getArrayValueUsingRecursion(arr, pos + 1, len);
+  }
+  return;
+}
+
+getArrayValueUsingRecursion(arrayValueForRecursion, 0, arrayValueForRecursion.length);
+

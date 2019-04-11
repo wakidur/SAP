@@ -1,10 +1,5 @@
 class Links {
-    constructor(
-        public left,
-        public value
-    ) {
-        
-    }
+    constructor(  public left, public value ) {}
 }
 
 // demo of how to find heads nods, declarative style using recursion
@@ -14,12 +9,12 @@ const secondLinks = new Links(null, 1);
 
 function findHeadsRecursive(startNode:any) {
     if (startNode.left !== null) {
-        return findHeadsImperative(startNode.left);
+        return findHeadsRecursive(startNode.left);
     } else {
         return startNode;
     }
 }
 
-const found = findHeadsImperative(secondLinks);
+const found = findHeadsRecursive(secondLinks);
 console.log('found', found);
 console.log(found === heads);
