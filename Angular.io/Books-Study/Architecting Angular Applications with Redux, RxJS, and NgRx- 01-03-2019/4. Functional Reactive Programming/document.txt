@@ -93,6 +93,19 @@ leaf(গাছের পাতা)
 /****************** 11-04-2019 *******************/ 
         4.2.1. No more loops
         4.2.2. Reoccurring pattern   
+            4.2.2.1. Summarise
+/****************** 15-04-2019 *******************/ 
+    4.3. Asynchronous data streams
+        An asynchronous data stream is a stream of data where values are emitted, one after another, with a delay between them. The word asynchronous means that the data emitted can appear anywhere in time, after one second or even after two minutes, for example. A way to model asynchronous streams is to place the emitted values on a time axis, 
+
+        there are a lot of things that can be considered asynchronous. 
+        One such thing is fetching data through AJAX. When the data arrives depends on a number of factors, 
+
+            •	The speed of your connection
+            •	The responsiveness of the backend API
+            •	The size of the data, and many more factors.
+
+
 
 
 
