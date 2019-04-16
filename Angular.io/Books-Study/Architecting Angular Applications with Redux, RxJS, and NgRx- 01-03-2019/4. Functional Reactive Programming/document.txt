@@ -10,6 +10,7 @@ abide (মেনে চলা)
 eternity(অনন্তকাল)
 although (যদিও)
 leaf(গাছের পাতা)
+treating (আচরণ করা)
 
 /****************** 24-03-2019 *******************/ 
 4.	Functional Reactive Programming
@@ -106,7 +107,19 @@ leaf(গাছের পাতা)
             •	The size of the data, and many more factors.
 
 
+/****************** 16-04-2019 *******************/ 
+    4.4. Comparing lists to async streams – preparing for RxJS;
+        There are different ways to manipulate data: 
+        1. Sometimes we want to change the data emitted to some other data  
+        2. Sometimes we might want to change how often the data is being emitted to a listener.
+        3. Sometimes, we want our stream of data to become a totally different stream.
 
+        We will try to model the following situations
+            a> Projection: Changing the data of the value being emitted. 
+            b> Changing what gets emitted. 
+
+        4.4.1. Combining the functional programming paradigm with streams.
+            RxJS, as a library, 
 
 
              
