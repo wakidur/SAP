@@ -33,7 +33,8 @@ abstraction (বিমূর্তন, প্রত্যাহরণ)
             Operator: This is a method on an Observable, which allows us to manipulate the stream itself or the data emit.
             Stream: This is synonymous with an instance of an Observable. The reason for it being clled a stream is that you should thing of the data as continuous and not really having an end, unless you explicitly define an end. 
 
-            
+/****************** 21-04-2019 *******************/ 
+        5.2.1. Observable and Observe
 
 
          
