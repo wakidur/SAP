@@ -34,7 +34,11 @@ abstraction (বিমূর্তন, প্রত্যাহরণ)
             Stream: This is synonymous with an instance of an Observable. The reason for it being clled a stream is that you should thing of the data as continuous and not really having an end, unless you explicitly define an end. 
 
 /****************** 21-04-2019 *******************/ 
-        5.2.1. Observable and Observe
+/****************** 21-04-2019 *******************/ 
+        5.2.1. Observable(লক্ষণীয়, পর্যবেক্ষণীয়,) and Observe(পর্যবেক্ষক, প্রতিপালক, নিরীক্ষক, তত্ত্বাবধায়ক, অবেক্ষক, দ্রষ্টা)
 
+/****************** 24-04-2019 *******************/
+        5.2.2. Producer 
 
+        5.2.3. Observable error and completion
          
