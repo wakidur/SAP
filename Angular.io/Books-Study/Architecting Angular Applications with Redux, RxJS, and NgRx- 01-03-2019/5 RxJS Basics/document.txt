@@ -41,4 +41,8 @@ abstraction (বিমূর্তন, প্রত্যাহরণ)
         5.2.2. Producer 
 
         5.2.3. Observable error and completion
+
+
+/****************** 25-04-2019 *******************/
+        5.2.4. Operator
          

@@ -1,6 +1,7 @@
 iterative (পুনরাবৃত্তিমূলক, পুনরাবৃত্ত)
 nuances (সামান্য পার্থক্য, তারতম্য)
 Leveraging (ওঠানামা)
+Rough (মোটামুটি)
 /**
  28-01-2019------------------
 */
@@ -14,4 +15,36 @@ Local Weather app
     and RxJS.
 
 30-01-2018 -------------- 
+
+/****************** 25-04-2019 *******************/
+    2.1	Introduction to Angular
+       2.1.1.  Angular's philosophy
+    2.2. What's new in Angular 6?
+    2.3. Angular in Full-Stack Architecture
+        2.3.1. High level architecture
+            There are two types of decoupling, one is a 
+             1. soft-decoupling.
+                where essentially a Gentlemen's Agreement is made to not mix concerns and try and not mess up the code base. 
+            
+                *** If you maintain your frontend code under the same code structure as your backend code and if you let your REST server serve up your frontend application, then you are only practicing soft-decoupling.
+            2. hard-decoupling 
+                
+/****************** 28-04-2019 *******************/
+        2.3.2. Folder structure
+            2.3.2.1. Set up your development directory
+    2.4. Generate your Angular application
+        2.4.1. Installing Angular CLI
+        2.4.2. Initializing Angular app
+        2.4.3. Publishing Git Repository using GitHub Desktop
+        2.4.4. Inspecting and updating package.json
+        2.4.5. Commiting code using VS Code
+        2.4.6. Running your Angular app
+    2.5. Optimizing VS Code for Angular
+        2.5.1.IDE settings
+        2.5.2. IDE extensions
+        2.5.3. Coding style
+    2.6. Planning a feature road map using Waffle
+        2.6.1. Setting up a Waffle project
+        2.6.2. Creating issues for your Local Weather app
+    2.7. Crafting UI elements using components and interfaces
 
