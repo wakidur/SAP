@@ -1,0 +1,20 @@
+fragile(ভঙ্গুর, অথর্ব, ক্ষণস্থায়ী, নশ্বর, জরাগ্রস্ত, পলকা)
+combines(সম্মিলন)
+abstracts (সারাংশ)
+/****************** 06-05-2019 *******************/  
+3. Prepare Angular App for Production Release
+
+/****************** 07-05-2019 *******************/ 
+
+    3.1. Angular unit tests
+        3.1.1. Unit test execution
+        3.1.2. Declarations
+
+/****************** 08-05-2019 *******************/ 
+    3.5. Containerizing the app using Docker
+        Docker is an open platform for developing, shipping, and running applications.
+
+        Docker combines a lightweight container virtualization platform with workflows and tooling that help manage and deploy applications.
+        The most obvious difference between "Virtual Machines (VMs)"
+    
+        3.5.1. Installing Docker

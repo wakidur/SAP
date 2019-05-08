@@ -2,6 +2,10 @@ iterative (পুনরাবৃত্তিমূলক, পুনরাবৃ�
 nuances (সামান্য পার্থক্য, তারতম্য)
 Leveraging (ওঠানামা)
 Rough (মোটামুটি)
+leveraging(উপজীব্য, জীবিকা, জীবনযাত্রা, জীবন, জীবিকানির্বাহের উপায়, উপজীবিকা, উপজীব্য)
+differs(পৃথক)
+admittedly(স্বীকার করিয়া লইয়া, নিঃসন্দেহে, স্পষ্টত)
+convoluted(সংবর্ত, জটিল)
 /**
  28-01-2019------------------
 */
@@ -46,5 +50,40 @@ Local Weather app
     2.6. Planning a feature road map using Waffle
         2.6.1. Setting up a Waffle project
         2.6.2. Creating issues for your Local Weather app
-    2.7. Crafting UI elements using components and interfaces
 
+/****************** 29-04-2019 *******************/
+    2.7. Crafting UI elements using components and interfaces
+        2.7.1. Adding an Angular component
+            [An effective implementation of MVVM] inherently enforces proper separation of concerns. Business logic is clearly separated from presentation logic. So when a View is developed, it stays developed, because fixing a bug in one View's functionality doesn't impact other views. On the flip side, if [you use] visual inheritance effectively and [create] reusable user controls, fixing a bug in one place can fix issues throughout the application.
+
+
+/****************** 30-04-2019 *******************/
+        2.7.1. Adding an Angular component .....
+        2.7.2. Define your model using interfaces
+    
+    2.8. Using Angular Services and HttpClient to retrieve data
+        Now you need to connect your CurrentWeather component to the OpenWeatherMap APIs. In the upcoming sections, we will go over the following steps to accomplish this goal:
+            1.	Create a new Angular Service
+            2.	Import HttpClientModule and inject it into the service
+            3.	Discover the OpenWeatherMap API
+            
+            4.	Create a new interface that conforms to the shape of the API
+            5.	Write a get request
+            6.	Inject the new service into the CurrentWeather component
+            7.	Call the service from the init function of the CurrentWeather component
+            8.	Finally, map the API data to the local ICurrentWeather type using RxJS functions so that it can be consumed by your component
+        
+        2.8.1. Creating a new Angular Service
+        2.8.2. Inject dependencies
+        2.8.3. Discover OpenWeatherMap APIs
+        2.8.4. Storing environment variables
+
+/****************** 05-05-2019 *******************/        
+        2.8.5. Implementing an HTTP GET 
+        2.8.6. Retrieving service data from a component
+    
+    2.9. Transform data using RxJS
+        2.9.1. Understanding Reactive programming
+
+/****************** 06-05-2019 *******************/   
+    2.10. Summary   
