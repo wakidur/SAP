@@ -23,5 +23,9 @@ Introduction to modules
 
 /****************** 14-05-2019 *******************/ 
     1.3. NgModules and JavaScript modules
+
+/****************** 14-05-2019 *******************/ 
+        In JavaScript each file is a module and all object defined in the file belong to that module. The module declares some objects to be public by marking them with the export key word. 
         
 
+Event ID: CRO-9743-EBTM

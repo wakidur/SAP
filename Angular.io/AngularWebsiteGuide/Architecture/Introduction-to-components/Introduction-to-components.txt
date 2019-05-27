@@ -1,15 +1,24 @@
+patch (টুকরা, একটুকরা জমি)
+tedious(ক্লান্তিকর)
+nightmare(দুঃস্বপ্ন, প্রচণ্ড আতঙ্ক)
+coordinating (সমন্বয়ের)
+coordinate(সমশ্রেণীভুক্ত করা)
+
+/****************** 15-05-2019 * Review ******************/ 
 Introduction to components
 1. Introduction to components
   A component controls(নিয়ন্ত্রণ) a patch of screen called a view.  
   you define a component's application logic what it does to support the view inside a class.
 
   ** Angular creates, update, and destroys components as the user moves through the application. your app can take action at each moment in the lifecycle throught optional lifecycle hooks, like ngOnInit();
+
 2. Component metadata
 
 
 3. Templates and views
   Views are typically arranged  hierarchically, allowing tyou to modify or show and hide entire UI sections or pages as a unit. The template immediately associated(যুক্ত) with a component defines that component's host view. The component can also define a view hierarcy, which contains embedded(খচিত) views, hosted by other components.
 
+/****************** 19-05-2019 * Review ******************/
 4. Template syntax
   This templage uses typical HTML elements like <h2> and <p>, and also inculdes Angular template-syntax elements,
    *ngFor
@@ -34,8 +43,16 @@ Introduction to components
 
 ***** Data binding plays an important rola in communication between a template and its component, and is also important for communication between parent and child components.
 
+/****************** 20-05-2019 * Review ******************/
 6. Pipes
-  Angular pipes let you declare display-value transformations(	পরিবর্তন, রুপান্তর, রুপান্তরণ ) in your templet HTML. 
+  Angular pipes let you declare display-value transformations(	পরিবর্তন, রুপান্তর, রুপান্তরণ ) in your template HTML. 
+  A class with the @pipe decorator defines a function that transorms input values to output values for dispaly in a view. 
+
+  Angular defines various pipes, such as the data pipe and currency pipe, for a component list, see the pipes API list. 
+
+  {{interpolated_value | pipe_name}}
+
+  you can chain pipes, sending the output of one pipe function to be transformed by another pipe function. 
 
 7. Directives
   Angular templates  are dynamic. When Anuglar renders them, it transforms(	রুপান্তর করা ) the DOM according to the instructions given by directives. A directive is a class with a @Directive decorator. 

@@ -1,6 +1,8 @@
+/****************** 21-05-2019 *** Review ****************/ 
 Introduction to servieces and dependency injection
 
-Service is a broad category encompassing(পরিবেষ্টন করা) any value, function, or feature that an app needs. A service is typically a class with a narrow(সংকীর্ণ), well defined purpose. It should do something specific and do it well. 
+Service is a broad category encompassing(পরিবেষ্টন করা) any value, function, or feature that an app needs. 
+A service is typically a class with a narrow(সংকীর্ণ), well defined purpose. It should do something specific and do it well. 
 
 Angular distinguishes(আলাদা) components form services in order to increases modularity and reusability. 
 
