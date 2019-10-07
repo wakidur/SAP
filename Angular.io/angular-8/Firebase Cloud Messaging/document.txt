@@ -1,0 +1,38 @@
+https://firebase.google.com/docs/cloud-messaging
+
+Google Cloud Messaging ...........
+
+Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably deliver messages at no cost.
+
+Using FCM
+=> You can notify a client app that new email or other data is available to sync. 
+=> You can send notification messages to drive user re-engagement and retention. 
+=> For use cases such as instant messaging, a message can transfer a payload of up to 4KB to a client app. 
+
+Key capabilities
+  1. Send notification message or data messages.
+  2. Versatile message targeting : Distribute messages to your client app in any of 3 ways—
+        to single devices, 
+        to groups of devices, or 
+        to devices subscribed to topics.
+  3. Send messages from client apps
+
+
+How does it work?
+
+An FCM implementation includes two main components for sending and receiving
+
+1. A trusted environment such as Cloud Functions for Firebase or an app server on which to build, target, and send messages.
+2. An iOS, Android, or web (JavaScript) client app that receives messages.
+
+You can send messages via the Firebase Admin SDK or the FCM server protocols. For testing or for sending marketing or engagement messages with powerful built-in targeting and analytics, you can also use the Notifications composer.
+
+Implementation path
+
+/************** Set up a JavaScript Firebase Cloud Messaging client app ***********/
+The FCM JavaScript API lets you receive notification messages in web apps running in browsers that support the Push API. This includes the browser versions listed in this support matrix.
+
+
+
+https://github.com/adrianaden/angular-push-notification
+https://medium.com/@a.adendrata/push-notifications-with-angular-6-firebase-cloud-massaging-dbfb5fbc0eeb

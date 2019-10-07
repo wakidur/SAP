@@ -1,0 +1,6 @@
+https://www.tektutorialshub.com/angular/angular-runtime-configuration/
+15-9-2019
+Where to Store configuration
+
+APP_INITIALIZER
+The APP_INITIALIZER is the predefined injection token provided by Angular. The Angular will execute the function provided by this token when the application loads. If the function returns the promise, then the angular will wait until the promise is resolved. This will make it an ideal place to read the configuration and also to perform some initialization logic before the application is initialized.

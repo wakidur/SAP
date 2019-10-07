@@ -1,0 +1,3 @@
+Reading data before application startup in Angular 2
+https://gist.github.com/fernandohu/122e88c3bcd210bbe41c608c36306db9
+
