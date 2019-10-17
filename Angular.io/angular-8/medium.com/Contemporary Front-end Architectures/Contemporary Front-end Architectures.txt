@@ -1,0 +1,35 @@
+https://blog.webf.zone/contemporary-front-end-architectures-fb5b500b0231
+
+Contemporary (সমসাময়িক)
+evolved (বিবর্তিত)
+ Prelude (প্রস্তাবনা)
+/**************** 14-10-2019 ***************/
+Contemporary Front-end Architectures
+How we got here?(আমরা এখানে কিভাবে পেলাম?/আমরা এখানে কিভাবে আছে?) A front-end engineer’s perspective!
+
+"Reasoning about the Data Flows" within different components of a software system is the central idea of software architecture
+
+The quality of the architecture is the measure of ease with which you can justify this reasoning! (আর্কিটেকচারের গুণমানটি স্বাচ্ছন্দ্যের পরিমাপ যা দিয়ে আপনি এই যুক্তিটি ন্যায়সঙ্গত করতে পারেন!).
+
+Exploring these data flows and ultimately architectures in today’s web applications is the motivation behind this article. Web applications have evolved from simple static websites (two-tiered architecture) into complex multi-layered SPA(Single-page application) and SSR(Server-Side Rendering) driven API first systems. CMS systems have grown into Headless content-first systems.
+
+Front-end community has changed rapidly in recent times. It started with DOM infused algorithms introduced by jQuery, which was quickly succeeded by MVC based Backbone.js. And, in no time, we found ourselves in the jungle of bidirectional and unidirectional data flow architecture. Somewhere, we lost the track of how we got here. How did the world that was so drenched in MVC suddenly got into React pioneered unidirectional data flow? What is the correlation? As we progress, we will attempt to unlock this puzzle.
+
+A Necessary Prelude (একটি প্রয়োজনীয় উপস্থাপনা) — What is a Computer?
+
+A prelude is necessary here. A computer is a machine that collects data/information from user and provide it back to the user after processing it, either instantly or later. How does computer collect and show this data? It uses software application to achieve this.
+
+The struggle of software architecture is to provide reasonable means to compose the software without losing the sanity(সদ্বিবেচনা,মতিস্থিরতা, প্রকৃতিস্থতা).
+
+
+The key thing to remember is that the data, which software application is processing, is known as The Model or The Application State. Few brave souls might call it Domain Model or Business Logic of the application. An application could be a desktop or web application.
+
+
+/**************** 15-10-2019 - 16-10-2019 ***************/
+seminal (ধাতুগত, প্রজনক)
+Father’s MVC — The original
+
+Separating data from presentation is the core theme of Graphical User Interfaces (both web-based or desktop-based). With MVC — Model View Controller, separating presentation (View) from domain concerns (Model) was the primary design motivation. And without doubt, MVC was a seminal work which would influence generations to come.
+
+"If there could be first principle of software development, then it is SoC — Separation of Concern. And probably, MVC pattern is its first bold manifestation."
+

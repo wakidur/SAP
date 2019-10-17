@@ -18,7 +18,7 @@ express (প্রকাশ করা, দ্রুতগামী,স্পষ�
 persist(জিদ করা, অবিরত লাগিয়া থাকা,স্থায়ী অবস্থায় থাকা )
 cumbersome (কষ্টকর, অসুবিধাজনক)
 
-/****************** 01-03-2019 *******************/ 
+/****************** 01-03-2019 -- 01-03-2019 *******************/ 
 1. Quick Look Back at Data Services for Simple Apps
     This book is about learning to structure your application and learning how to set up and communicate your application's state, and its changes, in a way that all parts of your application are in agreement on what is happening.
 

@@ -1,0 +1,17 @@
+https://medium.com/ableneo/how-to-pass-data-between-routed-components-in-angular-2306308d8255
+ public  stateChangeAction() {
+    if (this.isActiveNotification) {
+      this.router.navigate(["/admin/marketing", "notification"], { state: { data: this.notification.userIds }});
+    } else if (this.isActivepSMS) {
+      this.router.navigate(["/admin/marketing/", btoa(JSON.stringify({ids: this.notification.userIds, tab: 'sms'}))]);
+    } else if (this.isActiveEmail) {
+      this.router.navigate(["/admin/marketing/", btoa(JSON.stringify({ids: this.notification.userIds, tab: 'email'}))]);
+    }
+  }
+How to pass data between routed components in Angular
+
+There are several ways how Angular components can pass data around:
+    1. Using @Input and @Output
+    2. By injecting parent component through constructor or child components through @ViewChild, @ViewChildren, @ContentChild, @ContentChildren and directly calling component’s API
+    3. Using services (this covers state management libraries like ngrx)
+    4. Using router parameters
