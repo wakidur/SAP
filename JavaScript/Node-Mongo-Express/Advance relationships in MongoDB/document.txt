@@ -1,0 +1,6 @@
+https://medium.com/@saurabhgupta_37181/advance-relationships-in-mongodb-eb63a6a2cce1
+Advance relationships in MongoDB.
+
+Query through multiple collections in MongoDB
+
+Most no-SQL database like MongoDB supports storing data with different schemas in the same collection. 
