@@ -1,0 +1,18 @@
+/**
+  Error case study
+  1 
+  https://stackoverflow.com/questions/52122272/err-http-headers-sent-cannot-set-headers-after-they-are-sent-to-the-client
+  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+  Ans 
+ That particular error occurs whenever you try to send more than one response to the same request and is usually caused by improper asynchronous code.
+ 
+  if (!user) {
+  errors.email = "User not found";
+  res.status(404).json({ errors });
+  // stop further execution in this callback
+  return;
+}
+ */
+
+ 2 
+ The \"data\" argument must be one of type string, TypedArray, or DataView. Received type undefined
