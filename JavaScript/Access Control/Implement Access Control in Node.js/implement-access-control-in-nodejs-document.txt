@@ -1,4 +1,5 @@
 https://blog.nodeswat.com/implement-access-control-in-node-js-8567e7b484d1
+https://medium.com/practo-engineering/route-based-access-control-462861b04433
 
 https://www.imperva.com/learn/data-security/role-based-access-control-rbac/
 
@@ -50,6 +51,14 @@ ABAC (Attribute Based Access Control) — is an evolution of RBAC that tries to 
 Details of RBAC
 
 
+https://medium.com/practo-engineering/route-based-access-control-462861b04433
+
+Route Based Access Control
+In REST API, the resources are mapped to a particular entity in the DB.
+Thus, having POST access to a resource means that you have the access to upsert entries in the corresponding DB model.
+
+IDEA
+Instead of treating DB Model as the Entity for which access is managed, We attack 
 
 
 

@@ -1,0 +1,58 @@
+Guide To Becoming A Self-Taught Software Developer
+
+Figure Out Your End Goal  
+    Work for a big company, startup, Freelance?
+    Web development (Frontend/Backend), Gaming, data science, mobile apps? 
+    What are you naturally good at?
+    Check pay scales, job security, etc for different types of dev jobs.
+
+Choose a Programming Language 
+    Figure out which language you should learn for what want to do
+    Fundamentals first! (Save frameworks, etc for later)
+    Chose a text editor/ IDE and get comfortable with it.
+    You can always switch or learn another language
+
+Find Resources & Build a Curriculum 
+    Books: Great for learning language fundamentals
+    Documentation: Best used for reference
+    Resources Websites: W3Schooles, MDN web docs
+    Video Courses: Youtube, Udemy, Pluralsight, Lynda, Coursera, Frontend Masters
+    Online Bootcamps: Freecodecamp, Codeacademy, Team Treehouse
+    Challenge Websites: Codewares, HackerRank
+
+Find a Community 
+    Having people to talk to and learn from is very beneficial
+    Find a mentor if possible
+    Join an online community
+    Go to meetups
+
+Create Your Own Projects 
+    Following along with courses is only half the battle
+    This is where most get stuck and many quit
+    Your projects do NOT have to be from scratch
+    Add new features, use the docs as a supplement to figure new stuff out 
+    Look at other people’s code that is similar to what 
+    Eventually, you won’t need to use other projects as a starting point 
+Create Your Portfolio 
+    Create an attractive but simple portfolio
+    Showcase a live version (if possible) and your source code
+    Selfe taught development NEED a great portfolio with work examples
+
+Contribute To Open Source 
+    Givens your experience with real-life project
+    Collaborate with other developers
+    Something for you resume
+    Learn how to use Github
+
+Create an Online Presence 
+    Also extremely important for self-taught devs no degree
+    Have an up to date Linkedin and professional Twitter
+    Upload all of your work to Github and keep it well documented 
+    Write articles, Tutorial, Videos, etc
+    The more you are visible on the web, the better
+Prepare & Apply For Jobs 
+    All other boxes should be checked
+    Prepare for interviews, Practice algorithms, Create a resume, Cover letter, etc
+    Search for jobs in your area that are looking for things you know
+    Apply event if it says degree required
+    Remember… it is your first job, not your last
