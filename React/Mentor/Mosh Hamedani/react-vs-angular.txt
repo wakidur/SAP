@@ -1,0 +1,40 @@
+React vs. Angular: The Complete Comparison
+https://programmingwithmosh.com/react/react-vs-angular/
+
+History of React vs. Angular
+ 1. Architecture of React vs. Angular
+    Framework vs. Library
+    => Angular is a full-fledged MVC framework and React is merely a JavaScript Library (just the view).
+
+        Angular provides the following “out of the box”:
+            Templates, based on an extended version of HTML
+            XSS protection
+            Dependency injection
+            Ajax requests by @angular/HTTP
+            Routing, provided by @angular/router
+            Component CSS encapsulation
+            Utilities for unit-testing components.
+            @angular/forms for building forms
+        
+        React, on the other hand, gives you much more freedom. It only provides the “view” in MVC – you need to solve the M and C on your own.
+
+            In addition, each React project is different and requires a decision requiring its folder hierarchy and architecture. Things can go wrong much more easily due to this.
+
+        React provides the following “out of the box”:
+            Instead of classic templates, it has JSX, an XML-like language built on top of JavaScript
+            XSS protection
+            No dependency injection
+            Fetch for Ajax requests
+            Utilities for unit-testing components
+        Some popular libraries to add functionality are:
+
+            React-router for routing
+            Redux or MobX for state management
+            Enzyme for additional testing utilities
+2. Regular DOM vs. Virtual Dom
+    - React’s use of a virtual DOM . A virtual DOM only looks at the differences between the previous and current HTML and changes the part that is required to be updated. 
+
+    - Angular opted to use a regular DOM. This will update the entire tree structure of HTML tags until it reaches the user’s age.
+
+    Templates – JSX or HTML
+        React decided to combine UI templates and inline JavaScript logic, which no company had ever done before. The result is called “JSX”. Although it may have sounded like a bad idea, Facebook’s gamble paid off big-time. React uses something called a component, which contains both the markup AND logic in the same file. It also uses an XML-like language that allows you to write markup directly in your JavaScript code. JSX is a big advantage for development, because you have everything in one place, and code completion and compile-time checks work better
