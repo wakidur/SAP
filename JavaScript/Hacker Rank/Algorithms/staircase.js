@@ -72,3 +72,16 @@ function staircase(n) {
 }
 
 staircase(3)
+
+
+
+function staircase(n) {
+    if (n == null || n <= 0 || n > 100) {
+        return null;
+    }
+    let steps = 1;
+    for (let i = 0; i < n; i++) {
+        console.log(' '.repeat(n - steps) + '#'.repeat(steps));
+        steps++;
+    }
+}

@@ -7,7 +7,10 @@ const {
 const {
     diagonalDifference,
     plusMinus,
-    staircase
+    staircase,
+    miniMaxSum,
+    birthdayCakeCandles,
+    timeConversion
 } = require('./algorithms/warmup-problem');
 
 
@@ -41,5 +44,20 @@ compareTheTriplets(array1, array2);
 // plusMinus(arr);
 
 //  staircase 7 
+// staircase(3);
 
-staircase(3);
+
+// Complete the miniMaxSum function below. 8 
+// let arr = [256741038, 623958417, 467905213, 714532089, 938071625]
+// miniMaxSum(arr);
+
+// Complete the birthdayCakeCandles function below.. 9 
+// let ar = [4, 2, 1, 4]
+// birthdayCakeCandles(ar);
+
+
+/*
+ * Complete the timeConversion function below. 10
+ */
+let s = "07:05:45PM"
+timeConversion(s);
