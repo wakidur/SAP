@@ -1,8 +1,11 @@
 React vs. Angular: The Complete Comparison
 https://programmingwithmosh.com/react/react-vs-angular/
 
-History of React vs. Angular
- 1. Architecture of React vs. Angular
+0. History of React vs. Angular
+ Angular is a JavaScript framework written in TypeScript. It was developed and is maintained by Google, and is described as a “Superheroic JavaScript MVWFramework” on Angular’s webpage. Angular (version 2 and above), originally released in September 2016, is a complete rewrite of AngularJS (released in October 2010).
+ React is a JavaScript library developed and maintained by Facebook. It was released in March 2013 and is described as “a JavaScript library for building user interfaces”.  
+
+1. Architecture of React vs. Angular
     Framework vs. Library
     => Angular is a full-fledged MVC framework and React is merely a JavaScript Library (just the view).
 
@@ -31,10 +34,64 @@ History of React vs. Angular
             React-router for routing
             Redux or MobX for state management
             Enzyme for additional testing utilities
+            
 2. Regular DOM vs. Virtual Dom
     - React’s use of a virtual DOM . A virtual DOM only looks at the differences between the previous and current HTML and changes the part that is required to be updated. 
 
     - Angular opted to use a regular DOM. This will update the entire tree structure of HTML tags until it reaches the user’s age.
 
-    Templates – JSX or HTML
+3. Templates – JSX or HTML
         React decided to combine UI templates and inline JavaScript logic, which no company had ever done before. The result is called “JSX”. Although it may have sounded like a bad idea, Facebook’s gamble paid off big-time. React uses something called a component, which contains both the markup AND logic in the same file. It also uses an XML-like language that allows you to write markup directly in your JavaScript code. JSX is a big advantage for development, because you have everything in one place, and code completion and compile-time checks work better
+4. React Fiber
+5. Components
+6. State Management
+7. Data Binding
+8. TypeScript vs JavaScript/Flow
+9. Mobile Solutions of React vs. Angular
+10. Testing in React vs. Angular
+11. Learning Curve of React vs. Angular
+12. Popularity & Growth Trajectory of React vs. Angular
+13. Most Loved, Dreaded, and Wanted Frameworks, Libraries, and Tools
+14. Companies Using
+15. Conclusion of React vs. Angular
+Conclusion of React vs. Angular
+As you have seen through my many examples, React and Angular are two titans in a cutthroat industry. In a business where only the strongest survive, you can easily conclude that these are some of the best technologies on the market. You can’t go wrong with either one.
+
+Recap
+Let’s recap what you’ve learned in this article:
+
+Angular:
+
+Is a full framework
+Has a Regular DOM, which renders updates slower than React’s Virtual DOM
+The rendered JavaScript and HTML maintains a physical separation
+Utilizes Components: emerging web components standard
+Data Binding: two-way
+You must use TypeScript
+Mobile: Ionic and Cordova are slower than React Native
+Testing:  Jasmine & Mocha
+Learning Curve is higher, but once you understand it you have an entire MVC framework
+Scalability: easy to scale
+Popularity: dropped since AngularJS (Angular 1)
+Open source: GitHub stars: 40,963 / Contributors: 732 / Issue: 2,162
+Size: larger, resulting in longer load times and performance on mobile
+Used on: Google, Nike, Forbes, Upwork, General Motors, HBO, Sony
+React:
+
+Just a small view library
+Has a Virtual DOM, which renders updates faster than Angular’s Regular DOM
+Uses JSX, which combines markup and logic in the same file (making components easier to read)
+Components: emerging web components standard
+Data Binding: one-way
+You Can use ES6/7 JavaScript, although you can use Typescript or Flow if you so choose
+Mobile: React Native is faster than Angular’s solutions
+Testing: Jest & Enzyme
+Learning Curve is lower, but you only get the view. Because of this, you’re going to have to learn a slew of 3rd party libraries. Ex. State management (Redux or MobX), Asynchronous calls (react-promise, react-thunk, or react-saga), etc.
+Scalability: is more testable, so also easy to scale
+Popularity: has increased exponentially
+Open source: GitHub stars: 111,927 / Contributors: 1,242 / Issues: 287
+Size: smaller than Angular, so a bit faster
+Used on: Facebook, Airbnb, Uber, Netflix, Instagram, Whatsapp, Dropbox
+React Fiber will increase the speed of React dramatically
+
+
