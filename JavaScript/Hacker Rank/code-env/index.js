@@ -10,7 +10,8 @@ const {
     staircase,
     miniMaxSum,
     birthdayCakeCandles,
-    timeConversion
+    timeConversion,
+    gradingStudents
 } = require('./algorithms/warmup-problem');
 
 
@@ -59,5 +60,13 @@ compareTheTriplets(array1, array2);
 /*
  * Complete the timeConversion function below. 10
  */
-let s = "07:05:45PM"
-timeConversion(s);
+// let s = "07:05:45PM"
+// timeConversion(s);
+/*
+ * Complete the 'gradingStudents' function below. 11
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY grades as parameter.
+ */
+let grades = [73, 67, 38, 33]
+gradingStudents(grades);

@@ -161,3 +161,45 @@ exports.timeConversion = async (s) => {
         console.error(error);
     }
 }
+
+/*
+ * Complete the 'gradingStudents' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY grades as parameter.
+ */
+
+exports.gradingStudents = async (grades) => {
+    try {
+        // step 1
+        let gradesOutput = "";
+        grades.forEach(integer => {
+            if ((integer % 5) >= 3 && integer >= 38) {
+                gradesOutput += `${integer + (5 - (integer % 5))}\n`
+            } else {
+                gradesOutput += `${integer}\n`;
+            }
+        });
+        // print the rounded grade on a new line.
+        console.log(gradesOutput);
+
+
+        // step 2
+        // let gradesOutput = "";
+        let result = [];
+        grades.forEach(integer => {
+            if ((integer % 5) >= 3 && integer >= 38) {
+                result.push(integer + (5 - (integer % 5)));
+            } else {
+                result.push(integer);
+            }
+        });
+        // return array 
+        return result
+
+
+
+    } catch (error) {
+        console.error(error);
+    }
+}
