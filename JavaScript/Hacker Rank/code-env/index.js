@@ -14,6 +14,14 @@ const {
     gradingStudents
 } = require('./algorithms/warmup-problem');
 
+const {
+    greeting,
+    performOperation,
+    getAreaGetPerimeter,
+    factorial,
+    circle
+} = require('./10-days-of-javascript/days-of-javascript')
+
 
 
 // invoke function
@@ -68,5 +76,32 @@ compareTheTriplets(array1, array2);
  * The function is expected to return an INTEGER_ARRAY.
  * The function accepts INTEGER_ARRAY grades as parameter.
  */
-let grades = [73, 67, 38, 33]
-gradingStudents(grades);
+// let grades = [73, 67, 38, 33]
+// gradingStudents(grades);
+
+
+/**
+ * ------------------------------- 10 Days of Javascript ----------------------
+ */
+// 1 
+const parameterVariable = "Welcome to 10 Days of JavaScript!"
+greeting(parameterVariable);
+
+// 2 Day 0: Data Types
+const secondInteger = '12';
+const secondDecimal = '4.32';
+const secondString = 'is the best place to learn and practice coding!';
+performOperation(secondInteger, secondDecimal, secondString);
+
+// 3 Day 1: Arithmetic Operators
+const length = '3';
+const width = '4.5';
+getAreaGetPerimeter(length, width);
+// 4 Day 1: Functions
+const factorialNumber = 4;
+factorial(factorialNumber);
+
+
+// 5 Day 1: Let and Const
+const radius = 2.6;
+circle(radius);
