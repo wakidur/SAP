@@ -1,5 +1,16 @@
-const {compareTheTriplets} = require('../algorithms/compare-the-triplets')
+const {
+    compareTheTriplets, 
+    generateText
+} = require('../algorithms/compare-the-triplets')
 
 test('Compare The Triplets', () => {
-    expect(compareTheTriplets([1, 28, 30], [99, 16, 1])).toBe([ 2, 1 ]);
+    const compareTriplets = compareTheTriplets([1, 28, 30], [99, 16, 1]);
+    expect(compareTriplets).toStrictEqual([ 2, 1 ]);
 });
+
+test('should output name and age', () => {
+    const text = generateText('Max', 29);
+    expect(text).toBe('Max (29 years old)');
+});
+
+

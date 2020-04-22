@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./index",
     "devstart": "nodemon ./index",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "keywords": [
     "Algorithms",

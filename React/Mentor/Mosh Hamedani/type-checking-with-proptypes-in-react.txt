@@ -1,2 +1,6 @@
 Type Checking With PropTypes In React
 https://programmingwithmosh.com/javascript/type-checking-with-proptypes-in-react/
+
+
+
+Static vs Dynamic Typing

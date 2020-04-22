@@ -1,4 +1,4 @@
-exports.compareTheTriplets = async (arr1, arr2) => {
+exports.compareTheTriplets =  (arr1, arr2) => {
     try {
         let resultArr = []
         let alice = 0;
@@ -37,4 +37,9 @@ exports.compareTheTriplets = async (arr1, arr2) => {
     }
 
 }
+
+exports.generateText = (name, age) => {
+    // Returns output text
+    return `${name} (${age} years old)`;
+  };
 
