@@ -478,3 +478,184 @@ class Square extends Rectangle {
 
 const square = new Rectangle(10, 10)
 console.log(square.area());
+
+
+/**
+ * Let’s look at a simple example of inheritance in JavaScript showing a Car is a Vehicle.
+ */
+class Vehicle {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    }
+
+    getName() {
+        return this.name;
+    }
+
+    getType() {
+        return this.type;
+    }
+}
+
+class Car extends Vehicle {
+    constructor(name) {
+        super(name, "car")
+    }
+
+    getName() {
+        return 'This car name is: ' + super.getName();
+    }
+}
+
+const Cars = new Car('Extende');
+console.log(Cars.getName());
+/**
+ * 16 Day 5: Template Literals
+ * Determine the original side lengths and return an array:
+ * - The first element is the length of the shorter side
+ * - The second element is the length of the longer side
+ * 
+ * Parameter(s):
+ * literals: The tagged template literal's array of strings.
+ * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
+ */
+exports.sides = (literals, ...expressions) => {
+    // ES6 allows destructureing of array
+    let [a, p] = expressions;
+    const root = Math.sqrt((p * p) - (16 * a));
+    const s1 = (p + root) / 4;
+    const s2 = (p - root) / 4;
+    return ([s1, s2].sort((a, b) => a - b))
+
+    // step - 2
+    // let [area, perimeter] = expressions;
+
+    // let root = Math.sqrt(perimeter * perimeter - 16 * area);
+
+    // let s1 = (perimeter + root) / 4;
+    // let s2 = (perimeter - root) / 4;
+
+    // return [s1, s2].sort(function (a, b) {
+    //     return a - b
+    // })
+}
+
+
+/*
+ * 17 Day 5: Arrow Functions
+ * Modify and return the array so that all even elements are doubled and all odd elements are tripled.
+ * 
+ * Parameter(s):
+ * nums: An array of numbers.
+ */
+exports.modifyArray = (nums) => {
+    const modifiedArr = nums.map(item => (item % 2 === 0) ? item * 2 : item * 3);
+    return modifiedArr;
+}
+
+
+/*
+ * 18 Day 6: Bitwise Operators
+ * 
+ * 
+ * 
+ * 
+ */
+exports.getMaxLessThanK = (n, k) => {
+    let count = 0;
+    for (let a = 1; a <= n; a++) {
+        for (let b = a + 1; b <= n; b++) {
+            if ((a & b) < k && (a & b) > count) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+/*
+ * 19 Day 6: Bitwise Operators
+ * 
+ * 
+ * 
+ * 
+ */
+exports.getDayName = (dateString) => {
+    let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let dayName;
+    dayName =
+
+        console.log(dayName)
+    return dayName;
+
+
+}
+// Day 7: Regular Expressions II
+function regexVar() {
+    /*
+     * Declare a RegExp object variable named 're'
+     * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
+     */
+    const re = /\b([aeiou])[a-z]+\1\b/i;
+    /**
+     * \b - leading word boundary (because the pattern after it matches a word character)
+     * ([aeiou]) - Group 1 capturing a vowel from the specified range
+     * [a-z]+ - one or more letters (both upper- and lowercase since the /i modifier is used)
+     * \1 - backreference to the vowel captured with the first group
+     * \b - trailing word boundary
+     */
+
+    /*
+     * Do not remove the return statement
+     */
+    return re;
+}
+// Day 7: Regular Expressions II
+function regexVar() {
+    /*
+     * Declare a RegExp object variable named 're'
+     * It must match a string that starts with 'Mr.', 'Mrs.', 'Ms.', 'Dr.', or 'Er.', 
+     * followed by one or more letters.
+     */
+
+
+    const re = /^(Mr|Mrs|Ms|Dr|Er)[.][a-zA-Z]*$/;
+    /*
+     * Do not remove the return statement
+     */
+    return re;
+}
+
+// Day 7: Regular Expressions III
+function regexVar() {
+    /*
+     * Declare a RegExp object variable named 're'
+     * It must match ALL occurrences of numbers in a string.
+     */
+
+
+    let re = /(?!=\.)[0-9]+/g;
+}
+/*
+ * Do not remove the return statement
+ */
+
+/*
+ * Complete the 'longestSubarray' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+function longestSubarray(arr) {
+    // Write your code here
+
+
+    const maximalSubset = arr.slice().sort().reduce((subset, current) => {
+        if (subset.reduce((s, c) => s + c, 0) + current <= arr.length) subset.push(current);
+        return subset;
+    }, []);
+
+    return maximalSubset.length
+
+}

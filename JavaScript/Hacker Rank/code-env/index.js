@@ -27,9 +27,13 @@ const {
     reverseString,
     isPositive,
     rectangle,
-    getCount
-} = require('./10-days-of-javascript/days-of-javascript')
+    getCount,
+    sides,
+    modifyArray,
+    getDayName
+} = require('./10-days-of-javascript/days-of-javascript');
 
+const {controlFlow} = require('./JavaScript-Basics-for-Beginners/control-Flow')
 
 
 // invoke function
@@ -154,23 +158,42 @@ compareTheTriplets(array1, array2);
 /**
  * 13 Day 4: Count Objects
  */
-const obj = [{
-    x: 100,
-    y: 1
-}, {
-    x: 2,
-    y: 3
-},
-{
-    x: 1,
-    y: 3
-},
-{
-    x: 3,
-    y: 4
-},
-{
-    x: 4,
-    y: 5
-}]
-getCount(obj)
+// const obj = [{
+//     x: 100,
+//     y: 1
+// }, {
+//     x: 2,
+//     y: 3
+// },
+// {
+//     x: 1,
+//     y: 3
+// },
+// {
+//     x: 3,
+//     y: 4
+// },
+// {
+//     x: 4,
+//     y: 5
+// }]
+// getCount(obj)
+
+
+/**
+ * 16
+ */
+// sides("a", 10,14);
+/**
+ * 16
+ */
+// const expressions = [10, 14]
+// modifyArray([1, 2, 3, 2, 5]);
+
+// getDayName('11/10/2010');
+
+
+/* 
+ ************************************ Control Flow ************************
+*/
+controlFlow();

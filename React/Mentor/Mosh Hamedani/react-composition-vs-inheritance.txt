@@ -1,0 +1,5 @@
+React – Composition Vs. Inheritance
+https://programmingwithmosh.com/react/react-composition-vs-inheritance/
+
+Inheritance
+Composition
