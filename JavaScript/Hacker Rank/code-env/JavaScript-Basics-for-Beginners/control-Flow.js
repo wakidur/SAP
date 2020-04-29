@@ -1,5 +1,5 @@
 exports.controlFlow = () => {
-    /*
+
     // 1 
     // Hour
     // If hour is between 6am and 12pm : Good morning!
@@ -87,7 +87,7 @@ exports.controlFlow = () => {
         console.log(k);
         k++;
     }
-*/
+
     /**
      * 8
      * Exercise 1
@@ -125,6 +125,29 @@ exports.controlFlow = () => {
         if (num % 5 === 0)
             return 'Buzz';
         return num;
+
+    }
+    /*
+     * Complete the 'fizzBuzz' function below.
+     *
+     * The function accepts INTEGER n as parameter.
+     * n = 15
+     */
+
+    function fizzBuzz(n) {
+        // Write your code here
+        for (let i = 1; i <= n; i++) {
+            if (i === 0)
+                console.log(i);
+            else if ((i % 3 == 0) && (i % 5 == 0))
+                console.log("FizzBuzz");
+            else if (i % 3 == 0)
+                console.log("Fizz");
+            else if (i % 5 == 0)
+                console.log("Buzz");
+            else
+                console.log(i);
+        }
 
     }
 
@@ -279,10 +302,10 @@ exports.controlFlow = () => {
      * Show Stars
      */
 
-    // console.log(showStarsLeftToRightUp(10));
-    // console.log(showStarsLeftToRightDown(10));
-    // console.log(showStarsRightToLeftUp(10));
-    // console.log(showStarsRightToLeftDown(10));
+    console.log(showStarsLeftToRightUp(10));
+    console.log(showStarsLeftToRightDown(10));
+    console.log(showStarsRightToLeftUp(10));
+    console.log(showStarsRightToLeftDown(10));
 
     function showStarsLeftToRightUp(rows) {
         for (let row = 1; row <= rows; row++) {

@@ -1,3 +1,102 @@
+/**
+ * 1 Solve Me First
+ * solveMeFirst(2, 3)
+ */
+exports.solveMeFirst = (a, b) => {
+    // Hint: Type return a+b below   
+    let sum = 0;
+    sum = parseInt(a) + parseInt(b);
+    return sum;
+}
+// 
+/**
+ * 2 Simple Array Sum
+ * let ar = [1, 2, 3, 4, 10, 11];
+ * simpleArraySum(ar);
+ * Sample Output:  31
+ * 
+ */
+exports.simpleArraySum = (ar) => {
+    /*
+     * Write your code here.
+     */
+    let total = 0;
+    const integerArrayLength = Array.isArray(ar) ? ar.length : false;
+    if (integerArrayLength && 0 < integerArrayLength) {
+        for (var i in ar) {
+            if (ar[i] <= 1000) {
+                total += ar[i];
+            }
+        }
+    } else {
+        console.log("Empty Array ");
+    }
+
+    return total;
+}
+
+// 3
+exports.compareTheTriplets = (arr1, arr2) => {
+    try {
+        let resultArr = []
+        let alice = 0;
+        let bob = 0;
+        if (arr1.length !== arr2.length && arr1.length !== 3 && arr2.length !== 3) return false;
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (1 <= parseInt(arr1[i]) && parseInt(arr1[i]) <= 100 && 1 <= parseInt(arr2[i]) && parseInt(arr2[i]) <= 100) {
+                if (parseInt(parseInt(arr1[i])) === parseInt(parseInt(arr2[i]))) {
+                    alice += 0;
+                    bob += 0;
+                } else if (parseInt(arr1[i]) > parseInt(arr2[i])) {
+                    alice += 1;
+                    bob += 0;
+                } else if (parseInt(arr1[i]) < parseInt(arr2[i])) {
+                    alice += 0;
+                    bob += 1;
+                }
+
+            } else {
+                console.log(`Awarding points on a scale from 1 to 100`);
+                resultArr = null;
+            }
+
+        }
+
+        if (resultArr) {
+            resultArr.push(parseInt(alice), parseInt(bob));
+        } else {
+            resultArr = [];
+        }
+
+        return resultArr;
+    } catch (error) {
+        console.error(error)
+    }
+
+}
+// 4
+exports.aVeryBigSum = async (ar, arr2) => {
+    try {
+        const largeLimit = 10000000000;
+        let i, total = 0;
+        for (i = 0; i < ar.length; i++) {
+            console.log(ar[i]);
+            if (0 <= parseInt(ar[i]) && parseInt(ar[i]) <= largeLimit) {
+                total += ar[i];
+            } else {
+                console.error(`This Array of element does'n consider constraints range ${parseInt(ar[i])} `)
+            }
+
+        }
+        console.log("Total: ", total)
+        return parseInt(total);
+    } catch (error) {
+        console.error(error)
+    }
+
+}
+// 5
 exports.diagonalDifference = async (arr, arr2) => {
     try {
         const arrLength = arr.length
@@ -26,7 +125,7 @@ exports.diagonalDifference = async (arr, arr2) => {
     }
 
 }
-
+// 6
 exports.plusMinus = async (arr, name) => {
     try {
         let positiveCount = 0;
@@ -52,7 +151,7 @@ exports.plusMinus = async (arr, name) => {
         console.error(error);
     }
 }
-
+// 7
 exports.staircase = async (n) => {
     try {
         let mainContain = "";
@@ -73,9 +172,11 @@ exports.staircase = async (n) => {
         console.error(error);
     }
 }
-
+// 8
 /**
  * Complete the miniMaxSum function below.
+ * let arr = [256741038, 623958417, 467905213, 714532089, 938071625]
+ * miniMaxSum(arr);
  */
 exports.miniMaxSum = async (arr) => {
     try {
@@ -101,9 +202,11 @@ exports.miniMaxSum = async (arr) => {
         console.error(error);
     }
 }
-
+// 9
 /**
- * // Complete the birthdayCakeCandles function below.
+ * Complete the birthdayCakeCandles function below.
+ * let ar = [4, 2, 1, 4]
+ * birthdayCakeCandles(ar);
  */
 exports.birthdayCakeCandles = async (ar) => {
     try {
@@ -122,9 +225,11 @@ exports.birthdayCakeCandles = async (ar) => {
     }
 }
 
-
+// 10
 /*
  * Complete the timeConversion function below.
+ * let s = "07:05:45PM"
+ * ltimeConversion(s);
  */
 exports.timeConversion = async (s) => {
     try {
@@ -161,12 +266,14 @@ exports.timeConversion = async (s) => {
         console.error(error);
     }
 }
-
+// 11
 /*
  * Complete the 'gradingStudents' function below.
  *
  * The function is expected to return an INTEGER_ARRAY.
  * The function accepts INTEGER_ARRAY grades as parameter.
+ * let grades = [73, 67, 38, 33]
+ * gradingStudents(grades)
  */
 
 exports.gradingStudents = async (grades) => {
@@ -202,4 +309,18 @@ exports.gradingStudents = async (grades) => {
     } catch (error) {
         console.error(error);
     }
+}
+
+/**
+ * 12
+ * Complete the countApplesAndOranges function below.
+ */
+
+exports.countApplesAndOranges = (s, t, a, b, apples, oranges) => {
+    let fallsApple = 0;
+    let fallsOrang = 0;
+    apples.map(apple => ((a + apple) >= s && (a + apple) <= t) ? fallsApple++ : 0);
+    oranges.map(orange => ((b + orange) >= s && (b + orange) <= t) ? fallsOrang++ : 0);
+    console.log(fallsApple);
+    console.log(fallsOrang);
 }

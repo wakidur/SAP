@@ -1,18 +1,20 @@
+// challenges
 const {
-    compareTheTriplets
-} = require('./algorithms/compare-the-triplets');
-const {
-    aVeryBigSum
-} = require('./algorithms/aVeryBigSum');
-const {
+    solveMeFirst,
+    simpleArraySum,
+    compareTheTriplets,
+    aVeryBigSum,
     diagonalDifference,
     plusMinus,
     staircase,
     miniMaxSum,
     birthdayCakeCandles,
     timeConversion,
-    gradingStudents
+    gradingStudents,
+    countApplesAndOranges
 } = require('./algorithms/warmup-problem');
+
+// 10-days-of-javascript
 
 const {
     greeting,
@@ -32,9 +34,19 @@ const {
     modifyArray,
     getDayName
 } = require('./10-days-of-javascript/days-of-javascript');
+// Script-Basics-for-Beginners
+const {
+    controlFlow
+} = require('./JavaScript-Basics-for-Beginners/control-Flow')
+const {
+    objectOrientedProgramming
+} = require('./JavaScript-Basics-for-Beginners/object');
 
-const {controlFlow} = require('./JavaScript-Basics-for-Beginners/control-Flow')
-
+// 30 Days of Code
+const {
+    processData,
+    dataTypes
+} = require('./30-days-of-code/thirty-days-of-code');
 
 // invoke function
 // compareTheTriplets  3
@@ -67,29 +79,11 @@ compareTheTriplets(array1, array2);
 //  staircase 7 
 // staircase(3);
 
-
-// Complete the miniMaxSum function below. 8 
-// let arr = [256741038, 623958417, 467905213, 714532089, 938071625]
-// miniMaxSum(arr);
-
-// Complete the birthdayCakeCandles function below.. 9 
-// let ar = [4, 2, 1, 4]
-// birthdayCakeCandles(ar);
+countApplesAndOranges(7, 11, 5, 15, [-2, 3, 2], [1]) 
 
 
-/*
- * Complete the timeConversion function below. 10
- */
-// let s = "07:05:45PM"
-// timeConversion(s);
-/*
- * Complete the 'gradingStudents' function below. 11
- *
- * The function is expected to return an INTEGER_ARRAY.
- * The function accepts INTEGER_ARRAY grades as parameter.
- */
-// let grades = [73, 67, 38, 33]
-// gradingStudents(grades);
+
+
 
 
 /**
@@ -195,5 +189,14 @@ compareTheTriplets(array1, array2);
 
 /* 
  ************************************ Control Flow ************************
-*/
-controlFlow();
+ */
+//controlFlow();
+/* 
+ ************************************ object oriented programming ************************
+ */
+// objectOrientedProgramming();
+
+
+/**
+ * ******************************* 30 Days of Code *************
+ */

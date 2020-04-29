@@ -1,0 +1,25 @@
+JavaScript fundamentals before learning React
+https://www.robinwieruch.de/javascript-fundamentals-react-requirements
+
+TABLE OF CONTENTS
+    1. Entering React after learning JavaScript
+    2. React and JavaScript Classes
+    3. Arrow Functions in React
+    4. Functions as Components in React
+    5. React Class Component Syntax
+    6. Template Literals in React
+    7. Map, Reduce and Filter in React
+    9. var, let, and const in React
+    10. Ternary Operator in React
+    11. Import and Export Statements in React
+    11. Libraries in React
+    12. Async/Await in React
+    13. Higher-Order Functions in React
+    14. Shorthand Object Assignment
+    15. Destructuring in React
+    16. Spread Operator in React
+    17 There is more JavaScript than React
+
+
+    Composition vs Inheritance
+ 

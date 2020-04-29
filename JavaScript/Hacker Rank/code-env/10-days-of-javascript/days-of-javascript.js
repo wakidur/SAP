@@ -446,7 +446,7 @@ class Polygon {
     }
 }
 const rectangle = new Polygon([10, 20, 10, 20]);
-console.log(rectangle.perimeter());
+// console.log(rectangle.perimeter());
 
 
 /*
@@ -477,7 +477,7 @@ class Square extends Rectangle {
 
 
 const square = new Rectangle(10, 10)
-console.log(square.area());
+// console.log(square.area());
 
 
 /**
@@ -509,7 +509,42 @@ class Car extends Vehicle {
 }
 
 const Cars = new Car('Extende');
-console.log(Cars.getName());
+//console.log(Cars.getName());
+
+class Developer {
+    constructor(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+   
+    getName() {
+        debugger
+        return `${this.firstname} ${this.lastname}`;
+    }
+}
+
+class JavaScriptDeveloper extends Developer {
+  
+    constructor(a, b) {
+        super(a, b);
+        this.a = a;
+        this.b = b;
+    }
+    
+    getJob() {
+        return 'JavaScript Developer'
+    }
+
+    getInnerMethos() {
+        return `${this.a} .... ${this.b}  `;
+    }
+}
+
+const developerOfJs = new JavaScriptDeveloper('Robin', 'Wieruch');
+// console.log(developerOfJs.getName())
+// console.log(developerOfJs.getJob())
+// console.log(developerOfJs.getInnerMethos())
+
 /**
  * 16 Day 5: Template Literals
  * Determine the original side lengths and return an array:
@@ -636,26 +671,4 @@ function regexVar() {
 
     let re = /(?!=\.)[0-9]+/g;
 }
-/*
- * Do not remove the return statement
- */
 
-/*
- * Complete the 'longestSubarray' function below.
- *
- * The function is expected to return an INTEGER.
- * The function accepts INTEGER_ARRAY arr as parameter.
- */
-
-function longestSubarray(arr) {
-    // Write your code here
-
-
-    const maximalSubset = arr.slice().sort().reduce((subset, current) => {
-        if (subset.reduce((s, c) => s + c, 0) + current <= arr.length) subset.push(current);
-        return subset;
-    }, []);
-
-    return maximalSubset.length
-
-}
