@@ -314,6 +314,7 @@ exports.gradingStudents = async (grades) => {
 /**
  * 12
  * Complete the countApplesAndOranges function below.
+ * countApplesAndOranges(7, 11, 5, 15, [-2, 3, 2], [1])
  */
 
 exports.countApplesAndOranges = (s, t, a, b, apples, oranges) => {
@@ -323,4 +324,16 @@ exports.countApplesAndOranges = (s, t, a, b, apples, oranges) => {
     oranges.map(orange => ((b + orange) >= s && (b + orange) <= t) ? fallsOrang++ : 0);
     console.log(fallsApple);
     console.log(fallsOrang);
+}
+
+/**
+ * 13
+ * Complete the kangaroo function below.
+ * 
+ */
+
+exports.kangaroo = (x1, v1, x2, v2) => {
+   if( (x2 > x1) && (v2 > v1)) return "NO";
+   if (((x1-x2) % (v2-v1)) === 0 ) return "YES";
+   else return "NO";
 }

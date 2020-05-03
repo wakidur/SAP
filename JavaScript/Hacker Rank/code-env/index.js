@@ -11,7 +11,8 @@ const {
     birthdayCakeCandles,
     timeConversion,
     gradingStudents,
-    countApplesAndOranges
+    countApplesAndOranges,
+    kangaroo
 } = require('./algorithms/warmup-problem');
 
 // 10-days-of-javascript
@@ -41,13 +42,28 @@ const {
 const {
     objectOrientedProgramming
 } = require('./JavaScript-Basics-for-Beginners/object');
+const {
+    arrays
+} = require('./JavaScript-Basics-for-Beginners/arrays');
 
 // 30 Days of Code
 const {
     processData,
-    dataTypes
+    dataTypes,
+    solve,
+    introToConditionalStatements,
+    Person
+
 } = require('./30-days-of-code/thirty-days-of-code');
 
+// JavaScript (Basic) Skills Certification Test
+
+const {
+    getCountryName,
+
+} = require('./JavaScript (Basic) Skills Certification Test/country-codes');
+
+getCountryName('ZW')
 // invoke function
 // compareTheTriplets  3
 /*
@@ -79,9 +95,9 @@ compareTheTriplets(array1, array2);
 //  staircase 7 
 // staircase(3);
 
-countApplesAndOranges(7, 11, 5, 15, [-2, 3, 2], [1]) 
 
 
+kangaroo(0, 3, 4, 2)
 
 
 
@@ -195,6 +211,10 @@ countApplesAndOranges(7, 11, 5, 15, [-2, 3, 2], [1])
  ************************************ object oriented programming ************************
  */
 // objectOrientedProgramming();
+/* 
+ ************************************ Arrays ************************
+ */
+arrays();
 
 
 /**

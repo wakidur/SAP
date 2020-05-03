@@ -3,7 +3,7 @@
  * 
  */
 exports.objectOrientedProgramming = () => {
-    /*
+
     // step - 1: Basics ; 
     // Object Oriented Programming style 
     // You define (and create) a JavaScript object with an object literal 
@@ -91,7 +91,7 @@ exports.objectOrientedProgramming = () => {
     // Step - 7 : Value vs. Reference Types
     let xx = 10;
     let yy = xx;
-    
+
     xx = 20;
 
     // Output 
@@ -100,7 +100,9 @@ exports.objectOrientedProgramming = () => {
     // y
     // 10
 
-    let xxR = {value: 10};
+    let xxR = {
+        value: 10
+    };
     let yyR = xxR
 
     xxR.value = 20;
@@ -111,19 +113,23 @@ exports.objectOrientedProgramming = () => {
     // Objects are coppied by their reference 
 
     let number = 10;
+
     function increase(number) {
         number++;
     }
 
     increase(number);
     console.log(number)
-    let objIn = {value: 10};
+    let objIn = {
+        value: 10
+    };
+
     function increase(objIn) {
         objIn.value++;
     }
 
     increase(objIn);
-    console.log(objIn );
+    console.log(objIn);
 
     // Enumerating Properties of an Object
     const EnumeratObj = {
@@ -133,15 +139,15 @@ exports.objectOrientedProgramming = () => {
         }
     }
 
-    for (const key in EnumeratObj) 
-        if (EnumeratObj.hasOwnProperty(key)) 
-            console.log(key, EnumeratObj[key]) ;
+    for (const key in EnumeratObj)
+        if (EnumeratObj.hasOwnProperty(key))
+            console.log(key, EnumeratObj[key]);
 
-    for (const iterator of Object.keys(EnumeratObj)) 
+    for (const iterator of Object.keys(EnumeratObj))
         console.log(iterator);
 
-    for (const entry of Object.entries(EnumeratObj)) 
-        console.log(entry); 
+    for (const entry of Object.entries(EnumeratObj))
+        console.log(entry);
 
     // 9 cloning an Object 
     const cloningObj = {
@@ -152,61 +158,82 @@ exports.objectOrientedProgramming = () => {
     }
 
     const clonAnother = Object.assign({}, cloningObj);
-    const cloningSpred = {...cloningObj};
+    const cloningSpred = {
+        ...cloningObj
+    };
 
     console.log(clonAnother);
     console.log(cloningSpred);
 
+    // 10 Garbage Collection
 
-    
-    
-     
+    // Exercise 3
+    let address1 = new Address('a', 'b', 'c');
+    let address2 = new Address('a', 'b', 'c');
+    let address3 = address1;
 
+    console.log(areEqual(address1, address2));
+    console.log(areSame(address1, address2));
+    console.log(areSame(address1, address3));
 
-*/
-
-
-    async function getCountryName(code) {
-        // write your code here
-        // API endpoint: https://jsonmock.hackerrank.com/api/countries?page=<PAGE_NUMBER>
-
-        function ajax_get(url, callback) {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    console.log('responseText:' + xmlhttp.responseText);
-                    try {
-                        var data = JSON.parse(xmlhttp.responseText);
-                    } catch (err) {
-                        console.log(err.message + " in " + xmlhttp.responseText);
-                        return;
-                    }
-                    callback(data);
-                }
-            };
-
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-        }
-
-
-        function getAllCountry() {
-            let countries = [];
-            for (let i = 1; i <= 25; i++) {
-                ajax_get(`https://jsonmock.hackerrank.com/api/countries?page=${i}`, function (data) {
-                    countries.push(data)
-                });
-
-            }
-            return countries
-        }
-
-        let countriesWithPagi = await getAllCountry();
-        console.log(countriesWithPagi)
-
+    // Constructor Function
+    function Address(street, city, zipCode) {
+        this.street = street;
+        this.city = city;
+        this.zipCode = zipCode;
     }
 
-    getCountryName()
+    function areEqual(address1, address2) {
+        return address1.street === address2.street && address1.city === address2.city && address1.zipCode === address2.zipCode;
+    }
+
+    function areSame(address1, address2) {
+        return address1 === address2;
+    }
+
+
+    // Exercise 4
+    let post = {
+        title: 'a',
+        body: 'b',
+        author: 'c',
+        views: 10,
+        comments: [{
+                author: 'a',
+                body: 'b'
+            },
+            {
+                author: 'c',
+                body: 'd'
+            }
+        ],
+        isLive: true
+    }
+
+    console.log(post)
+
+    // Exercise 5 Constructor Function
+
+    let postCon = new Post('a', 'b', 'c');
+    console.log(postCon);
+
+    function Post(title, body, author) {
+        this.title = title;
+        this.body = body;
+        this.author = author;
+        this.views = 0;
+        this.comments = [],
+            this.isLive = false;
+    }
+
+
+
+
+
+
+
+
+
 
 
 

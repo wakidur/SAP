@@ -65,8 +65,9 @@ REACT PREREQUISITES
         Why should I learn React?
 
 LEARN REACT.JS STEP BY STEP
+
         After we got clarity about learning only React and React's prerequisites, let's see how to learn React from zero from there.
-        - I strongly believe the best start is going through the official React documentation.
+        - I strongly believe the best start is going through the official ***React documentation***.
 
         Learn with React Docs
         Learn React with Projects
