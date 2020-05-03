@@ -52,7 +52,9 @@ const {
     dataTypes,
     solve,
     introToConditionalStatements,
-    Person
+    Person,
+    loopsFirstTenMultiples,
+    processDataStringEventAndOdd,
 
 } = require('./30-days-of-code/thirty-days-of-code');
 
@@ -214,9 +216,11 @@ kangaroo(0, 3, 4, 2)
 /* 
  ************************************ Arrays ************************
  */
-arrays();
+// arrays();
 
 
 /**
  * ******************************* 30 Days of Code *************
  */
+loopsFirstTenMultiples(2);
+processDataStringEventAndOdd(2)

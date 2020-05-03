@@ -84,7 +84,7 @@ class Person {
         // Do some computations in here and print out the correct statement to the console
         if (this.age < 13) console.log('You are young.');
         else if (this.age >= 13 && this.age < 18) console.log('You are a teenager.');
-        else  console.log('You are old.');
+        else console.log('You are old.');
     }
     yearPasses() {
         // Increment the age of the person in here
@@ -94,3 +94,62 @@ class Person {
 
 const personAge = new Person(14);
 console.log(personAge);
+
+/**
+ * 6 Day 5: Loops
+ * Task
+ * Given an integer, n, print its first 10  multiples. 
+ * Each multiple n * i  (where 1 <= i <= 10 ) should be printed on a new line in the form: n x i = result.
+ * 
+ * loopsFirstTenMultiples(2)
+ */
+
+exports.loopsFirstTenMultiples = (n) => {
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${n} x ${i} = ${parseInt(n * i)}`);
+    }
+}
+
+
+/**
+ * 7 Day 6: Let's Review
+ * Given a string, S, of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line (see the Sample below for more detail).
+ */
+
+exports.processDataStringEventAndOdd = (inputs) => {
+
+    let inputFormet = [2, 'Hacker', 'Rank'];
+    let input = `2\nHacker\nRank`;
+    console.log(input.split('\n'));
+    console.log(input.split('\n').slice(1));
+
+    inputCopy = input.split('\n').slice(1);
+   
+
+   //Enter your code here
+   inputCopy = input.split('\n').slice(1);
+   
+
+   for (const s of inputCopy) {
+       let evenIndexed = '';
+       let oddIndexed = '';
+       for (let j = 0; j < s.length; j++) {
+           if (j % 2 === 0) evenIndexed += s[j];
+           else oddIndexed += s[j];
+       }
+       console.log(`${evenIndexed} ${oddIndexed}`);
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+}
