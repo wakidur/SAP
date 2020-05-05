@@ -139,7 +139,6 @@ exports.processDataStringEventAndOdd = (inputs) => {
            else oddIndexed += s[j];
        }
        console.log(`${evenIndexed} ${oddIndexed}`);
-
    }
 
 
