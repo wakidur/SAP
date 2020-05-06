@@ -159,7 +159,7 @@ exports.arrays = () => {
     console.log(combinedJoin);
 
     /**
-     * 12. Joining Arrays
+     * 12. Sorting Arrays
      * 
      */
 
@@ -194,8 +194,128 @@ exports.arrays = () => {
     console.log(courses12);
 
     /**
-     * 13. Joining Arrays
+     * 13. Testing The Elemet of an Array  
      * 
      */
+
+    const numbers13 = [1, 2, -1, 3, 4];
+    // every()
+    // some()
+    /**
+     * (method) Array<number>.every(callbackfn: (value: number, index: number, array: number[]) => unknown, thisArg?: any): boolean 
+     * 
+     * 
+     * Determines whether all the members of an array satisfy the specified test.
+     */
+    const allPositive = numbers13.every(value => {
+        return value >= 0
+    })
+    console.log(allPositive);
+
+    /**
+     * (method) Array<number>.some(callbackfn: (value: number, index: number, array: number[]) => unknown, thisArg?: any): boolean
+     * 
+     * Determines whether the specified callback function returns true for any element of an array
+     * 
+     */
+    const atLeastOnePositive = numbers13.some(value => {
+        return value >= 0
+    })
+    console.log(atLeastOnePositive);
+
+
+    /**
+     * 14. Filtering an Array  
+     * 
+     * (method) Array<number>.filter(callbackfn: (value: number, index: number, array: number[]) => unknown, thisArg?: any): number[] (+1 overload)
+     * 
+     * 
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     */
+
+    const filtered = numbers13.filter(n => n >= 0);
+    console.log(filtered);
+
+    /**
+     * 15. Mapping an array 
+     * 
+     * map(callbackfn: (value: number, index: number, array: number[]) => any, thisArg?: any): any[]
+     * 
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     */
+
+    const mapItems = numbers13
+        .filter(item => item >= 0)
+        .map(item => ({
+            value: item
+        }))
+        .filter(obj => obj.value > 1)
+        .map(obj => obj.value);
+    console.log(mapItems);
+
+    /**
+     * 16. Reducing an Array 
+     * 
+     * reduce(callbackfn: (previousValue/Accumulator : number, currentValue: number, currentIndex: number, array: number[]) => number): number
+     * 
+     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     */
+
+    // a = 0, c = 1 => a = 1
+    // a = 1, c = -1 => a = 0
+    // a = 0 , c = 2 => a = 2
+    // a = 2, c = 3 => a = 3
+    // a = 5, c = 4 => a = 5
+
+    // const numbers16 = [1, 2, 3, 4];
+    const numbers16 = [256741038, 623958417, 467905213, 714532089, 938071625];
+    const sum = numbers16.reduce((acc, cur) => acc + cur);
+    console.log(sum);
+
+
+    /**
+     * Exercise 1
+     */
+
+    const exercise1 = arrayFromRange(-1, 4);
+    console.log(exercise1);
+
+    function arrayFromRange(min, max) {
+        const output = [];
+        for (let i = min; i <= max; i++)
+            output.push(i);
+        return output;
+    }
+
+    /**
+     * Exercise 2 
+     */
+
+    const exercise2 = [1, 2, 3, 4, 5];
+
+    console.log(includesFun(exercise2, -1));
+
+    function includesFun(array, searchElement) {
+        for (const element of array)
+            if (element === searchElement)
+                return true;
+        return false;
+    }
+
+    /**
+     * Exercise 3 
+     */
+    const exercise3 = [1, 2, 3, 4];
+    const exerciseThreeOutput = except(exercise3, [1]);
+    console.log(exerciseThreeOutput);
+
+    function except(array, excluded) {
+        const output = [];
+        for (let element of array)
+            if (!excluded.includes(element))
+                output.push(element);
+        return output;
+    }
+
 
 }

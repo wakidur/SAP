@@ -216,11 +216,11 @@ kangaroo(0, 3, 4, 2)
 /* 
  ************************************ Arrays ************************
  */
-// arrays();
+arrays();
 
 
 /**
  * ******************************* 30 Days of Code *************
  */
-loopsFirstTenMultiples(2);
-processDataStringEventAndOdd(2)
+// loopsFirstTenMultiples(2);
+// processDataStringEventAndOdd(2)
