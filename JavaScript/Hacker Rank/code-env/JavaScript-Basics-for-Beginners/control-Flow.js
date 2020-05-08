@@ -63,7 +63,7 @@ exports.controlFlow = () => {
     for (const key in person) {
         if (person.hasOwnProperty(key)) {
             const element = person[key];
-            console.log(element);
+           // console.log(element);
 
         }
     }

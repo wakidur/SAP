@@ -12,7 +12,8 @@ const {
     timeConversion,
     gradingStudents,
     countApplesAndOranges,
-    kangaroo
+    kangaroo,
+    getTotalX
 } = require('./algorithms/warmup-problem');
 
 // 10-days-of-javascript
@@ -45,6 +46,9 @@ const {
 const {
     arrays
 } = require('./JavaScript-Basics-for-Beginners/arrays');
+const {
+    functions
+} = require('./JavaScript-Basics-for-Beginners/functions');
 
 // 30 Days of Code
 const {
@@ -65,7 +69,7 @@ const {
 
 } = require('./JavaScript (Basic) Skills Certification Test/country-codes');
 
-getCountryName('ZW')
+// getCountryName('ZW')
 // invoke function
 // compareTheTriplets  3
 /*
@@ -99,7 +103,7 @@ compareTheTriplets(array1, array2);
 
 
 
-kangaroo(0, 3, 4, 2)
+// getTotalX([2, 4], [16, 32, 96])
 
 
 
@@ -216,7 +220,11 @@ kangaroo(0, 3, 4, 2)
 /* 
  ************************************ Arrays ************************
  */
-arrays();
+// arrays();
+/* 
+ ************************************ Arrays ************************
+ */
+functions();
 
 
 /**

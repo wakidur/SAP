@@ -293,7 +293,7 @@ exports.arrays = () => {
 
     const exercise2 = [1, 2, 3, 4, 5];
 
-    console.log(includesFun(exercise2, -1));
+    // console.log(includesFun(exercise2, -1));
 
     function includesFun(array, searchElement) {
         for (const element of array)
@@ -307,7 +307,7 @@ exports.arrays = () => {
      */
     const exercise3 = [1, 2, 3, 4];
     const exerciseThreeOutput = except(exercise3, [1]);
-    console.log(exerciseThreeOutput);
+    // console.log(exerciseThreeOutput);
 
     function except(array, excluded) {
         const output = [];
@@ -316,6 +316,105 @@ exports.arrays = () => {
                 output.push(element);
         return output;
     }
+
+    /**
+     * Exercise 4 
+     */
+
+    const exercise4 = [1, 2, 3, 4, 5];
+    const output4 = move(exercise4, 1, 4);
+    // console.log(output4);
+
+    function move(array, index, offset) {
+        const position = index + offset;
+
+        if (position >= array.length || position < 0) {
+            console.error('Invalid offset.');
+            return;
+        }
+
+        const output = [...array] // copy main array
+        const element = output.splice(index, 1)[0];
+        output.splice(position, 0, element);
+        return output;
+
+    }
+
+    /**
+     * Exercise 5 
+     */
+    const exercise5 = [1, 2, 3, 4, 1];
+    const output5 = countOccurrences(exercise5, 1);
+    console.log(output5);
+
+    function countOccurrences(array, searchElement) {
+        // implementation step 1
+        /*
+        let count = 0;
+        for (let element of array)
+            if (element === searchElement)
+                count++;
+        return count;
+        */
+        // implementation step 2
+        return array.reduce((acc, cur) => {
+            const occurrence = (cur === searchElement) ? 1 : 0;
+            console.log(acc, cur, searchElement)
+            return acc + occurrence;
+        }, 0)
+    }
+
+    /**
+     * Exercise 6 
+     */
+    const movies = [{
+            title: 'a',
+            year: 2018,
+            rating: 4.5
+        },
+        {
+            title: 'b',
+            year: 2017,
+            rating: 4.7
+        },
+        {
+            title: 'c',
+            year: 2018,
+            rating: 3
+        },
+        {
+            title: 'd',
+            year: 2018,
+            rating: 4.5
+        },
+        {
+            title: 'e',
+            year: 2012,
+            rating: 4.5
+        },
+        {
+            title: 'f',
+            year: 2016,
+            rating: 4.5
+        },
+    ];
+
+    // All the movies in 2018 with rating > 4
+    // Sort them by their rating
+    // Descending order
+    // Pick their title
+
+
+
+    const title = movies
+        .filter(m => m.year === 2018 && m.rating >= 4)
+        .sort((a, b) => a.rating - a.rating)
+        .reverse()
+        .map(m => m.title);
+
+    console.log(title)
+
+
 
 
 }

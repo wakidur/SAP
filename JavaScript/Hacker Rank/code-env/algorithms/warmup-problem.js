@@ -333,7 +333,51 @@ exports.countApplesAndOranges = (s, t, a, b, apples, oranges) => {
  */
 
 exports.kangaroo = (x1, v1, x2, v2) => {
-   if( (x2 > x1) && (v2 > v1)) return "NO";
-   if (((x1-x2) % (v2-v1)) === 0 ) return "YES";
-   else return "NO";
+    if ((x2 > x1) && (v2 > v1)) return "NO";
+    if (((x1 - x2) % (v2 - v1)) === 0) return "YES";
+    else return "NO";
+}
+
+/**
+ * 14: Between Two Sets
+ * Complete the 'getTotalX' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY a
+ *  2. INTEGER_ARRAY b
+ * 
+ */
+
+exports.getTotalX = (a, b) => {
+    let res = [];
+    let count = 0;
+    let flag = true;
+    let check = true;
+    for (let i = a[a.length - 1]; i <= b[0]; i++) {
+        for (let j = 0; j < a.length && check === true; j++) {
+            if (i % a[j] !== 0)
+                check = false;
+        }
+        if (check !== false)
+            res.push(i)
+        check = true;
+
+    }
+
+    for (let i = 0; i < res.length; i++) {
+        for (let j = 0; j < b.length && flag === true; j++) {
+            if ((Math.max(res[i], b[j]) % Math.min(res[i], b[j])) !== 0) {
+                flag = flag;
+                res[i] = 0;
+            }
+        }
+        flag = true;
+    }
+
+    for (let i = 0; i < res.length; i++) {
+        if (res[i] > 0)
+            count++;
+    }
+    return count;
 }
