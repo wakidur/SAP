@@ -1,0 +1,96 @@
+// 22-07-2018 ---------------
+7 Consuming a REST API: Using an API from inside Express
+    7.1   How to call an API from Express
+        7.1.1   Adding the request module to our project
+        7.1.2   Setting up default options
+        7.1.3   Using the request module
+
+        Option-------------------------------  Description ----------------------------------- Required-----------------
+
+        url--------- Full URL of the request to be made, including protocol, domain, path, and URL parameters ------  Yes
+
+        method------ The method of the request, such as GET, POST, PUT, or DELETE--------------- No—defaults to GET if not specified
+
+        json--------- The body of the request as a JavaScript object; an empty object should be sent if no body data is needed ---Yes—ensures that the response body is also parsed as JSON
+
+        qs---------- A JavaScript object representing any query string parameters------------------ No
+
+
+
+    7.2   Using lists of data from an API: The Loc8r homepage
+        7.2.1   Separating concerns: Moving the rendering into a named function
+        7.2.2   Building the API request
+
+// 23-07-2018-----------------------
+
+        7.2.3   Using the API response data
+        7.2.4   Modifying data before displaying it: Fixing the distances
+        7.2.5   Catching errors returned by the API
+
+// 24-07-2018 -----------------------------
+            Making the request callback more robust
+            Defining output messages based on the response data
+            Updating the view to display the error messages
+            Testing the API error trapping
+
+                Our Express application is querying the API we built, which pulls data from the MongoDB database and passes it back to the application. When the application gets a response from the API, it works out what to do with it and either shows the data or an error messages in the browser.
+    
+    7.3   Getting single documents from an API: The Loc8r Details page
+        7.3.1   Setting URLs and routes to access specific MongoDB documents
+        
+        7.3.2   Separating concerns: Moving the rendering into a named function
+
+// 25-07-2018 ------------------------------
+        7.3.3   Querying the API using a unique ID from a URL parameter
+        7.3.4   Passing the data from the API to the view
+        7.3.5   Debugging and fixing the view errors
+            Formatting dates using a Pug mixin
+                span.reviewAuthor #{review.author.displayName}
+                small.reviewTimestamp
+                    +formatDate(review.createdOn)
+        
+        7.3.6   Creating status-specific error pages
+            Catching all error codes
+            Displaying error messages
+    
+    7.4   Adding data to the database via the API: Add Loc8r reviews
+        7.4.1   Setting up the routing and views
+
+            Defining the two review routes
+
+            Fixing the location detail view
+
+            Updating the review form view
+
+            Creating a named function for rendering the Add Review page
+
+            Getting the location detail
+
+            Displaying the location detail
+
+// 29-07-2018--------------------
+        7.4.2   POSTing the review data to the API
+
+    7.5   Protecting data integrity with data validation
+        7.5.1   Validating at the schema level with Mongoose
+            Updating the schema
+            Catching Mongoose validation errors
+            Display an error message in the browser
+
+// 30-07-2018 ---------------------
+        7.5.2   Validating at the application level with Node and Express
+            An application shouldn't rely solely on Validation at the Schema level, and you shold try to prevent unnecessery calls to the API, reducing overhead and speeding things up for the user. One way to do this is to add validation at the application level, checking the submitted data before sending to the API.
+
+        
+        7.5.3   Validating in the browser with jQuery
+
+// 31-07-2018 ---------------------------------
+            Just like application-level validation speeds things up by not requiring a call to the API, Client-side validation in the browser can speed things up by catching an error before the form is submitted to the application by removing yet another call. Catching an error at the point will keep the user on the same page.
+
+            Writing the jQuery validation
+            Adding the jQuery to the page
+
+                       
+
+
+

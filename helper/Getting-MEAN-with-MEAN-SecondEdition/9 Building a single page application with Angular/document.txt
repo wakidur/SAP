@@ -1,0 +1,69 @@
+// 08-08-2018 ---------------------------------
+9 Building a single page application with Angular
+    9.1 Setting the groundwork for an Angular SPA
+        9.1.1 Getting base files in place
+            
+            Creating an app_client folder for the client-side application
+            Creating the main SPA application file
+            Adding the main SPA application file to the pug layout
+
+    9.2 Switching from Express routing to Angular routing
+        Creating a new Express controller to deliver a page template
+
+        9.2.2 Adding ngRoute (angular-route) to the application
+            Adding the angular-route files to the application
+            Adding angular-route to the angular application
+    
+    9.3 Adding the first views, controllers, and services
+        9.3.1 Creating an Angular view
+
+            Creating the view template
+            Assigning a view to a route
+            Defining where to show the angular view
+        
+        9.3.2 Adding a controller to a route
+            Creating the controller
+            Adding a controller to the route config function
+            Telling the browser about the controller file
+        
+        9.3.3 Controller best practice: Using the controllerAs syntax
+            Declaring controllerAS in a route definition
+            Defining the viewModel in the controller
+            Using the viewModel in the view 
+        
+        9.3.4 Using services
+            Creating the services files
+            Getting the files to the browser
+            Using the services from the controller
+            Use $scope with needed
+                The controllerAs syntax that wr're using is ideal for decluttering and avoiding abuse of $scope. Following this approach you only use $scope when you absolutely need it, which helps provide an addintional layour of clarity and understanding to your code and the process going on behind it.
+                To use $scope.$apply in the home controller we just need to pass in $scope like any other dependency, and thane change the current vm.$apply calls back to $scope.$apply. The following listing show the changes needed.
+        
+        9.3.5 Using filters and directives 
+            Creating the formatDistance filter file
+            Creating the RatingStars directive files
+            Setting up the Homepage view
+    
+    9.4 Improving browser performance
+// 12-08-2018 ---------------------------------
+
+        9.4.1 Wrap each file in an IIFE
+        9.4.2 Manually injecting dependencies to protect against minification
+        9.4.3 Using UglifyJS to minify and concatenate scripts
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+

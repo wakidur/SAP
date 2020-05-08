@@ -1,0 +1,118 @@
+//29-03-2018
+/****** Express Tutorial Part 4: Routes and controllers ****/
+//====> second revision 17-5-2018
+interact(পরস্পরের উপর ক্রিয়া করা)
+genre(রীতি);
+Ultimately(চূড়ান্তভাবে);
+concentrate (কেঁদ্রীভূত করা)
+extract (নিষ্কাশন করা)
+dummy(কৃত্রিম, কোনো ব্যক্তি বা বস্তুর নকল যা আসল ব্যক্তি বা বস্তুর উপস্থিতির উদ্দেশ্য সিদ্ধ করে, সাজানো)
+skeleton(কঙ্কাল, অস্থি, কাঠাম)
+completion (পরিপূরণ)
+
+1. Overview
+	=> Routes: To forward the supported requests(and any information encoded in request URLs) to the appropriate(যথাযথ, উপযুক্ত) controller function.
+	
+	=> Controller: controller function to get the requested data from the models, create an HTML page displaying the data, and return it ti the user to view in the browser.
+	
+	=> Views(templates) used by the controllers to render the data.
+	
+	Http Request
+	Routes
+	Forward request to appropriate controller
+	controllers
+	views
+	read/write data
+	Models
+	Database
+	
+2. Routes primer
+	Route: A route is a section of Express code that associates an HTTP varb (GET, POST, PUT, DELETE, etc),an url path/pattern, and a function that is called to handle that pattern.
+	
+	2.1 Defining and using separate route modules
+	
+	2.2 Route functions
+	
+	The callback takes three arguments(usually named as shown: req, res, next), that will contain the 
+	HTTP Request object
+	HTTP response
+	Next function in the middleware chain
+	
+	Note: 
+		Router function are Express middleware, which means that they must either complete(respond to) the request or call next function in the chain. 
+		The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback function. Each function is part of the middleware cahin, and will be called in the order it is added to the chain.
+
+		res.send() => response to return the string
+		res.json() => send a JSON response
+		res.sendFile() => send a file.
+		res.render() => creates and returns HTML files using templates and data.
+	
+	2.3 HTTP verbs
+		1. post() 			2. put()
+		3. delete()			4. options()
+		5. trace() 			6. copy()
+		7. lock() 			8. mkcol()
+		9. move() 			10. purge()
+		11. propfind() 		12. proppatch()
+		13. unlock() 		14. report()
+		15. mkactivity() 	16. checkout()
+		17. merge() 		18. m-search()
+		19. notify() 		20. subscripbe()
+		21. unsubscribe() 	22. patch()
+		23. search() 		24. connect();
+		
+	2.4 Route paths 
+		The route paths define the endpoints at which requests can be made. 
+		Route paths can also be string patterns. 
+		String patterns use a subset of regular expression syntax to define patterns of endpoints that will be matched.
+		Note: the Hyphen(-) and the Dot(.) are interpreted(ব্যাখ্যা করা, অনুবাদ করা) literally by string-based paths.
+
+	
+		? => The endpoint must have 0 or 1 of the preceding(পূর্ববর্তী) character. E.g. a route path of '/ab?cd' will match endpoints 'acd' or 'abcd'.
+
+		+ => The endpoint must have 0 or 1 of the preceding character. E.g. a route path of '/ab+cd' will match endpoints abcd, abbcd, abbbcd, and so on.
+
+		* => The endpoint may have an arbitray string where the '*' character is placed. E.g. a route path of 'ab*cd' will match endpoints abcd, abXcd, abSOMErandomTEXTcd, and so on.
+
+		() => Grouping match on a set of character to perform another operation on. E.g. '/ab(cd)?e' will perform a '?' match on '(cd)' it will match abc and abcde.
+
+	2.5 Route parameters
+		Route parameters are named URL segments(অংশ) used to capture the values specified at their position in the URL. The named segments are prefixed with a colon and then the name( e.g. /:your_parameter_name/). The captured values are stored in the 'req.params' object using the parameter names as keys( e.g. req.params.your_parameter_name).
+
+
+	3. Routes needed for the LocalLibrary
+		1. catalog/ -- The home/index page.
+
+		2. catalog/<objects> -- the list of all books, bookinstances, genres, or authors(e.g. /catalog/books/, catalog/genres/ , etc);
+
+		3. catalog/<object>/<id> -- the detail page for a specific book, bookinstances, genre, or author with the given _id field value (e.g. /catalog/book/584493c1f4887f06c0e67d37).
+
+		4. catalog/<object>/create -- The form to create a new book, bookinstance, genre, or author (e.g. /catalog/book/create).
+
+		5. catalog/<object>/<id>/update -- The form to update a specific book, bookinstance, genre, or author, with the given _id field value (e.g. /catalog/book/584493c1f4887f06c0e67d37/update).
+
+		6. catalog/<object>/<id>/delete -- the form to delete a specific book, bookinstance, genere, author whth the given _id field value (e.g /catalog/book/584493c1f4887f06c0e67d37/delete)
+	
+	
+	    catalog/
+		catalog/<objects>/
+		catalog/<object>/<id>
+		catalog/<object>/create
+		catalog/<object>/<id>/update
+		catalog/<object>/<id>/delete
+
+
+	4. Create the route-handler callback functions
+		4.1 Author controller
+		4.2 BookInstance controller
+		4.3 Genre controller
+		4.4 Book controller
+
+	5. Create the catalog route module
+		5.1 Update the index route module
+		5.2 Update app.js
+		
+
+	
+	
+	

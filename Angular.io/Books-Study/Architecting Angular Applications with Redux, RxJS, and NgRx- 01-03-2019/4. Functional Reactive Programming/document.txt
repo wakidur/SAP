@@ -1,0 +1,137 @@
+paradigm (দৃষ্টান্ত, উদাহরণ)
+overaching (সর্বাধিক, চরম, শীর্ষস্থানীয়, মহত্তম, জ্যেষ্ঠ, সর্বোচ্চ)
+stream(প্রবাহ, প্রবাহিত হত্তয়া)
+arrive( পৌঁছা, আসা, ঘটা, পড়া, উপনীত হত্তয়া, আগমন করা, আগত হত্তয়া)
+Imperative (উপদেশমূলক)
+declarative(ঘোষণামূলক)
+Recursion (পুনরাবৃত্তির)
+standing(স্থায়ী, খাড়া)
+abide (মেনে চলা)
+eternity(অনন্তকাল)
+although (যদিও)
+leaf(গাছের পাতা)
+treating (আচরণ করা)
+
+/****************** 24-03-2019 *******************/ 
+4.	Functional Reactive Programming
+    Functional Reactive Programming (FRP) is a programming paradigm for reactive programming, which uses the building blocks of functional programming. 
+
+    To understand the whole sentence, we need to break it apart a bit, Let's try to define the following 
+
+        1. A Programming Paradigm : is an overaching theory, or way of working, centered around how a program should be organized and structured. Object-oriented programming and functional programming are examples of programming paradigms.
+
+        2. Reactive Programming: in Short, is programming with asynchronous data streams. Asynchronous data streams are streams of data whose values can arrive at any point in time. 
+
+        3. Functional programming: is a programming paradigam that takes a more mathematical approach, in that it sees a functional call as  a mathematical computation and thereby avoids changing states or dealing with mutable data. 
+
+        So, In short, We have a functional programming approach to values that might arrive at any point in time.
+
+/****************** 25-03-2019 *******************/ 
+
+        4.1.  Functional programming versus imperative programming
+            Two different styles of programming, 
+            1. Imperative programming and 
+            2. Declarative programming
+
+            Functional programming is a subset of declarative programming.
+
+            Imperative programming: focuses on how the program should achieve its result. 
+
+            Functional Programming: is a declarative programming paradigam, which means its focus is on what the programming should accomplish, or the what. 
+
+        4.1.1. Imperative programming versus declarative programming
+
+    /****************** 31-03-2019 *******************/ 
+        4.1.2. First-class higher-order functions
+            The term first class means that the language itself treats functional as values; they can be passed around as example arguments to other functions. 
+
+            >>> A higher-order function is a function that takes other function as parameters. 
+
+            function project(obj, fn) {
+                result fu(obj);
+            }
+
+            project({name: 'chris', age: 37}, (obj) => obj['name'] ); // chris
+            project({name: 'chris', age: 37}, (obj) => obj['age'] ); // chris
+        
+ /****************** 1-04-2019 *******************/ 
+
+        4.1.3. Pure functions
+
+/****************** 2-04-2019 *******************/ 
+
+            A pure function is a function that does not have a side-effect. Nothing the function does will ever affect a variable outside of it.
+
+/****************** 3-04-2019 *******************/ 
+
+/****************** 08-04-2019 *******************/ 
+/****************** 10-04-2019 *******************/ 
+    4.2. Recursion   পুনরাবৃত্তির
+        Recursion is a mathematical concept.
+
+        Recursion is the process(প্রক্রিয়া) a procedure(কার্যপ্রণালী) goes through(মাধ্যমে যায়) when one of the steps of the procedure involves(জড়িত) invoking(আবাহন) the procedure itself. A procedure that goes through recursion is said to be 'recursive'. 
+
+        A recursive function should abide to the following rules:
+            •	Should call itself
+            •	Should eventually meet an exit condition
+
+        if a recursive function donesn't have an exit condition, we will run out(ফুরিয়ে যাওয়া
+        , শেষ হয়ে যাওয়া, কমিয়া যাত্তয়া, কমিয়া যাত্তয়া) of memory as the function will call itself for all eternity(অনন্তকাল, চিরকাল, অমরত্ব, নিত্যতা, চিরস্থায়িত্ব, অবিনশ্বর যশ). 
+
+        There are certain types of problems that are more suitable than others to apply recursive programming to. Examples of these are:
+        •	Traversing trees
+        •	Compiling code
+        •	Writing algorithms for compression
+        •	Sort lists
+
+
+        Our example is a linked list. A linked list consists of nodes that know about the node they are connected to. The code for the Node structure looks like this:
+
+        class Node {
+            constructor(public left, public value) {}
+        }
+
+/****************** 11-04-2019 *******************/ 
+        4.2.1. No more loops
+        4.2.2. Reoccurring pattern   
+            4.2.2.1. Summarise
+/****************** 15-04-2019 *******************/ 
+    4.3. Asynchronous data streams
+        An asynchronous data stream is a stream of data where values are emitted, one after another, with a delay between them. The word asynchronous means that the data emitted can appear anywhere in time, after one second or even after two minutes, for example. A way to model asynchronous streams is to place the emitted values on a time axis, 
+
+        there are a lot of things that can be considered asynchronous. 
+        One such thing is fetching data through AJAX. When the data arrives depends on a number of factors, 
+
+            •	The speed of your connection
+            •	The responsiveness of the backend API
+            •	The size of the data, and many more factors.
+
+
+/****************** 16-04-2019 *******************/ 
+    4.4. Comparing lists to async streams – preparing for RxJS;
+        There are different ways to manipulate data: 
+        1. Sometimes we want to change the data emitted to some other data  
+        2. Sometimes we might want to change how often the data is being emitted to a listener.
+        3. Sometimes, we want our stream of data to become a totally different stream.
+
+        We will try to model the following situations
+            a> Projection: Changing the data of the value being emitted. 
+            b> Changing what gets emitted. 
+
+        4.4.1. Combining the functional programming paradigm with streams.
+            RxJS, as a library, 
+
+            4.4.1.1. Projection
+            4.4.1.2. Filtering
+            4.4.1.3. Combining mindsets
+    4.5. Summary    
+
+
+             
+
+        
+
+
+
+
+        

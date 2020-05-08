@@ -1,0 +1,109 @@
+Event list
+    save($formValidation)
+    reset($formValidation)
+    search()
+    searchReset()
+    editSeason(entity)
+    deleteSeason(entity)
+
+    selectBuyerBasic(entity) (if isModel)
+
+Property binding
+    {{isModal ? "Select": "Edit | Delete"}}
+
+class attribute binding
+
+    data-ng-class="{'medium-page': !isModal}"
+    data-ng-class="{'row': !isModal}"
+    data-ng-class="{'panel-default': !isModal}"
+    data-ng-class="isModal ? 'panel-heading p-none' : 'panel-heading'"
+    data-ng-show="!isModal" 
+    validation-msg="validationMsgs.season"
+
+    ni-form-dirty 
+    ni-forattrchange
+
+    table
+        ni-grid="gridOptions"
+        data-ng-repeat="entity in gridData"
+        tooltip-append-to-body="true"
+        animate-on-error='entity.onError'
+        tooltip="{{errorTooltip}}"
+
+
+
+Element
+    <ni-auto-complete 
+        focus-control="season" 
+        ni-validate 
+        type="text" 
+        ni-tabindex 
+        data-ng-model="model.season.name"
+        maxlength="50" 
+        datasource="model.seasonList" 
+        filter-property="name">
+    </ni-auto-complete>
+
+--------------------------------------
+Left side form.....
+
+Form model name
+    data-ng-model="model.season.name"
+    data-ng-model="model.season.shortName"
+    data-ng-model="model.season.code"
+    data-ng-model="model.season.isActive"
+
+Form Event name 
+    data-ni-click="save($formValidation)"
+    data-ni-click="reset($formValidation)"
+    data-ni-click="cancel($formValidation)"
+
+
+------------------------------------------------------- 
+Search By:
+
+data-ng-model="searchCriteria.season"
+data-ng-change="onChangeSeason()"
+
+data-ng-model="searchCriteria.shortName"
+data-ng-change="onChangeSeason()"
+
+ni-click="search()"
+ni-click="searchReset()"
+
+
+-------------------------
+ni-grid="gridOptions" 
+    th
+        {{longfht.season}}
+        {{longfht.shortname}}
+        {{longfht.code}}
+        {{longfht.active}}
+        {{isModal ? "Select": "Edit | Delete"}}
+
+
+    data-ng-repeat="entity in gridData"
+    tooltip-append-to-body="true"
+    animate-on-error='entity.onError'
+    tooltip="{{errorTooltip}}"
+        {{entity.name}}
+        {{entity.shortName}}
+        {{entity.code}}
+        {{entity.isActive |niBoolean}}
+    
+    event 
+        data-ng-click="editSeason(entity)"
+        data-ng-click="deleteSeason(entity)"
+
+        data-ng-click="selectBuyerBasic(entity)"
+
+---------------------------------------
+Controller depedency
+    '$scope', 
+    'seasonModelSvc', 
+    'seasonDataSvc', 
+    'appConstants', 
+    'modalSvc', 
+    'appMsgSvc', 
+    'utilityModelSvc', 
+    '$rootScope'

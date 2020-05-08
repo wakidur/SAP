@@ -13,10 +13,7 @@
     <title>Dashboard Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/scss/main.css" rel="stylesheet">
-
-    <link href="node_modules/datatables.net-dt/css/jquery.dataTables.css" rel="stylesheet">
-    <link href="node_modules/angular-datatables/dist/css/angular-datatables.css" rel="stylesheet">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -24,86 +21,42 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   
-    
+
+
     <!-- Angularjs -->
-
     <script src="node_modules/angular/angular.min.js"></script>
-    <!-- angular-datatables -->
-    <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
-    <script src="node_modules/angular-datatables/dist/angular-datatables.js"></script>
-
-    <!-- angular-resource -->
-    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
     <!-- angular-ui-router -->
-     <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
-   
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
+
+    <!-- module -->
     <script src="module/main-module.js"></script>
 
-    <!-- <script src="route-config/route-config-v0.4.3.js"></script> -->
-    <script src="route-config/route-config-v1.x.js"></script>
+    <!-- route -->
+    <script src="route-config/route-config.js"></script>
 
-    <script src="filters/charAtFilter.js"></script>
-    <script src="service/peopleSvc.js"></script>
-    <script src="service/userProfileSvc.js"></script>
-    <script src="controller/lableCtrl.js"></script>
-    <script src="controller/scotchCtrl.js"></script>
-    <script src="controller/arnovCtrl.js"></script>
-    <script src="controller/tableCtrl.js"></script>
-    <script src="controller/peopleCtrl.js"></script>
-    <script src="controller/personCtrl.js"></script>
-    <script src="controller/profileCtrl.js"></script>
-    <script src="controller/settingsCtrl.js"></script>
-    <script src="controller/chapterOneCtrl.js"></script>
-    <script src="controller/angularDatatableCtrl.js"></script>
-    <script src="controller/angularDatatableAdvancedCtrl.js"></script>
-    <!-- <script src="controller/singleUserCtrl.js"></script> -->
-    <script src="directives/basicDirective.js"></script>
-    <script src="directives/templateUrlPropertiesDirective.js"></script>
-    <script src="directives/isolateScopeFromDirective.js"></script>
-    <script src="directives/inputValueIntegerCheck.js"></script>
-    <script src="directives/counterDirective.js"></script>
-    <script src="directives/vactorTextDirective.js"></script>
-    <script src="directives/isolateScopeDirective.js"></script>
-    <script src="directives/compile-pre-post-controller.js"></script>
-    <!-- Chapter-1 -->
-    <script src="directives/chapterOne/directive-scope-inheritance.js"></script>
-    <script src="directives/chapterOne/treeDirective.js"></script>
-  
+    <!-- controller -->
+    <script src="controller/homeCtrl.js"></script>
+
+
+
 </head>
 
 <body ng-app="appModule">
+
+
     <!-- header section  -->
-    <header>
-            <nav ng-if="!($state.current.name === 'logout')" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" ng-include="'views/layout/header.html'"></nav>
-    </header>
-   
-    <!-- header section  -->
-    <div class="container-fluid" ng-if="!($state.current.name === 'logout')">
+    <div class="container-fluid">
         <div class="row">
             <!-- sidebar navigation  section  -->
-            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar" ng-include="'views/layout/sidebar-v1.x.html'"></nav>
             <!-- sidebar navigation  section  -->
-            <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style=" margin-top: 56px;">
-                <h1 class="page-header" ng-if="$state.current.name === 'root'">Welcome to Dashboard Template for Bootstrap </h1>
-                <h1 ng-class="{'page-header':$state.current.name.length}" ng-if="!($state.current.name === 'root')">{{$state.current.name | capitalize}}</h1>
+            <main role="main" class="col-sm-12 col-md-12 pt-3">
                 <!-- dynamic view section  -->
                 <ui-view></ui-view>
                 <!-- dynamic view section  -->
             </main>
         </div>
     </div>
-
-
-
-    <div class="container" ng-if="$state.current.name === 'logout'">
-        <ui-view></ui-view>
-    </div>
-
-
-
 </body>
 
 </html>

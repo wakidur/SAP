@@ -1,0 +1,174 @@
+﻿// 28-06-2018 -------------
+feed(ভোজন)
+feeding(প্রতিপালন, চারণভূমি, ভক্ষক, ভোজ্য সামগ্রী)
+encounter (সাক্ষাৎ)
+diverse range of problems (বিভিন্ন ধরণের সমস্যার)
+manner(পদ্ধতি, রকম)
+crawl (হামাগুড়ি)
+
+stuck(আটকে পড়া)
+
+flashy(চটকদার, লোকদেখান)
+
+2 Designing a MEAN stack architecture
+    This chapter covers
+        1. Introducing a common MEAN stack architecture
+        2. Considerations for single-page applications
+        3. Discovering alternative MEAN stack architectures
+        4. Designing an architecture for a real application
+        5. Planning a build based on the architecture design
+
+    2.1   A common MEAN stack architecture
+
+            representational state transfer (REST) 
+            API
+            single-page application (SPA)
+            The API is typically built with MongoDB, Express, and Node.js, 
+            with the SPA being built in Angular. 
+
+        A common way to architect a MEAN stack application is to have a representational state transfer (REST) API feeding a single-page application (SPA).
+
+        The API is typically built with MongoDB, Express, and Node.js, with the SPA being built in Angular. 
+
+// 30-06-2018 ------------- (9.00AM) 
+
+    WHAT IS A REST API?
+        REST stands for REpresentational State Transfer, Which is an architectureal style rather than a strict protocol. REST is stateless -- it has no idea of any current user state or history.
+
+        API is an abbreviation for application program interface, which enables applications to talk to each other. In the case of the web, an API is normally a set of URLs that respond with data when called in the correct manner wtih the correct information. 
+
+        REST API is a stateless inerface to your application. In the case of the MEAN Stack, the REST API is used to create a stateless interface to your database, enabling a way for other applications - for example an Angular SPA - to work with the data. In other words, you create a collection of structured URLs that will return specific data when called. 
+
+    2.2   Looking beyond SPAs
+        2.2.1   Hard to crawl
+            JavaScript applications are very hard for search engines to crawl and index. 
+            Most search engines look at the HTML content on a page but don’t download or execute much JavaScript. 
+
+            Making an SPA crawlable
+            Does it matter?
+        2.2.2   Analytics and browser history
+            Adding page loads to an SPA
+            Is it a major problem?
+        2.2.3   Speed of initial load
+            Speeding up the page load
+            Should you care about speed?
+        
+        2.2.4   To SPA or not to SPA?
+            The three points about 
+            crawlability, 
+            analytics integration, and 
+            page load speed 
+        
+    2.3   Designing a flexible MEAN architecture
+        2.3.1   Requirements for a blog engine
+             A blog engine typically has two sides to it.
+                    1. There’s a public-facing side serving up articles to readers, and hopefully being syndicated and shared across the internet.
+                    2. administrator interface where blog owners log in to write new articles and manage their blogs. 
+                
+                Blog entries
+                    Characteristics
+                        content-rice
+                        Low interaction
+                        Fast first load
+                        Short user duration
+                        public and shareable
+                
+                Admin interface
+                    Characteristics
+                        Feature-rice
+                        High interaction
+                        Fast response to actions 
+                        Long user duration
+                        Private
+
+
+            The blog articles should be quick to load to reduce bouncer rates,
+			
+			users typically stay on a blog entry for a short time.
+			
+			admin interface is very private and an individual user could be logged in for a long time.
+			
+			
+			
+			Admin area should be quick to respond to user input and actions.  
+
+
+
+        2.3.2   A blog engine architecture
+            Admin interface: An Angular SPA
+            Blog entries: What to do?
+            Blog entries: Making good use of Express
+            Blog entries: Using more of the stack
+            Blog engine: A hybrid architecture
+        2.3.3   Best practice: Build an internal API for a data layer
+
+// 01-07-2018----------------
+// 02-07-2018----------------
+
+    2.4   Planning a real application
+        2.4.1   Planning the application at a high level
+            Planning the screens
+                Loc8r will list nearby places with WiFi where people can go and get some work done. It will also display facilities, opening times, a rating, and a location map for each place. Visitors will be able to submit ratings and reviews.
+
+                From this we can get an idea about some of the screens we’re going to need:
+                    A screen that lists nearby places
+                    A screen that shows details about an individual place
+                    A screen for adding a review about a place
+                    A screen for “about us” information
+                
+            Dividing the screens into collections
+
+        2.4.2   Architecting the application
+            Starting with the API
+            Application architecture options
+            Choosing an application architecture
+        
+        2.4.3   Wrapping everything in an Express project
+        2.4.4   The end product
+    
+
+    2.5   Breaking the development into stages
+        2.5.1   Rapid prototype development stages (start .....)
+            Stage 1: Build a static site
+            Stage 2: Design the data model and create the database
+            Stage 3: Build our data API
+            Stage 4: Hook the database into the application
+            Stage 5: Augment the application
+        
+        2.5.2   The steps to build Loc8r
+            Step 2: Design the data model and create the database
+            Step 3: Build our REST API
+            Step 4: Use the API from our application
+            Step 5: Embellish the application
+            Step 6: Refactor the code into an Angular SPA
+            Step 7: Add authentication
+    
+    2.6   Hardware architecture
+        2.6.1   Development hardware
+        2.6.2   Production hardware
+            Starter size
+            
+            Growing up: A separate database server
+            One of the first things to be moved onto a separate server is often the database. So now you have two servers: 
+            1. one for the application code and 
+            2. one for the database.
+
+            This is quite a common model, particularly if you choose to use a platform as a service (PaaS) provider for your hosting. We’ll be using this approach in this book. 
+
+            Going for scale
+
+            you can have a different server for the different parts of your application—a 
+            database server, an 
+            API server, and an 
+            application server. 
+            This will allow you to deal with more traffic as the load is spread across three servers, 
+
+            But it doesn’t stop there. If your traffic starts to overload your three servers, you can have multiple instances—or clusters—of these servers
+
+
+
+
+        
+
+
+

@@ -1,0 +1,47 @@
+[{
+        "id": "chmzq50np0002gfixtr1qp64e",
+        "name": "Settles",
+        "artist": {
+            "id": "chmzq4l480001gfixe8a3nzhl",
+            "name": "Disclosure",
+            "tourDates": [{
+                "id": "chmzq45yn0000gfixa0wj6z9l",
+                "date": "Sat Oct 19 2013",
+                "name": "Treasure Island Music Festival",
+                "location": "San Francisco, CA, US",
+                "attending": [{
+                        "id": "chmzq7tyj0003gfix0rcylkll",
+                        "name": "Guy Lawrence"
+                    },
+                    {
+                        "id": "chmzqougy0004gfixuk66lhv7",
+                        "name": "Howard Lawrence"
+                    }
+                ]
+            }]
+        }
+    },
+    {
+        "id": "chmzq50np0002gfixtr1qp64o",
+        "name": "Settle",
+        "artist": {
+            "id": "chmzq4l480001gfixe8a3nzhm",
+            "name": "Disclouser",
+            "tourDates": [{
+                "id": "chmzq45yn0000gfixa0wj6z9j",
+                "date": "Sat Oct 19 2013",
+                "name": "Treasure Island Music Festival",
+                "location": "San Francisco, CA, US",
+                "attending": [{
+                        "id": "chmzq7tyj0003gfix0rcylkls",
+                        "name": "Guy Lawrence"
+                    },
+                    {
+                        "id": "chmzqougy0004gfixuk66lhv4",
+                        "name": "Howard Lawrence"
+                    }
+                ]
+            }]
+        }
+    }
+]

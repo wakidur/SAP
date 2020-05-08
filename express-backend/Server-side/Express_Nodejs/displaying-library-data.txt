@@ -1,0 +1,62 @@
+1. Overview
+    In our previous tutorial articles we defined Mongoose models that can use to interact with a database and created some initaal libary recode. We the created all the routes needed for the LocalLibaray website, but with "dummy controller" function (these are skeleton controller function that just return a "not implemented" message when a page is accessed).
+
+    At the end of this article you should have a good end-to-end understanding of 
+    how routes, 
+    asynchonus function,
+    view,
+    models
+    work in practice
+    
+2. Displaying library data tutorial subarticles.
+    2.1 Asynchronous flow control using async
+		We'll use the popular node "async" module
+		
+		Note: There are a number of other ways to manage asynchronous behaviors and flow control in JavaScript, including relatively recent JavaScript language features like Promises. 
+	
+    async.parallel();
+		to execute any operations that must be performed in parallel.
+    async.series();
+		for when we need to ensure that asynchronous operations are 
+    async.waterfall();
+        2.1.1 Why is this needed?
+        2.1.2 Asynchronous operations in parallel
+            The method "async.parallel()" is used to ren multiple Asynchronous operation in parallel. The first argument to "async.parallel()" is a collection of the asynchronous functions to run(an array, object or other iterable). Each function is passed a callback(err, result) which it must call on completion with an error err(which can be null) and optional results value.
+
+        2.1.3 Asynchronous operations in series 
+            The method "async.series()" is used to run multiple asynchronous operations in sequence, when subsequent function do not depend on the output of earlier function. It is essentially declared and behaves in the same way as "async.parallel()"
+        2.1.4 Dependent asynchronous operations in series
+            The method "async.waterfall()" is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.
+
+            The callback invoked by each asynchronous function contains null for the first argument and results in subsequenct arguments. Each function in the series takes the result arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. 
+
+
+    2.2 Template primer
+        2.2.1 Express template choices
+        2.2.2 Template configuration
+
+        https://www.youtube.com/watch?v=AqtyHzG9Ppc&index=4&list=RD9GHrSQ1SYv4
+    
+    2.3 The LocalLibrary base template
+
+    2.4 Home page
+        2.4.1 Route
+        2.4.2 Controller
+            The async.parallel() method is passed an object with functions for getting the counts for each of our models. These functions are all started at the same time. When all them have completed the final callback is invoked the counts in the results parameter(or an error);
+
+        2.4.3 View 
+
+
+    2.5 Book list page
+
+    2.6 BookInstance list page
+
+    2.7 Date formatting using moment
+
+    2.8 Author list page and Genre list page challenge
+
+    2.9 Genre detail page
+    2.10 Book detail page
+    2.11 Author detail page
+    2.12 BookInstance detail page and challenge
+

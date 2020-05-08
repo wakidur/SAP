@@ -1,0 +1,145 @@
+Angular 6 for Enterprise-Ready Web Applications (Book)
+    ⦁ Create full-stack web applications using Angular and RESTful APIs
+    ⦁ Master Angular fundamentals, RxJS, CLI tools, unit testing, GitHub, and Docker
+    ⦁ Design and architect responsive, secure and scalable apps to deploy on AWS
+    ⦁ Adopt a minimalist, value-first approach to delivering your app with  Kanban
+    ⦁ Get introduced to automated testing with continuous integration on  CircleCI
+    ⦁ Optimize Nginx and Node.js web servers with load testing tools
+
+Architecting Angular Applications with Redux, RxJS, and NgRx (Book)
+https://www.safaribooksonline.com/library/view/architecting-angular-applications/9781787122406/e359d09c-1007-4d53-af97-338e234a7c40.xhtml
+    ⦁ Understand the one-way data flow and Flux pattern
+    ⦁ Work with functional programming and asynchronous data streams
+    ⦁ Figure out how RxJS can help us address the flaws in promises
+    ⦁ Set up different versions of cascading calls
+    ⦁ Explore advanced operators
+    ⦁ Get familiar with the Redux pattern and its principles
+    ⦁ Test and debug different features of your application
+    ⦁ Build your own lightweight app using Flux, Redux, and NgRx
+
+https://www.safaribooksonline.com/library/view/angular-design-patterns/9781786461728/
+/*
+* 11-11-2019 -------------------------
+*/
+
+foizahmad2001@gmail.com
+emerged (নির্গত, উদিত)
+1. Getting Started
+    Developing applications in JavaScript is always a challenge. Due to its malleable nature and lack of type checking, building a decent-sized application in JavaScript is difficult. Moreover, we use JavaScript for all types of processes, such as user interface (UI) manipulation, client-server interaction, and business processing/validations. As a result, we end up with spaghetti code that is difficult to maintain and test.
+
+        Angular.js -- MVC(Model-View-Controller) pattern
+        Angular ----- component pattern
+
+
+    1.1. Angular basics
+        1.1.1 The component pattern
+        1.1.2. Using the component pattern in web applications
+        1.1.3. Why weren't components used before in Angular?
+        1.1.4. What's new that enables Angular to use the component pattern?
+            1.1.4.1. Web Components
+            1.1.4.2.  Angular and Web Components
+            1.1.4.3. Language support in Angular
+                1.1.4.3.1. ES2015
+                1.1.4.3.2. TypeScript
+            1.1.4.4. Putting it all together
+        1.1.5. Angular modules
+            Components are the basic building block of an Angular application. But how do we then organize these building block into complete applications? Angular modules provide the answer to this question. They enable us to combine our components into reusable groups of funcationality that can be exported and imported throughout our application. 
+        
+        1.1.6. The basic steps to building Angular applications
+
+/*
+* 12-11-2019 -------------------------
+*/    
+
+    1.2. The customary Hello Angular app – Guess the Number!
+        1.2.1 Building Guess the Number!
+            *** The standard practice while building user interfaces is to build them top-down. Start by designing the UI and then plug in the data and behavior according to your needs. With such an approach, the UI, data, and behavioral aspects of the app are all tightly coupled, which is a less than ideal situation!
+
+
+        1.2.2 Designing our first component
+            => Generating random numbers(original)
+            => Providing input for a user to guess the value (guess)
+            => Tracking the numer of guesses already made (noOfTries)
+            => Giving the user hints to improve their guess based on their input (deviation)
+            => Giving a success message if the user guesses the number correctly (deviation)
+           
+           
+           ===> Designing the component is a very crucial process. if it is done right, we can logically organize our application in a way that makes it understandable and easy to maintain.
+
+           ==== **** === While building any app, we urge you to 
+            => first think about the functionality you want to offer, 
+            => and then the data and behavior that can support the funcationality.
+            => Lastly think about how to build a user interface for it.
+            => this is a good practice irespective of the library or framework that you use to bulid your app. 
+        1.2.3. Developing our first component
+        1.2.4. What do we have so far?
+        1.2.5 The host file - index.html
+            1.2.5.1 Custom element
+        1.2.6. The component file
+            1.2.6.1. The import statement
+            1.2.6.2. Decorator
+            1.2.6.3. Defining the class
+        1.2.7 The module file
+        1.2.8 Bootstrapping
+        1.2.9 We're up and running!
+        1.3. Digging deeper
+            1.3.1. Interpolation
+                1.3.2. Tracking changes in the number of tries
+                1.3.3. Expressions
+                    1.3.3.1. The safe navigation operator
+                1.3.4. Data binding
+                    1.3.4.1. Property binding
+                    1.3.4.2. Event binding
+                1.3.5. Structural directives
+        1.4. Revisiting our app
+            Angular differs from other template frameworks, in that bindings between a component and its view are live. Changes made to the properties of the component update the view. Angular never regenerates the HTML. it just works on the relevent part of the HTML and update only that HTML that need to change as component properties change. This data binding capability makes Angular an exceptional view templateing engine too.
+        1.5. Looking at how our code handles updates
+        1.6. Maintaining state
+            1.6.1. Component as the container for state
+            1.6.2 Change detection
+        1.7. Tools
+        1.8. Resources
+
+
+
+
+/*
+* 13-11-2019 -------------------------
+*/ 
+
+    --------------------------------------------------------------------------------
+
+Architecture in Angular projects
+Cyrille Tuzi
+JavaScript and Angular trainer, PHP certified, @formationjs
+
+https://medium.com/@cyrilletuzi/architecture-in-angular-projects-242606567e40
+
+So I took some time to rethink the whole thing and implement a decent architecture for Angular apps, with these goals in mind:
+
+consistency: simplicity (for small apps) and scalability (for big apps),
+reusability in different projects,
+optimization (consistent with or without lazy-loading),
+testability.
+
+Angular modules
+    What is a NgModule?
+        The purpose of a NgModule is just to group components and/or serverces which belong together. Nothing more or less.
+i 
+    Types of Angular modules
+        There are 3 main types of NgModules you can do:
+
+        modules of pages,
+        modules of global services,
+        modules of reusable components.
+
+        Modules of pages 
+            Modules of pages are modules with routing. They are here to separate and organize the different areas of your application. They are loaded only once, either in the AppModule or via lazy-loading.
+        Shared services for pages
+        Pages: routed components
+        Modules of global services
+        Should I do a CoreModule?
+        Modules of reusable components
+
+
+

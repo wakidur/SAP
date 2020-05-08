@@ -1,0 +1,24 @@
+// 12-05-2018 ---------------- 
+// 28-07-2018 ---------------- 
+augmentation(বৃদ্ধি)
+
+/***************** Variable Declarations ******************/
+
+let: is similar to var in some respects 
+const: is an augmentation of let in that it prevents reassignment to a variable.
+
+
+/***** Scoping rules *****/
+var declaration have some odd scoping rules for those used to(ব্যবহৃত) other languages.
+
+These scoping rules can cause several types of mistakes. One problem they exacerbate is the fact that it is not an error to declare the same variable multiple times.
+
+May be it was easy to spot(স্থাননির্ণয় করা) out for some, but the inner for loop will accidentlly overwrite the variable i because i refers to the same function-scoped variable. As experienced developers know by now, similar sorts of bugs slip code reviews and code be an endless source of frustration. 
+
+/********** **** let declarations ************* /
+26-04-2018
+27-04-2018
+precisely (অবিকল)
+Apart (দূরে, ব্যবধানে)
+/* Block-scoping */
+When a variable is declared using let, it uses what some call lexical-scoping or block-scoping. 

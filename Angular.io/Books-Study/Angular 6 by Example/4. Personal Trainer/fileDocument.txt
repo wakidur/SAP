@@ -1,0 +1,105 @@
+4.1 Fle structure----------------------
+app
+    core
+        header
+            header.component.html
+            header.component.ts
+
+        core.module.ts
+        local-storage.service.ts
+        workout-history-tracker.service.ts
+		
+    finish
+        finish.component.html
+        finish.component.ts
+		
+    shared
+        my-audio.directive.ts
+        order-by.pipe.ts
+        search.pipe.ts
+        shared.module.ts
+    start
+        start.component.html
+        start.component.ts
+	
+	workout-builder
+		exercise
+			exercise.component.html
+			exercise.component.ts
+		exercises
+			exercises.component.html
+			exercises.component.ts
+		workout
+			workout.component.html
+			workout.component.ts
+		workouts
+			workouts.component.html
+			workouts.component.ts
+		workout-builder.component.ts
+		workout-builder.module.ts
+
+    workout-history
+        workout-history.component.html
+        workout-history.component.ts
+    workout-runner
+        exercise-description
+            exercise-description.component.html
+            exercise-description.component.ts
+
+        shared
+            seconds-to-time.pipe.ts
+        video-player
+            video-dialog
+                video-dialog.component.html
+                video-dialog.component.ts
+            video-player.component.html
+            video-player.component.ts
+        workout-audio
+            workout-audio.component.html
+            workout-audio.component.ts
+        workout-container
+            workout-container.component.html
+            workout-container.component.ts
+        model.ts
+        workout-runner.component.html
+        workout-runner.component.ts
+        workout-runner.module.ts
+    
+---------------------------------------------------
+const routes: Routes = [
+    { path: 'start', component: StartComponent },
+    { path: 'workout', component: WorkoutContainerComponent },
+    { path: 'finish', component: FinishComponent },
+    { path: 'history', component: WorkoutHistoryComponent },
+    { path: 'builder', component: WorkoutBuilderComponent },
+    { path: '**', redirectTo: '/start' }
+];
+
+
+
+
+4.2 Structure ----------------------------------------
+
+const routes: Routes = [
+    { path: 'start', component: StartComponent },
+    { path: 'workout', component: WorkoutContainerComponent },
+    { path: 'finish', component: FinishComponent },
+    { path: 'history', component: WorkoutHistoryComponent },
+    { path: '**', redirectTo: '/start' }
+];
+
+const routes: Routes = [
+  {
+    path: 'builder',
+    component: WorkoutBuilderComponent,
+    children: [
+         {path: '', pathMatch: 'full', redirectTo: 'workouts'},
+         {path: 'workouts', component: WorkoutsComponent },
+         {path: 'workout/new',  component: WorkoutComponent },
+         {path: 'workout/:id', component: WorkoutComponent },
+         {path: 'exercises', component: ExercisesComponent},
+         {path: 'exercise/new', component: ExerciseComponent },
+         {path: 'exercise/:id', component: ExerciseComponent }
+    ]
+  },
+];

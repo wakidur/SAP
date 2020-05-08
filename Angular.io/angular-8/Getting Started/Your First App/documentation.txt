@@ -1,0 +1,109 @@
+composed (রচিত)
+/****************** 23-06-2019 *****************/
+1. Getting Started with Angular: Your First App
+    1.1. Create a new project
+
+    1.2. Template syntax
+        Angular's template syntax extends HTML and JavaScript.
+
+        note*** : Structural directives shape or reshape the DOM's structure, typically by adding, removing, and manipulating the elements to which they are attached.
+        *** Any directive with an * is a structural directive.***
+
+        A. Structural Directive  *ngFor="let product of products" 
+        B. Interpolation syntax  {{}} 
+        C. Property binding [] syntax  [title]="product.name + 'details' "
+        D. ngIf
+        F. Event binding using () around the event.
+
+/****************** 24-06-2019 *****************/
+
+            *ngFor
+            *ngIf
+            Interpolation {{ }}
+            Property binding [ ]
+            Event binding ( )
+
+Components : Components define areas of responsibility in your UI that let you reuse these sets of UI functionality. 
+
+    A component is comprised of three things
+        A component class
+        An HTML template
+        Component-specific styles
+
+    An Angular application is composed of a tree of components, in which each angular component has a specific purpose and responsibility.l
+
+
+Input 
+
+    set up the new product alerts component to recive a product as input. 
+
+        1. Create a new product alerts component.
+
+            The generator creates starter files for all three parts of the component:
+                product-alerts.component.ts
+                product-alerts.component.html
+                product-alerts.component.css
+
+        2. Open product-alerts.component.ts.
+
+            import { Component, OnInit } from '@angular/core';
+
+            @Component({
+                selector: 'app-product-alerts',
+                templateUrl: './product-alerts.component.html',
+                styleUrls: ['./product-alerts.component.css']
+            })
+            export class ProductAlertsComponent implements OnInit {
+                constructor() { }
+
+                ngOnInit() {
+                }
+
+            }
+
+        3. Set up the new product alerts component to receive a product as input:
+
+            import { Component, OnInit } from '@angular/core';
+            import { Input } from '@angular/core';
+
+            export class ProductAlertsComponent implements OnInit {
+                @Input() product;
+                constructor() { }
+
+                ngOnInit() {
+                }
+
+            }
+        4. Define the view for the new product alert component.
+            src/app/product-alerts/product-alerts.component.html
+
+            <p *ngIf="product.price > 700">
+                <button>Notify Me</button>
+            </p>
+            
+        5. Display the new product alert component as part of (a child of) the product list.
+
+                src/app/product-list/product-list.component.html
+                <div *ngFor="let product of products">
+ 
+                    <h3>
+                        <a [title]="product.name + ' details'">
+                        {{ product.name }}
+                        </a>
+                    </h3>
+                    
+                    <p *ngIf="product.description">
+                        Description: {{ product.description }}
+                    </p>
+                    
+                    <button (click)="share()">
+                        Share
+                    </button>
+                     <app-product-alerts [product]="product"> </app-product-alerts>
+                </div>
+
+                    
+
+                   
+
+

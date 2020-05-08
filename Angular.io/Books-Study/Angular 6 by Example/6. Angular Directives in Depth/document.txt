@@ -1,0 +1,117 @@
+influence (প্রভাব)
+Acquaintance (জানাশোনা)
+emitted(নির্গত, )
+emit(প্রেরণ করা)
+associated(যুক্ত)
+/*
+* 23-10-2018 -----------------------
+*/
+No one is born hating another person because of the color of his skin, or his background, or his religion. People must learn to hate, and if they can learn hete, they can be taught to love, for love comes more naturally to the human heart then its opposite. :Nelson Mandela:
+remote (দূরবর্তী)
+6. Angular Directives in Depth
+
+    The topics we will cover in this chapter include the following
+        •	Building directives
+        •	Asynchronous validation
+        •	Using renderer for view manipulation
+        •	Host binding
+        •	Directive injection
+        •	Working with view children and content children
+        •	Understanding the NgIf platform directive
+        •	View encapsulation of Angular components
+
+    6.1. Classifying directives
+        Angular directive integrate the HTML view with the application state. Directive help us mainpulate views and application state changes and respond to view updates with little or no manual with the actual DOM 
+
+        6.1.1. Components 
+            The view is bound to the component implementation and it can only work with "properties" and "events" defined on the backing component. 
+        6.1.2. Attribute directives
+            Attribute directives, on the other hand, extend an existing component or HTML element. Consider them as behavioral extensions to these components/elements.
+        
+        6.1.3. Structural directives
+            The purpose of a structural directive is to show/hide or clone the template view or clone the template view provided to it. 
+    
+    6.2. Building a remote validator directive
+        Async validators are similar to standard custom validators, except that of returning a key-value object map or null, the return value of a validation check is a Promise. This provise is eventually resolved with the validation state being set (if there is an error) , or null otherwise (on validation success)
+    
+        6.2.1. Validating workout names using async validators
+
+/*
+* 29-10-2018 
+*/
+    6.3. Building a busy indicator directive
+        6.3.1. Injecting optional dependencies with the @Optional decorator
+        6.3.2. Implementation one – using renderer
+        6.3.3. Angular renderer, the translation layer
+            One of the primary design golals of Angular 2 was to make it run across enviroments, frameworks, and devices. 
+            Angular enabled this by dividing the core framework implementation into an "application layer " and rendering layer. 
+            The application layer has the API we interact with, whereas the rendering layer provides an abstrication that the application layer can use without worrying about how and whare the actural view is being renderer. 
+
+            By separating the rendering layer, Angular can theoretically run in various setups. These include (but are not limited to):
+
+            Browser
+            Browser main thread and web worker thread, for obvious performance reasonse 
+            Server-side rendering
+            Native app frameworks; efforts are underway to integrate Angular with NativeScript with ReactNative
+            Testing, allowing us to test the app UI outside the web Browser
+
+        6.3.4. Host binding in directives
+
+            In the Angular kingdom, the component/element that a directive gets attached to is termed the host element: a container that hosts our directive/component. For the BusyIndicatorDirective, the input element is the host.
+                "<input type="text" appBusyIndicator>" 
+            6.3.4.1. Property binding using @HostBinding
+            6.3.4.2. Attribute binding
+
+/* 
+* 31-10-2018 -------------------  
+*/
+            6.3.4.3. Event binding
+                event binding is used to subscribe to the events raised by the host component/element. 
+
+        6.3.5. Implementation two - BusyIndicatorDirective with host bindings
+    
+    
+
+/* 
+* 04-11-2018 -------------------  
+*/
+    6.4. Directive injection
+        6.4.1. Injecting directives defined on the same element
+        6.4.2. Injecting directive dependency from the parent
+        6.4.3. Injecting a child directive (or directives)
+        6.4.4. Injecting descendant directive(s)
+
+    
+/* 
+* 06-11-2018 -------------------  
+*/
+    6.5. Building an Ajax button component
+        the execute property points to the function that is invoked on the Ajax button click.
+        the parameter is the data can be passed to this function 
+
+        6.5.1. Transcluding external components/elements into a component
+
+/* 
+* 07-11-2018 -------------------  
+*/
+            6.5.1.2. Injecting view children using @ViewChild and @ViewChildren
+            6.5.1.3. Tracking injected dependencies with QueryList
+
+
+/* 
+* 08-11-2018 -------------------  
+*/
+            6.5.1.4. Injecting content children using @ContentChild and @ContentChildren
+
+    6.6. Dependency injection using viewProvider
+        1. Dependency Injection at the global level 
+        2. Dependency Injecting to any module declaration.
+        3. Dependency Injection at a component level 
+
+        Directive/Components are registered in the "declarations" array 
+    
+    6.7. Understanding structural directives
+    6.7. emplateRef
+        6.7.1. ViewContainerRef
+    
+    6.8. Component styling and view encapsulation

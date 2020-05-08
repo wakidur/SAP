@@ -1,6 +1,6 @@
 /*
 ***CHAPTER 6
-***Access Control
+***Access Control(প্রবেশাধিকার নিয়ন্ত্রণ)
 */
 Access control models are responsible for granting(মঞ্জুর হলেই, অনুমতি দেত্তয়া) or restricting(সীমাবদ্ধ) access(প্রবেশ, ) to resources. They depend on two things: 
 1. user identification (verified by one or more authentication schemes) 
@@ -17,3 +17,6 @@ malicious(বিদ্বেষপরায়ণ)
 intruder(অনধিকারপ্রবেশকারী)
 obtains(গ্রহণ করে, অর্জন করা)
 Passwords should be stored with a one-way encryption(এনক্রিপশন) hash,
+1. rainbow tables: enormous, pre-computed hash values for every possible combination of characters.
+2. Password salts. 
+3. Brute force

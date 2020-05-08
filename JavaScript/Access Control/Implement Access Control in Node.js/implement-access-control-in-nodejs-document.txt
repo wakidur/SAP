@@ -1,0 +1,72 @@
+https://blog.nodeswat.com/implement-access-control-in-node-js-8567e7b484d1
+https://medium.com/practo-engineering/route-based-access-control-462861b04433
+
+https://www.imperva.com/learn/data-security/role-based-access-control-rbac/
+
+https://www.okta.com/identity-101/what-is-role-based-access-control-rbac/
+
+https://auth0.com/docs/authorization/concepts/rbac
+
+Tue Dec 03 2019 09:54:02 GMT+0600 (Bangladesh Standard Time)
+/************************* Implement Access Control in Node.js ** ***********************/
+Most web applications rely on some sort of access control to keep users from accessing information not meant for them.
+
+If authentication is a lock on the main door of the hotel, then access control is the individual access card they give to each user for accessing their room.
+
+Relearn Access Control
+    When asking developers to name different access control methods, the usual answer seems to be ACL(Access Control List) and RBAC. If you answered this question the same way, then you are also among the misinformed. Let’s look at both of these in turn and then explain why.
+
+ACL or Access Control List is an implementation of access control, usually represented as a table of privileges.
+In this table we can see how each user is a row and has specific privileges assigned to them. Upon access control check, the user’s row and the column in question are cross-checked — this determines if this user has access or not.
+
+RBAC or Role Based Access Control is an access control method where users are given roles and the roles determine what privileges they have. It is usually described as a tree or diagram, as roles can inherit accesses from their parent roles. So our previous ACL table could look something like this.
+
+These are the common understandings of ACL and RBAC and they are both incorrect. and here's why
+
+First of all, ACL is not an access control model, but an implementation type. 
+It is often confused with IBAC (Identity Based Access Control) where each individual has their access rights determined separately — based on identity.
+
+That sounds very much like the ACL we described earlier. However, ACL variations like ACLg can also be used to implement RBAC access model. We simply substitute the individual for a group. As a result we end up with:
+
+This means ACLg (g stands for grouped) is equivalent of RBACm (m stands for minimal). You might be wondering where is the hierarchy in this model. Well there isn’t any. RBAC doesn’t have hierarchy written in the basic definition — it is an added extra in a model referred to HRBAC (Hierarchical Role Based Access Control).
+So to recap: ACL is not an access control model, but an implementation type and RBAC does not have hierarchy by the baseline definition.
+
+
+
+Know Your Access Control
+
+MAC/DAC (Mandatory/Discretionary Access Control) — although completely separate access control methods, I grouped them together as these two only differ in one important aspect. 
+Both focus on the data object as the center of access rights. 
+Discretionary access control method can most readily be seen in UNIX systems, where the owner of any given file has control over whom to give access. The access rights are in his/her discretion — hence the name. MAC also focuses on the data object as the basis of access rights, however the rights are not determined by the owner, but instead by the sensitivity of the data object. This method is most often seen in governmental or military systems due to the high costs of implementation
+
+IBAC (Identity Based Access Control) — this method focuses on the identity of the user as the basis of the privileges. Each individual is given specific access rights for every operation. The benefits are high granularity in assigning rights and simplicity in systems with a few users. However as systems grow in user numbers, then it usually gets difficult to manage.
+
+RBAC (Role Based Access Control) — tries to solve the limitations of IBAC management in large systems by mimicking the real world needs more closely. Operational privileges are grouped into roles and each user is assigned a role. The role, instead of the individual, is the basis for access checks. It is often implemented in a hierarchical model, where higher level roles inherit the privileges from lower levels. RBAC sacrifices granularity for higher maintainability in systems with lots of users.
+
+ABAC (Attribute Based Access Control) — is an evolution of RBAC that tries to solve some shortcomings in specific situations. In systems where there are many attributes that separate access to internal resources (i.e. has the user passed some tests and been educated in the use of this part of the system etc), using the RBAC model would result in what is known as the role explosion — a need to define all the roles that separate users based on their attributes. ABAC aims to solve this problem by providing a framework for defining access rights based on the various properties of a user.
+
+
+
+
+Details of RBAC
+
+
+https://medium.com/practo-engineering/route-based-access-control-462861b04433
+
+Route Based Access Control
+In REST API, the resources are mapped to a particular entity in the DB.
+Thus, having POST access to a resource means that you have the access to upsert entries in the corresponding DB model.
+
+IDEA
+Instead of treating DB Model as the Entity for which access is managed, We attack 
+
+
+
+
+
+
+
+
+
+
+

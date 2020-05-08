@@ -1,0 +1,59 @@
+prior (পূর্বে)
+explicity labeled - স্পষ্ট লেবেলযুক্ত
+compatible - উপযুক্ত,
+regardless  - নির্বিশেষে
+modifier  - পরিবর্তক
+intercepting - (আটকাচ্ছে, পথিমধ্যে আটক করা)
+getter (সংগ্রহকারী)
+setter (গোয়েন্দা, গুপ্তচর)
+/*
+* 10-10-2018
+*/
+Classes
+    Introduction
+        Traditional JavaScript uses functions and prototype-based inheritance to build up reusable components, but this may feel a bit awkward to programmers more comfortable with an object-oriented approach, where classes inherit functionality and objects are built from these classes. Starting with ECMAScript 2015, also known as ECMAScript 6, JavaScript programmers will be able to build their applications using this object-oriented class-based approach. In TypeScript, we allow developers to use these techniques now, and compile them down to JavaScript that works across all major browsers and platforms, without having to wait for the next version of JavaScript
+        
+    Inheritance
+        One of the most fundamental patterns in class-based programming is being able to extend existing classes to create new ones using inheritance.
+
+    
+/*
+* 14-10-2018 --------------------------
+*/
+        one of the most fundamental patterns is class-based programming is being able to extend existing classes to create new ones using inheritance;
+
+        Derived class are often called subclasses
+        Base class are often called Superclasses.
+
+        On
+/*
+* 15-10-2018 --------------------------
+*/
+    Public, private, and protected modifiers
+
+    Public by default : In TypeScript, each member is public by default
+
+    Understanding private: When a member is marked private, it cannot be accessed from outside of its containing class.
+
+    protected: The protected modifier acts much like the private modifier with the exception that members declared protected can also accessed within deriving classes.
+
+
+/*
+* 16-10-2018 --------------------------
+*/
+
+/*
+* 17-10-2018 --------------------------
+*/
+
+    Readonly modifier
+/*
+* 21-10-2018 --------------------------
+*/
+Accessors
+    TypeScript supports getters/setters as a way of intercepting accesses to a member of an object.
+
+
+Static Properties 
+    We can also create static members of a class, those that are visible on the class itself reather then on the instances. 
+

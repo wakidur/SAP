@@ -1,0 +1,60 @@
+/*
+* 25-11-2018 -------------
+* 11-02-2019 -------------
+* 13-02-2019 -------------
+* Eevey day is a new day, and you will never be able to find happiness if you don't move on.
+*/
+
+plethora (আধিক্য)
+shrunk (সঙ্কুচিত)
+substantially (যথেষ্ট)
+changing landscape(পরিবর্তন আড়াআড়ি)
+7.	Testing Personal Trainer
+    7.1. The need for automation
+        The size and complexity of apps being built for the web are growing with each passing day. The plethora of options that we now have to build web apps is just mind-boggling. Add to this the fact that the release cycles for products/apps have shrunk drastically from months to days, or even multiple releases per day! This puts a lot of burden on software testing. There is too much to be tested. Multiple browsers, multiple clients and screen sizes (desktop and mobile), multiple resolution, and so on
+    7.2. Testing in Angular
+
+        7.2.1. Types of testing
+            There are broadly two forms of testing that we do for a typical Angular app
+            •	Unit testing: Unit testing is all about testing a component in isolation to verify the correctness of its behavior. 
+            •	End-to-end testing: This type of testing is all about executing the application like a real end user and verifying the behavior of the application. 
+
+            Unit testing is the first line of defense against bugs, and we should be able to iron out most issues with code during unit testing. But unless E2E is done, we cannot confirm that the software is working correctly. Only when all the components within a system interact in the desired manner can we confirm that the software works; hence, E2E testing becomes a necessity.
+
+            Who writes unit and E2E tests and when are they written are important questions to answer.
+        7.2.2. Testing – who does it and when?
+            Traditionally, E2E testing was done by the Quality Assurance (QA) team and developers were responsible for unit-testing their code before submitting. Developers did some amount of E2E testing too, but overall the E2E testing process was manual.
+
+
+            With the changing landscape, modern testing tools, especially on the web front, have allowed developers to write automated E2E tests themselves and execute them against any deployment setup (such as development/stage/production). Tools such as Selenium, together with WebDrivers, allow easy browser automation, thus making it easy to write and execute E2E tests against real web browsers.
+            A good time to write E2E scenario tests is when the development is complete and ready to be deployed.
+
+
+            When it comes to unit testing, there are different schools of thought around when a test should be written. 
+                1. A Test Driven Developer writes tests before the functionality is implemented. 
+                2. Others write tests when the implementation is complete to confirm the behavior. 
+                3. Some write while developing the component itself. 
+
+                Choose a style that suits you, keeping in mind that the earlier you write your tests, the better.
+
+
+        7.2.3. The Angular testing ecosystem
+            At the moment, the Angular testing library works by default with Jasmine
+            All the tests in this chapter are written using Jasmine (both unit and integration tests). Karma will be our test runner for unit tests and Protractor for E2E tests.
+
+    7.3. Getting started with unit testing
+        The ultimate aim of unit testing is to test a specific piece of code/component in isolation to make sure that the components work according to the specification. This reduces the chances of failures/bugs in the component when integrated with other parts of the software. 
+
+        Before we start writing tests, there are some guidelines that can help us write good and maintainable tests:
+            1. 
+
+            7.3.1. Setting up Karma and Jasmine for unit testing
+            7.3.2. Organization and naming of our test files
+            7.3.3. Unit-testing Angular applications
+                7.3.3.1. Unit-testing pipes
+                7.3.3.2. Running our test files
+               
+/*
+* 26-11-2018 -------------
+*/
+            7.3.4. Unit-testing components

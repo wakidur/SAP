@@ -1,0 +1,15 @@
+<h2>Hero List</h2>
+<p><i>Pick a hero from the list</i></p>
+<ul>
+    <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
+        {{hero.name}}
+    </li>
+</ul>
+
+<app-hero-detail *ngIf="selectedHero"  [hero]="selectedHero"></app-hero-detail>
+
+<!-- pipes -->
+<!-- Default format: output 'Jun 15, 2018' -->
+<p> Today is {{today | data}} </p>
+<p> Today is {{today | data:'fullDate'}} </p>
+<p> Today is {{today | data:'shortTime'}} </p>

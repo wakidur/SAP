@@ -1,0 +1,132 @@
+4 Building a static site with Node and Express
+// 08-07-2018---------
+    4.1   Defining the routes in Express
+        4.1.1   Different controller files for different collections
+            Requiring the controller files
+
+            const express = require('express');
+            const router = express.Router();
+            const ctrlLocations = require('../controllers/locations');
+            const ctrlOthers = require('../controllers/others')
+        Setting up the routes
+            const express = require('express');
+            const router = express.Router();
+            const ctrlLocations = require('../controllers/locations');
+            const ctrlOthers = require('../controllers/others');
+            
+            /* Locations pages */
+            router.get('/', ctrlLocations.homelist);
+            router.get('/location', ctrlLocations.locationInfo);
+            router.get('/location/review/new', ctrlLocations.addReview);
+            
+            /* Other pages */
+            router.get('/about', ctrlOthers.about);
+            
+            module.exports = router;
+    
+    4.2 Building basic controllers
+        4.2.1 Setting up controllers
+
+            /* GET 'home' page */
+            const index = function(req, res){
+                res.render('index', { title: 'Express' }
+            };
+        
+    
+            Adding the Others controllers
+
+                /* GET 'about' page */
+                const about = function(req, res){
+                    res.render('index', { title: 'About' });
+                };
+                module.exports = {
+                    about
+                };
+            
+            Adding the Locations controllers
+                locations.js
+            
+                Listing 4.4 Locations controller file
+                /* GET 'home' page */
+                const homelist = function(req, res){
+                    res.render('index', { title: 'Home' });
+                };
+                
+                /* GET 'Location info' page */
+                const locationInfo = function(req, res){
+                    res.render('index', { title: 'Location info' });
+                };
+                
+                /* GET 'Add review' page */
+                const addReview = function(req, res){
+                    res.render('index', { title: 'Add review' });
+                };
+                
+                module.exports = {
+                    homelist,
+                    locationInfo,
+                    addReview
+                };
+        
+        4.2.2 Testing the controllers and routes
+    
+    4.3 Creating some views
+        4.3.1   A look at Bootstrap
+            Bootstrap responsive grid system
+        
+        4.3.2   Setting up the HTML framework with Pug templates and Bootstrap
+            Looking at the layout
+            Building the navigation
+
+
+//09-07-2018-------------------
+    4.5   Take the data out of the views and make them smarter
+        4.5.1 How to move data from the view to the controller
+            Update the controller
+            Update the view
+        
+        4.5.2 Dealing with complex, repeating data
+            Analyzing the data in the view
+
+            Name 
+            Rating
+            Distance away
+            Address
+            List of facilities
+
+            {
+                name: 'Starcups',
+                address: '125 High Street, Reading, RG6 1PS',
+                rating: 3,
+                facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+                distance: '100m'
+            }
+        
+
+            Adding the repeating data array to the controller
+            Looping through arrays in a Pug view
+        
+        4.5.3   Manipulating the data and view with code
+            small &nbsp;
+                - for (let i = 1; i <= location.rating; i++)
+                    i.fa.fa-star
+                - for (let i = location.rating; i < 5; i++)
+                    i.fa.fa-star-o
+        4.5.4   Using includes and mixins to create reusable layout components
+            Defining Pug mixins
+                mixin welcome
+                    p Welcome
+                
+                mixin outputRating(rating)
+                    - for (let i = 1; i <= rating; i++)
+                        i.fa.fa-star
+                    - for (let i = rating; i < 5; i++)
+                        i.fa.fa-star-o
+            Calling Pug mixins
+        
+                small &nbsp;
+                    +outputRating(location.rating)
+
+        4.5.4   The finished homepage     
+
+        4.5.5   Updating the rest of the views and controllers  

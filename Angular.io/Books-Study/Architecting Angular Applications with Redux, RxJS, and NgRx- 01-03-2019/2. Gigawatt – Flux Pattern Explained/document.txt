@@ -1,0 +1,29 @@
+flux(নিরন্তর পরিবর্তন)
+bolt ()
+fragile(ভঙ্গুর, ক্ষণস্থায়ী)
+predictable(আন্দাজের)
+unpredictable(অনিশ্চিত, যার সম্বন্ধে আগে থেকে বলা যায় না)
+predictability(ভবিষ্যদ্বাণীর)
+bidrectional(দ্বিমুখী)
+unidirectional (একমুখী)
+
+thought (চিন্তা)
+seldom (কদাপি, ক্বচিৎ, প্রাই কখনোই না)
+vice versa(বিপরীত)
+cascade(নির্ঝর, নির্ঝর, জলপ্রপাত, প্রপাত, ঝরনা, ঝোর)
+deviating (বিচু্যত, বিচ্ছিন্ন, বিচু্যত, আলাদা, উদাসীন, ছিন্ন, অনন্বিত)
+dispatcher (প্রাথমিক কাজ)
+interaction (মিথষ্ক্রিয়া)
+intent (উদ্দেশ্য, অভিপ্রায়, ইচ্ছা, পরিকল্পনা, লক্ষ্য, অভিলাষ, )
+intention (উদ্দেশ্য)
+consists (গঠিত)
+propagate (প্রসারিত করা)
+propagated (প্রসারিত করা, প্রচারিত)
+propulate(জনপূর্ণ করা)
+persisted (স্থায়ী অবস্থায় থাকা)
+/****************** 07-03-2019 *******************/ 
+ 2. Gigawatt – Flux Pattern Explained
+    Flux is an architectural pattern created by Facebook. 
+
+    2.1. Core concepts overview
+        At the core of the Flux pattern is a unidirectional data flow.

@@ -1,0 +1,125 @@
+//10-07-2018-----------------
+terminates(বন্ধ)
+
+5. Building a data model with MongoDB and Mongoose
+    5.1   Connecting the Express application to MongoDB using Mongoose
+        5.1.1   Adding Mongoose to our application
+            "dependencies": {
+                    "body-parser": "~1.15.2",
+                    "cookie-parser": "~1.4.3",
+                    "debug": "~2.2.0",
+                    "express": "~4.14.0",
+                    "morgan": "~1.7.0",
+                    "pug": "~2.0.0-beta6",
+                    "serve-favicon": "~2.3.0"
+                    "mongoose": "^4.9.1"
+                }
+       
+        5.1.2   Adding a Mongoose connection to our application
+            MongoDB and Mongoose connection
+                Mongoose opens a pool of five reusable connections when it connects to a MongoDB
+                database. This pool of connections is shared between all requests. Five is just the
+                default number and can be increased or decreased in the connection options if you
+                need to.
+                    BEST-PRACTICE TIP
+
+            Setting up the connection file
+            Creating the Mongoose connection
+                mongodb://username:password@localhost:27027/database
+
+                (mongodb)MongoDB protocol 
+                (username:password)Login credentials for database
+                (localhost)Server address
+                (27027)Port
+                (database)Database name
+
+                *** The username, password, and port are all optional
+
+
+            Monitoring the connection with Mongoose connection events
+            Closing a Mongoose connection
+                Closing the Mongoose connection when the application stops is as much a part of the best practice as opening the connection when it starts. 
+                The connection has two ends: 
+                one in your application and 
+                one in MongoDB.
+                MongoDB needs to know when you want to close the connection so that it doesn’t keep redundant connections open.
+
+                To monitor when the application stops we need to listen to the Node.js process, listening for an event called SIGINT.
+
+            Capturing the process termination events
+            Complete connection file
+
+//11-07-2018-----------------
+
+    5.2   Why model the data?
+        5.2.1   What is Mongoose and how does it work?
+            Mongoose was built specifically as a MongoDB Object-Document Modeler (ODM) for Node applications. One of the key principles is that you can manage your data model from within your application. 
+
+            First off, let's get some naming convention out of the way 
+            1. In MongoDB each entry in a database is called a document.
+            2. In MongoDB a collection of documents is called a collection
+            3. In MongoDB the definition of a document is called a schema
+            4. Each individual data entity defined in a schema is called a path
+
+            How does Mongoose model data?
+            Breaking down a schema path
+                Allowed schema types
+                    String
+                    Number
+                    Date
+                    Boolean
+                    Buffer
+                    Mixed
+                    Array
+                    ObjectI
+
+//12-07-2018-----------------
+    5.3   Defining simple Mongoose schemas
+        We’ve just discussed that a Mongoose schema is essentially a JavaScript object, which we define from within the application.
+        5.3.1   The basics of setting up a schema
+
+            "const locationSchema = new mongoose.Schema({ });"
+        
+            Defining a schema from controller data
+
+//11-07-2018-----------------
+            Assigning default values
+            Adding some basic validation: Required fields
+
+            *** malformed data
+
+            Adding some basic validation: Number boundaries
+        
+        5.3.2   Using geographic data in MongoDB and Mongoose
+        GeoJSON
+
+        5.3.3   Creating more complex schemas with subdocuments
+            Using nested schemas in Mongoose to define subdocuments
+
+                Subdocuments are defined in Mongoose by using nested schemas. So that’s one schema nested inside another.
+            
+            Adding a second set of subdocuments
+        
+        5.3.4   Final schema
+
+        5.3.5   Compiling Mongoose schemas into models
+            An application doesn’t interact with the schema directly when working with data; data interaction is done through models.
+            In Mongoose, a model is a compiled version of the schema. Once compiled, a single  instance of the model maps directly to a single document in your database. It’s
+            through this direct one-to-one relationship that the model can create, read, save, and  delete data.
+
+            Compiling a model from a schema
+        
+    
+    5.4   Using the MongoDB shell to create a MongoDB database and add data
+        5.4.1 MongoDB shell basics
+            Starting the MongoDB shell
+            Listing all local databases
+            Using a specific database
+            Listing the collections in a database
+            Seeing the contents of a collection
+        
+        5.4.2 Creating a MongoDB database
+
+
+
+

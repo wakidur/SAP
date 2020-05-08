@@ -1,0 +1,165 @@
+<div class="container-fluid fl-stretch-box " data-ng-class="{'medium-page': !isModal}">
+    <div class="fl-box fl-content-box" data-ng-class="{'row': !isModal}">
+        <form 
+            class="col-md-4 fl-row-box p-r-5" 
+            data-ng-show="!isModal" 
+            name="seasonFrom" 
+            role="form" 
+            validation-msg="validationMsgs.season" 
+            ni-form-dirty 
+            ni-forattrchange 
+            novalidate>
+            <div class="panel panel-default m-b-none">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="ni-sup">{{ longft.season }}</label>
+                        <ni-auto-complete 
+                            focus-control="season" 
+                            ni-validate 
+                            type="text" 
+                            ni-tabindex 
+                            data-ng-model="model.season.name"
+                            maxlength="50" 
+                            datasource="model.seasonList" 
+                            filter-property="name"></ni-auto-complete>
+                    </div>
+                    <div class="form-group">
+                        <label for="shortName" class="ni-sup">{{longft.shortname}}</label>
+                        <ni-auto-complete 
+                            ni-validate 
+                            type="text" 
+                            ni-tabindex 
+                            data-ng-model="model.season.shortName" 
+                            shortname
+                            datasource="model.seasonList" 
+                            filter-property="shortName"></ni-auto-complete>
+                    </div>
+                    <div class="form-group">
+                        <label title="{{longft.systemcode}}">{{longft.systemcode}}</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            data-ng-disabled="true" 
+                            data-ng-model="model.season.code" />
+                    </div>
+                    <div class="checkbox">
+                        <label class="option-box">
+                            <input 
+                                type="checkbox" 
+                                ni-tabindex 
+                                data-ng-model="model.season.isActive">
+                            <i class="fa fa-square-o"></i>
+                            <i class="fa fa-check-square-o"></i>
+                            <span>{{ longfht.active }}</span>
+                        </label>
+                    </div>
+
+
+                    <div class="btn-group pull-right" role="group">
+                        <button 
+                            type="button" 
+                            data-ng-disabled="seasonFrom.$invalid || !seasonFrom.$dirty " 
+                            class="btn btn-success" 
+                            data-ni-click="save($formValidation)">Save</button>
+                        <button 
+                            type="button" 
+                            data-ng-disabled="!seasonFrom.$dirty" 
+                            class="btn btn-danger" 
+                            data-ni-click="reset($formValidation)">Reset</button>
+                        <button 
+                            type="button" 
+                            data-ng-if="model.season.id" 
+                            class="btn btn-danger" 
+                            data-ni-click="cancel($formValidation)">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div data-ng-class="isModal ? 'col-md-12 p-r-none' : 'col-md-8 fl-row-box'" fitmodal="70%">
+            <div fitmodal="60%">
+                <div class="panel form-horizontal" data-ng-class="{'panel-default': !isModal}">
+                    <div data-ng-class="isModal ? 'panel-heading p-none' : 'panel-heading'">Search By:</div>
+                    <div class="panel-body" data-ng-class="{'panel-body': !isModal}">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group m-b-none">
+                                    <label class="col-md-4 control-label">{{longfht.season}}</label>
+                                    <div class="col-md-8">
+                                        <input 
+                                            type="text" 
+                                            class="form-control" 
+                                            data-ng-model="searchCriteria.season"
+                                            data-ng-change="onChangeSeason()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group m-b-none">
+                                    <label class="col-md-4 control-label">{{longfht.shortname}}</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control text-uppercase" data-ng-model="searchCriteria.shortName" data-ng-change="onChangeSeason()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="btn-group pull-left" role="group">
+                                    <button type="button" class="btn btn-primary" ni-click="search()">Search</button>
+                                    <button type="button" class="btn btn-danger" ni-click="searchReset()">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel m-b-none" data-ng-class="{'panel-default': !isModal}">
+                    <div class="panel-heading" data-ng-show="!isModal">Season List</div>
+                    <div data-ng-class="{'panel-body': !isModal}">
+                        <div class="table-responsive">
+                            <table ni-grid="gridOptions" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 35%;">{{longfht.season}}</th>
+                                        <th style="width: 20%;">{{longfht.shortname}}</th>
+                                        <th style="width: 20%;">{{longfht.code}}</th>
+                                        <th style="width: 10%;">{{longfht.active}}</th>
+                                        <th style="width: 15%;">{{isModal ? "Select": "Edit | Delete"}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="entity in gridData" tooltip-append-to-body="true" animate-on-error='entity.onError' tooltip="{{errorTooltip}}">
+
+                                        <td style="width: 35%;">{{entity.name}}</td>
+                                        <td class="text-uppercase" style="width: 20%;">{{entity.shortName}}</td>
+                                        <td style="width: 20%;">{{entity.code}}</td>
+                                        <td style="width: 10%;">{{entity.isActive |niBoolean}}</td>
+                                        <td class="p-none" style="width: 15%;">
+                                            <ul class="table-link-group">
+                                                <li data-ng-show="!isModal" data-ng-click="editSeason(entity)">
+                                                    <a href="javascript:void(0)" title="Edit">
+                                                        <i class="fa fa-edit"></i>
+                                                    </a>
+                                                </li>
+                                                <li ni-dbclick-prevent data-ng-show="!isModal" data-ng-click="deleteSeason(entity)">
+                                                    <a href="javascript:void(0)" title="Delete">
+                                                        <i class="fa fa-trash-o text-danger"></i>
+                                                    </a>
+                                                </li>
+                                                <li data-ng-show="isModal" data-ng-click="selectBuyerBasic(entity)">
+                                                    <a href="javascript:void(0)" ni-anchor-disabled="!entity.isActive" title="Select">
+                                                        <i class="ni ni-select-record"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

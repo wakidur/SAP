@@ -1,0 +1,3 @@
+https://toddmotto.com/dynamic-page-titles-angular-2-router-events
+
+In Angular (v2+), the solution is far easier as it provides a single API, however we can actually tie this API into route change events to dynamically update the page titles.

@@ -1,0 +1,21 @@
+{
+  "name": "code-env",
+  "version": "1.0.0",
+  "description": "Hacke Rank code run environment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index",
+    "devstart": "nodemon ./index",
+    "test": "jest --watch"
+  },
+  "keywords": [
+    "Algorithms",
+    "Data Structure"
+  ],
+  "author": "Wakidur Rahman",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.3.0",
+    "nodemon": "^2.0.3"
+  }
+}

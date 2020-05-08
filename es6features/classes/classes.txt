@@ -1,0 +1,73 @@
+//----------------------26-2-2018---------------
+/******************* 1.Defining classes ***************/
+Classes are in fact(প্রকৃত ঘটনা, প্রকৃত অবস্থা) "special functions", and just as you can define "function expressions" and "function declaration", the class syntax has two components
+1. class expressions
+2. class declarations
+
+
+//---------Class declarations----------
+
+One way to define a class is using a class declaration. To declare a class, you use the class keyword with the name of the class("Rectangle" )
+
+A. Hoisting
+An important difference between "function declarations" and "class declarations" is that function declaration are hoisted and class declaration are not. 
+*** you first need to declare your class and then access it, otherwise code like the following will throw a RefernceError.
+
+//-----------Class expressions----------
+A class expression is another way to define a class. Class expressions can be named or unnamed. The name give to a named class expressions is local to the class's body. ( it can be retrived through the class's (not an instanc's).name property, thought);
+
+// 28-2-2018----09-09-2018--------------
+//---------1 Class body and method definitions ----------
+
+The body of a class is the part that is in curly brackets {}. This is where you define class members, such as methods or constructor 
+
+//1.1 Strict mode ----------
+The bodies of class declarations and class expressions are executed in strict mode i.e. constructor, static and prototype methods, getter and setter function are executed in strict mode.
+
+//1.2 Constructor ----------
+The constructor method is a special method for creating and initializing an object created with a class.
+
+// 1.3 Prototype methods
+
+
+// 1.4 Static methods
+
+// 05-03-2018--------------------
+// 1.5 Boxing with prototype and static methods :
+
+When a static or prototype method is called without a value for this, the this value will be 'undefined' inside the method. This behavour will be the same event if the 'use strict' directive isn't present, because code witing the 'class' syntax is always executed in 'strict mode'
+
+class Animal { 
+  speak() {
+    return this;
+  }
+  static eat() {
+    return this;
+  }
+}
+
+let obj = new Animal();
+obj.speak(); // Animal {}
+let speak = obj.speak;
+speak(); // undefined
+
+Animal.eat() // class Animal
+let eat = Animal.eat;
+eat(); // undefined
+
+If the above is written using traditional function-based syntax, then autoboxing  in method calls will happen in non-strict mode based on the initial this value. If the inital value is 'undefined, this will be set to the global object. 
+ 
+
+
+
+//--------- Sub classing with extends(প্রসারিত করা, বাড়ান) ----------
+
+The "extends" keyword is used in "class declaration" or "class expressions" to create a class as a child of(একটি শিশু হিসাবে) another class.
+
+
+
+
+
+
+
+

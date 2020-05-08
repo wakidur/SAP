@@ -1,0 +1,122 @@
+How to learn React.js in 2019  https://www.robinwieruch.de/learn-react-js
+
+1. JavaScript ES6 to learn React. (https://www.robinwieruch.de/javascript-fundamentals-react-requirements/)
+2. React documentation. https://reactjs.org/docs
+
+
+
+LEARN REACT [QUICKLY || FAST || EASY]
+
+    - There is no way to learn something the easy way. 
+    - You have to be patient. That applies for developers too. 
+    - Personally, that's why I like being a developer, because there will be always something new to learn. 
+    - If you stay curious, you will not be disappointed while becoming a developer. 
+    - Learning is always a challenge, a challenge to hone your skills, if challenge and skill at hand are in balance. 
+    - That's why it takes time to learn React as well.
+
+    Learn React, only React step by step, and don't let yourself distract from other tech on this journey.
+
+    There are a couple of tech stacks that people want to learn with React straightaway. I want to pick up a few of them and give a brief explanation why it isn't a good idea to marry them with React while learning it:
+
+        => Learn React with TypeScript? No way, learn React first before converting JavaScript to a typed language. Not only the vanilla JavaScript code will be typed with TypeScript, but also your React components and everything that comes with them. It will become a mess and overwhelming when you haven't learned React itself from scratch. Also 99% of the React tutorials and courses out there are not written in TypeScript, so it makes things more complicated than easier.
+    
+        => Learn React with Redux? Redux is a popular state management library for JavaScript. Again, learn React and its built-in state management first before reaching out to a sophisticated external state management library which is meant to be used in large scale and complex applications. React already comes with plenty of tools to handle state in your application. The vast majority of React applications out there doesn't even need Redux or any other state management library. Learn how to deal with the state in React first before throwing another library on the problem. Redux makes React more complicated for beginners.
+
+        => Learn React with Gatsby? Gatsby.js got quite popular in the recent time. It's the go-to solution for creating static websites such as personal websites, blogs and landing pages. However, Gatsby comes with its own learnings such as GraphQL, its large plugin system, and the problems coming with server-side rendered React applications. So don't mistake Gatsby.js for having an easier time learning React. It makes writing static websites with React easier, but not learning React itself.
+
+        These were only a few things React beginners tend to associate with React when starting out with it. There are definitely more of them. However, they will not make the learning experience easier.In contrast, you will have to learn two things instead of one. So start out with React first before learning anything on top of it. Learn one thing at a time.
+
+REACT PREREQUISITES
+    - Since React is a JS library, there is no way around learning JavaScript. 
+    - You cannot learn React without JavaScript or without knowing JavaScript in the first place. 
+    - In comparison to other frontend solutions, React makes heavily use of JavaScript.
+
+        Learn React or JavaScript first?
+            - You should understand at least the basics of JavaScript, often referred to as JavaScript ES5, and have decent knowledge about HTML and CSS. 
+            - React also utilizes JavaScript syntax, most often referred to JavaScript ES6 and beyond (ES7, ES8, ES9). 
+            - That's why it makes sense to get comfortable with at least JavaScript ES6 to learn React.
+
+
+            =-There are many people who recommend to learn web development and all JavaScript fundamentals as prerequisite before learning React
+            -- The skills they recommend to acquire go far beyond what's needed to build basic applications with React.js. A couple of them may be
+
+            Functions are first-class citizens in JavaScript
+            bind(), apply(), and call()
+            scopes and closures
+            this
+            Object Methods
+            Array Methods
+            Prototypical Inheritance -> ES6 Class
+            Callbacks and Promises
+            Event Loop
+            Event Bubbling
+            Regular Expressions
+            Error Handling
+            JavaScript ES6 and beyond
+            Hoisting, Memoization
+            Declarative vs imperative programming
+            Functional vs object-oriented programming
+
+            However, I believe it's not true to have all this knowledge. In contrast, it can be very disillusioning for beginners being new to JavaScript, React and Web Development. You don't want to hang around in the "Scopes and Closures"-land while you could build real projects instead that motivate you to keep going. The "Aha"-moment for grasping closures will come along the way. Personally I didn't know about half of the things in the list when I started to learn React and I still have to look up regular expressions online because I don't really bother learning them; and I still help companies with their JavaScript projects.
+
+            == I believe most of JavaScript can be learned along the way when learning React, because then you experience it in context while building web applications.That's exciting and that's what drives us as human beings. So keep yourself excited while learning and don't hang around too long with the fundamentals where you cannot see the purpose without ever applying them in a real world scenario. Start to build real projects. Stay curious! Move forth and back between JavaScript and React while you learn React.
+        
+        Learn React or jQuery?
+        Why should I learn React?
+
+LEARN REACT.JS STEP BY STEP
+
+        After we got clarity about learning only React and React's prerequisites, let's see how to learn React from zero from there.
+        - I strongly believe the best start is going through the official ***React documentation***.
+
+        Learn with React Docs
+        Learn React with Projects
+        Learn React by Doing
+        Learn React every Day
+        Learn React in Public
+        Learn to use React
+            Learn about React's JSX syntax
+            Learn about React Components
+            Learn about React Component Composition
+            Learn about React Props
+            Learn about React State
+
+
+REACT SETUP FOR BEGINNERS
+    Set up React on Windows
+    Execute JavaScript with Node and NPM:
+    Develop with Visual Studio Code: 
+    Learn with create-react-app:
+    Format with Prettier:
+
+
+LEARN ADVANCED REACT
+    - After you have learned the basics of React with 
+        React components, 
+        props/state, and 
+        React's JSX syntax to return valid HTML in JavaScript, you can dive deeper with advanced React concepts and patterns. 
+    - These are a few essential of them that will not go away that quickly:
+        Learn React Hooks
+        Learn React Higher-Order Components
+        Learn React Render Prop Components
+        Learn React Context
+
+        - Being equipped with these advanced React techniques, you should be comfortable to dive into larger React applications where you will find these concepts and techniques more often. 
+        - Due to React Hooks, the other Higher-Order Components and Render Prop Components may be less used in the future, but you should still see them fairly often throughout the next year.
+
+LEARN REACT ONLINE
+    React Tutorials
+    React Books
+    React Videos (YouTube, Twitch, Online Courses)
+    Web Development or React Podcasts
+    Interactive Courses
+
+LEARN REACT ROADMAP
+    - After you have learned only React and feel comfortable with its basic and advanced implementation details, there are plenty of learning paths you can take to advance your React skills. 
+    - The React ecosystem is not opinionated but innovative and extensive. A couple of recommendations:
+
+
+    React + React Router: Enable Navigation in your React application with a Router
+    React + Firebase: Connect React to a Database and implement User Authentication/Authorization
+    React + GraphQL: Connect React with a GraphQL interface to a Node.js backend application
+    React + Redux: Explore predictable and scalable state management in React with Redux

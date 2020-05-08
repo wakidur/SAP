@@ -1,0 +1,7 @@
+/****************** 23-05-2019 *** Review ****************/ 
+Displaying Data
+Showing component properties with interpolation
+Template inline or template file?
+Showing an array property with *ngFor
+
+

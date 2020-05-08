@@ -1,0 +1,13 @@
+/****************** 21-05-2019 *** Review ****************/ 
+Introduction to servieces and dependency injection
+
+Service is a broad category encompassing(পরিবেষ্টন করা) any value, function, or feature that an app needs. 
+A service is typically a class with a narrow(সংকীর্ণ), well defined purpose. It should do something specific and do it well. 
+
+Angular distinguishes(আলাদা) components form services in order to increases modularity and reusability. 
+
+    by separating a component's view-related functionality from other kinds of processing, you can make your component class lean and effecient. Ideally, a component's job is to enable the user experience and nothing more. It should present properties and methods for data binding, in order to mediate beteween the view(rendered by the template) and the application logic (which often includes some notion of a model)
+
+    a component should not to define things like how to fatch data from the server, validate user input, or log directly to the console. Instead, it can delegate such tasks to services. by defining that kind of processing task in an injectable service class, you make it available to any component. You can also make your app more adaptable by injecting different providers of the same king of service, as appropriate in dirrerent circumstances. 
+
+Angular doesn't enforce these principles. Angular does help you follow thes principles by making it easy to factor your application loging 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> component-based application structure.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="./node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+    <script src="main.js"></script>
+
+
+    <style>
+        .grabber {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            cursor: move;
+            height: 15px;
+            width: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            padding: 0px;
+            margin: 0px;
+            line-height: 15px;
+        }
+
+        .grabber:after {
+            content: " ";
+            width: 15px;
+            height: 15px;
+            border-bottom: 15px solid #ccc;
+            border-left: 15px solid transparent;
+            right: 0;
+            position: absolute;
+            cursor: move;
+        }
+
+        .grabber:before {
+            content: " ";
+            width: 15px;
+            height: 15px;
+            border-bottom: 15px solid #ccc;
+            border-right: 15px solid transparent;
+            position: absolute;
+            left: 0;
+            cursor: move;
+        }
+
+        /* countdown */
+
+        .ni-count-down {
+            width: 100%;
+            display: table;
+        }
+
+        .cd-row {
+            display: table-row
+        }
+
+        .cd-cell {
+            display: table-cell;
+            /* width: 10%; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                <div class="grabber"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ni-coundown -->
+    <!-- <div style="width: 250px; height: 250px;">
+        <div class="ni-count-down">
+            <div class="cd-row">
+                <div class="cd-cell">DD</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">HR</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">MN</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">SE</div>
+                <div class="cd-cell"></div>
+                <div class="cd-cell">MS</div>
+            </div>
+           
+            <div class="cd-row">
+                <div class="cd-cell">100</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">02</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">36</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">47</div>
+                <div class="cd-cell">:</div>
+                <div class="cd-cell">47</div>
+            </div>
+           
+        </div>
+    </div> -->
+
+
+
+</body>
+
+</html>

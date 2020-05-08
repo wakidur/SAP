@@ -1,0 +1,24 @@
+React Functional or Class Components: Everything you need to know
+https://programmingwithmosh.com/react/react-functional-components/
+
+What are Functional Components?
+    There are two main types of components in React. 
+        Class Components and 
+        Functional Components. 
+    
+    If you ever have a class component with only a render method – you should always make it a functional component.
+
+
+Why use Functional Components?
+
+    Here are the 6 key reasons to start using functional components:
+        1. Functional components are easy to reason about
+        2. Functional components are easy to test
+        3. Functional components can potentially have a better performance
+            Since functional components offer no state or lifecycle methods, you would think that this would allow the internals of React to avoid unnecessary overhead such as lifecycle events. Unfortunately, this is currently not the case.
+        4. Functional components are easy to debug
+        5. Functional components are more reusable
+            This one might be a bit controversial. but by removing function level state, 
+        6. Functional components can reduce coupling
+
+When NOT to use Functional Components

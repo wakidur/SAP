@@ -1,0 +1,20 @@
+https://hencework.com/theme/eric/light/
+http://onlinesodai.com/work/me/#
+
+1 File uploading
+2 authentication
+
+https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
+
+In this article, I will be briefly explaining the following 10 common architectural patterns with their usage, pros and cons.
+
+Layered pattern
+Client-server pattern
+Master-slave pattern
+Pipe-filter pattern
+Broker pattern
+Peer-to-peer pattern
+Event-bus pattern
+Model-view-controller pattern
+Blackboard pattern
+Interpreter pattern

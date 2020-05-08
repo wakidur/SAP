@@ -1,0 +1,236 @@
+/**** 30-09-2018------------------------------*/
+driven (পরিচালিত)
+underlying(মূলগত)
+
+4.	Personal Trainer
+    Angular form support 
+    client-server communication
+
+    •	Defining Personal Trainer requirements:
+    •	Defining the Personal Trainer model
+    •	Defining the Personal Trainer layout and navigat
+    •	Adding support pages
+    •	Defining the Workout Builder component structure: 
+    •	Building forms
+        •	Form types: 
+        •	ngModel: 
+        •	Reactive Form Controls
+        •	Data formatting
+        •	Input validation: 
+
+    4.1. The Personal Trainer app - the problem scope
+    4.2. Personal Trainer requirements
+        Based on the notion of managing workouts and exercises, these are some of the requirements that our Personal Trainer app should fulfill:
+
+            •	The ability to list all available workouts.
+            •	The ability to create and edit a workout. While creating and editing a workout, it should have:
+                •	The ability to add workout attributes including name, title, description, and rest duration
+                •	The ability to add/remove multiple exercises for workouts
+                •	The ability to order exercises in the workout
+                •	The ability to save workout data
+
+            •	The ability to list all available exercises.
+            •	The ability to create and edit an exercise. While creating and editing an exercise, it should have:
+                •	The ability to add exercise attributes such as name, title, description, and procedure
+                •	The ability to add pictures for the exercise
+                •	The ability to add related videos for the exercise
+                •	The ability to add audio clues for the exercise
+    
+    4.3. The Personal Trainer model
+    4.4. Getting started with the code for Personal Trainer
+    4.5. Using the Personal Trainer model in Workout Builder services
+    4.6. The Personal Trainer layout
+    4.7. Personal Trainer navigation with routes
+
+        Route
+            /builder
+            /builder/workouts
+            /builder/workout/new
+            /builder/workout/:id
+            /builder/exercises
+            /builder/exercise/new
+            /builder/exercise/:id
+        
+        4.7.1. Getting started with Personal Trainer navigation
+        4.7.2. Introducing child routes to Workout Builder
+        4.7.3. Adding the child routing component
+        4.7.4. Updating the WorkoutBuilder component
+        4.7.5. Updating the Workout Builder module
+        4.7.6. Updating App Routing module
+        4.7.7. Putting it all together
+
+// 01-10-2018------------------------------------
+        4.7.8. Lazy loading of routes
+            Lazy loading allows us to employ an asynchronous approach when loading our modules.
+
+            If you think of our application as a Single Page Application (SPA). 
+            In order to avoid round trips to the server, an SPA will typically load all the resources that will be needed to use the application when it is first started up by a user. 
+
+            But in our case, the important point is that we do not need the Workout Builder when the application is first loaded. 
+            Instead, we would like to load those resources only when the user decides that they want to add or change a workout or exercise.
+
+            Child and asynchronous routing make it straightforward to implement applications that allow us to have our cake and eat it too. On one hand, we can build SPAs with powerful client-side navigation, while on the other hand we can also encapsulate features in separate child routing components and load them only on demand.
+        4.7.9. Integrating sub- and side-level navigation
+            4.7.9.1. Sub-level navigation
+            4.7.9.2. Side navigation
+
+    4.8. Implementing workout and exercise lists
+
+        4.8.1. WorkoutService as a workout and exercise repository
+
+            The plan here is to create a WorkoutService instance that is responsible for exposing the exercise and workout data across the two applications. 
+            The main responsibilities of the service include
+
+            •	Exercise-related CRUD operations: Get all exercises, get a specific exercise based on its name, create an exercise, update an exercise, and delete it
+
+            •	Workout-related CRUD operations: These are similar to the exercise-related operations, but targeted toward the workout entity
+
+            4.8.2. Workout and exercise list components
+            
+
+// 02-10-2018---------------------
+
+            4.8.3. Workout and exercise list views
+                4.8.3.1. Workouts list views
+                4.8.3.2. Exercises list views
+    4.9. Building a workout
+        4.9.1 Finishing left nav
+                so we can implement child/parent inter-component communication to accomplish that.
+        4.9.2. Adding WorkoutBuilderService
+                WorkoutBuilderService monitors the state of the workout that a user of the application is building.
+                    Tracks the current workout
+                    Create a new workout
+                    loads the existing workout
+                    save the workout.
+            
+        4.9.3. Adding exercises using ExerciseNav
+        4.9.4. Implementing the Workout component
+        4.9.5. Route parameters
+        4.9.6. Route guards
+                As the name implies, route guards provide a way to prevent navigation to a route. 
+                A route guard can be used to inject custom logic that can do things such as check authorization, load data, and make other verifications to determine whether the navigation to the component needs to be canceled or not. 
+            
+                Angular offers several route guards, 
+                    CanActivate
+                    CanActivateChild
+                    CanDeActivate
+                    Resolve
+                    CanLoad
+            4.9.6.1. Implementing the resolve route guard
+
+// 03-10-2018--------------------------------
+        4.9.7. Implementing the Workout component continued...
+        4.9.8. Implementing the Workout template
+
+    4.10. Angular forms
+        Allowing user inputs
+        validation those inputs against business rules
+        Submitting the data to the backend server.
+
+        4.10.1. Template-driven and reactive forms
+            Angular offers tow types of forms
+                template-driven
+                reactive
+        4.10.2. Template-driven forms
+        4.10.3. Getting started
+            4.10.3.1. Using NgForm
+                <form 
+                    #f="NgForm" 
+                    name="formWorkout"
+                    (ngSubmit)="save(f.form)">
+            4.10.3.2. ngModel
+                One of the fundamental building blocks for template-driven forms is ngModel,
+                One of the Primary roles of "ngModel" is to support two-way binding between user input and an underlying model. With such a setup, changes in the model are reflected in the view, and update to the view too are reflected back on the model. 
+                *** But, be aware that "ngModel" is only available within "NgForm" for use with elements that allow user input.
+
+                4.10.3.2.1. Using ngModel with input and textarea
+                    The answer to the question is that the combination [()] is shorthend for both binding a model 
+
+            4.10.3.3. Using ngModel with select
+                ngModelGroup will allow us to create a nested group withing our model that will contain the list the list of exercises included in the workout and then in turn loop over each exercise to bind its duration to the model. 
+
+
+// 4-10-2012 ----------------------------
+    none
+// 5-10-2012 ----------------------------
+        4.10.4. Angular validation
+        4.10.5. ngModel
+            4.10.5.1. The Angular model state
+                Whenever we use 'NgForm', every element within our form, including input, textarea, and select, has some states defined on the associated model. ngModel tracks these states for us. this states trackes are:
+                    pristine
+                    dirty
+                    touched
+                    untouched
+                    valid
+                    invalid
+                    pristinedirty
+                    toucheduntouched
+
+            4.10.5.2. Angular CSS classes
+                ng-valid
+                ng-invalid
+                ng-pristine
+                ng-dirty
+                ng-untouched
+                ng-touched
+            4.10.6. Workout validation
+                4.10.6.1 Displaying appropriate validation messages
+//6-10-2018-------------------------------------
+                4.10.6.2. Adding more validation
+                    required
+                    minLenght
+                    maxLength
+                    email
+                    pattern
+
+                4.10.6.3. Managing multiple validation messages
+
+                4.10.6.3.1. Custom validation messages for an exercise
+            4.10.7. Saving the workout
+                4.10.7.1. More on NgForm
+                4.10.7.2. Fixing the saving of forms and validation messages
+            
+            4.10.8. Reactive forms
+                4.10.8. 1. Getting started with reactive forms
+
+//07-10-2018----------------------------------
+                4.10.8.2. Using the FormBuilder API
+                4.10.8.3. Adding the form model to our HTML view
+                    <form class="row" [formGroup]="exerciseForm" (ngSubmit)="onSubmit(exerciseForm)">  
+                4.10.8.4. Adding form controls to our form inputs
+                    <input name="name" formControlName="name" class="form-control" id="name" placeholder="Enter exercise name. Must be unique.">
+
+                4.10.8.5. Adding validation 
+                    <label *ngIf="exerciseForm.controls['name'].hasError('required') && (exerciseForm.controls['name'].touched || submitted)" class="alert alert-danger validation-message">Name is required</label> 
+
+                    'name': [this.exercise.name, validations.required]
+                4.10.8.6. Adding dynamic form controls
+// 09-10-2018 -----------------------------------------
+                4.10.8.7. Saving the form
+                4.10.8.8. Custom validators
+                4.10.8.9. Integrating a custom validator into our forms
+            4.10.9. Configuration options for running validation
+                <form 
+                    #f="ngForm" 
+                    name="formWorkout" 
+                    (ngSubmit)="save(f.form)" 
+                    [ngFormOptions]="{
+                        updateOn: 'submit'
+                        }" 
+                    class="row">
+
+                This instructs Angular to run our validations only upon submit. Try it and you’ll see that no validations appear when you make entries into the form. Leave the form blank and press the Save button, and you will see the validation messages appear. 
+
+                
+
+
+
+
+            
+
+
+
+
+
+
+

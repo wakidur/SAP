@@ -1,0 +1,130 @@
+//----------11-02-2018-------------
+"
+If you really 
+want 
+something 
+you will find a 
+way...
+if you don't 
+you will find 
+an Excuse,
+"
+
+Fairly(নিরপেক্ষভাবে)
+/********* 0. Express web framework (Node.js/JavaScript) ***********/
+Express is a popular unopinionated(একমত)  web framework, written in JavaScript and hosted within the node.js runtime enviroment.
+
+//----------12-02-2018-------------
+/******************************1. Express/Node introduction**************************/
+//====> second revision 12-5-2018
+1.2.  What is Node?
+	Node (or more formally Node.js) is an open-source, cross platform, runtime enviroment that allows developers to create all kinds of server-side tools and application in JavaScript. The runtime is intended(লক্ষ্য)  for use outside of a browser context(প্রসঙ্গ)(i.e runnig directly on a computer or serve OS). As such, the enviroment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and the system libraries.
+
+1.2. What is Express?
+	Express is the most popular node web framework, and is the underliying libary for a number of other popular Node web framework. It provides mechanisms to: 
+		1.2.1. Write handlers for requests with different HTTP verbs at different URL paths (routes).
+		1.2.2. Integrate with "view" rendering engines in order to generate responses by inserting data into templates.
+		1.2.3. Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.
+		1.2.4. Add additional request processing "middleware" at any point within the request handling pipeline.
+
+		While Express itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with 
+		  a. Cookies
+		  b. Sessions
+		  c. User logins
+		  d. URL parameters
+		  e. POST data
+		  f. security headers
+
+1.3 Where did it come from?
+
+1.4 How popular is Node/Express?
+
+1.5 Is Express opinionated?
+
+1.6 What does Express code look like?
+	1.6.1 Helloworld Express
+	1.6.2 Importing and creating modules
+	1.6.3 Using asynchronous APIs //====> second revision 15-5-2018
+		JavaScript code frequently uses asynchronous rather than synchronous APIs for operations that may take some time to complete. A synchronous API is one in which each operations must complete before the next operation can start. 
+
+	1.6.4 Creating route handlers
+
+2.4 Where did it come from?
+Express was initially released in November 2010 and is currently on version 4.16 of the API. 
+
+2.5 How popular is Node/Express?
+
+2.6 Is Express opinionated(	অটল বিশ্বাসী )?
+Express is unopinionated. You can insert almost any compatible middleware you like into the request handling chain, in almost any order you like. 
+
+
+2.7 What does Express code look like?
+
+	2.7.1 Helloworld Express
+	
+	1. line one      => var express = require('express');
+    2. line two 	 => var app = express();
+    3. line three  	 => app.get('/', function(req, res) {
+							res.send('Hello World!');
+						});
+    4. line four 	=>  app.listen(3000, function() {
+							console.log('Example app listening on port 3000!');
+						});
+
+	
+	The first two lines require() (import) the express module and create an Express application. The object, which is traditionally named app, 
+
+	A. has methods for routing HTTP requests,
+	B. Configuring middleware,
+	C. rendering HTML views,
+	D. Registering a template engine
+	E. Modifying application settings that control how the application behaves 
+
+	The middle part of the code (the three lines starting with app.get) shows a route definition.
+
+//----------13-02-2018-------------
+	2.7.2 Importing and creating modules
+
+	Module: A module is a JavaScript library/ file that you can import into other code using Node's require() function.
+	Express itself is a module, as are the middlewar and database libraries that we use in our Express applications.
+
+	2.7.3 Using asynchronous APIs
+
+	2.7.4 Creating route handlers
+		JavaScript tip: You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.
+
+		The Express application object also provides methods to define route handlers for all the other HTTP vars, which are mostly used in exactly the same way
+		post();
+		put();
+		delete();
+		options();
+		trace();
+		copy();
+		lock();
+		mkcol();
+		move();
+		purge();
+		propfind();
+		proppatch();
+		unlock();
+		report();
+		mkactivity();
+		checkout();
+		merge();
+		m-search();
+		notify();
+		subscribe();
+		unsubscribe();
+		patch();
+		search();
+		connect();
+    2.7.5 Using middleware
+		extensively(ব্যাপকভাবে);
+		compressing (সংকুচিতকারী);
+		
+	The 
+
+
+
+
+

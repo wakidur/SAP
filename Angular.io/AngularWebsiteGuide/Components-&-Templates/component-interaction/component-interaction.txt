@@ -1,0 +1,36 @@
+04-06-2018
+Component Interaction(মিথষ্ক্রিয়া)
+
+This cookbook contains recipes for common component communication scenarios in which two or more components share information. 
+
+1. Pass data from parent to child with input binding
+
+2. Intercept(পথিমধ্যে রোধ করা, ধরে রাখা, আটকানো) input property changes with a setter.
+
+    Use an input property setter to intercept and act upon a value from the parent.
+
+3. Intercept input property changes with ngOnChanges()
+    Detect and act upon changes to input property value with the "ngOnChanges()" method of the onChanges lifecycle hook interface.
+
+    *** You may prefer this approach to the property setter when watching multiple, interacting input properties. 
+
+4. Parent listens for child event
+    The child component exposes(অনাবৃত) an EventEmitter property with which it "emits" events when something happens. The parent binds to that event property and reacts to this events.
+
+    The child's EventEmitter property is an output property, typically adorned(সুশোভিত, অলঙ্কৃত) with an @Output decoration as seen in this VoterComponent.
+
+// 06-06-2018 -----------------------
+
+5. Parent interacts with child via local variable 
+
+A parent component cannot use data binding to read child properties or invoke child methods. You can do both by creating a template reference variable for the child element and then reference that within the parent template as seen in the following example
+
+
+
+
+
+    
+
+
+
+

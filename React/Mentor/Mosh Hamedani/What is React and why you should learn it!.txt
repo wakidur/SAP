@@ -1,0 +1,32 @@
+
+What is React and why you should learn it! (https://programmingwithmosh.com/react/react-tutorial/)
+
+What is React?
+React is a JavaScript library for building fast and interactive user interfaces.
+
+Architecture 
+At the heart of all React applications are components.
+
+A component is essentially a piece of the user interface. So, when building applications with React, we build a bunch of independent, isolated and reusable components and then compose them to build complex user interfaces.
+
+Show Me the Code!
+class Tweet { 
+   state = {};
+   render() { 
+      // Here we return a React element 
+   } 
+}
+
+Virtual DOM
+
+The output of this render method is a React element which is a simple, plain JavaScript object that maps to a DOM element. It’s not a real DOM element, it’s just a plain JS object that represents that DOM element in memory.
+
+So, React keeps a light-weight representation of the DOM in memory. We refer to this as the virtual DOM. Unlike the browser or the real DOM, this virtual DOM is cheap to create. When we change the state of a component, we get a new React element. React will then compare this element and its children with the previous one, it figures out what is changed, and then, it’ll update a part of the real DOM to keep it in sync with the virtual DOM.
+
+React vs Vanilla JavaScript/ jQuery
+
+We simply change the state of our components, and React will automatically update the DOM to match that state.
+
+React vs Angular 2+
+
+React and Angular are similar in terms of their component-based architecture. But Angular is a framework or a complete solution, while React is a library. It only takes care of rendering the view and making sure that the view is in sync with the state. That’s all React does, nothing less, nothing more! For this very reason, it has a small API to learn.

@@ -1,0 +1,25 @@
+10-12-2018-------------
+1. REST – What You Did Not Know
+    Representational State Transfer (REST)
+        Architectural Styles and the Design of Network-Based Software Architectures.
+    Simple Object Access Protocol (SOAP)
+    Hypertext Transfer Protocol- (HTTP) 
+    Uniform Resource Identifier (URI)
+    SOAP with Attachment References (SwaRef)
+    Message Transmission Optimization Mechanism (MTOM).
+
+    Let's look at the key principles around the HTTP and URI standards, sticking to which will make your HTTP application a RESTful service-enabled application:
+
+        1. Everything is a resource
+        2. Each resource is identifiable by a unique identifier (URI)
+        3. Resources are manipulated via standard HTTP methods
+        4. Resources can have multiple representations
+        5. Communicate with resources in a stateless manner
+
+        Principle 1 – Everything is a resource
+To understand this principle, one must conceive of the idea of representing data by a
+specific format and not by a physical file containing a bunch of bytes. Each piece of data
+available on the internet has a format that describes it, known as the content type; for
+example, JPEG images, MPEG videos, HTML, XML, text documents, and binary data are all
+resources with the following content types: image/jpeg, video/mpeg, text/html, text/xml,
+and application/octet-stream.

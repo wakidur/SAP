@@ -1,0 +1,23 @@
+.banner {
+    background-image: url("../images/site_showcase_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    background-size: cover;
+    min-height:  500px; 
+}
+
+.title {
+    margin-top: 80px;
+    font-size: 48px;
+    color: #fff;
+}
+.title span {
+    color: #1caa98;
+}
+
+.description {
+    font-size: 18px;
+    color: #fff;
+    
+}

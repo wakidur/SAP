@@ -1,0 +1,34 @@
+1. Angular Authentication: Using the Http Client and Http Interceptors
+https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
+
+intercept (পথিমধ্যে রোধ করা, বাঁধা, ব্যাঘাত ঘটান, ঠেকান, বন্ধন করা, বাধা দেত্তয়া, ব্যাঘাত করা) 
+
+So why are HTTP interceptors useful? 
+    There are many reasons
+    1. To automatically attach authentication information to requests.
+        This can take several different forms but most often involves attaching a JSON Web Token (or other form of access token) as an Authorization header with the Bearer scheme.
+
+1.1. Make an Authentication Service
+1.2. Create an Interceptor
+1.3 Looking for Unauthorized Responses
+
+2. How to build an Http Interceptor in Angular Framework
+https://medium.com/@mohamedaymen.ourabi11/how-to-build-an-http-interceptor-in-angular-framework-8a5091e1b813
+
+    2.1. What the hell is Http interceptor ?
+        We all know that with Angular we can perform http requests to any server side based on REST approach using (GET,POST,PUT,DELETE) methods , thus in the modern web architectures dealing with http requests has become more and more complicated the fact that sometimes we have to add extra informations to the request before sending it to the server and we can take as an exemple RESTful webservices that use token based authentication as a security approach which is actually based on sending requests to the server and adding what we call an acces token in the header of the http request, 
+
+        after that the request will be intercepted by the server side middleware to check whether the token is valid or not and grant access to grab or persist data .
+
+        Now the problem is that we have to add this access token manually using special headers to every single http request in our Angular application and exactly in every service provider that we have where we usually use HttpClient to make requests .
+
+        To avoid this problem we are going to use Http interceptor which is a new feature included in Angular that help us to intercept http requests and attach automatically any extra information .
+
+        2.2 Getting started
+
+
+
+
+
+3. Angular Authentication: Using Route Guards
+https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3

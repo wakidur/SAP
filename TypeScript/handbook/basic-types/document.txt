@@ -1,0 +1,52 @@
+// 27-03-2018 ------------------
+// 23-07-2018 - | review |------------ 
+convenient(সুবিধাজনক)
+enumeration (গণনা)
+// 28-03-2018 ----------------------
+
+// 9-4-2018 --------------------
+What is TypeScript?
+    TypeScript is a superset of JavaScript that compiles to plain JavaScript.
+
+"Starts and ends with JavaScript"
+    TypeScript starts from the same syntax and semantics(শব্দার্থবিদ্যা) that millions of JavaScript developers know today. Use existing(বিদ্যমান) JavaScript code, incorporate(সঙ্ঘবদ্ধ হত্তয়া) popular JavaScript libraries, and call TypeScript code from JavaScript.
+    TypeScript compiles to clean, simple JavaScript code which runs on any browser, in Node.js, or in any JavaScript engine that supports ECMAScript 3 (or newer).
+
+"Strong tools for large apps"
+    Types eneble(সক্ষম করা) JavaScript developers to use highly-productive development tools and practices like static checking and code refactoring when developing JavaScript applications.
+    Types are optional, and type inference allows a few type annotations to make a big difference to the static varification of your code. Types let you define interfaces between software components and gain insights into the behavior of existing JavaScript libraries.
+
+"State of the art JavaScript"
+    TypeScript offers supports for the latest and evolving JavaScript features, including those from ECMAScript 2015 and future proposals, like async functions and decorators, to help build robust components.
+
+    These features are available at development time for high-confidence app development, but are compiled into simple JavaScript taht targets ECMAScript 3 (or newer) environments.
+
+
+/******************* Basic Types  ****************************/
+
+1. Boolean: The most basic datatype is the simple true/false value, which JavaScript and TypeScript call a boolean vale.
+
+2. Number : As in JavaScript, all numbers in TypeScript are floating point values. 
+
+3. String: We use the type string to refer to these textual datatypes. Just like JavaScript, 
+we can also use template strings, which can span multiple lines and have embedded expressions.
+
+4. Array: Array types can be written in one of two ways. In the first, you use the type of the elements followed by [] to denote an array of that element type
+The second way uses a generic array type, Array<elemType>:
+
+5. Tuple: Tuple type allow you to express an array where the type of a fixed number of elements is known, but need not be the same. 
+
+6. Enum: A helpful addition to the standard set of datatypes from JavaScript is the enum. As in languages like C#, an enum is a way of giving more friendly names to set of numberic values.
+
+by default, enums bening numbering their members starting at 0. you can change this by manually stting the value of 
+
+7. Any: We may need to describe the type of variables that we do not know when we are writing an application. These values may come from dynamic content, e.g. from the user or a 3rd party library. In these cases, we want to opt-out of type-checking and let the values pass through compile-time checks. To do so, we label these with the any type:
+
+8. Void: is a little like the opposite of any: the absence of having any type al all. You may commonly see this as the ruturn of functions that do not return a value
+
+9. Null and Undefined: In TypeScript, both Undefined and Null actually have their own type named Undefined and Null respectively.
+
+10. Naver: The never type represents the type of values that never occur. 
+
+
+

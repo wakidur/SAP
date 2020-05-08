@@ -1,0 +1,301 @@
+adequate(পর্যাপ্ত)
+decent-sized(শালীন আকারের)
+invariably(অপরিবর্তনীয়ভাবে)
+mundane (পার্থিব, জাগতিক)
+footprint(পদচিহ্ন,)
+tweak(খামচি, খামচি মারা)
+trick(কৌশল, চাল)
+impressive (গভীর, হৃদয়গ্রাহী)
+drastically(আয়তন বহুলাংশে)
+substantially(যথেষ্ট)
+nifty (ছিমছাম)
+quirky(বিচিত্র)
+compilation(সংকলন)
+compile(সঙ্কলন করা, রচনা করা)
+full-fledged (পূর্ণবর্ধিত, পরিপক্ব, পরিণত, পাকা,)
+pronounced(উচ্চারিত)
+re-rendering (পুনরায় রেন্ডারিং)
+evolves(উন্নতির)
+tied (বাঁধা)
+against(বিরুদ্ধে)
+reside(বাস করা)
+abstraction (অন্যমনস্ক অবস্থা, অপসারণ)
+perceived (অনুভূত,উপলব্ধ)
+tout(দালালি করা)
+touted(দালালি)
+Offloading (অফলোড)
+neat(পরিচ্ছন্ন)
+mainstream(মূলধারার,প্রধান ধারা )
+alleviate (উপশম করা, কমানো)
+norm(আদর্শ)
+impose (আরোপ করা, )
+avenues(রাজপথ)
+superb (চমত্কার, অতীব কার্যকর)
+roughly (মোটামুটিভাবে)
+hierarchy (যাজকতন্ত্র)
+parsing(পদপরিচয়, শব্দবিশ্লেষণ )
+worth(মূল্য, গুরুত্ব, দাম)
+constantly(প্রতিনিয়ত, সর্বদা)
+underlying (নিম্নাবস্থিত, মূলগত, ভিত্তিস্বরূপ,অবলম্বনস্বরুপ)
+intercept (পথিমধ্যে রোধ করা, রূখা)
+feat(কৃতিত্ব)
+non-intrusive (অ অনধিকারমূলক)
+bare (নগ্ন, খালি)
+implicitly (পরোক্ষভাবে)
+susceptible (সমর্থ)
+embark (জাহাজের তুলা, জাহাজের উঠা)
+circumvent (ফাঁদে ফেলা, পরিবেষ্টন করা, প্রতারণা করা, অবরোধ করা, বোকা বানান)
+irrespective (নিরপেক্ষ)
+
+authentication(প্রমাণীকরণ)
+authorization(অনুমোদন,অনুমতি,ক্ষমতাপ্রদান, কর্তৃত্বদান )
+
+tweak(খামচি)
+
+assumption (ধৃষ্টতা)
+
+
+
+
+
+
+
+
+
+
+/*
+    * 03-12-2018
+    * 17-02-2018
+*/
+
+8. Some Practical Scenarios
+    8.1. Building a new app
+        Setting up a new project typically involves:
+            1. Creating a standard folder structure. This is at times influenced by the server framework (such as RoR, ASP.Net, Node.js, and others). 
+            2. Adding standard assets to specific folders.
+            3. Setting up the build, which in the case that, we are developing an Angular-based web application, includes:
+                •	Compiling/transpiling content if using TypeScript
+                •	Configuring the Module loader
+                •	Dependency management in terms of framework and third-party components
+                •	Setting up unit/E2E testing
+            4. Configuring builds for different environments such as dev, test, and production. Again, this is influenced by the server technology involved.
+            5.	Code bundling and minification.
+
+        8.1.1. Seed projects
+            •	Angular Starter 
+            •	Angular Seed 
+    8.2. Angular performance
+        Every part of the framework, 
+            Starting from the framework footprint, 
+            Initial load time,
+            memory utilization,
+            Change detection plus data binding
+            DOM rendering,
+/*
+    * 04-12-2018
+*/
+        8.2.1. Byte size
+        Angular bundle
+            The standard techniques of 
+                Minification 
+                gzipping 
+                can reduce the gap substantially 
+            
+            Tree shaking : Tree Shaking can result in enormous size reduction as you don't bundle framework bit that you don't use
+
+            Using tree shaking together with Ahead-of-Time (AoT) compilation, we can just get rid of the Angular compiler (in the browser) altogether.
+
+            With AoT compilation, the view template(HTML) are compiled beforehand on the server side. This compilation again is done as part of the app's build process where a server version fo the Angular compiler compiles every view in the application.
+
+            With all the templates compiled, there is no need to send the Angular compiler bits to the client side at all. Tree Shaking can now just get rid of the compiler and create a far slimmer framework package.
+
+        8.2.2. Initial load time and memory utilization
+        8.2.3. The Angular rendering engine
+            The biggest disadvantage of the AngularJS was that the framework was tied to the browser DOM.
+            The Directive, the binding, and the interpolatins all worked against the DOM.
+
+            With Angular , the biggest architectural change that came in was a separte rendering layer. 
+            Now, an Angular app has two larys 
+
+                Application layer: This is the layer out code resides in. It uses an abstraction build over the renderer layer to interact with it. 
+
+                Rendering larys:  This layer is responsible for translating requests from the application layer into rendered components, and reacting to user input and view updates.
+        
+        8.2.4. Server-side rendering
+            Pre-rendering 
+            In such a scenario, when the user requests for a view/page, a piece of software on the server generates a fully materialized HTML page with data pre-bound to the view and sends it to the client along with a small script. The app view is therefore immediately rendered, ready for interaction. While the framework loads in the background, the small script that was sent along the first time captures all user inputs and makes them available to the framework, allowing it to replay the interactions once it is loaded.
+
+            Angular Universal, as it is touted, allows rendering and sharing of the view both on the server and the client side.
+
+            Server-side rendering is only made possible because of separation of the rendering layer described previously. The initial view is generated by a renderer implementation on the server, named ServerDomRenderer. There is a Node.js plugin (http://bit.ly/ng-universal-node) that can be used in a number of node web frameworks such as Express, Hapi, Sail, and others.
+
+            Performance is not the only benefit with server-side rendering. As it turns out, search indexers too like pre-rendered HTML content. Server-side rendering is really useful in areas such as search engine optimization (SEO) and deep linking, which allows easy content sharing.
+        
+        8.2.5. Offloading work to a web worker
+             
+            In today's world, CPUs with multiple cores are the norm, but JavaScript execution is still single-threaded. There is a need for a standard/mechanism to utilize these idle cores for our apps. Web workers fit the bill perfectly, and since most modern browsers support them, we all should be writing code that utilizes web workers.
+        
+        8.2.6. Performant mobile experience
+
+        8.2.7. Change detection improvements
+            8.2.7.1. Change detection
+                Angular's data binding engine does a great job of binding the view with the model data (component data). 
+                These are live bindings where Angular keeps the view in sync with model changes. 
+                Any time the model changes, the binding engine re-renders parts of the view that are dependent on the model. 
+                To manage this view-model synchronization, Angular needs to know when the model changed and what changed exactly. This is what change detection is all about. 
+                During app execution, Angular frequently does what we call change detection runs to determine what changed.
+
+                If you are from AngularJS, a change detection run is roughly equivalent to digest cycles, except that in Angular there are no cycles
+
+                While this problem of keeping the model and view in sync may sound simple, it's a tough nut to creck. Unlike the component tree, the interconnection between multiple models can be complex. 
+                Changes in one componet model can trigger changes in muluple component models. 
+                Furthermore, these interconnection may have cycles. A single model property could be bound to multiple views. All thes complex scenarios need to be managed using  a robust change detection infrastructure.
+/*
+    * 05-12-2018
+*/
+            8.2.7.2. Change detection setup 
+                A change detector attached to a component has the responsibility of detecting changes in the component. It does that by parsing the binding on the component's template HTML and setting up the necessery change detection watches.
+
+                Remember, the detector only sets up watches on model properties used in the template, not on all component properties.
+
+                Another important point worth highlighting here is that change detection is set up one way, from model to view. Angular does not have the concept of two-way data binding and hence the preceding figure is a directed tree without cycles. This also makes change detection more predictable. Interleaving model and view updates are disallowad. 
+            
+            8.2.7.3. When does change detection kick in?
+                Does Angular constantly check for changes in the model data? 
+                    Ans: change detection runs get executed only at specific times during app execution.
+
+                what causes a view to update?
+                    A view can get updated due to:
+
+                    •	User input/browser events: We click on a button, enter some text, or scroll the content. Each of these actions can update the view (and the underlying model).
+
+                    •	Remote XHR requests: This is another common reason for view updates. Getting data from a remote server to show on the grid and getting user data to render a view are examples of this.
+                    
+                    •	setTimeout and setInterval timers: As it turns out, we can use setTimeout and setInterval to execute some code asynchronously and at specific intervals. Such code can also update the model. For example, a setInterval timer may check for stock quotes at regular intervals and update the stock price on the UI.
+
+                The interesting part here is not when Angular's change detection kicks in but how Angular is able to intercept all browser events, XHR requests, and setTimeout and setInterval functions.
+
+                This feat in Angular is performed by a library called zone.js. As the documentation describes:
+
+                "A Zone is an execution context that persists across async tasks."
+
+/*
+    * 06-12-2018
+*/
+            8.2.7.4 How does change detection work?
+                As soon as any of the asynchronous event callbacks are triggered (the execution of an event handler is also an async activity), Angular first executes the application code we attached to the callback. This code execution may result in some model updates. After the execution of the callback, Angular needs to respond to the changes by triggering a change detection run.
+
+                In a change detection run, starting from the top of the component tree, every change detector evaluates its respective component's template bindings to see if the value of the binding expression has changed
+
+                There are some things that we need to highlight regarding this execution:
+                    •  Angular does a strict equality check (using ===) to detect changes. Since it's not a deep comparison, for a binding that refers to an object, Angular will only update the view when the object reference changes.
+
+                    •	The change detection flow is unidirectional (starting from root), from parent to child in a top-down fashion. The detectors on the parent component run before the child detectors.
+
+                    •	Change detectors only track properties that are part of template bindings, not the complete object/component properties.
+
+                    •	To detect changes in the bound value, the change detectors need to track the previous value of the expression evaluated during the last change detection run. Clearly, some amount of bookkeeping is required for every template binding we use.
+
+                   ***  The obvious next question would be what happens when a change is detected (by a change detector)?
+
+                   doWork() {
+                       this.firstName = "David";
+                       this.lastName = "Ruiz";
+
+                   }
+
+            8.2.8. Change detection performance
+                If you think checking the complete component tree every time for change is inefficient, you will be surprised to know how fast it is. Due to some optimization around how expressions are evaluated and compared, Angular can perform thousands of checks in a couple of milliseconds.
+
+                The reason Angular needs to do the complete tree walk is that model changes in one place may trigger model changes at other places. 
+
+                If we can help Angular determine what parts of the application state are updated, Angular can be pretty smart about what part of the component tree it traverses to detect changes. We do this by storing the app data in some special data structures that help Angular decide what components need to be checked for changes.
+
+                8.2.8.1. Using immutable data structures
+                    immediately object/collections are object that cannot be changed once created. Any 
+                8.2.8.2. Using Observables
+                8.2.8.3. Manual change detection
+    
+
+    8.3. Handling authentication and authorization
+        There are primarily two broad approaches to securing any web applications
+            1. cookie-based authentication
+            2. token-based authentication
+        
+
+        8.3.1. Cookie-based authentication
+            Cookie-based authentication involves setting the browser cookie to track the user authentication session.
+
+            The cookie-based authentication flow may vary depending on the server framework, but the general pattern of setting a cookie and attaching a cookie with every subsequent request remains the same.
+        
+            Cookie-based authentication is definitely less work on the client side, but there are times when you have to revert to token-based access. 
+ 
+                •	Cookies and cross-domain requests do not play nicely across browsers. Specifically, IE8 and IE9 do not support them.
+                •	The server may not support generating cookies, or the server only exposes token-based authentication.
+                •	Token-based solutions are easy to integrate with a native mobile application and desktop clients.
+
+        8.3.2. Token-based authentication
+            Token-based access is all about sending a token (typically in HTTP headers) with each request instead of a cookie.
+            Many public APIs (such as Facebook and Twitter) use token-based authentication. The 
+
+            The format  of the token,
+            Where it goes,
+            and how it is generated depends on the protocol used and the server implementation. 
+
+            Popular services that use token-based authentication implement the OAuth 2.0 protocol for token generation and exchange
+
+            In a typical token-based authentication setup, the views are available publicly but the API is secured. If the application tries to pull data through API calls without attaching the appropriate token to the outgoing request, the server returns an HTTP 401 Unauthorized status code.
+
+            **** Enabling token authentication is a good amount of work in Angular. 
+            It involves setting up a 
+                login page/component, 
+                guard conditions
+                authentication service,
+                authentication context shared across the application.
+        
+        8.3.3. Handling authorization
+            When working on an authorization requirement for any application, there are three essential elements that are part of the setup:
+
+                •	The resources that need to be secured/authorized
+                •	A list of roles and users that are part of these roles
+                •	A mapping between the resources and the roles that define who can access what
+
+
+                From an Angular app perspective, the resources are the pages and, sometimes, sections of pages that need to be restricted to specific roles. If the user is in a specific role, depending upon the role-resource mapping, they get access to some pages; otherwise, they are denied access.
+
+            8.3.3.1. Adding authorization support
+                To enable authorization, the first thing that we need to do is expose the logged in user data, including his/her roles, throughout the application.
+                
+                8.3.3.1.1. Sharing user authentication context
+                    User context can be shared using an Angular service, which can then be injected into components that require the authorization context. Look at this service interface:
+                        class SessionContext { 
+                            currentUser():User { ... }; 
+                            isUserInRole(roles:Array<string>):boolean { ...}; 
+                            isAuthenticated:boolean; 
+                        } 
+                    The SessionContext service tracks the user login session and provides details such as:
+                    •	The logged in user (currentUser)
+                    •	Whether the user is authenticated (isAuthenticated)
+                    •	The isUserInRole function, which returns true or false based on whether the user is part of any of the roles passed into the roles parameter
+                    With such a service in place, we can add authorization for routes, thereby restricting access to some routes to specific roles only.
+
+                8.3.3.1.2. Restricting routes
+                    
+                8.3. 3.1.3. Conditionally rendering content based on roles
+
+            
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+

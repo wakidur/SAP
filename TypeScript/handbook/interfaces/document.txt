@@ -1,0 +1,26 @@
+// 15-05-2018 -----------------
+// 25-07-2018 -----------------
+// 30-04-2019 ---Review--------
+
+/*********************************** Interfaces ***********************/
+One of TypeScript's core principles is that type-checking(টাইপ-পরীক্ষণ) focuses on the shape(আকৃতি) that value have. 
+This is something called "duck typing" or "structural subtyping".
+
+In TypeScript, interfaces fill(পূরণ করা) the role of naming these types, and are a powerful way of defining contracts(চুক্তি) within your code as well as contracts with code outside of your project.
+
+it's worth pointing out that the type-checker does not require that these properties come in any sort of order, only that the properties the interface requires are present and have the required type.
+
+// 29-07-2018 -----------------------
+1. Optional Properties
+    Not all properties of an interace may be requied. Some exist under certain condition or may not be there at all. These optional properites are popular when creating patterns like "option bangs" whare you pass an object to function that only has a couple of properties filled in.
+
+2. Readonly properties
+    Some properties should only be modifiable when an object is first created. You can specifey this by putting " readonly " befor the name of the property
+    
+    TypeScript comes with a " ReadonlyArray<T>  " type that is the same as " Array<T> " with all mutating methods removed, so you can make sure you don't change your arrays after creation;
+
+    2.1 readonly vs const
+        Variables use const whereas propeties use readonly.
+        
+// 31-07-2018 -------------------------------
+3. Excess Property Checks

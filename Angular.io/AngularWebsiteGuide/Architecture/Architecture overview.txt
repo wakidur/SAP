@@ -1,0 +1,10 @@
+implement (বাস্তবায়ন)
+/****************** 12-05-2019 *******************/ 
+Architecture overview: Angular is a platform and framework for building client applications in HTML and TypeScirpt. Angular is written in TypeScirpt. It implements core and optional functionality as a set of TypeScirpt libraries that you import into your apps. 
+
+The basic building blocks of an Angular application are NgModules, which provide a compilation context for components.
+
+Modules: Angular NgModules differ from and complement JavaScript (ES2015) modules. An NgModule declares a compilation context for a set of components that is dedicated to an application domain, a workflow, or a closely related set of capabilities.
+
+
+

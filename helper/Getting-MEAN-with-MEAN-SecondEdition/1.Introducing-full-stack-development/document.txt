@@ -1,0 +1,168 @@
+// 26-06-2018 -------------------------
+https://www.manning.com/books/getting-mean-with-mongo-express-angular-and-node-second-edition
+/******** Book Name: Getting MEAN with Mongo, Express, Angular, and Node, Second Edition  ******/
+Part 1: Setting The Baselin
+1 Introducing full-stack development
+2. Designing a MEAN Stack Architecture
+
+----------------------------------------------
+1. Introducing full-stack development
+    1.1. Why learn the full stack?
+        1.1.1. A very brief history of web development
+        1.1.2. The trend toward full-stack developers
+        1.1.3. Benefits of full-stack development
+        1.1.4. Why the MEAN stack specifically?
+    1.2. Introducing Node.js: The web server/platform
+        1.2.1. JavaScript: The single language through the stack
+        1.2.2. Fast, efficient, and scalable
+        1.2.3. Using prebuilt packages via npm
+    1.3. Introducing Express: The framework
+        1.3.1. Easing your server setup
+        1.3.2. Routing URLs to responses
+        1.3.3. Views: HTML responses
+        1.3.4. Remembering visitors with session support
+    1.4. Introducing MongoDB: The database
+        1.4.1. Relational versus document databases
+        1.4.2. MongoDB documents: JavaScript data store
+        1.4.3. More than just a document database
+        1.4.4. What is MongoDB not good for?
+        1.4.5. Mongoose for data modeling and more
+    1.5. Introducing Angular: The front-end framework
+        1.5.1. jQuery versus Angular
+        1.5.2. Two-way data binding: Working with data in a page
+        1.5.3. Using Angular to load new pages
+        1.5.4. Are there any downsides?
+        1.5.5. Developing in TypeScript
+    1.6. Supporting cast
+        1.6.1. Twitter Bootstrap for user interface
+        1.6.2. Git for source control
+        1.6.3. Hosting with Heroku
+    1.7. Putting it together with a practical example
+        1.7.1. Introducing the example application
+        1.7.2. How the MEAN stack components work together
+    1.8. Summary
+
+// 26-06-2018----------(Review Chapter)
+1 Introducing full-stack development
+    This chapter covers 
+        The benefits of full-stack development
+        An overview of the MEAN stack components
+        What makes the MEAN stack so compelling
+        A preview of the application we'll build throughout this Book
+
+impatient(অধীর)
+comprised (অন্তর্ভুক্ত)
+trend (প্রবণতা)
+proficient (দক্ষ)
+disciplines (নিয়মানুবর্তিতা)
+seamlessly(অঙ্গীভূতভাবে)
+tremendous (অসাধারণ)
+throughout(সর্বত্র)
+
+The MEAN stack is a pure JavaScript stack comprised of four main technologies, with a cast of Supporting technologies
+
+MongoDB:- the database (MongoDB has been around since 2007)
+Express:- the web framework (Express was first released in 2009 by T. J. Holowaychuk )
+Angular:- the front-end framework (Angular is open source and backed by Google 2010)
+Node.js:- the web server (Node.js was created in 2009)
+
+
+1.1   Why learn the full stack?
+
+    1.1.1   A very brief history of web development
+        Helping developers with libraries and frameworks
+        Moving the application code forward in the stack
+    1.1.2   The trend toward full-stack developers
+    1.1.3   Benefits of full-stack development
+    1.1.4   Why the MEAN stack specifically?
+
+1.2   Introducing Node.js: The web server/platform
+    nutshell(বাদামের খোলা);
+    on top of it(এটি উপরে)
+    nor(না, এবং না)
+    contains (রয়েছে)
+    foray,(আক্রমণ. হানা, হঠাত্ আক্রমণ)
+    obstacles(প্রতিবন্ধকতা)
+    mainstream (মূলধারার)
+    teller(কথক)
+    abstracts(	পৃথক্ করা ) 
+    away
+    directory (নির্দেশক, নির্দেশপূর্ণ)
+    silo(একঘেয়ে রূপ)
+    transactional(লেনদেনের)
+    context(প্রসঙ্গ)
+    wondering (ভাবছি)
+
+	Node.js is the foundation of the stack!
+	
+	In a nutshell, Node.js is a software platform that allows you to create your own web server and build web application on top of it. 
+	Node.js isn't itself a web server, nor is it a language.
+	It contains a built-in HTTP server library, meaning that you don't need to run a separate web server program such as Nginx, Apache or Internet Information Servers(IIS). This ultimately gives you greater control over how your web server works, but also increases the complexity of getting it up and running, particularly in live environment.
+	
+	1.2.1   JavaScript: The single language through the stack
+	
+	1.2.2   Fast, efficient, and scalable
+		How does it do this? 
+			Node.js is light on system responses because it's single-threaded, whereas 
+            tradition web server are multithreaded.
+
+// 27-06-2018 -------------------------
+    
+        Traditional multithreaded web server
+        A single-threaded web server
+    1.2.3   Using prebuilt packages via npm
+
+    1.3   Introducing Express: The framework
+        1.3.1   Easing your server setup
+        1.3.2   Routing URLs to responses
+        1.3.3   Views: HTML responses
+        1.3.4   Remembering visitors with session support
+            Being single-threaded, Node.js doesn’t remember a visitor from one request to the next. It doesn’t have a silo of RAM set aside just for you; it sees only a series of HTTP requests. HTTP is a stateless protocol, so there’s no concept of storing a session state. As it stands, this makes it difficult to create a personalized experience in Node.js or have a secure area where a user has to log in: it’s not much use if the site forgets who you are on every page. You can do it, of course, but you have to code it yourself. 
+            Or, you’ll never guess what: Express has an answer to this too! Express comes with the ability to use sessions so that you can identify individual visitors through multiple requests and pages. Thank you Express!
+    
+    1.4   Introducing MongoDB: The database
+        1.4.1   Relational versus document databases
+        1.4.2   MongoDB documents: JavaScript data store
+            MongoDB stores documents as BSON, which is binary JSON (JavaScript Serialize Object Notation). Don't worry for now if you're not fully familiar with JSON.
+
+            {
+                "firstName" : "Simon",
+                "lastName" : "Holmes",
+                _id : ObjectId("52279effc62ca8b0c1000007")
+            }
+        1.4.3   More than just a document database
+        1.4.4   What is MongoDB not good for?
+        1.4.5   Mongoose for data modeling and more
+            What is data modeling?
+            Data modeling, in the context of Mongoose and MongoDB, is defining what data can be in a document, and what data must be in a document. When storing user information, you might want to be able to save the first name, last name, email address, and phone number. But you need only the first name and email address, and the email address must be unique. This information is defined in a schema, which is used as the basis for the data model.
+
+            What else does Mongoose offer?
+        
+    1.5   Introducing Angular: The front-end framework
+        1.5.1   jQuery versus Angular
+        1.5.2   Two-way data binding: Working with data in a page
+        1.5.3   Using Angular to load new pages
+        1.5.4   Are there any downsides?
+        1.5.5   Developing in TypeScript
+    
+    1.6   Supporting cast
+        1.6.1   Twitter Bootstrap for user interface
+            Responsive grid layout
+            CSS classes and HTML components
+            Adding themes for a different feel
+        1.6.2   Git for source control
+            How to use Git
+            What are we using Git for here?
+        
+        1.6.3   Hosting with Heroku
+    1.7   Putting it together with a practical example
+        1.7.1   Introducing the example application
+            Real or fake data?
+            End produc
+    1.7.2   How the MEAN stack components work together
+
+
+
+
+
+

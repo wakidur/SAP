@@ -1,5 +1,116 @@
+/*** ******* CHAPTER 5 Separation of Concerns ****** ***/
+Tiers(স্তরে,স্তর),
+tier(স্তর)
+attempt(চেষ্টা, চেষ্টা-প্রচেষ্টা)
+roughly(মোটামুটিভাবে)
+employing(প্রয়োজক)
+implies(অর্থপ্রকাশ করা, বোঝা)
 //15-02-2018------------
-Separation of concerns: separation of concerns is the idea that each module or layer in an application shoule only be responsible for one thing and should not contain conde that deals with other things.
+// 24-06-2018(Review)----------
+Separation of concerns is the idea that each module or layer in an application shoule only be responsible for one thing and should not contain code that deals with other things.
+Separating concerns reduces code complexity by breaking a large application down into many smaller units of encapsulated functionaliy.
+
+It’s easy to confuse separation of concerns with employing modules for the construction
+of your application, but separation of concerns also implies the layering of functionality
+in your application.
+For example: 
+  A> n-tier Architecture
+  B> MVC Architecture
+
+Separation of concerns can be expressed as 
+  functions, 
+  modules, 
+  controles, 
+  widgets, 
+  layers, 
+  tiers, 
+  services and so on
+
+
+  Functions:
+
+  modules:
+
+  Control: A control is a resuable GUI(Graphical User Interface) input that eneble user interaction with your application. For example, combo boxes, calender inputs, siliders, buttons, switchs,a nd Knobs are all controles
+
+  Widget: A widget is a small application which is intended to be embedded in other applications. 
+
+  Layers: Layears are logical groupings of functionality. 
+    For example 
+      A data layer might encepsulate functionality related to data and state, 
+
+      A presentation layer handles display concerns, such as rendering to the DOM and binding UI behaviors. 
+  
+  Tiers: Tiers are the runtime environments that layers get deployed to. A runtime environment usually consists of at least one physical  computer, an operating system, the runtime engine (e.g., Node, Java, or Ruby), and any configuration needed to express how the application should interact with its environment.
+
+
+//18-2-2018--------------
+
+/* ****************Client-Side Concerns*********************** */
+There are several(বিভিন্ন) client-side concerns(সংস্পর্শ, চিন্তা) that almost every mature(পরিপক্ক) JavaScript application might deal with at some point
+
+1. Module management
+2. Event
+3. Presentaion and DOM manipulation
+4. Internationalization
+5. Data management and IO (including AJAX)
+6. Routing(translating URLs to script actions) 
+7. Logging
+8. Analytics tracking
+9. Authentication
+10. Future toggling (decouple code deployment and feature release)
+
+
+/* --------------- 1. Module Management ----------- */
+//19-2-2018--------------
+//25-2-2018--------------
+//26-2-2018--------------
+// 1.1Getting started
+// 1.2Registration, loading, and rendering
+
+// 27-02-2018-----------------------
+
+/* --------------- 2. Events ----------- */
+Event: Events are a method of communicating between different application modules or components in order to achieve loose coupling, 
+    a. Asynchronous communication
+    b. interprocess communication
+    c. combination of the both
+ ** The Browser environment is event driven;
+
+// ** 2.1 Event emitters 
+  emits(নিঃসরণ করে, প্রেরণ করা)
+
+  DOM elements are event emitters, so that they can notify you of user input or other state changes.
+  .on(),
+  .trigger(),
+  .off();
+
+// ** 2.2 Event aggregators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Events------------
 Events are a method of communication between deffernt application modules or components in order to achieve 

@@ -1,0 +1,57 @@
+/********************** ----------Building RESTful APIs---------**********/
+hackit.org.uk/work-with-us/careers
+https://hackney.recruitmentplatform.com/QU2FK026203F3VBQB798M8NQD/UK/login.php
+ID: wakidur@gmail.com
+PW: 713470Wa
+//06-03-2018----------------
+ Representational State Transfer (REST) 
+1. client-server architecture
+2. Layered
+3. Stateless
+4. Cacheable
+5. uniform interface
+
+
+consistency(দৃঢ়তা, সমন্বয়)
+1. What is an API?
+application programming interface
+
+2. RESTful API, we’re specifically talking about an interface(a point where two systems, subjects, organizations, etc., meet and interact(পরস্পরের উপর ক্রিয়া করা) ) that allows users and applications to interact(পরস্পরের উপর ক্রিয়া করা) with your application over HTTP using REST architecture (REpresentational State Transfer).
+
+3. Why should you build an API? 
+you’re going to need a way to connect the user interface to your backend resources, like a database, logging services, and maybe some gateways to third-party APIs. But there are good reasons to expose parts of that API to the public as well.
+
+*** Data-oriented architecture.
+*** remote procedure calls (RPC).
+
+A defining characteristic is that REST does not deal with remote procedure calls (RPC).Instead, it is only concerned with the transfer of state. The difference is verbs versus nouns. When you call a procedure, you’re asking the API to do something. When you ransfer state, you’re sharing data about something. RPC is "control oriented", while REST is "data oriented".
+
+
+The advantage of a data-oriented architecture style is that it can map to any domain
+without embedding knowledge of the particular domain in the client. In other words,
+everything you need to know to interact successfully with a RESTful API should be
+contained in:
+1. The protocol(s) (HTTP URIs, GET, POST, etc.)
+2. The media type (rules for interpreting(ব্যাখ্যা করা, ) messages)
+3. The messages from the server (hyperlinks, templates, etc.)
+
+*** The goal of REST is to avoid coupling(সংযোজন, একত্রীকরণ) the "client application" and the "server application". it decouples your client application from your server application such that changes to your API can be published without breaking existing clients
+
+//07-03-2018 ------------
+
+
+// 08-03-2018------------
+
+//Resourceful routing
+
+• Create a new entry in the resource collection: HTTP POST.
+• Retrieve a resource representation: HTTP GET verb.
+• Update (replace) the resource: HTTP PUT.
+• Delete a resource: HTTP DELETE.
+
+GET           /albums              -> index
+POST          /albums              -> create, return URL
+GET           /albums/:id         -> show
+PUT           /albums/:id          -> create or update
+DELETE        /albums/:id          -> destroy
+

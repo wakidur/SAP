@@ -12,16 +12,9 @@
   "author": "wakidur",
   "license": "ISC",
   "dependencies": {
-    "@uirouter/angularjs": "^1.0.7",
-    "angular": "^1.6.8",
-    "angular-animate": "^1.6.8",
-    "angular-data-table": "^0.7.0",
-    "angular-datatable": "^2.2.1",
-    "angular-datatables": "^0.6.2",
-    "angular-resource": "^1.6.8",
-    "angular-ui-router": "^0.4.3",
-    "bootstrap": "^4.0.0-beta.3",
-    "font-awesome": "^4.7.0",
-    "metismenu": "^2.7.2"
+    "angular": "^1.6.9",
+    "angular-ui-router": "^1.0.3",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1"
   }
 }

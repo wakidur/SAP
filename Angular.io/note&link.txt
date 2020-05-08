@@ -1,0 +1,22 @@
+https://www.youtube.com/channel/UCJUmE61LxhbhudzUugHL2wQ/videos
+
+Angular 6 for Enterprise-Ready Web Applications
+by Doguhan Uluca
+Publisher: Packt Publishing
+Release Date: May 2018
+ISBN: 9781786462909
+Topic: AngularJS
+
+https://www.safaribooksonline.com/library/view/angular-6-for/9781786462909/
+
+
+BOOK
+Node.js Web Development - Third Edition by David Herron
+June 2016, Packt Publishing
+https://www.safaribooksonline.com/library/view/nodejs-web-development/9781785881503/
+
+
+BOOK
+Node.js, MongoDB and Angular Web Development, 2nd Edition by Brad Dayley, Brendan Dayley, Caleb Dayley
+October 2017, Addison-Wesley Professional
+https://www.safaribooksonline.com/library/view/nodejs-mongodb-and/9780134655642/

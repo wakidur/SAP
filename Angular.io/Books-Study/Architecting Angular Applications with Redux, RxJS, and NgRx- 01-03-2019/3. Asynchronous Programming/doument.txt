@@ -1,0 +1,199 @@
+/****************** 10-03-2019 *******************/ 
+predict (ভবিষ্যদ্বাণী করা, গণনা করা)
+predictable(আন্দাজের)
+stress (জোর, কঠিন চাপ)
+arrival (উপস্থিতি)
+emerging (উদীয়মান, উঠতি, উত্থিত, উঠন্ত, বর্ধনশীল, ঊর্ধ্বগামী)
+tabulation (ছককাটা তালিকাভুক্ত করণ)
+tabbed  (ট্যাবযুক্ত স্থির করা)
+shallow (অগভীর স্থান, অগভীর)
+cognitive (জ্ঞান সম্বন্ধীয়)
+stretching (প্রসারিত)
+straight (সোজা, সরাসরিভাবে)
+ away
+2.	Asynchronous Programming
+    To learn what asynchronous conde is, let's first conver what synchronous code is.
+
+    Synchornous: With synchronous code, you have one statement being executed after another.
+    the code is predictable; you know what happens  and when.
+
+    print('a'); 
+    print('b'); 
+    print('c'); 
+
+    // Output
+    a, b, c;
+
+    Asynchronous: With asynchronous code you lose all the nice predictability that the synchronous code offers. In fact, there is very little you know about asynchronous code other than that it finishes executing, eventually. 
+
+    asyncPrint('a')
+    asyncPrint('b')
+    asyncPrint('c')
+
+    // output
+    c, b, a
+
+    As you can see, the order in which a statement finishes is not determined by when a statement occurs in the code. Instead, there is a time element involved that decides when a statement has run its course.
+
+
+
+
+    Asynchronous code runs in an event loop. 
+    This means that async code runs in the following order: 
+        1. Run async code 
+        1. Wait for the response to be ready, then fire an interrupt
+        1. Run the event handler
+
+    An important thing to stress here is that async code is non-blocking.
+    other operations can take place while async code is running.
+
+    Therefore, async code is a good candidate to be used when dealing with 
+    I/O, 
+    long-running tasks, and 
+    network requests.
+
+/****************** 11-03-2019 *******************/ 
+
+    3.1. The callback pattern
+        An operating system deals with asynchronous code by thinking of it in terms of the following concepts:
+        •	Events, these are messages that signals to the operating system that a certain type of action has occurred
+        •	Event handler, this is the piece of code that should run when an event has occurred
+        •	Event queue, this is where all events and their event handlers are placed, waiting to be executed
+
+
+/****************** 12-03-2019 *******************/
+        3.1.1. The callback pattern on the web
+
+            As the web is single-threaded
+
+/****************** 13-03-2019 *******************/
+        3.1.2. The callback pattern in Node.js
+            Node.js is single-threaded just like the web.
+    
+    3.2. Problems with structuring async code – callback hell
+
+/****************** 14-03-2019 *******************/
+    3.3. Promises
+        The idea of a Promise is to flatten out async code. 
+        A promise is said to have the following states:
+
+        •	Pending: This means it has not yet been decided or that the data is not available yet
+        •	Fulfilled: The data has come back
+        •	Rejected: An error happened during the operation
+        
+        3.3.1. Thenables
+            3.3.1.1. Handling rejected promises
+            3.3.1.2. Chaining – dealing with several promises
+    3.4. Asynchronous libraries
+        3.4.1. Async library
+            3.4.1.1. async.map()
+            3.4.1.2. async.parallel()
+            3.4.1.3. async.series()
+    3.5. Async/await
+    3.6. Summary
+
+
+/****************** 18-03-2019 *******************/
+/****************** Resource From Website *******************/
+https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff
+
+simplify (সহজতর করা)
+unresponsive(ক্ষমাহীন, দয়াহীন)
+execution (নির্বাহ)
+context (প্রসঙ্গ, পূর্বাপর সম্বন্ধ)
+stack (গাদা, প্রচুর পরিমাণ)
+abstract (সারাংশ, সংক্ষিপ্তসার, বিমূর্ত)
+implies (অর্থপ্রকাশ করা, বোঝা)
+/**
+***** Understanding Asynchronous JavaScript
+**/
+
+1. JavaScript is a single-threaded programming language 
+which means only one thing can happen at a time. 
+That is, the JavaScript engine can only process one statement at a time in a single thread.
+
+Imagine requesting some data from an API. Depending upon the situation the server might take some time to process the request while blocking the main thread making the web page unresponsive.
+
+That’s where asynchronous JavaScript comes into play. 
+Using asynchronous JavaScript (such as callbacks, promises, and async/await), you can perform long network requests without blocking the main thread.
+
+    1.1. How Does Synchronous JavaScript Work?
+        1.1.1. Execution Context
+            An Execution Context is an abstract concept of an environment where the JavaScript code is evaluated and executed.  
+            Whenever any code is run in JavaScript, it’s run inside an execution context.    
+            The function code executes inside the function execution context, and the global code executes inside the global execution context. Each function has its own execution context.
+        
+        1.1.2. Call Stack
+            The call stack is used to store all the execution context created during the code execution. 
+
+            JavaScript has a single call stack because it's a single-threaded programming language. 
+
+            The call stack has a LIFO(Last in, First out)  structure which means that the items can be added or removed from the top of the stack only.
+   
+/****************** 19-03-2019 *******************/
+    2. How Does Asynchronous JavaScript Work?
+        2.1. What is Blocking?
+        2.2. So what’s the solution?
+            2.2.1. We use asynchronous callbacks to make our code non-blocking.
+                *** note
+                    "Please keep in mind that the setTimeout is not a part of the JavaScript engine, it’s a part of something known as web APIs (in browsers) and C/C++ APIs (in node.js)."
+
+                To understand how this code is executed we have to understand a few more concepts such event loop and the callback queue (also known as task queue or the message queue).
+                1. Event loop
+                2. Callback Queur
+                3. Task Queur/ Message queue
+
+                *** note
+                    The Event Loop, the Web APIs and Message Queue/Task Queur are not the part of the JavaScript engine, it's part of browser's runtime environment or Nodejs JavaScript runtime environment (in case of Nodejs). 
+                    In Nodejs. the web APIs are replace by the C/C++ APIs
+
+/****************** 20-03-2019 *******************/            
+            2.2.2. The Event Loop
+                Event loop : The job of the Event loop is to look into the call stack and determine if the call stack is empty or not. If the call stack is empty, it looks into the message queue to see if there's any pending callback waiting to be executed. 
+
+            2.2.3. DOM Events
+                The Message Queue also contains the callbacks from the DOM events such as Click events and keyboard events 
+
+/****************** 21-03-2019 *******************/  
+
+            2.2.4. ES6 Job Queue/ Micro-Task queue
+                ES6 introduced the concept of job queue/ micro-task queue which is used by Promises in JavaScript. The difference between the message queue and the job queue is that the job queue has a higher priority than the message queue, which means that promise jobs inside the job queue/ micro-task queue will be executed before the callbacks inside the message queue. 
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+             
+
+
+
+
+
+            
+
+
+
+
+

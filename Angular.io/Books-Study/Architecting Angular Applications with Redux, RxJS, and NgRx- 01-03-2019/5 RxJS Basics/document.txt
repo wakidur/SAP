@@ -1,0 +1,48 @@
+Observer (পর্যবেক্ষক, প্রতিপালক, নিরীক্ষক, তত্ত্বাবধায়ক, অবেক্ষক, দ্রষ্টা)
+abstraction (বিমূর্তন, প্রত্যাহরণ)
+/****************** 16-04-2019 *******************/ 
+5.	RxJS Basics
+    5.1. Observer pattern
+        The Observer pattern is gang of four pattern. 
+        The pattern has two key players involved 
+            1. Subject 
+            2. Observer.
+        
+        1. A subject is observed by an Observer.
+        
+        Typically, a Subject holds an internal list of Observers that should be notified when a change happens on the Subject. 
+
+        It is quite common that the subject is a model and the Observers are some kind of UI component. In Short, Subject should be able to.
+            Hold a list of Observers
+            Add an Observer
+            Remove an Observer
+            Notify all Observers when a change happens.
+        
+/****************** 17-04-2019 *******************/ 
+        2. The Observer, on the other hand, should only hold one property, and that is an update() method that can be called by a Subject when an update has occurred. 
+        
+        The idea behind this pattern is to create a loose coupling between different layers. 
+        
+        Neither Subjects nor Observers should know about each other directly by name, but rather by abstractions.     
+
+    5.2. RxJS core concepts
+        RxJS consists of some core concepts that are important for you to understand early on. 
+            Observable: This is a class representing a stream of data.
+            Observer: This is a class able to emit data.
+            Producer: This is what internally produces data, which the observer ulitmately emit. 
+            Operator: This is a method on an Observable, which allows us to manipulate the stream itself or the data emit.
+            Stream: This is synonymous with an instance of an Observable. The reason for it being clled a stream is that you should thing of the data as continuous and not really having an end, unless you explicitly define an end. 
+
+/****************** 21-04-2019 *******************/ 
+/****************** 21-04-2019 *******************/ 
+        5.2.1. Observable(লক্ষণীয়, পর্যবেক্ষণীয়,) and Observe(পর্যবেক্ষক, প্রতিপালক, নিরীক্ষক, তত্ত্বাবধায়ক, অবেক্ষক, দ্রষ্টা)
+
+/****************** 24-04-2019 *******************/
+        5.2.2. Producer 
+
+        5.2.3. Observable error and completion
+
+
+/****************** 25-04-2019 *******************/
+        5.2.4. Operator
+         

@@ -1,0 +1,55 @@
+/*
+* 22-10-2018 -----------------------
+*/
+assumes (অনুমান)
+Function 
+    Function Types 
+        Typing the function
+            we can add types to each of the parameters and then to the function itself to add a return type. 
+            TypeScript can figure the return type out by looking at the return statements, so we can also optionlly leave this off in many cases.
+
+/*
+* 23-10-2018 -----------------------
+*/
+Inferring the types: In playing with the example, you may notice that the TypeScript compiler can figure out the type if you have types on one side of the equation but not the other:
+This is called “contextual typing”, a form of type inference. This helps cut down on the amount of effort to keep your program typed.
+
+/*
+* 24-10-2018 -----------------------
+*/
+Optional and Default Parameters
+    *** In TypeScript, every parameter is assumed to be required by the function. ****
+    *** In JavaScript, every parameter is optional, and users may leave them off as they see fit. *** 
+    *** In TypeScript, we can also set a value that a parameter will be assigned if the user does not provide one, ***
+    1. The number of arguments given to a function has to match the number of parameters the function expects.
+
+    2. In JavaScript, every parameter is optional, and users may leave them off as they see fit. When they do, their value is undefined.
+    we can get this functionality in TypeScript by adding a " ? " to the end of parameters we want to be optional.
+
+    3. In TypeScript, we can also set a value that a parameter will be assigned if the user does not provide one, or if the user passes undefined in its place. These are called default-initialized parameters.
+
+/*
+* Rest Parameters
+*/
+
+/*
+* 29-10-2018 -------------------
+*/
+
+ this
+
+ this and arrow functions 
+
+ In JavaScript, this is variable that's set when a function is called. This makes it a very powerful and flexible feature, 
+
+/*
+* 30-10-2018 -------------------
+*/
+
+
+
+/*
+* 04-11-2018 -------------------
+*/
+this parameters
+Overloads

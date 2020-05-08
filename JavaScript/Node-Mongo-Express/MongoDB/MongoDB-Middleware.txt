@@ -1,0 +1,8 @@
+https://mongoosejs.com/docs/middleware.html
+Middleware
+Mon Dec 30 2019 10:19:52 GMT+0600 (Bangladesh Standard Time)
+
+Middleware
+
+Middleware (also called pre and post hooks) are functions which are passed control during execution of asynchronous functions.
+Middleware is specified on the schema level and is useful for writing plugins.

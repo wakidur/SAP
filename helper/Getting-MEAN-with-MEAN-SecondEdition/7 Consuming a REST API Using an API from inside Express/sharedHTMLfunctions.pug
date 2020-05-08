@@ -1,0 +1,14 @@
+//- Create a pug mixin to format the dates
+mixin formatDate(dateString) 
+    //- Convert date provided from string to date object
+    -const data = new Date(dateString);
+    //- Set up array of values for names of months
+    -const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    //- Use JavaScript data methods to extract and convert required parts of date
+    -const d = date.getDate();
+    -const m = monthName[date.getMonth()];
+    -const y = date.getFullYear();
+    //- Put parts back together in desired format and render output
+    -const output = `${d} ${m} ${y}`
+    =output
+

@@ -1,0 +1,7 @@
+Angular Architecture Overview & Concepts
+
+Angular Architecture
+The  Architecture of an Angular Application is based on the idea of Components.  
+    =>An Angular application starts with a Top level component called Root Component. 
+    =>We then add child components forming a tree of loosely coupled components.
+    => It injects services into the components using Dependency Injection

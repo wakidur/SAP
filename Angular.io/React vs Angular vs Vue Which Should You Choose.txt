@@ -1,0 +1,11 @@
+SPAs
+Components
+Data Flow
+State Management
+Templating 
+Data Binding
+Backend APIs
+Routing
+Language Abstractions
+Testing
+Frontend Builds
