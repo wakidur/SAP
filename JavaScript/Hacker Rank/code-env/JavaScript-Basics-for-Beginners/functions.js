@@ -24,7 +24,7 @@ exports.functions = () => {
         return total;
     }
 
-    console.log(sum(1, 2, 3, 4, 5, 6, 10));
+    // console.log(sum(1, 2, 3, 4, 5, 6, 10));
 
     // 4. The Rest Operator
     function sum(discount, ...prices) {
@@ -39,7 +39,7 @@ exports.functions = () => {
         return principle * rate / 100 * years;
     }
 
-    console.log(interest(10000, 4.3, 5));
+    // console.log(interest(10000, 4.3, 5));
 
     // 6 Getters and Setters
     // 7. Try and Catch 
@@ -68,7 +68,7 @@ exports.functions = () => {
         console.error(error);
     }
 
-    console.log(personObj);
+    // console.log(personObj);
     // console.log(personObj.fullName);
 
     // 8 Local vs. Global Scope 
@@ -88,7 +88,7 @@ exports.functions = () => {
         }
         console.log(i)
     }
-    startLetVar()
+    // startLetVar()
 
 
     /**
@@ -122,24 +122,84 @@ exports.functions = () => {
         console.log(this)
     }
 
-    video.paly();
-    video.stop();
-    video.showTags();
+    // video.paly();
+    // video.stop();
+    // video.showTags();
 
     function playVideo(params) {
         // console.log(this); // global
     }
 
-    playVideo();
+    // playVideo();
 
     // Constructor function
     function Video(title) {
         this.title = title;
-        console.log(this)
+        //console.log(this)
     }
     const v = new Video('b');
 
-    // 
+    // Exercise 1 -Sum of Argument
+
+    console.log(exerciseOneSum([1, 2, 3, 4, 5]));
+    // console.log(exerciseOneSum(1, 2, 3, 4, 5));
+
+    function exerciseOneSum(...items) {
+        console.log(items);
+
+        if (items.length === 1 && Array.isArray(items[0]))
+            items = [...items[0]];
+        // console.log(items = [...items[0]])
+
+        return items.reduce((acu, cur) => acu + cur);
+
+    }
+
+    // Exercise 2 - Area of Circle
+
+    const circleObj = {
+        radius: 2,
+        get area() {
+            return Math.PI * this.radius * this.radius;
+        }
+    };
+
+    console.log(circleObj.area);
+
+    // Exercise 3 Error Handling
+
+
+
+    try {
+        const exercise5 = [1, 2, 3, 4, 1];
+        const output5 = countOccurrences(exercise5, 1);
+        console.log(output5);
+    } catch (error) {
+        console.error(error);
+    }
+
+    function countOccurrences(array, searchElement) {
+        // implementation step 1
+        /*
+        let count = 0;
+        for (let element of array)
+            if (element === searchElement)
+                count++;
+        return count;
+        */
+        // implementation step 2
+
+        // Error Handling
+        if (!Array.isArray(array))
+            throw new Error('Invalid Array.');
+
+        return array.reduce((acc, cur) => {
+            const occurrence = (cur === searchElement) ? 1 : 0;
+            console.log(acc, cur, searchElement)
+            return acc + occurrence;
+        }, 0)
+    }
+
 
 
 
