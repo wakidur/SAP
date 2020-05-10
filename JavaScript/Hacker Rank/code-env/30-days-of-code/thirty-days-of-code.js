@@ -93,7 +93,7 @@ class Person {
 }
 
 const personAge = new Person(14);
-console.log(personAge);
+// console.log(personAge);
 
 /**
  * 6 Day 5: Loops
@@ -125,30 +125,35 @@ exports.processDataStringEventAndOdd = (inputs) => {
     console.log(input.split('\n').slice(1));
 
     inputCopy = input.split('\n').slice(1);
-   
-
-   //Enter your code here
-   inputCopy = input.split('\n').slice(1);
-   
-
-   for (const s of inputCopy) {
-       let evenIndexed = '';
-       let oddIndexed = '';
-       for (let j = 0; j < s.length; j++) {
-           if (j % 2 === 0) evenIndexed += s[j];
-           else oddIndexed += s[j];
-       }
-       console.log(`${evenIndexed} ${oddIndexed}`);
-   }
 
 
+    //Enter your code here
+    inputCopy = input.split('\n').slice(1);
 
 
+    for (const s of inputCopy) {
+        let evenIndexed = '';
+        let oddIndexed = '';
+        for (let j = 0; j < s.length; j++) {
+            if (j % 2 === 0) evenIndexed += s[j];
+            else oddIndexed += s[j];
+        }
+        console.log(`${evenIndexed} ${oddIndexed}`);
+    }
 
+}
 
+/**
+ * 8 Day 7: Arrays
+ */
 
+exports.arraysReverse = () => {
+    let result = '';
+    const n = 4;
 
-
-
-
+    const arr = [1, 4, 3, 2];
+    for (let i = n - 1; i >= 0; i--) {
+        result += arr[i] + " ";
+    }
+    console.log(result);
 }

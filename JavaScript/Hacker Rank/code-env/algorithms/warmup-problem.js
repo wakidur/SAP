@@ -35,7 +35,16 @@ exports.simpleArraySum = (ar) => {
     return total;
 }
 
-// 3
+
+/**
+ * 3 compareTheTriplets  
+ * @param {*} arr1 
+ * @param {*} arr2 
+ * const array1 = [1, 28, 30];
+ * const array2 = [99, 16, 1];
+ * compareTheTriplets(array1, array2);
+ * 
+ */
 exports.compareTheTriplets = (arr1, arr2) => {
     try {
         let resultArr = []
@@ -75,7 +84,12 @@ exports.compareTheTriplets = (arr1, arr2) => {
     }
 
 }
-// 4
+// 
+/**
+ * 4 aVeryBigSum
+ * const ar = [10000000008, 1000000002, 1000000003, 1000000004, 1000000005];
+ * aVeryBigSum(ar);
+ */
 exports.aVeryBigSum = async (ar, arr2) => {
     try {
         const largeLimit = 10000000000;
@@ -96,7 +110,12 @@ exports.aVeryBigSum = async (ar, arr2) => {
     }
 
 }
-// 5
+
+/**
+ * 5 diagonalDifference
+ * const arr = [ [1, 2, 3], [4, 5, 6], [9, 8, 9] ]
+ * diagonalDifference(arr);
+ */
 exports.diagonalDifference = async (arr, arr2) => {
     try {
         const arrLength = arr.length
@@ -380,4 +399,36 @@ exports.getTotalX = (a, b) => {
             count++;
     }
     return count;
+}
+
+/**
+ * 15: Breaking the Records
+ * Complete the breakingRecords function below.
+ * 
+ */
+
+exports.breakingRecords = () => {
+    try {
+        let scores = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
+        let max = scores[0];
+        let min = scores[0];
+        let maxCount = 0;
+        let minCount = 0;
+
+        for (const item of scores) {
+            if (item > max) {
+                max = item;
+                maxCount += 1;
+            } else if (item < min) {
+                min = item;
+                minCount += 1;
+            }
+        }
+
+        console.log(maxCount, minCount)
+        return [ maxCount, minCount];
+
+    } catch (error) {
+
+    }
 }
