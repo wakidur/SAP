@@ -13,9 +13,11 @@ const {
     gradingStudents,
     countApplesAndOranges,
     kangaroo,
-    getTotalX
+    getTotalX,
+    breakingRecords
 } = require('./algorithms/warmup-problem');
 
+breakingRecords()
 // 10-days-of-javascript
 
 const {
@@ -50,6 +52,12 @@ const {
     functions
 } = require('./JavaScript-Basics-for-Beginners/functions');
 
+// OOP 
+
+const {
+    gettingStartedOOP
+} = require('./Object-oriented-Programming-in-JavaScript/getting-started');
+
 // 30 Days of Code
 const {
     processData,
@@ -69,29 +77,12 @@ const {
 
 } = require('./JavaScript (Basic) Skills Certification Test/country-codes');
 
-// getCountryName('ZW')
-// invoke function
-// compareTheTriplets  3
-/*
-const array1 = [1, 28, 30];
-const array2 = [99, 16, 1];
-compareTheTriplets(array1, array2);
-*/
 
 
-// a Very Big Sum 4
-
-// const ar = [10000000008, 1000000002, 1000000003, 1000000004, 1000000005];
-// aVeryBigSum(ar);
 
 
-// diagonalDifference 5
-// const arr = [
-//     [1, 2, 3],
-//     [4, 5, 6],
-//     [9, 8, 9]
-// ]
-// diagonalDifference(arr);
+
+
 
 
 //  plusMinus 6 
@@ -224,7 +215,11 @@ compareTheTriplets(array1, array2);
 /* 
  ************************************ Arrays ************************
  */
-functions();
+// functions();
+/* 
+ ************************************ OOP ************************
+ */
+// gettingStartedOOP();
 
 
 /**
